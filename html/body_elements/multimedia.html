@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../styles/styles.css">
+  
+  <title>Multimedia</title>
+  <meta name="description" content="Elementos html multimedia">
+
+</head>
+
+<body>
+
+  <header>
+    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <hgroup>
+      <h1>Multimedia</h1>
+      <p>Elementos que permiten insertar o enlazar con imágenes, vídeos, audio u otras páginas web.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <details>
+      <summary>img</summary>
+      <p>Espacio reservado para contener una imagen. Darle siempre valores width y height para que al cargar la página no de saltos al cargar el contenido. Los estilos css son más prioritarios que los valores de los atributos. Recomendable usar siempre atributos: alt, height and width.</p>
+      <p>Acepta formatos animados como '.gif'</p>
+        <div class="code">
+          <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen enrutada desde internet" width="200">
+
+          <div class="code black">
+            <span class="gris">&lt;</span> 
+            <span class="etiqueta">img </span> 
+            <span class="atributo"> src</span>
+            =
+            <span class="valor">"ruta a la imagen"</span>
+            <span class="atributo"> alt</span>
+            =
+            <span class="valor">"Descripción de la imagen"</span>
+            <span class="atributo"> width</span>
+            =
+            <span class="valor">"200"</span>
+            <span class="gris">></span> 
+          </div>
+
+          <p><strong>src: </strong>Puede ser ruta a un archivo dentro del proyecto o a una url externa.</p>
+          <p><strong>alt: </strong>Útil para personas ciegas y cuándo no carga la imagen.</p>
+          <p><strong>width | height: </strong>se lee en píxeles, no hace falta poner 'px'</p>
+        </div>
+    </details>
+    <details>
+      <summary>map</summary>
+      <p>Crea áreas clickables en una imagen.</p>
+      <div class="code">
+        <img src="https://www.w3schools.com/html/workplace.jpg" alt="workplace" usemap="#workmap">
+
+        <map name="workmap">
+          <area shape="rect" coords="34,44,270,350" alt="Computer" href="#">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="#">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="#">
+        </map>  
+
+        <div class="code black">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">img </span> 
+          <span class="atributo"> src</span>=
+          <span class="valor">"ruta a la imagen"</span>
+          <span class="atributo"> alt</span>=
+          <span class="valor">"Descripción de la imagen"</span>
+          <span class="atributo"> usemap</span>=
+          <span class="valor">"#workmap"</span>
+          <span class="gris">></span> <br><br>
+
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">map </span> 
+          <span class="atributo"> name</span>=
+          <span class="valor">"workmap"</span>
+          <span class="gris">></span><br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">area </span> 
+          <span class="atributo"> shape</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> coords</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> alt</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> href</span>=
+          <span class="valor">"..."</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">area </span> 
+          <span class="atributo"> shape</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> coords</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> alt</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> href</span>=
+          <span class="valor">"..."</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">map </span> 
+          <span class="gris">></span> 
+        </div>  
+
+        <p><strong>shape: </strong>rect | circle | poly | default. Rectángulo, círculo, polígono o toda la imagen.</p>
+        <p><strong>coords:</strong></p>
+        <ul>
+          <li><strong>rect: </strong>4 coords. Esquina superior izquierda = left - top + esquina inferior derecha = left-top</li>
+          <li><strong>circle: </strong>3 coords. Centro del círculo = left - top + px de radio</li>
+          <li><strong>poly: </strong>Tantas como sean necesarias.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>picture</summary>
+      <p>Diferentes imágenes según el tamaño del dispositivo. También para diferentes formatos de imagen a los navegadores, por si no reconoce alguno. Se queda con el primer source que le sirva e ignorará el resto.</p>
+      <div class="code">
+        <picture>
+          <source media="(min-width: 1000px)" srcset="https://www.w3schools.com/html/img_food.jpg" width="100%">
+          <img src="https://www.w3schools.com/html/img_girl.jpg" width="200">
+        </picture>
+
+        <div class="code black">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">picture </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">source </span>
+          <span class="atributo"> media</span>=
+          <span class="valor">"(min-width: 1000px)"</span>
+          <span class="atributo"> srcset</span>=
+          <span class="valor">"ruta a la img"</span>
+          <span class="atributo"> width</span>=
+          <span class="valor">"xxx"</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">img </span>
+          <span class="atributo"> src</span>=
+          <span class="valor">"ruta a la img"</span>
+          <span class="gris">></span> 
+          <span class="comentario">&lt;!-- Imagen por defecto --></span> 
+          <br>
+
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">picture </span> 
+          <span class="gris">></span> <br>
+        </div>
+
+        <p><strong>media: </strong>condición de tamaño para empezar a aplicar esa imagen.</p>
+      </div>      
+    </details>
+    <details>
+      <summary>iframes</summary>
+      <p>Espacios dónde se pueden incluir una página web dentro de otra.</p>
+      <div class="code">
+        <iframe src="" name="iframe_a" title="Ejemplo de Iframe activado con un link" style="width: 100%;"></iframe>
+        <p><a href="../../index.html" target="iframe_a">Abrir página en el iframe</a></p>
+        
+        <div class="code black">
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">iframe </span>
+          <span class="atributo"> src</span>=
+          <span class="valor">" "</span>
+          <span class="atributo"> name</span>=
+          <span class="valor">"iframe_name"</span>
+          <span class="atributo"> title</span>=
+          <span class="valor">"..."</span>
+          <span class="atributo"> style</span>=
+          <span class="valor">"width:100%"</span>
+          <span class="gris">></span> 
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">iframe </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">a </span>
+          <span class="atributo"> href</span>=
+          <span class="valor">"url al sitio"</span>
+          <span class="atributo"> target</span>=
+          <span class="valor">"iframe_name"</span>
+          <span class="gris">></span> Abrir página en el iframe
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">a </span> 
+          <span class="gris">></span> <br>
+        </div>
+
+        <p><strong>title: </strong>Aconsejado para ciegos o problemas de carga.</p>
+        <p><strong>Para evitar saltos al cargar la página: </strong>Se le puede dar con atributos width, height o style, como en el ejemplo.</p>
+      </div>
+      <div class="code">
+        <p>¿Cómo reproducir vídeos de youtube?</p>
+        <p>En un elemento iframe añadir los atributos de alto y ancho y en el "src" poner "https:/www.youtube.com" + "/embed" (de embedded, inyectado) + "/el-id-del-vídeo(buscarlo en el url)"</p>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">iframe</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">src</span>
+          =
+          <span class="valor">"https://www.youtube.com/embed/tgbNymZ7vqY"</span>
+          <span class="gris">></span>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">iframe</span>
+          <span class="gris">></span>
+        </div>
+        <p>Después del id del vídeo se pueden añadir otras opciones como:</p>
+        <ul>
+          <li><p><strong>autoplay=1: </strong>que se reproduzca al cargar.</p> </li>
+          <li><p><strong>mute=1: </strong> que se reproduzca sin sonido.</p></li>
+          <li><p><strong>loop=1: </strong>para que se reproduzca en bucle.</p></li>
+          <li><p><strong>controls=0: </strong>para que no se vean los controles.</p></li>
+          <p>Se añade un símbolo "?" después del id y entre valores un &.</p>
+        </ul>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">iframe</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">src</span>
+          =
+          <span class="valor">"https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"</span>
+          <span class="gris">></span>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">iframe</span>
+          <span class="gris">></span>
+        </div>
+
+        <p>Se pueden reproducir listas de vídeos colocando en el src varias url separadas por coma. ","</p>
+      </div>            
+    </details>
+    <details>
+      <summary>figure</summary>
+      <p>Contenedor para imágenes, ilustraciones, diagramas, fotos, etc. con pie de foto. El elemento "figcaption" sirve como pie de foto y tiene que ir dentro del figure.</p>
+      <div class="code">
+        <figure>
+          <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen enrutada desde internet" width="200">
+          <figcaption>Pie de foto</figcaption>
+        </figure>
+
+        <div class="code black">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">figure </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">img </span>
+          <span class="atributo"> src</span>=
+          <span class="valor">"url-imagen"</span>
+          <span class="atributo"> alt</span>=
+          <span class="valor">"texto-alternativo"</span>
+          <span class="atributo"> width</span>=
+          <span class="valor">"xxx"</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">figcaption </span>
+          <span class="gris">></span>
+          Pie de foto
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">figcaption </span> 
+          <span class="gris">></span> 
+          <br>
+
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">figure </span> 
+          <span class="gris">></span> <br>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>canvas</summary>
+      <p>Espacio para crear gráfico mediante JavaScript. Tiene que tener un id para enlazar con el javascript y tamaño de alto y ancho para que no tiemble la página al cargar. Permite crear rectángulos, círculos, textos con diseños especiales, añadir imágenes, etc.</p>
+    </details>
+    <details>
+      <summary>svg</summary>
+      <p>Scalable vector graphics. Etiqueta que contiene una imagen vectorial svg. Se pueden crear vectores rectángulos, círculos, texto, polígonos y mucho más. Con JavaScript se puede hacer que los objetos sean interactivos.</p>
+      <div class="code">
+        <svg width="100" height="100">
+          <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+        </svg>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">svg</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"100"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"100"</span>
+          <spanclass="gris">></span>
+          <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">circle</span>
+            <span class="atributo">cx</span>
+            =
+            <span class="valor">"50"</span>
+            <span class="atributo">cy</span>
+            =
+            <span class="valor">"50"</span>
+            <span class="atributo">r</span>
+            =
+            <span class="valor">"40"</span>
+            <span class="atributo">stroke</span>
+            =
+            <span class="valor">"green"</span>
+            <span class="atributo">stroke-width</span>
+            =
+            <span class="valor">"4"</span>
+            <span class="atributo">fill</span>
+            =
+            <span class="valor">"yellow"</span>
+            <span class="gris">/></span>
+            <br>
+            <span class="gris">&lt;/</span>
+          <span class="etiqueta">svg</span>
+          <span class="gris">></span>
+        </div>
+
+        <svg width="400" height="120">
+          <rect x="10" y="10" width="200" height="100" stroke="red" stroke-width="6" fill="blue" />
+        </svg>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">svg</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"400"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"200"</span>
+          <spanclass="gris">></span>
+          <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">rect</span>
+            <span class="atributo">x</span>
+            =
+            <span class="valor">"10"</span>
+            <span class="atributo">y</span>
+            =
+            <span class="valor">"10"</span>
+            <span class="atributo">width</span>
+            =
+            <span class="valor">"200"</span>
+            <span class="atributo">height</span>
+            =
+            <span class="valor">"100"</span>
+            <span class="atributo">stroke</span>
+            =
+            <span class="valor">"red"</span>
+            <span class="atributo">stroke-width</span>
+            =
+            <span class="valor">"6"</span>
+            <span class="atributo">fill</span>
+            =
+            <span class="valor">"blue"</span>
+            <span class="gris">/></span>
+            <br>
+            <span class="gris">&lt;/</span>
+          <span class="etiqueta">svg</span>
+          <span class="gris">></span>
+        </div>
+
+        <svg width="300" height="200">
+          <polygon points="100,10 40,198 190,78 10,78 160,198"
+          style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+        </svg>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">svg</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"300"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"200"</span>
+          <spanclass="gris">></span>
+          <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">poligon</span>
+            <span class="atributo">points</span>
+            =
+            <span class="valor">"100,10 40,198 190,78 10,78 160,198"</span>
+            <span class="atributo">style</span>
+            =
+            <span class="valor">"fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;"</span>
+            <span class="gris">/></span>
+            <br>
+            <span class="gris">&lt;/</span>
+          <span class="etiqueta">svg</span>
+          <span class="gris">></span>
+        </div>
+
+        <svg height="130" width="500">
+          <defs>
+            <linearGradient id="grad1">
+              <stop offset="0%" stop-color="yellow" />
+              <stop offset="100%" stop-color="red" />
+            </linearGradient>
+          </defs>
+          <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+          <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+          Sorry, your browser does not support inline SVG.
+        </svg>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">svg</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"500"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"130"</span>
+          <span class="gris">></span>
+          <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">defs</span>
+            <span class="gris">></span>
+            <br>
+              <span class="gris nieto">&lt;</span>
+              <span class="etiqueta">linearGradient</span>
+              <span class="atributo">id</span>
+              =
+              <span class="valor">"grad1"</span>
+              <br>
+                <span class="gris biznieto">&lt;</span>
+                <span class="etiqueta">stop</span>
+                <span class="atributo">offset</span>
+                =
+                <span class="valor">"0%"</span>
+                <span class="atributo">stop-color</span>
+                =
+                <span class="valor">"yellow"</span>
+                <span class="gris">/></span>
+                <br>
+                <span class="gris biznieto">&lt;</span>
+                <span class="etiqueta">stop</span>
+                <span class="atributo">offset</span>
+                =
+                <span class="valor">"100%"</span>
+                <span class="atributo">stop-color</span>
+                =
+                <span class="valor">"red"</span>
+                <span class="gris">/></span>
+                <br>
+              <span class="gris nieto">&lt;</span>
+              <span class="etiqueta">linearGradient</span>
+              <span class="gris">/></span>
+              <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">defs</span>
+            <span class="gris">/></span>
+            <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">ellipse</span>
+            <span class="atributo">cx</span>
+            =
+            <span class="valor">"100"</span>
+            <span class="atributo">cy</span>
+            =
+            <span class="valor">"70"</span>
+            <span class="atributo">rx</span>
+            =
+            <span class="valor">"85"</span>
+            <span class="atributo">ry</span>
+            =
+            <span class="valor">"500"</span>
+            <span class="atributo">fill</span>
+            =
+            <span class="valor">"url(#grad1)"</span>
+            <span class="gris">/></span>
+            <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">text</span>
+            <span class="atributo">fill</span>
+            =
+            <span class="valor">"#fff"</span>
+            <span class="atributo">font-size</span>
+            =
+            <span class="valor">"45"</span>
+            <span class="atributo">font-family</span>
+            =
+            <span class="valor">"verdana"</span>
+            <span class="atributo">x</span>
+            =
+            <span class="valor">"50"</span>
+            <span class="atributo">y</span>
+            =
+            <span class="valor">"86"</span>
+            <span class="gris">></span>
+            SVG
+            <span class="gris hijo">&lt;/</span>
+            <span class="etiqueta">text</span>
+            <span class="gris">></span>
+            <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">svg</span>
+          <span class="gris">></span>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>video</summary>
+      <p>Para incluir un vídeo. Dentro de la etiqueta, el texto que se escriba no se verá, salvo en el caso de que el navegador no pueda reproducir el vídeo. En video se definen los atributos alto y ancho. Dentro de video, van los source con sus atributos "src" y "type" (espeficipar el formato de vídeo) y se puede añadir el elemento "track" que sirve para añadir subtítulos en videos y audios.</p>
+      <p><strong>Atributos del video</strong></p>
+      <details>
+        <summary>controls</summary>
+        <p>Atributo sin valor que añade pause, play y volumen</p>
+      </details>
+      <details>
+        <summary>autoplay</summary>
+        <p>Atributo sin valor para que el vídeo se inicie automáticamente al cargar.</p>
+      </details>
+      <details>
+        <summary>muted</summary>
+        <p>Atributo sin valor que va después de autoplay y hará que el vídeo esté sin sonido por defecto.</p>
+      </details>
+    </details>
+    <details>
+      <summary>audio</summary>
+      <p>Igual que el vídeo, permite atributos "controls", "muted" y "autoplay" y dentro van los source con varios formatos. El texto dentro de esta etiqueta sólo se ve si el navegador no carga los audios.</p>
+    </details>
+  </main>
+
+</body>
+</html>

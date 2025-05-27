@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <title>Colores</title> 
+  <meta name="description" content="Códigos alfanuméricos para colores que existen"> <!-- Cambiar los contenidos para definir este documento -->
+
+</head>
+<body>
+  <header>
+    <a class="button back" href="index.html">Volver al Índice</a> 
+    <h1>Colores</h1>
+    <hr>
+  </header>
+  
+  <main>
+    
+    <details>
+      <summary>RGB</summary>
+      <p>Red, green, blue. Valores de 0 a 255. 16777216 combinaciones.</p>
+      <p>rgb(0,0,0) negro, rgb(xy,xy,xy) grises, rgb(255,255,255) blanco. </p>
+    </details>
+
+    <details>
+      <summary>RGBA</summary>
+      <p>Lo mismo que el rgb pero añadiendo opacidad. El 0 es transparente y el 1 opaco.</p>
+    </details>
+    
+    <details>
+      <summary>Colores hexadecimales</summary>
+      <p>#RRGGBB red, green blue. Del 00 al ff. Mismas combinaciones que RGB</p>
+      <p>#ffffff blanco, #000000 negro. Los valores repetidos son grises #xyxyxy.</p>
+    </details>
+
+    <details>
+      <summary>HSL</summary>
+      <p>hue, saturation, lightness. Matiz, saturación y brillo. Medida en grados del 0 al 360º. 0º rojo, 120º verde, 240º azul. Saturación y brillo con porcentaje del 0 al 100% y el matiz con un número.</p>
+      <p>100% saturación es color puro, 0% saturación es gris. </p>
+      <p>0% brillo es negro, 100% brillo es blanco</p>
+      <p>0 color y 0% saturación da gris y variar luminosidad da gris más claro a más oscuro.</p>
+    </details>
+
+    <details>
+      <summary>HSLA</summary>
+      <p>Lo mismo que HSL pero con opacidad. 0.0 es transparente y 1.0 es opaco.</p>
+    </details>
+
+    <details>
+      <summary>Colores HTML</summary>
+      <div id="paletaColoresHTML">
+        
+        <!-- Blanco -->
+        <div style="background-color: White;">White #FFFFFF</div>
+
+        <!-- Grises -->         
+        <div style="background-color: Snow;">Snow #FFFAFA</div>
+        <div style="background-color: WhiteSmoke;">White Smoke #F5F5F5</div>
+        <div style="background-color: GhostWhite;">Ghost White #F8F8FF</div>
+        <div style="background-color: Gainsboro;">Gainsboro #DCDCDC</div>
+        <div style="background-color: LightGray;">Light Gray / Light Grey #D3D3D3</div>
+        <div style="background-color: Silver;">Silver #C0C0C0</div>
+        <div style="background-color: darkgrey;">Dark Gray / Dark Grey #A9A9A9</div>
+        <div style="background-color: SlateGrey;">Slate Gray / Slate Grey #708090</div>
+        <div style="background-color: grey;">Gray / Grey #808080</div>
+        <div style="background-color: LightSlateGray;">Light Slate Gray / Light Slate Grey #778899</div>
+        <div style="background-color: DimGray; color: white;">Dim Gray / Dim Grey #696969</div>
+        <div style="background-color: DarkSlateGray; color: white;">Dark Slate Gray / Dark Slate Grey #2F4F4F</div>
+        <!-- Negros -->
+        <div style="background-color: Black; color: white;">Black #000000</div>
+
+        <!-- Amarillos -->
+        <div style="background-color: LightYellow;">Light Yellow #FFFFE0</div>
+        <div style="background-color: LightGoldenRodYellow;">Light Golden Rod Yellow #FAFAD2</div>
+        <div style="background-color: Yellow;">Yellow #FFFF00</div>
+        
+        <!-- Naranjas -->
+        <div style="background-color: #ffd700;">Gold #FFD700</div>
+        <div style="background-color: Orange;">Orange #FFA500</div>
+        <div style="background-color: DarkOrange;">Dark Orange #FF8C00</div>
+        <div style="background-color: BlanchedAlmond;">Blanched Almond #FFEBCD</div>
+        <div style="background-color: PeachPuff;">Peach Puff #FFDAB9</div>
+        <div style="background-color: DarkSalmon;">Dark Salmon #E9967A</div>
+        <div style="background-color: LightSalmon;">Light Salmon #FFA07A</div>
+        <div style="background-color: LightCoral;">Light Coral #F08080</div>
+        <div style="background-color: Salmon;">Salmon #FA8072</div>
+        <div style="background-color: Coral;">Coral #FF7F50</div>
+        <div style="background-color: Tomato;">Tomato #FF6347</div>
+        
+        <!-- Rojos -->
+        <div style="background-color: OrangeRed;">Orange Red #FF4500</div>
+        <div style="background-color: Red;">Red #FF0000</div>
+        <div style="background-color: Crimson; color: white;">Crimson #DC143C</div>
+        <div style="background-color: FireBrick; color: white;">Fire Brick #B22222</div>
+        <div style="background-color: Brown; color: white;">Brown #A52A2A</div>
+        <div style="background-color: DarkRed; color: white;">Dark Red #8B0000</div>
+        <div style="background-color: IndianRed;">Indian Red #CD5C5C</div>
+        <div style="background-color: PaleVioletRed;">Pale Violet Red #DB7093</div>
+
+        
+        <!-- Rosas -->
+        <div style="background-color: DeepPink;">Deep Pink #FF1493</div>
+        <div style="background-color: Magenta;">Magenta / Fuchsia #FF00FF</div>
+        <div style="background-color: HotPink;">Hot Pink #FF69B4</div>
+        <div style="background-color: LightPink;">Light Pink #FFB6C1</div>
+        <div style="background-color: Pink;">Pink #FFC0CB</div>
+        <div style="background-color: MistyRose;">Misty Rose #FFE4E1</div>
+        
+        <!-- Morados -->
+        <div style="background-color: LavenderBlush;">Lavender Blush #FFF0F5</div>
+        <div style="background-color: Thistle;">Thistle #D8BFD8</div>
+        <div style="background-color: Plum;">Plum #DDA0DD</div>
+        <div style="background-color: Violet;">Violet #EE82EE</div>
+        <div style="background-color: Orchid;">Orchid #DA70D6</div>
+        <div style="background-color: MediumOrchid;">Medium Orchid #BA55D3</div>
+        <div style="background-color: DarkOrchid; color: white;">Dark Orchid #9932CC</div>
+        <div style="background-color: DarkViolet; color: white;">Dark Violet #9400D3</div>
+        <div style="background-color: MediumVioletRed;">Medium Violet Red #C71585</div>
+        <div style="background-color: DarkMagenta; color: white;">Dark Magenta #8B008B</div>
+        <div style="background-color: Purple; color: white;">Purple #800080</div>
+        <div style="background-color: RebeccaPurple; color: white;">Rebecca Purple #663399</div>
+        <div style="background-color: Indigo; color: white;">Indigo #4B0082</div>
+        <div style="background-color: BlueViolet; color: white;">Blue Violet #8A2BE2</div>
+        <div style="background-color: MediumPurple;">Medium Purple #9370DB</div>
+        <div style="background-color: MediumSlateBlue;">Medium Slate Blue #7B68EE</div>
+        <div style="background-color: SlateBlue; color: white;">Slate Blue #6A5ACD</div>
+        <div style="background-color: DarkSlateBlue; color: white;">Dark Slate Blue #483D8B</div>
+
+        
+        <!-- Azules -->
+        <div style="background-color: MidnightBlue; color: white;">Midnight Blue #191970</div>
+        <div style="background-color: Navy; color: white;">Navy #000080</div>
+        <div style="background-color: DarkBlue; color: white;">Dark Blue #00008B</div>
+        <div style="background-color: MediumBlue; color: white;">Medium Blue #0000CD</div>
+        <div style="background-color: Blue; color: white;">Blue #0000FF</div>
+        <div style="background-color: RoyalBlue;">Royal Blue #4169E1</div>
+        <div style="background-color: CornflowerBlue;">Cornflower Blue #6495ED</div>
+        <div style="background-color: LightSkyBlue;">Light Sky Blue #87CEFA</div>
+        <div style="background-color: SkyBlue;">Sky Blue #87CEEB</div>
+        <div style="background-color: SteelBlue;">Steel Blue #4682B4</div>
+        <div style="background-color: LightSteelBlue;">Light Steel Blue #B0C4DE</div>
+        <div style="background-color: Lavender;">Lavender #E6E6FA</div>
+        <div style="background-color: LightBlue;">Light Blue #ADD8E6</div>
+        <div style="background-color: PowderBlue;">Powder Blue #B0E0E6</div>
+        <div style="background-color: LightCyan;">Light Cyan #E0FFFF</div>
+        <div style="background-color: MintCream;">Mint Cream #F5FFFA</div>
+        <div style="background-color: PaleTurquoise;">Pale Turquoise #AFEEEE</div>
+        <div style="background-color: DodgerBlue;">Dodger Blue #1E90FF</div>
+        <div style="background-color: DeepSkyBlue;">Deep Sky Blue #00BFFF</div>
+        <div style="background-color: Cyan;">Cyan / Aqua #00FFFF</div>
+
+        
+        <!-- Verdes azulados -->
+        <div style="background-color: Aquamarine;">Aquamarine #7FFFD4</div>
+        <div style="background-color: Turquoise;">Turquoise #40E0D0</div>
+        <div style="background-color: DarkTurquoise;">Dark Turquoise #00CED1</div>
+        <div style="background-color: CadetBlue; color: white;">Cadet Blue #5F9EA0</div>
+        <div style="background-color: LightSeaGreen;">Light Sea Green #20B2AA</div>
+        <div style="background-color: DarkCyan; color: white;">Dark Cyan #008B8B</div>
+        <div style="background-color: Teal; color: white;">Teal #008080</div>
+        <div style="background-color: MediumTurquoise;">Medium Turquoise #48D1CC</div>
+        <div style="background-color: MediumAquaMarine;">Medium AquaMarine #66CDAA</div>
+        <div style="background-color: MediumSeaGreen;">Medium Sea Green #3CB371</div>
+        <div style="background-color: SeaGreen; color: white;">Sea Green #2E8B57</div>
+        <div style="background-color: MediumSpringGreen;">Medium Spring Green #00FA9A</div>
+        <div style="background-color: SpringGreen;">Spring Green #00FF7F</div>
+        <div style="background-color: Azure;">Azure #F0FFFF</div>
+        <div style="background-color: AliceBlue;">Alice Blue #F0F8FF</div>
+        
+        <!-- Verdes -->
+        <div style="background-color: DarkSeaGreen;">Dark Sea Green #8FBC8F</div>
+        <div style="background-color: HoneyDew;">Honey Dew #F0FFF0</div>
+        <div style="background-color: LemonChiffon;">Lemon Chiffon #FFFACD</div>
+        <div style="background-color: PaleGoldenRod;">Pale Golden Rod #EEE8AA</div>
+        <div style="background-color: Khaki;">Khaki #F0E68C</div>
+        <div style="background-color: GreenYellow;">Green Yellow #ADFF2F</div>
+        <div style="background-color: PaleGreen;">Pale Green #98FB98</div>
+        <div style="background-color: LightGreen;">Light Green #90EE90</div>
+        <div style="background-color: Chartreuse;">Chartreuse #7FFF00</div>
+        <div style="background-color: LawnGreen;">Lawn Green #7CFC00</div>
+        <div style="background-color: YellowGreen;">Yellow Green #9ACD32</div>
+        <div style="background-color: Lime;">Lime #00FF00</div>
+        <div style="background-color: #32cd32;">Lime Green #32CD32</div>
+        <div style="background-color: Green; color: white;">Green #008000</div>
+        <div style="background-color: DarkGreen; color: white;">Dark Green #006400</div>
+        <div style="background-color: ForestGreen; color: white;">Forest Green #228B22</div>
+        <div style="background-color: DarkOliveGreen; color: white;">Dark Olive Green #556B2F</div>
+        <div style="background-color: OliveDrab;">Olive Drab #6B8E23</div>
+        <div style="background-color: Olive;">Olive #808000</div>
+        <div style="background-color: DarkKhaki;">Dark Khaki #BDB76B</div>
+        
+        <!-- Marrones -->
+        <div style="background-color: Beige;">Beige #F5F5DC</div>
+        <div style="background-color: PapayaWhip;">Papaya Whip #FFEFD5</div>
+        <div style="background-color: Bisque;">Bisque #FFE4C4</div>
+        <div style="background-color: Moccasin;">Moccasin #FFE4B5</div>
+        <div style="background-color: NavajoWhite;">Navajo White #FFDEAD</div>
+        <div style="background-color: SandyBrown;">Sandy Brown #F4A460</div>
+        <div style="background-color: Chocolate;">Chocolate #D2691E</div>
+        <div style="background-color: Cornsilk;">Cornsilk #FFF8DC</div>
+        <div style="background-color: FloralWhite;">Floral White #FFFAF0</div>
+        <div style="background-color: Ivory;">Ivory #FFFFF0</div>
+        <div style="background-color: Linen;">Linen #FAF0E6</div>
+        <div style="background-color: OldLace;">Old Lace #FDF5E6</div>
+        <div style="background-color: SeaShell;">Sea Shell #FFF5EE</div>
+        <div style="background-color: AntiqueWhite;">Antique White #FAEBD7</div>    
+        <div style="background-color: Wheat;">Wheat #F5DEB3</div> 
+        <div style="background-color: BurlyWood;">Burly Wood #DEB887</div>
+        <div style="background-color: Tan;">Tan #D2B48C</div>
+        <div style="background-color: DarkGoldenRod; color: white;">Dark Golden Rod #B8860B</div>
+        <div style="background-color: GoldenRod;">Golden Rod #DAA520</div>           
+        <div style="background-color: Peru;">Peru #CD853F</div>
+        <div style="background-color: Sienna;">Sienna #A0522D</div>
+        <div style="background-color: SaddleBrown; color: white;">Saddle Brown #8B4513</div>
+        <div style="background-color: RosyBrown;">Rosy Brown #BC8F8F</div>
+        <div style="background-color: Maroon; color: white;">Maroon #800000</div>
+
+      </div>  
+    </details>
+  </main>
+  
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../styles/styles.css">
+  
+  <title>Tablas</title> 
+  <meta name="description" content="Elemento HTML para hacer tablas"> 
+  <!-- Estilos para que los ejemplos de tablas sean más visuales -->
+  <style>
+    .amarillo {
+      background-color: yellow;
+    }
+    .naranja {
+      background-color: orange;
+    }
+    .tstyles thead {
+      background-color: cornflowerblue;
+    }
+    .tstyles tbody {
+      background-color: white;
+    }
+    .tstyles tfoot {
+      background-color: greenyellow;
+    }
+    .propiedades table, .propiedades tr, .propiedades th, .propiedades td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    .propiedades table {
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+    .tcol th:nth-child(even), .tcol td:nth-child(even) {
+      background-color: wheat;
+    }
+    .trow tr:nth-child(odd) {
+      background-color: wheat;
+    }
+  </style>
+
+</head>
+<body>
+
+  <header>
+    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <hgroup>
+      <h1>Tablas</h1>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+
+    <h2>Elementos HTML para tablas</h2>
+    <details>
+      <summary>table</summary>
+      <p>contiene toda la tabla.</p>
+    </details>
+    <details>
+      <summary>caption</summary>
+      <p>Da un título a la tabla que se colocará arriba centrado.</p>
+    </details>
+    <details>
+      <summary>tr</summary>
+      <p>Table row. Contiene al grupo de celdas que forman una fila.</p>
+    </details>
+    <details>
+      <summary>th</summary>
+      <p>Table header. Se usa en lugar del td cuándo el contenido es un encabezado, así es más fácil dar estilos diferentes</p>
+    </details>
+    <details>
+      <summary>td</summary>
+      <p>Table data. Va el contenido. El contenido puede ser cualquier cosa, un enlace, una imagen, otra tabla, etc.</p>
+    </details>
+
+    <div class="code col2">
+      <table>table
+        <caption>caption</caption>
+        <tr>
+          <th>th</th>
+          <th>th</th>
+          <th>th</th>
+          <th>th</th>
+        </tr>
+        <tr>
+          <td>td</td>
+          <td>td</td>
+          <td>td</td>
+          <td>td</td>
+        </tr>
+        <tr>
+          <td>td</td>
+          <td>td</td>
+          <td>td</td>
+          <td>td</td>
+        </tr>
+        <tr>
+          <td>td</td>
+          <td>td</td>
+          <td>td</td>
+          <td>td</td>
+        </tr>
+      </table>
+      <div class="code" style="margin-top: 15px; background-color: black; color: white;">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">table </span> 
+        <span class="gris">></span> table <br>
+  
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">caption </span> 
+        <span class="gris">></span> caption
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">caption </span> 
+        <span class="gris">/></span> <br> 
+  
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">tr </span> 
+        <span class="gris">></span> <br>
+        
+        <span class="gris nieto">&lt;</span> 
+        <span class="etiqueta">th </span> 
+        <span class="gris">></span> th
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">th </span> 
+        <span class="gris">/></span> <br>
+        <span  style="margin-left: 30px;">...</span> <br>
+        
+        <span class="gris hijo">&lt;/</span> 
+        <span class="etiqueta">tr </span> 
+        <span class="gris">></span> <br>
+  
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">tr </span> 
+        <span class="gris">></span> <br>
+        
+        <span class="gris nieto">&lt;</span> 
+        <span class="etiqueta">td </span> 
+        <span class="gris">></span> td
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">td </span> 
+        <span class="gris">/></span> <br>
+        <span  style="margin-left: 30px;">...</span> <br>
+        
+        <span class="gris hijo">&lt;/</span> 
+        <span class="etiqueta">tr </span> 
+        <span class="gris">></span> <br>      
+  
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">table </span> 
+        <span class="gris">></span> 
+          
+      </div>
+    </div>
+
+    <h2>Elementos HTML que agrupan celdas</h2>
+    <details>
+      <summary>colgroup</summary>
+      <p>Para seleccionar columnas. Sólo pueden afectar los siguientes estilos: width, visibility, background y border.</p>
+      <ul>
+        <li><strong>col: </strong>va dentro de un colgroup. Es dónde se define el estilo a aplicar y el número de celdas y dirección afectadas.</li>
+      </ul>
+      <div class="code">
+        <p>Ejemplo de colgroup</p>
+        <p>Dos columnas de amarillo y otras dos en naranja.</p>
+        <table>
+          <colgroup>
+            <col />
+            <col span="2" class="amarillo" />
+            <col span="2" class="naranja" />
+          </colgroup>
+          <tr>
+            <td></td>
+            <th colspan="2" scope="col">Amarillo</th>
+            <th colspan="2" scope="col">Naranja</th>
+          </tr>
+          <tr>
+            <th scope="row">Frutas</th>
+            <td>Limón</td>
+            <td>Melón</td>
+            <td>Naranja</td>
+            <td>Mandarina</td>
+          </tr>
+        </table>
+        <div class="code black" style="margin-top: 15px;">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">table </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">colgroup </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">col </span> 
+          <span class="gris">/></span> <br>
+          
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">col </span> 
+          <span class="atributo">span</span> =
+          <span class="valor">"2"</span>
+          <span class="atributo"> class</span> =
+          <span class="valor">"amarillo"</span>
+          <span class="gris">/></span> <br>
+          
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">col </span> 
+          <span class="atributo">span</span> =
+          <span class="valor">"2"</span>
+          <span class="atributo"> class</span> =
+          <span class="valor">"naranja"</span>
+          <span class="gris">/></span> <br>
+
+          <span class="gris hijo">&lt;/</span> 
+          <span class="etiqueta">colgroup </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">tr </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">th </span> 
+          <span class="gris">></span>
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">th </span> 
+          <span class="gris">/></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">th </span> 
+          <span class="atributo">colspan</span> =
+          <span class="valor">"2"</span>
+          <span class="atributo"> scope</span> =
+          <span class="valor">"col"</span>
+          <span class="gris">></span> 
+          Amarillo 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">th</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">th </span> 
+          <span class="atributo">colspan</span> =
+          <span class="valor">"2"</span>
+          <span class="atributo"> scope</span> =
+          <span class="valor">"col"</span>
+          <span class="gris">></span> 
+          Naranja 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">th</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;/</span> 
+          <span class="etiqueta">tr </span> 
+          <span class="gris">></span> <br>  
+          
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">tr </span> 
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">th </span> 
+          <span class="atributo"> scope</span> =
+          <span class="valor">"row"</span>
+          <span class="gris">></span> 
+          Frutas 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">th</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">td </span>
+          <span class="gris">></span> 
+          Limón 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">td</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">td </span>
+          <span class="gris">></span> 
+          Melón 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">td</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">td </span>
+          <span class="gris">></span> 
+          Naranja 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">td</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris nieto">&lt;</span> 
+          <span class="etiqueta">td </span>
+          <span class="gris">></span> 
+          Mandarina 
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">td</span>
+          <span class="gris">></span> <br>
+
+          <span class="gris hijo">&lt;/</span> 
+          <span class="etiqueta">tr </span> 
+          <span class="gris">></span> <br>      
+
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">table </span> 
+          <span class="gris">></span> 
+            
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>thead</summary>
+      <p>Engloba lo que aparezca dentro, generalmente encabezados.</p>
+    </details>
+    <details>
+      <summary>tbody</summary>
+      <p>Engloba lo que aparezca dentro, generalmente contenidos. Es el valor por defecto de todas las tablas ¡cuidado! al dar estilos a esta etiqueta general porque se aplicará en todas las tablas.</p>
+    </details>
+    <details>
+      <summary>tfoot</summary>
+      <p>Engloba lo que aparezca dentro, generalmente el pie.</p>
+    </details>
+    <p>thead tbody tfoot: Especialmente pensado para ser aplicado en tablas grandes en las que se busca dejar fijos los encabezados y el pie mientras el cuerpo se puede escrolear.</p>
+    <div class="code">
+      <p>Ejemplo de <span style="background-color: cornflowerblue;">thead</span>, <span style="background-color: white;">tbody</span>, <span style="background-color: greenyellow;">tfoot</span></p>
+      <table class="tstyles">
+        <thead>
+          <tr>
+            <th>Encabezado</th>
+            <th>Encabezado</th>
+            <th>Encabezado</th>
+            <th>Encabezado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Datos</td>
+            <td>Datos</td>
+            <td>Datos</td>
+            <td>Datos</td>
+          </tr>
+          <tr>
+            <td>Datos</td>
+            <td>Datos</td>
+            <td>Datos</td>
+            <td>Datos</td>
+          </tr>
+          <tr>
+            <td>Datos</td>
+            <td>Datos</td>
+            <td>Datos</td>
+            <td>Datos</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Pie</td>
+            <td>Pie</td>
+            <td>Pie</td>
+            <td>Pie</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <h2>Atributos de tabla</h2>
+    <h3>Para elementos colgroup</h3>
+    <p><strong>span: </strong>nº de columnas a las que aplicará el estilo definido en el colgroup</p>
+    <h3>Para el resto</h3>
+    <details>
+      <summary>class</summary>
+      <p>La clase que se aplicará en las columnas elegidas</p>
+    </details>
+    <details>
+      <summary>colspan</summary>
+      <p>nº de columnas de ancho que ocupara la celda</p>
+    </details>
+    <details>
+      <summary>rowspan</summary>
+      <p>nº de filas de alto que ocupara la celda</p>
+    </details>
+    <details>
+      <summary>scope</summary>
+      <p>No es nada visible. Da información a la máquina sobre que la celda en cuestión es un encabezado. En función de sus posibles valores (col / row / colgroup / rowgroup ) le indicará que los datos a los que encabeza se disponen en columna, en fila, en grupo de columnas, en grupo de filas, o en ambas direcciónes. Ej.: scope="col row"</p>
+    </details>
+    <details>
+      <summary>style</summary>
+      <p>Se puede controlar estilos pero también el ancho y alto de las celdas. Si se añaden valores de porcentaje % se ajustará al valor que tenga su padre.</p>
+    </details>
+
+    <h2>Propiedades CSS para tablas</h2>
+    <p>Las tablas html no son nada sin estilos css. Estos son los que le aportan claridad y legibilidad. Existen varias propiedades css fundamentales a la hora de diseñar tablas.</p>
+    <details>
+      <summary>border-collapse</summary>
+      <p>Hace que los bordes converjan en uno solo y no quede la tabla con dobles bordes.</p>
+      <div class="code">
+        <div style="display: flex;" class="propiedades">
+          <table style="border-collapse: collapse; width: 200px;">
+            <caption>Border collapse</caption>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <table style="width: 200px;">
+            <caption>Border normal</caption>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>    
+        <div class="code black">  
+          <span class="clase">table {</span>   
+          <span class="atributo">border-collapse</span> :
+          <span class="valor">collapse</span> ;
+          <span class="clase">}</span> 
+        </div> 
+      </div>
+    </details>
+
+    <details>
+      <summary>border-spacing</summary>
+      <p>Define el espacio que quedará entre las celdas y el contenedor</p>
+      <div class="code">
+        <div style="display: flex;" class="propiedades">
+          <table style="width: 200px;">
+            <caption>Border normal</caption>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+          <table style="width: 200px; border-spacing: 30px;">
+            <caption>Border spacing</caption>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>    
+        <div class="code black">  
+          <span class="clase">table {</span>   
+          <span class="atributo">border-spacing</span> :
+          <span class="valor">30px</span> ;
+          <span class="clase">}</span> 
+        </div>     
+      </div>
+    </details>
+
+    <details>
+      <summary>:nth-child(...) selector par o inpar (even - odd)</summary>
+      <p>Para darles estilo y que la tabla muestre con más claridad las diferentes filas o columnas.</p>
+      <div class="code propiedades">
+        <p>Ejemplo de columna par= even</p>
+        <div class=" tcol" style="display: flex;">
+          <table style="width: 200px;">
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div> 
+        <div class="code black">  
+          <span class="clase">th:nth-child(even)</span>   ,
+          <span class="clase"> td:nth-child(even) {</span>   
+          <span class="atributo">background-color</span> :
+          <span class="valor">wheat</span> ;
+          <span class="clase">}</span> 
+        </div>   
+        <p>Ejemplo de fila impar=odd</p>     
+        <div class=" trow" style="display: flex;">
+          <table style="width: 200px;">
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div> 
+        <div class="code black">  
+          <span class="clase">tr:nth-child(odd) {</span>   
+          <span class="atributo">background-color</span> :
+          <span class="valor">wheat</span> ;
+          <span class="clase">}</span> 
+        </div>  
+        <p>Ejemplo de damero</p>
+        <div class=" trow tcol" style="display: flex;">
+          <table style="width: 200px;">
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div> 
+        <div class="code black">  
+          <span class="clase">tr:nth-child(odd)</span> ,
+          <span class="clase">th:nth-child(even)</span>  ,
+          <span class="clase"> td:nth-child(even) {</span>           
+          <span class="atributo">background-color</span> :
+          <span class="valor">wheat</span> ;
+          <span class="clase">}</span> 
+        </div>            
+      </div>
+    </details>
+
+  </main>
+
+</body>
+</html>

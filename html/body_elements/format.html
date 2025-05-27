@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../styles/styles.css">
+  
+  <title>Formatos de texto</title>
+  <meta name="description" content="Marcado de texto que afecta a su aspecto">
+
+</head>
+<body>
+
+  <header>
+    <a class="button back" href="../body.html">Volver a la lista de elementos HTML</a>
+    <hgroup>
+      <h1>Formatos de texto</h1>
+      <p>Existen diferentes marcados de texto para cambiar el aspecto del texto.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2>Elementos HTML para formato de texto</h2>
+    <details>
+      <summary>b</summary>
+      <p>bold. texto en negrita.</p>
+    </details>
+
+    <details>
+      <summary>strong</summary>
+      <p>Como la negrita, pero significa palabra importante para los motores de búsqueda.</p>
+    </details>
+
+    <details>
+      <summary>i</summary>
+      <p>Italics. Cursiva. Se suele utilizar para palabras extrangeras, terminología técnica, el nombre de un barco, etc.</p>
+    </details>
+
+    <details>
+      <summary>em</summary>
+      <p><em>Emfasis. Cursiva, pero paa los lectores de texto marcará una pronunciación enfática.</em></p>
+    </details>
+
+    <details>
+      <summary>mark</summary>
+      <p><mark>marker. Cómo subrayado por un fosforito.</mark></p>
+    </details>
+
+    <details>
+      <summary>small</summary>
+      <p><small>Texto más pequeñito.</small></p>
+    </details>
+
+    <details>
+      <summary>del</summary>
+      <p><del>delete. Texto tachado porque se entiende como eliminado del párrafo.</del></p>
+    </details>
+
+    <details>
+      <summary>s</summary>
+      <p>Indica que un texto ya no es correcto, está desactualizado, no es relevante, no es adecuado, etc. Aparece el texto tachado. Es algo así como el del, pero su semántica indica un matíz diferente.</p>
+    </details>
+
+    <details>
+      <summary>ins</summary>
+      <p><ins>inserted. Texto añadido, algo así como el del, pero en vez de ser rechazado del texto, este es un añadido. Se representa subrayando.</ins></p>
+    </details>
+
+    <details>
+      <summary>sub</summary>
+      <p><sub>subtext. Texto que se coloca por debajo del texto.</sub></p>
+    </details>
+
+    <details>
+      <summary>sup</summary>
+      <p><sup>suppertext. Texto que se coloca por encima del texto.</sup></p>
+    </details>
+
+    <details>
+      <summary>span</summary>
+      <p>Elemento inline que se suele utilizar para aplicar estilos diferentes sólo a una <span style="color: coral;">parte del</span> texto.</p>
+    </details>
+
+    <details>
+      <summary>pre</summary>
+      <p><pre>preformatted. Texto que
+      respeta     los espacios que 
+  se añadan   o saltos    de
+
+      línea tal cual se escriben en el código.
+      Y con fuente monoscope
+    </pre></p>
+    </details>
+
+    <details>
+      <summary>code</summary>
+      <p><code>Presenta el código en monoscope, como pre, pero sin respetar saltos de línea ni espacios en blanco. Se utiliza para mostrar código del ordenador.</code></p>
+    </details>
+
+    <details>
+      <summary>kbd</summary>
+      <p>Keyboad. Fuente monoscope y sirve para indicar atajos de teclado.</p>
+    </details>
+
+    <details>
+      <summary>bdo</summary>
+      <p>bi-dimensional override. Dirección de escritura.</p>
+      <div class="code">
+        <bdo style="font-weight: bold;" dir="rtl">ejemplo de frase con la dirección cambiada.</bdo>
+        <div class="code black">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">bdo </span> 
+          <span class="atributo">dir</span> =
+          <span class="valor">"rtl"</span>
+          <span class="gris">></span> ejemplo de fra...
+
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">bdo </span> 
+          <span class="gris">></span> 
+        </div> 
+        <p>rtl = right to left , ltr = left to right </p>   
+      </div>
+    </details>
+
+    <details>
+      <summary>samp</summary>
+      <p>Sample output. Resultado de programa de ordenador. Algo así como la etiqueta que indica que un contenido es el resultado de el cálculo o funcionalidad de la máquina. También se ve como monoscope.</p>
+    </details>
+
+    <details>
+      <summary>var</summary>
+      <p>variable. Para indicar un contenido que corresponde a una variable. Se muestra en cursiva.</p>
+    </details>
+
+    <h2>Caracteres reservados</h2>
+    <div class="code">
+      <p>Ej (&lt;, >) </p>
+      <p>Para poder usarlos como texto existen las <strong>entidades</strong></p>
+      <ul>
+        <li>&entity_name; EJ.: &<strong></strong>lt; =&lt; </li>
+        <li>&#entity_number EJ.: &#<strong></strong>60; = &#60; </li>
+      </ul>
+      <a href="https://www.w3schools.com/charsets/ref_utf_math.asp" target="_blank">Lista de Entidades símbolos</a>
+      <a href="https://www.w3schools.com/charsets/ref_utf_greek.asp" target="_blank">Lista de Entidades letras griegas</a>
+      <a href="https://www.w3schools.com/charsets/ref_utf_currency.asp" target="_blank">Símbolos económicos</a>
+      <a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp" target="_blank">Flechas</a>
+      <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp" target="_blank">Miscelanea</a>
+      <a href="https://www.w3schools.com/charsets/ref_emoji_smileys.asp" target="_blank">Ejomis</a>
+      <a href="https://www.w3schools.com/charsets/ref_utf_basic_latin.asp" target="_blank">UTF8</a>
+      <p>ASCII fue el primer estandar de codificación de símbolos.</p>
+    </div>
+
+    <h2>Otros Elementos poco usados</h2>
+    <details>
+      <summary>bdi</summary>
+      <p>bi-directional Isolation. Es útil para otros alfabetos que se escriben de derecha a izquierda y siguen otras normas. Por ejemplo en el alfabeto árabe se colocan en lugares diferentes a los esperados. Para controlar esto se usa el alfabeto entre etiquetas bdi. </p>
+      <p>Ej sin y con bdi: User إيان: 90 points  ≠ User <bdi>إيان</bdi>: 90 points</p>
+    </details>
+
+    <details>
+      <summary>ruby</summary>
+      <p>Normalmente utilizado en japonés, es una etiqueta que contiene un texto que va acompañado de una aclaración sobre cómo se pronuncia. <br> Los caracteres de la pronunciación van entre etiqutas "rt"</p>
+      <ruby>
+      漢 <rt> ㄏㄢˋ </rt>
+      </ruby>
+      <p>Existe otra etiqueta relacionada con esta que es "rp" que sirve para añadir los símbolos de paréntesis alrededor de los caracteres de pronunciación para los casos en los que el navegador no interpreta la etiqueta rt. Así se expresa de otra manera que se trata de la pronunciación del kanji.</p>
+    </details>
+
+    <details>
+      <summary>u</summary>
+      <p>unarticulated. Es algo así como texto diferente del texto normal. Normalmente texto mal escrito o nombres propios en chino.</p>
+    </details>
+
+  </main>
+  
+</body>
+</html>

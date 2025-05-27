@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <title>Accesibilidad web</title>
+  <meta name="description" content="Buenas prácticas de accesibilidad web">
+</head>
+<body>
+
+  <header>
+    <a class="button back" href="index.html">Volver al Índice</a>
+    <hgroup>
+      <h1>Accesibilidad web</h1>
+      <p>Lista de buenas prácticas de accesibilidad.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+
+    <details>
+      <summary>elementos con semántica: </summary>
+      <p>Evitar usar elementos html vacíos de semántica como "div" o "span" y utilizar otros que aportan más significado, por ejemplo "article" "section" "strong".</p>
+    </details>
+    
+    <details>
+      <summary>Puntos de referencia: </summary>
+      <p>Gracias a los elementos semánticos, un lector de pantalla puede identificar diferentes zonas en base a algunos puntos de referencia. Por ejemplo: una etiqueta main permite relacionarlo con un tipo de información principal, una etiqueta nav con <strong>aria-label</strong>="social" permite identificar un menú de redes sociales fácilmente.</p>
+    </details>
+      
+    <details>
+      <summary>button y a: </summary>
+      <p>Elegir el elemento button cuándo al clickar se desarrolle una acción que no sea navegar entre secciones. Elegir el elemento a cuándo se trate de navegar entre secciones.</p>
+    </details>    
+    
+    <details>
+      <summary>Rol, nombre y valor: </summary>
+      <p>Los elementos interactivos deben responder estos tres conceptos. Para explicarlo con ejemplos:</p>
+      <ul>        
+        <li><p><strong>rol: </strong>Si por algún motivo no se puede utilizar el elemento html con la semántica adecuada se puede añadir el atributo "role" para ayudar a los lectores de pantalla. Por ejemplo, no se puede utiliar un button entonces en la etiqueta a se añade el atributo "role="button".</p></li>        
+        <li><p><strong>nombre: </strong>Los elementos interactivos tienen que tener un nombre, que no se refiere al atributo name, sino que el propio contenido del elemento HTML sirve como nombre. El lector de pantalla lee el contenido y sirve para darle un nombre a ese elemento en cuestión. En caso de que el contenido de la etiqueta no sea posible se puede añadir el atributo "aria-label" para definir un nombre mejor.</p></li>        
+        <li><p><strong>valor: </strong>No se trata del atributo "value" sino de estados de los elementos interactivos que son importantes para la buena comprension de los lectores de pantalla. Por ejemplo, en un accordion el valor sería definir si el accordion en cuestión está o no desplegado. En este caso se utilizaría un atributo "aria-expanded="false"" para indicar al lector de pantalla que ese accordion no está desplegado y guarda más información dentro.</p></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Contraste en los colores: </summary>
+      <p>En la web <a href="https://www.siegemedia.com/contrast-ratio">contrast-ratio</a> se puede saber el valor de contraste que existe entre dos colores. Se aconseja que el contraste de fondo y texto sea de entre 4.5 y 7. Logos, imágenes y botones, que tenga un contraste en torno a los 5 puntos y los cambios por hover, focus o active que tengan un contraste de más de 3.</p>
+    </details>
+    
+    <details>
+      <summary>No apoyarse en el color: </summary>
+      <p>Evitar que el color sea el único canal de comunicación. En caso de que la pantalla sea en escala grises, un enlace sin subrayado se verá igual que el texto normal. Para esto es útil respetar los estilos por defecto, por ejemplo los subrayados. Añadir texto explicativo, iconos y símbolos en lugar de sólo color.</p>
+    </details>
+    
+    <details>
+      <summary>Imágenes decorativas: </summary>
+      <p>Algunas imágenes dentro de la web cumplen una función meramente decorativa. Si la puedes eliminar sin que la web pierda sentido, es decorativa. Para que el lector de pantalla al entienda como imagen que se puede ignorar es importante ponerle un alt vacío. Si no se pone ningún alt, el lector lee el nombre del archivo, que no es lo que interesa. Para elementos que no pueden llevar alt se utiliza "aria-hidden="true"".</p>
+    </details>
+    
+    <details>
+      <summary>El texto en los alt: </summary>
+      <p>En algunos casos describir lo que se ve en la imagen es lo útil, pero hay ocasiones, como por ejemplo en los iconos que decir que un icono es el logo de la compañía no dice mucho, pero describirlo como Home de la compañía sí aporta información útil al usuario. Por lo tanto el alt se puede describir como descripción del elemento o mejor aún, coma la intención y el propósito de que ese elemento esté ahí.</p>
+    </details>
+    
+    <details>
+      <summary>Estado de los enlaces: </summary>
+      <p>En CSS las pseudo-clases de los estados pueden ser: Unvisited, visited, hover, active y focus. Estos estados del enlace pueden ayudar al usuario a recordar lo que ya han visitado y a poder pulsar el botón adecuado.</p>
+    </details>
+    
+    <details>
+      <summary>Jerarquía: </summary>
+      <p>Los lectores de pantalla ofrecen opciones para resumir los contenidos de una web en base a "landmarks" que es algo así como dividir por el esqueleto de la web (header, body, aside, section, article, footer) o a través de los "headings" los títulos. Es importante cuidar la jerarquía de etiquetas de título, sin que esto afecte a temas de diseño. Es decir, una página tiene que tener un "h1". Si por temas de diseño no se quiere incluir en el diseño este título, no hay problema se puede añadir un título en código que sea invisible en pantalla. Por ejemplo es posible añadir una clase CSS "sr-only" que significa, screen reader only. Es decir, esa etiqueta sólo sirve para que lo lea el lector de pantalla. Así se puede cuidar la jerarquía de títulos sin afectar al diseño. Esta buena práctica de organización de contenidos ayuda a ahorrar tiempo a los usuarios que usan el lector de pantalla, permitíendoles saltar contenidos que no les interesa y haciéndose un idea mental general del contenido de toda la página.</p>
+    </details>
+    
+    <details>
+      <summary>No eliminar el focus: </summary>
+      <p>La propiedad CSS otuline:0; elimina el focus y elimina la posibilidad de accesibilidad para personas que no pueden utilizar el ratón. overflow:hidden; también elimina la posibilidad de hacer focus cuándo el elemento padre es más pequeño que su contenido. Se pueden editar los estilos del focus con las clases CSS: outline-style, outline-color, outline-width, outline-offset y outline.</p>
+    </details>
+    
+    <details>
+      <summary>Opción de saltar secciones: </summary>
+      <p>Existe una práctica para acelerar el proceso de ir al contenido principal de la web saltando secciones de navegación. Se trata de crear en el "header" un marcador invisible que haga saltar la pantalla hacia el contenido principal de la web.</p>
+    </details>
+
+    <details>
+      <summary>Fromularios: </summary>
+        <p>Buenas prácticas en los formularios:</p>
+      <ul>
+        <li><p><strong>Títulos: </strong>Siempre añadir un título, ya sea con la etiqueta label, legend o el atributo aria-label. En la etiqueta label el for tiene que ser el mismo nombre que el id del input para relacionarlos y poder así hacer que su área sea clicable.</p></li>
+        <li><p><strong>Campos obligatorios: </strong>Además de añadir el atributo "required" también utlizar "aria-required="true"".</p></li>
+        <li><p><strong>Autocompletar: </strong>El atributo "autocomplete" con los diferentes valores que permite, email, vda-day, bday-month, etc, permite al navegador encontrar rápidamente la información a cumplimentar.</p></li>
+        <li><p><strong>Mensajes de error: </strong>Tienen que existir mensajes que expliquen los errores con palabras y siendo lo más precisos posible. Estarán cerca del campo con error y se pueden añadir efectos visuales. El campo y su error tienen que estar vinculados a través del id del mensaje de error que tendrá un "role="alert". Ese id se relaciona en el input utilizando "aria-describedby" y también "aria-invalid="true"" para indicar al lector de pantalla que ese campo no es válido y no permite el envío del formulario.</p></li>
+      </ul>    
+    </details>
+  
+    <details>
+      <summary>Agrandamientos: </summary>
+      <p>Para los usuarios que necesitan hacer el texto más grande es necesario que en vez de trabajar con unidades como px, se utilicen unidades relativas como rem. Intentar no limitar los espacios de texto para que en caso de agrandar el tamaño las palabras no se oculten o pisen entre sí.</p>
+    </details>
+  </main>
+
+
+  
+ 
+
+  
+  
+
+  </ul>
+</body>
+</html>

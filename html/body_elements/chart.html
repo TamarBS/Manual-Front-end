@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../styles/styles.css">
+  
+  <title>Gráficas</title> 
+  <meta name="description" content="Elementos HTML que sirven cómo gráficos"> 
+</head>
+<body>
+
+  <header>
+    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <hgroup>
+      <h1>Gráficas</h1>
+      <p>Elementos HTML que sirven como gráficos para visualizar información.</p>
+      <hr>
+    </hgroup> 
+  </header>
+
+  <main>
+    <details>
+      <summary>progress</summary>
+      <p>Crea una barra de progreso. Tiene los atributos "value" y "max". Siempre acompañar de la etiquta label como buena práctica de accesibilidad.</p>
+      <div class="code">
+        <label for="exprogress">Barra de progreso: </label>
+        <progress id="exprogress" value="32" max="100"></progress>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">progress</span>
+          <span class="atributo">value</span>
+          =
+          <span class="valor">"32"</span>
+          <span class="atributo">max</span>
+          =
+          <span class="valor">"100"</span>
+          <span class="gris">></span>
+          32%
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">progress</span>
+          <span class="gris">></span>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>meter</summary>
+      <p>Crea una barra de progreso pero no se debe utilizar para conceptos de barra de progreso. Es más bien una gráfica que muestra datos dentro de un rango. Por ejemplo, la cantidad de memoria Ram del ordenador.</p>
+      <div class="code">
+        <meter value="35" max="100"></meter>
+      </div>
+    </details>
+  </main>
+</body>
+</html>

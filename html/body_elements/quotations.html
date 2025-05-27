@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../styles/styles.css">
+
+  <title>Citas y anotaciones</title>
+  <meta name="description" content="Formas de indicar autoría y referencias externas">
+
+</head>
+
+<body>
+
+  <header>
+    <a class="button back" href="../body.html">Volver a la lista de elementos HTML</a>
+    <hgroup>
+      <h1>Citas y anotaciones</h1>
+      <p>Elementos que indican que el texto es una referencia externa de otro autor.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+
+    <details>
+      <summary>blockquote</summary>
+      <p>Una cita de varias líneas de texto. Los navegadores lo indentan.</p>
+      <div class="code">
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">For 60 years, WWF has worked to help people and
+          nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every
+          level, we collaborate with people around the world to develop and deliver innovative solutions that protect
+          communities, wildlife, and the places in which they live.</blockquote>
+        <div class="code black" style="margin-top: 15px;">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">blockquote </span>
+          <span class="atributo">cite</span> =
+          <span class="valor">"http://www.worldwildlife.org/who/index.html"</span>
+          <span class="gris">></span> For 60 years, WWF has wor...
+
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">blockquote </span>
+          <span class="gris">></span>
+
+        </div>
+      </div>      
+    </details>
+
+    <details>
+      <summary>q</summary>
+      <p>Pone <strong><q>comillas</q></strong>. Se utiliza para citar frases cortas y resaltar algunas palabras, caracteres, etc.</p>
+    </details>
+
+    <details>
+      <summary>abbr</summary>
+      <p>Indica al navegador que esa palabra es un acrónimo.</p>
+      <div class="code">
+        <p><abbr title="United States of America">USA</abbr></p>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">abbr </span>
+          <span class="atributo">title</span> =
+          <span class="valor">"United States of America"</span>
+          <span class="gris">></span> USA
+    
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">abbr </span>
+          <span class="gris">></span>
+        </div>
+      </div>
+    </details>
+
+    <details>
+      <summary>dfn</summary>
+      <p>Definition element. Se le coloca esta etiqueta al término que va a ser definido más adelante en el contenido.</p>
+      <div class="code black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">p</span>
+        <span class="gris">></span>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">dfn</span>
+        <span class="gris">></span>
+        HTML
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">dfn</span>
+        <span class="gris">></span>
+        es el lenguaje estandar de marcado de hipertexto para crear páginas web.
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">p</span>
+        <span class="gris">></span>
+      </div>
+    </details>
+
+    <details>
+      <summary>address</summary>
+      <p>define la información de contacto.</p>
+      <div class="code">
+        <address>
+          teléfono : xxxxxx <br>
+          dirección : calle xxxx
+        </address>
+      </div>
+    </details>
+
+    <details>
+      <summary>cite</summary>
+      <p>define el título de un trabajo, una obra, el título de un libro, etc. No el nombre del autor. Se
+    visualiza en cursiva. <cite style="font-weight: bold;">ejemplo de cite</cite></p>
+    </details>
+
+  </main>
+
+</body>
+</html>

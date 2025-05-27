@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../../styles/styles.css">
+  
+  <title>Plug-ins</title>
+  <meta name="description" content="Html plug-ins">
+</head>
+<body>
+  <header>
+    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <hgroup>
+      <h1>Plug-ins</h1>
+      <p>Permiten expandir las funcionalidades de una web incluyendo servicios como: gps, mapas, escaner de virus, verificaciones de banca, etc.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <details>
+      <summary>object</summary>
+      <p>Contenedor para plugins como: lectores de PDF, reproductores de Flash y para incluir Html(por ejemplo una lista que está en otro documento html), incluso imágenes.</p>
+      <div class="code black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">object</span>
+        <span class="atributo">width</span>
+        =
+        <span class="valor">"100%"</span>
+        <span class="atributo">height</span>
+        =
+        <span class="valor">"500px"</span>
+        <span class="atributo">data</span>
+        =
+        <span class="valor">"otro-archivo.html"</span>
+        <span class="gris">></span>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">object</span>
+        <span class="gris">></span>
+        <br>
+        <span class="comentario">&lt;-- este object mostraría el contenido de otro archivo html en ese espacio de ancho completo y 500px de alto --></span>
+      </div>
+      <p>Puede contener la etiqueta "param" que permite los atributos "name" y "value" para, por ejemplo hacer que un audio se reproduzca en el momento en que se carga.</p>
+    </details>
+
+    <details>
+      <summary>embed</summary>
+      <p>Embedded object. No tiene etiqueta de cierre. Es anticuado, ya no aparece en HTML5. Sirve igual que el object, como contenedor.</p>
+    </details>
+  </main>
+  
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Head</title>
+  <meta name="description" content="Elementos HTML que van en el head">
+
+</head>
+<body>
+  
+  <header>
+    <a class="button back" href="../html.html">Volver a HTML</a>
+    <hgroup>
+      <h1>Elementos HTML propios del Head</h1>
+      <p>La etiqueta head tiene sus propios elementos HTML que no se utilizan en el body.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+
+    <h2>Ejemplo de un head con bastantes metadatos</h2>
+    <div class="code black">
+      <span class="gris">&lt;</span>
+        <span class="etiqueta">head</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">meta</span>
+        <span class="atributo">charset</span>
+        =
+        <span class="valor">"UTF-8"</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">meta</span>
+        <span class="atributo">name</span>
+        =
+        <span class="valor">"viewport"</span>
+        <span class="atributo">content</span>
+        =
+        <span class="valor">"width=device-width, initial-scale=1.0"</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">meta</span>
+        <span class="atributo">name</span>
+        =
+        <span class="valor">"keywords"</span>
+        <span class="atributo">content</span>
+        =
+        <span class="valor">"HTML, CSS, JavaScript"</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">meta</span>
+        <span class="atributo">name</span>
+        =
+        <span class="valor">"author"</span>
+        <span class="atributo">content</span>
+        =
+        <span class="valor">"Tamar Buelta"</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">meta</span>
+        <span class="atributo">name</span>
+        =
+        <span class="valor">"description"</span>
+        <span class="atributo">content</span>
+        =
+        <span class="valor">"Free Web manuals"</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">meta</span>
+        <span class="atributo">http-equiv</span>
+        =
+        <span class="valor">"refresh"</span>
+        <span class="atributo">content</span>
+        =
+        <span class="valor">"30"</span>
+        <span class="gris">></span>
+        <br>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">link</span>
+        <span class="atributo">rel</span>
+        =
+        <span class="valor">"stylesheet"</span>
+        <span class="atributo">href</span>
+        =
+        <span class="valor">"styles.css"</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">link</span>
+        <span class="atributo">rel</span>
+        =
+        <span class="valor">"icon"</span>
+        <span class="atributo">type</span>
+        =
+        <span class="valor">"image/x-icon"</span>
+        <span class="atributo">href</span>
+        =
+        <span class="valor">"/images/favicon.ico"</span>
+        <span class="gris">></span>
+        <br>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">title</span>
+        <span class="gris">></span>
+        Título del documento
+        <span class="gris hijo">&lt;/</span>
+        <span class="etiqueta">title</span>
+        <span class="gris">></span>
+        <br>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">base</span>
+        <span class="atributo">href</span>
+        =
+        <span class="valor">"https://www.w3schools.com/"</span>
+        <span class="atributo">target</span>
+        =
+        <span class="valor">"_blank"</span>
+        <span class="gris">></span>
+        <br>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">style</span>
+        <span class="gris">></span>
+        <br>
+        <span class="clase nieto">h1</span>
+        <span class="llave">{</span>
+        <span class="propiedad">color</span>
+        :
+        <span class="valorCss">red</span>
+        ;
+        <span class="llave">}</span>
+        <br>
+        <span class="clase nieto">.clase</span>
+        <span class="llave">{</span>
+        <span class="propiedad">background-color</span>
+        :
+        <span class="valorCss">blue</span>
+        ;
+        <span class="llave">}</span>
+        <br>
+        <span class="gris hijo">&lt;/</span>
+        <span class="etiqueta">style</span>
+        <span class="gris">></span>
+        <br>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">script</span>
+        <span class="gris hijo">></span>
+        <br>
+        <span class="etiqueta nieto">function</span>
+        <span class="funcion">myFunction</span>()
+        {
+        <br>
+        <span class="atributo biznieto">document</span>.
+        <span class="funcion">getElementById</span>(
+        <span class="valor">"demo"</span>).
+        <span class="atributo">innerHTML</span>
+        =
+        <span class="valor">"Paragraph changed."</span>;
+        }
+        <span class="gris hijo">&lt;/</span>
+        <span class="etiqueta">script</span>
+        <span class="gris hijo">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">noscript</span>
+        <span class="gris hijo">></span>
+        Lo sentimos, tu navegador no ejecuta JavaScript.
+        <span class="gris hijo">&lt;/</span>
+        <span class="etiqueta">noscript</span>
+        <span class="gris hijo">></span>
+        <br>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">head</span>
+        <span class="gris">></span>
+    </div>
+
+    <h2>Lista de Elementos HTML metadatos</h2>
+    <p>Los metadatos son datos que aportan datos a la página. Pueden ser datos sobre enlaces con otros documentos, sobre la forma de adaptar el contenido a un dispositivo, sobre la transcripción de caracteres, el modo de apertura de enlaces, etc.</p>
+    <details>
+      <summary>&lt;title>&lt;/title></summary>
+      <p>Elemento obligatorio en cada archivo. Título de la página y aparece en la pestaña del navegador. Importante para SEO. Será el texto por defecto en los marcadores y sirve para que los motores de búsqueda almacenen y organicen el mapa de la web.</p>
+    </details>
+    <details>
+      <summary>&lt;link>&lt;/link></summary>
+      <p>Enlaza el documento con otros documentos.</p>
+      <ul>
+        <li>  <p><strong>&lt;link rel="stylesheet" href="styles.css"></strong> Enlaza con una hoja de estilos llamado styles.css</p></li>
+        <li>  <p><strong>&lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"></strong> Enlaza con un favicon que se verá en la pestaña de la ventana. El favicon mide 16x16 con colores de alto contraste. Se pueden crear favicones online en webs como: <a href="https://www.favicon.cc">favicon.cc</a>. Se aconseja llamar al favicon 'favicon.ico'.</p></li>
+      </ul>
+    </details>
+    <details>
+      <summary>&lt;meta></summary>
+      <p>Metadata que no será visible en la pantalla pero es útil para navegadores.</p>
+      <ul>
+        <li><p><strong>&lt;meta charset="UTF-8"></strong> el set de caractéres </p></li>
+        <li><p><strong>&lt;meta name="keywords" content="HTML, CSS, JavaScript"></strong> define las palabras clave para motores de búsqueda.</p></li>
+        <li><p><strong>&lt;meta name="description" content="Free Web tutorials"></strong> una descripción de la web para motores de búsqueda</p></li>
+        <li><p><strong>&lt;meta name="author" content="Tamar Buelta"></strong> define el autor del documento</p></li>
+        <li><p><strong>&lt;meta http-equiv="refresh" content="30"></strong> que refresque el documento en 30 segundos.</p></li>
+        <li><p><strong>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"></strong> ayuda a que la web se vea bien en todos los dispositivos. Indica que el ancho será el ancho del dispositivo y que se aplicará un zoom adaptado. Sin este meta, la adaptación a móvil y tablet es peor. Mejora el responsive.</p></li>
+      </ul>
+    </details>
+    <details>
+      <summary>&lt;base></summary>
+      <p>Define la url base y el atributo 'target' que se aplicará a todos los enlaces en el documento.</p>
+    </details>
+    <details>
+      <summary>&lt;script>&lt;/script></summary>
+      <p>Permite ejecutar funciones de JavaScript que sólo apectarán a este documento.</p>
+      <p><strong>&lt;noscript>&lt;/noscript>:</strong> Se añade después del script para mostrar su contenido de texto en caso de que el JavaScript no cargue.</p>
+    </details>
+    <details>
+      <summary>&lt;style>&lt;/style></summary>
+      <p>Permite dar estilos CSS que sólo apectarán a este documento.</p>
+    </details>
+  </main>
+</body>
+</html>
