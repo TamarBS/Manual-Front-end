@@ -21,6 +21,38 @@
   </header>
 
   <main>
+
+    <h2>Sintáxis</h2>
+    <div class="code black">
+      <span class="clase">selector</span>
+      <span class="llave">{</span>
+      <span class="propiedad">propiedad</span>:
+      <span class="valorCss">valor</span>;
+      <span class="propiedad">propiedad</span>:
+      <span class="valorCss">valor</span>;
+      <span class="llave">}</span>
+    </div>
+    <details>
+      <summary>selector</summary>
+      <p>Se utiliza para encontrar el elemento HTML que se quiere afectar con estilos.</p>
+      <p><strong>Se pueden dividir en 5 categorías:</strong></p>
+      <ul>
+        <li><p><strong>simple: </strong>Selecciona en base a los atributos name (nombre de la etiqueta), id (#nombre del id) y class (.nombre de la clase).</p></li>
+        <li><p><strong>combinator: </strong>Seleccionan elementos en función a una relación específica.</p></li>
+        <li><p><strong>Pseudo-class: </strong>Selectores en base a ciertos estados.</p></li>
+        <li><p><strong>Pseudo-elements: </strong>Seleccionan una parte del elemento.</p></li>
+        <li><p><strong>Attribute: </strong>Selecciona elementos basado en su atributo o valor del atributo.</p></li>
+      </ul>
+      <div class="code">
+        <p>Ejemplos de selectores:</p>
+        <p><strong>.center {...} </strong>Afecta a todos los elementos con clase center.</p>
+        <p><strong>p.center {...} </strong>Afecta a los elementos p que tengan la clase center.</p>
+        <p><strong>* {} </strong>Selector universal. Afecta a todos los Elementos HTML.</p>
+        <p><strong>.center</strong></p>
+        <p><strong>h1, h2, h3 {...} </strong>Afectan los mismos estilos a los elementos h1, h2 y h3.</p>
+      </div>
+    </details>
+
     <!-- Contenido provisional. En esta sección irá el índice a los contenidos específicos de mi manual de CSS -->
     <h2>Propiedades CSS que aparecieron en el tutorial de HTML</h2>
     <ul>
