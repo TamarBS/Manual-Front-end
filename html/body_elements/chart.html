@@ -12,9 +12,9 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
     <hgroup>
-      <h1>Gráficas</h1>
+      <h1 class="body-title">Gráficas</h1>
       <p>Elementos HTML que sirven como gráficos para visualizar información.</p>
       <hr>
     </hgroup> 
@@ -22,35 +22,31 @@
 
   <main>
     <details>
-      <summary>progress</summary>
+      <summary><h2 class="details-summary">progress</h2></summary>
       <p>Crea una barra de progreso. Tiene los atributos "value" y "max". Siempre acompañar de la etiquta label como buena práctica de accesibilidad.</p>
-      <div class="code">
-        <label for="exprogress">Barra de progreso: </label>
-        <progress id="exprogress" value="32" max="100"></progress>
-        <div class="code black">
-          <span class="gris">&lt;</span>
-          <span class="etiqueta">progress</span>
-          <span class="atributo">value</span>
-          =
-          <span class="valor">"32"</span>
-          <span class="atributo">max</span>
-          =
-          <span class="valor">"100"</span>
-          <span class="gris">></span>
-          32%
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">progress</span>
-          <span class="gris">></span>
-        </div>
+      <label for="exprogress">Barra de progreso: </label>
+      <progress id="exprogress" value="32" max="100"></progress>
+      <div class="code black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">progress</span>
+        <span class="atributo">value</span>
+        =
+        <span class="valor">"32"</span>
+        <span class="atributo">max</span>
+        =
+        <span class="valor">"100"</span>
+        <span class="gris">></span>
+        32%
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">progress</span>
+        <span class="gris">></span>
       </div>
     </details>
 
     <details>
-      <summary>meter</summary>
+      <summary><h2 class="details-summary">meter</h2></summary>
       <p>Crea una barra de progreso pero no se debe utilizar para conceptos de barra de progreso. Es más bien una gráfica que muestra datos dentro de un rango. Por ejemplo, la cantidad de memoria Ram del ordenador.</p>
-      <div class="code">
-        <meter value="35" max="100"></meter>
-      </div>
+      <meter value="35" max="100"></meter>
     </details>
   </main>
 </body>

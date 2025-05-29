@@ -12,9 +12,9 @@
 </head>
 <body>
   <header>
-    <a class="button back" href="index.html">Volver al Índice</a>
+    <div class="button back"><a  href="index.html">Volver al Índice</a></div>
     <hgroup>
-      <h1><dfn id="exHtml"><abbr title="Hyper Text Markup Language">HTML</abbr></dfn></h1>
+      <h1 class="body-title"><dfn id="exHtml"><abbr title="Hyper Text Markup Language">HTML</abbr></dfn></h1>
       <p>Lenguaje de <abbr title="Asignación de diferentes funciones y aspectos a un texto mediante una etiqueta ( Palabra reservada encapsulada entre los símbolos '&lt;' y '>' ) .">marcado</abbr> de <abbr title="Texto que enlaza a otro texto.">hipertexto</abbr>. Es el lenguaje base en la creación de páginas web.</p>
       <hr>
     </hgroup>
@@ -22,29 +22,29 @@
 
   <main>
 
-    <h2>Historia</h2>
+    <h2 class="body-subtitle">Historia</h2>
     <p>Fue inventado por Tim Berners-Lee en 1991.</p>
     
-    <h2>Todos los Elementos HTML</h2>
+    <h2 class="body-subtitle">Todos los Elementos HTML</h2>
     <div class="index">
       <nav aria-label="elementosHtml">
-        <a href="html/esqueleto.html">Elementos HTML en la estructura básica de un documento .html</a>
+        <a href="html/esqueleto.html">Estructura básica de un documento .html</a>
         <a href="html/head.html">Elementos HTML que normalmente van en el head</a>
         <a href="html/body.html">Elementos HTML que normalmente van en el body</a>
       </nav>
     </div>
 
-    <h2>Particularidades</h2>
+    <h2 class="body-subtitle">Particularidades</h2>
     <details>
-      <summary>No discrimina mayúsculas y minúsculas</summary>
+      <summary><h3 class="details-summary">No discrimina mayúsculas y minúsculas</h3></summary>
       <p>Se pueden utilizar mayúsculas y minúsculas, aunque el consenso es usar minúsculas.</p>
     </details>
     <details>
-      <summary>Los atributos no necesitan ir entrecomillados</summary>
+      <summary><h3 class="details-summary">Los atributos no necesitan ir entrecomillados</h3></summary>
       <p>Pero el consenso es que sí aparezcan entre comillas. Da problemas no ir entrecomillado si hay espacios entre palabras. Las comillas por defecto son ("") dobles, pero en caso de que el valor quiera mostrar esas comillas, se pueden usar entonces las simples ('') y viceversa.</p>
     </details>
     <details>
-      <summary>Sintaxis de un Elemento HTML</summary>
+      <summary><h3 class="details-summary">Sintaxis de un Elemento HTML</h3></summary>
       <div class="code black">
         <span class="gris">&lt;</span> 
         <span class="etiqueta">etiqueta </span> 
@@ -72,10 +72,10 @@
       </div>
     </details>
     <details>
-      <summary>Formas de vincular estilos CSS</summary>
+      <summary><h3 class="details-summary">Formas de vincular estilos CSS</h3></summary>
       <p>Se puede vincular al CSS de tres maneras:</p>
       <details>
-        <summary>Inline</summary>
+        <summary><h4 class="details-summary">Inline</h4></summary>
         <p>Dentro del elemento HTML como atributo</p>
         <div class="code black">
           <span class="gris">&lt;</span>
@@ -91,7 +91,7 @@
       </details>
       
       <details>
-        <summary>Interno</summary>
+        <summary><h4 class="details-summary">Interno</h4></summary>
         <p>Inyectado en el head</p>
         <div class="code black">
           <span class="gris">&lt;</span>
@@ -123,7 +123,7 @@
       </details>
 
       <details>
-        <summary>Externo</summary>
+        <summary><h4 class="details-summary">Externo</h4></summary>
         <p>Enlazado a un documento externo .css</p>
         <div class="code black">
           <span class="gris">&lt;</span>
@@ -154,106 +154,104 @@
       </ol>
     </details>
     <details>
-      <summary>XHTML</summary>
+      <summary><h3 class="details-summary">XHTML</h3></summary>
       <p>Es una versión más estricta de HTML. (X de eXtensible). Basicamente, lo que en HTML se puede obviar pero se hace porque son buenas prácticas, en XHTML es obligatorio. Ej.: Comenzar con &lt;!DOCTYPE>, cerrar etiquetas, elementos siempre en minúsculas, las anidaciones tienen que ir en orden estricto, etc. </p>
     </details>
     <details>
-      <summary>Enrutado</summary>
+      <summary><h3 class="details-summary">Enrutado</h3></summary>
       <p>Se utilizan las siglas <dfn><abbr title="Uniform Resource Locator">URL</abbr></dfn> para referirnos a la dirección de una página web y también la ruta a un archivo. Significa Localizador uniforme de recursos.</p>
-      <div class="code">
-        Su sintaxis es:
-        <div class="code black">
-          <span class="gris">protocolo</span>
-          ://
-          <span class="valorCss">prefijo</span>
-          .
-          <span class="etiqueta">dominio</span>
-          :
-          <span class="valor">puerto</span>
-          /
-          <span class="comentario">ruta</span>
-          /
-          <span class="atributo">(nombre del archivo)</span>
-        </div>
-        <ul>
-          <li><strong>protocolo: </strong>define el tipo de servicio de Internet (http, https, ftp o file)</li>
-          <li><strong>prefijo: </strong>por defecto para http es www</li>
-          <li><strong>dominio: </strong>nombre del dominio</li>
-          <li><strong>puerto: </strong>número del puerto, para http normalmente es 80</li>
-          <li><strong>ruta: </strong>la ruta entre carpetas que lleva al archivo</li>
-          <li><strong>nombre del archivo: </strong>archivo en cuestión al que se quiere llegar.</li>
-        </ul>
-        <p>Una URL puede tener un dominio en palabras, o mediante un IP (Internet Protocol) Ej.: 192.68.20.50</p>
-        <p>Sólo usa el código ASCII, si contiene otros caracteres diferentes se tienen que sustituir. Ej.: no admite espacios, se sustituyen por "+" o "%20". Otros caracteres se sustituyen por "% seguido de el digito que le corresponda al símbolo". Ej.: ® = 	%C2%AE</p>
+      <p class="details-subtitle">Sintaxis</p>
+      <div class="code black">
+        <span class="gris">protocolo</span>
+        ://
+        <span class="valorCss">prefijo</span>
+        .
+        <span class="etiqueta">dominio</span>
+        :
+        <span class="valor">puerto</span>
+        /
+        <span class="comentario">ruta</span>
+        /
+        <span class="atributo">(nombre del archivo)</span>
       </div>
-      <p>Hay dos formas de hacer una ruta a los archivos:</p>
-      
+      <ul>
+        <li><strong>protocolo: </strong>define el tipo de servicio de Internet (http, https, ftp o file)</li>
+        <li><strong>prefijo: </strong>por defecto para http es www</li>
+        <li><strong>dominio: </strong>nombre del dominio</li>
+        <li><strong>puerto: </strong>número del puerto, para http normalmente es 80</li>
+        <li><strong>ruta: </strong>la ruta entre carpetas que lleva al archivo</li>
+        <li><strong>nombre del archivo: </strong>archivo en cuestión al que se quiere llegar.</li>
+      </ul>
+      <p>Una URL puede tener un dominio en palabras, o mediante un IP (Internet Protocol) Ej.: 192.68.20.50</p>
+      <p>Sólo usa el código ASCII, si contiene otros caracteres diferentes se tienen que sustituir. Ej.: no admite espacios, se sustituyen por "+" o "%20". Otros caracteres se sustituyen por "% seguido de el digito que le corresponda al símbolo". Ej.: ® = 	%C2%AE</p>
+      <p class="details-subtitle">Hay dos formas de hacer una ruta a los archivos</p>
       <details>
-        <summary>Ruta absoluta</summary>
+        <summary><h4 class="details-summary">Ruta absoluta</h4></summary>
         <p>Enlaza a un dominio externo a la página web. Al no depender de nuestro mantenimiento puede desaparecer.</p>
-        <div class="code">
-          <p>'https://www.w3schools.com/html/imagen.jpg'</p>
-        </div>
-        <p><strong>Ruta a nuestra propia web</strong></p>
+        <p>Ej.: 'https://www.w3schools.com/html/imagen.jpg'</p>
+        <p class="details-subtitle">Ruta a nuestra propia web</p>
         <p>Cuando nuestra web está publicada en internet podemos acceder a los archivos del proyecto utilizando una url que empieza con el símbolo "/" que representa el directorio raiz. Se recorren todas las carpetas desde la que contiene todo el proyecto hasta la que contiene el recurso indicado.</p>
-        <div class="code">
-          <p>Mi dominio es https://www.misitio.es</p>
-          &lt;img src="/carpeta/archivo.jpg">
-          <p>La imagen está apuntando a la ruta: https://www.misitio.es/meloinvento/lasimagenes/carpeta/archivo.jpg</p>
-        </div>
+        <p>Ej.: Mi dominio es https://www.misitio.es</p>
+        &lt;img src="/carpeta/archivo.jpg">
+        <p>La imagen está apuntando a la ruta: https://www.misitio.es/meloinvento/lasimagenes/carpeta/archivo.jpg</p>
       </details>
-      
       <details>
-        <summary>Ruta relativa</summary>
+        <summary><h4 class="details-summary">Ruta relativa</h4></summary>
         <p>El archivo está alojado dentro de nuestro proyecto.</p>
         <p>La ruta se piensa desde el archivo en el que se está hasta al que se quiere llegar.</p>
         <p><strong>Entrar en carpetas </strong>es nombrarlas seguidas del símbolo "/"</p>
         <p><strong>Salir de carpetas</strong> es "../"</p>
-        <div class="code">
-          <ul>
-            <li style="list-style: none;">archivo1</li>
-            <li style="list-style: none;">carpeta1
-              <ul>
-                <li>archivo2</li>
-                <li>archivo3</li>
-                <li style="list-style: none;">carpeta2
-                  <ul>
-                    <li>archivo4</li>
-                    <li>archivo5</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li style="list-style: none;">carpeta3
-              <ul>
-                <li>archivo6</li>
-                <li>archivo7</li>
-              </ul>
-            </li>
-          </ul>          
-        </div>
-        <p><strong>Estoy en el archivo3 y quiero ir al archivo5</strong></p>
-        <p>Estoy dentro de la carpeta1, así que sólo tengo que entrar en la carpeta2, dónde ya puedo acceder al archivo5</p>
-        <p class="gris">'carpeta2/archivo5'</p>
-        <br>
-        <p><strong>Estoy en el archivo4 y quiero ir al archivo1</strong></p>
-        <p>Salgo de dos carpetas, la carpeta2 en la que estoy y luego la carpeta1 y ya tengo acceso al archivo1</p>
-        <p class="gris">'../../archivo1'</p>
-        <br>
-        <p><strong>Estoy en el archivo5 y quiero ir al archivo7</strong></p>
-        <p>Salgo de dos carpetas, la carpeta2 en la que estoy y luego la carpeta1. Entro en carpeta3 y ya tengo acceso al archivo7.</p>
-        <p class="gris">'../../carpeta3/archivo7'</p>
-        <br>
-        <p><strong>Estoy en el archivo1 y quiero ir al archivo4</strong></p>
-        <p>Entro en la carpeta1, y luego en carpeta2 dónde ya accedo al achivo4</p>
-        <p class="gris">'carpeta2/archivo5'</p>     
+        <p class="details-subtitle">Ejemplo práctico</p>
+        <ul>
+          <li>archivo1</li>
+          <li>carpeta1
+            <ul>
+              <li>archivo2</li>
+              <li>archivo3</li>
+              <li>carpeta2
+                <ul>
+                  <li>archivo4</li>
+                  <li>archivo5</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>carpeta3
+            <ul>
+              <li>archivo6</li>
+              <li>archivo7</li>
+            </ul>
+          </li>
+        </ul>  
+        <ul>
+          <li>
+            <p><strong>Estoy en el archivo3 y quiero ir al archivo5</strong></p>
+            <p>Estoy dentro de la carpeta1, así que sólo tengo que entrar en la carpeta2, dónde ya puedo acceder al archivo5</p>
+            <p class="gris">'carpeta2/archivo5'</p>            
+          </li>
+          <li>
+            <p><strong>Estoy en el archivo4 y quiero ir al archivo1</strong></p>
+            <p>Salgo de dos carpetas, la carpeta2 en la que estoy y luego la carpeta1 y ya tengo acceso al archivo1</p>
+            <p class="gris">'../../archivo1'</p>
+          </li>
+          <li>
+            <p><strong>Estoy en el archivo5 y quiero ir al archivo7</strong></p>
+            <p>Salgo de dos carpetas, la carpeta2 en la que estoy y luego la carpeta1. Entro en carpeta3 y ya tengo acceso al archivo7.</p>
+            <p class="gris">'../../carpeta3/archivo7'</p>
+          </li>
+          <li>
+            <p><strong>Estoy en el archivo1 y quiero ir al archivo4</strong></p>
+            <p>Entro en la carpeta1, y luego en carpeta2 dónde ya accedo al achivo4</p>
+            <p class="gris">'carpeta2/archivo5'</p>     
+          </li>
+        </ul>
+
       </details>
     </details>
     <details>
-      <summary>Comentarios</summary>
+      <summary><h3 class="details-summary">Comentarios</h3></summary>
     <p>Se pueden añadir al código y no serán visibles. Son útiles para <strong>dejar indicaciones</strong> del funcionamiento del código y claves para su mejor comprensión, para <strong>ocultar</strong> partes del código, como recordatorios y en revisiones de JavaScript para hacer debugging.</p>
     <p class="code black comentario">&lt;!-- Contenido del comentario --&gt;</p>
-
     </details>
     
   </main>

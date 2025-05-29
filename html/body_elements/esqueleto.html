@@ -50,9 +50,9 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de elementos HTML</a> 
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div> 
     <hgroup>
-      <h1>Elementos HTML para ordenar y agrupar contenido</h1>
+      <h1 class="body-title">Elementos HTML para ordenar y agrupar contenido</h1>
       <p>Los contenidos de una web se pueden agrupar en etiquetas contenedoras que ayudan a mejorar la accesibilida, el orden y la comprensión del código.</p>
       <hr>
     </hgroup>
@@ -60,7 +60,7 @@
 
   <main>
 
-    <h2>Elementos HTML para el esqueleto base</h2>
+    <h2 class="body-subtitle">Elementos HTML para el esqueleto base</h2>
     <p>Las webs comparten una estructura de organiación de contenidos basada en varios Elementos HTML que facilitan el orden y la familiaridad.</p>
     <div class="col2">
       <div class="webpage">
@@ -76,73 +76,73 @@
       </div>   
       <div>
         <details>
-          <summary>header</summary>
+          <summary><h3 class="details-summary">header</h3></summary>
           <p>Cabecera del documento o sección. Suele contener, logo, autoría y un elemento de título h1 - h6.</p>
         </details>
 
         <details>
-          <summary>nav</summary>
+          <summary><h3 class="details-summary">nav</h3></summary>
           <p>Menú de navegación del sitio web. Cuando hay varios es buena práctica de accesibilidad añadirles un atributo aria-label que los distinga en función del contenido.</p>
         </details>
 
         <details>
-          <summary>section</summary>
+          <summary><h3 class="details-summary">section</h3></summary>
           <p>Separador de contenido sobre un mismo tema, normalmente con un título y un cuerpo de texto. No está relacionado con el contenido principal. Ej: Capítulos, introducción, contacto, noticias.</p>
         </details>
 
         <details>
-          <summary>article</summary>
+          <summary><h3 class="details-summary">article</h3></summary>
           <p>Contenido independiente del resto de contenidos de la web con sentido por sí mismo. EJ: Blog posts, Comentarios, artículos de periódicos.</p>
 
         </details>
 
         <details>
-          <summary>aside</summary>
+          <summary><h3 class="details-summary">aside</h3></summary>
           <p>Anticuado. Algo así como una barra de navegación, espacio para anotaciones o contenido lateral vertical de lo que sea. Está relacionado con el contenido principal.</p>
         </details>
 
         <details>
-          <summary>footer</summary>
+          <summary><h3 class="details-summary">footer</h3></summary>
           <p>Pie para información adicional y normas del sitio, arbol web, info legal, etc.</p>
         </details>
       </div>
     </div>
    
-    <h2>Otros Elementos HTML para declarar contenidos</h2>
+    <h2 class="body-subtitle">Otros Elementos HTML para declarar contenidos</h2>
     <p>Algunos de estos elementos sirven para agrupar información dentro de un mismo contenedor, otros son etiquetas para declarar un tipo concreto de información.</p>
     <details>
-      <summary>details</summary>
+      <summary><h3 class="details-summary">details</h3></summary>
       <p>Sección de contenido desplegable. Debe contener la etiqueta <stro>summary</stro>que será el título. Por defecto aparece el contenido oculto. Aparece una flecha delante del "summary".</p>
     </details>
 
     <details>
-      <summary>main</summary>
+      <summary><h3 class="details-summary">main</h3></summary>
       <p>Informa de que es el contenido principal de la página. Sólo debe haber uno por documento.</p>
     </details>
 
     <details>
-      <summary>template</summary>
+      <summary><h3 class="details-summary">template</h3></summary>
       <p>Reservado para contenido que en un principio aparece oculto y se muestra en pantalla cuándo el usuario activa el Javascript que lo hace aparecer.</p>
     </details>
 
     <details>
-      <summary>dialog</summary>
+      <summary><h3 class="details-summary">dialog</h3></summary>
       <p>Ventana emergente. Atributo "open"</p>
-      <div class="code" style="height: 60px;"><dialog open>Ventana emergente</dialog></div>
+      <div style="height: 60px;"><dialog open>Ventana emergente</dialog></div>
     </details>
 
     <details>
-      <summary>div</summary>
+      <summary><h3 class="details-summary">div</h3></summary>
       <p>Elemento block (ocupa todo el ancho por defecto). Se utiliza generalmente como contenedor para organizar otros elementos y aplicar estilos de forma más concreta.</p>
     </details>
 
     <details>
-      <summary>time</summary>
+      <summary><h3 class="details-summary">time</h3></summary>
       <p>Declara que su contenido es una fecha/hora.</p>
     </details>
 
     <details>
-      <summary>data</summary>
+      <summary><h3 class="details-summary">data</h3></summary>
       <p>Permite dar un atributo "value" con contenido legible para la máquina (por ejemplo numérico) y un contenido comprensible para las personas.</p>
     </details>
 

@@ -13,166 +13,161 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de elementos HTML</a>
-    <h1>Listas</h1>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
+    <h1 class="body-title">Listas</h1>
     <hr>
   </header>
 
   <main>
+    <h2 class="body-subtitle">Tipos de listas</h2>
     <details>
-      <summary>Lista ordenada</summary>
+      <summary><h3 class="details-summary">Lista ordenada</h3></summary>
       <p><strong>ol</strong> ordered list</p>
-        <div class="code">
-          <div style="display: flex;">
-            <ol type="1">
-              <li>Type 1 default</li>
-              <li>Type 1</li>
-              <li>Type 1</li>
-              <li>Type 1</li>
-            </ol>
-            <ol type="A">
-              <li>Type A</li>
-              <li>Type A</li>
-              <li>Type A</li>
-              <li>Type A</li>
-            </ol>
-            <ol type="a">
-              <li>Type a</li>
-              <li>Type a</li>
-              <li>Type a</li>
-              <li>Type a</li>
-            </ol>
-            <ol type="I">
-              <li>Type I</li>
-              <li>Type I</li>
-              <li>Type I</li>
-              <li>Type I</li>
-            </ol>
-            <ol type="i">
-              <li>Type i</li>
-              <li>Type i</li>
-              <li>Type i</li>
-              <li>Type i</li>
-            </ol>
-            <ol start="50">
-              <li>start</li>
-              <li>start</li>
-              <li>start</li>
-              <li>start</li>
-            </ol>
-          </div>
-          <div class="code black">
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">ol </span> 
-            <span class="atributo"> type</span> =
-            <span class="valor">"default | A | I | i "</span>
-            <span class="gris">></span> <br>
+      <div style="display: flex;">
+        <ol type="1">
+          <li>Type 1 default</li>
+          <li>Type 1</li>
+          <li>Type 1</li>
+          <li>Type 1</li>
+        </ol>
+        <ol type="A">
+          <li>Type A</li>
+          <li>Type A</li>
+          <li>Type A</li>
+          <li>Type A</li>
+        </ol>
+        <ol type="a">
+          <li>Type a</li>
+          <li>Type a</li>
+          <li>Type a</li>
+          <li>Type a</li>
+        </ol>
+        <ol type="I">
+          <li>Type I</li>
+          <li>Type I</li>
+          <li>Type I</li>
+          <li>Type I</li>
+        </ol>
+        <ol type="i">
+          <li>Type i</li>
+          <li>Type i</li>
+          <li>Type i</li>
+          <li>Type i</li>
+        </ol>
+        <ol start="50">
+          <li>start</li>
+          <li>start</li>
+          <li>start</li>
+          <li>start</li>
+        </ol>
+      </div>
+      <div class="code black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">ol </span> 
+        <span class="atributo"> type</span> =
+        <span class="valor">"default | A | I | i "</span>
+        <span class="gris">></span> <br>
 
-            <span class="gris hijo">&lt;</span> 
-            <span class="etiqueta">li </span> 
-            <span class="gris">></span> ... 
-            <span class="gris">&lt;/</span>
-            <span class="etiqueta">li</span>
-            <span class="gris">></span> <br>     
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">li </span> 
+        <span class="gris">></span> ... 
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">li</span>
+        <span class="gris">></span> <br>     
 
-            <span class="gris">&lt;/</span>
-            <span class="etiqueta">ol</span>
-            <span class="gris">></span><br><br>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">ol</span>
+        <span class="gris">></span><br><br>
 
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">ol </span> 
-            <span class="atributo"> start</span> =
-            <span class="valor">"50"</span>
-            <span class="gris">></span> <br>
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">ol </span> 
+        <span class="atributo"> start</span> =
+        <span class="valor">"50"</span>
+        <span class="gris">></span> <br>
 
-            <span class="gris hijo">&lt;</span> 
-            <span class="etiqueta">li </span> 
-            <span class="gris">></span> ... 
-            <span class="gris">&lt;/</span>
-            <span class="etiqueta">li</span>
-            <span class="gris">></span> <br>     
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">li </span> 
+        <span class="gris">></span> ... 
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">li</span>
+        <span class="gris">></span> <br>     
 
-            <span class="gris">&lt;/</span>
-            <span class="etiqueta">ol</span>
-            <span class="gris">></span> 
-          </div>
-        </div>
-    </details>
-    <details>
-      <summary>Lista no ordenada</summary>
-      <p><strong>ul</strong> unordered list</p>
-      <div class="code">
-        <ul>
-          <li style="list-style-type: disc;">disc default</li>
-          <li style="list-style-type: circle;">circle</li>
-          <li style="list-style-type: square;">square</li>
-          <li style="list-style-type: none;">none</li>
-        </ul>    
-        <div class="code black">
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">ul </span> 
-          <span class="gris">></span> <br>
-
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">li </span> 
-          <span class="gris">></span> ... 
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">li</span>
-          <span class="gris">></span> <br>     
-
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">ul</span>
-          <span class="gris">></span><br><br>     
-          
-          <span style="color: yellow;">ul li {</span>   
-          <span class="atributo">list-style-type</span> :
-          <span class="valor">disc | circle | square | none</span> ;
-          <span style="color: yellow;">}</span>  
-        </div>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">ol</span>
+        <span class="gris">></span> 
       </div>
     </details>
     <details>
-      <summary>Lista de definifiones</summary>
+      <summary><h3 class="details-summary">Lista no ordenada</h3></summary>
+      <p><strong>ul</strong> unordered list</p>
+      <ul>
+        <li style="list-style-type: disc;">disc default</li>
+        <li style="list-style-type: circle;">circle</li>
+        <li style="list-style-type: square;">square</li>
+        <li style="list-style-type: none;">none</li>
+      </ul>    
+      <div class="code black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">ul </span> 
+        <span class="gris">></span> <br>
+
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">li </span> 
+        <span class="gris">></span> ... 
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">li</span>
+        <span class="gris">></span> <br>     
+
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">ul</span>
+        <span class="gris">></span><br><br>     
+        
+        <span style="color: yellow;">ul li {</span>   
+        <span class="atributo">list-style-type</span> :
+        <span class="valor">disc | circle | square | none</span> ;
+        <span style="color: yellow;">}</span>  
+      </div>
+    </details>
+    <details>
+      <summary><h3 class="details-summary">Lista de definifiones</h3></summary>
       <p><strong>dl</strong> description list</p>
-      <div class="code">
-        <dl>
-          <dt>Término</dt>
-          <dd>Definición</dd>
-          <dt>Término</dt>
-          <dd>Definición</dd>
-          <dt>Término</dt>
-          <dd>Definición</dd>
-        </dl>   
-        <div class="code black">
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">dl </span> 
-          <span class="gris">></span> 
-          <span class="comentario">&lt;!-- description list --></span><br>
+      <dl>
+        <dt>Término</dt>
+        <dd>Definición</dd>
+        <dt>Término</dt>
+        <dd>Definición</dd>
+        <dt>Término</dt>
+        <dd>Definición</dd>
+      </dl>   
+      <div class="code black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">dl </span> 
+        <span class="gris">></span> 
+        <span class="comentario">&lt;!-- description list --></span><br>
 
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">dt </span> 
-          <span class="gris">></span> Término 
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">dt</span>
-          <span class="gris">></span>   
-          <span class="comentario">&lt;!-- description term --></span><br> 
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">dt </span> 
+        <span class="gris">></span> Término 
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">dt</span>
+        <span class="gris">></span>   
+        <span class="comentario">&lt;!-- description term --></span><br> 
 
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">dd </span> 
-          <span class="gris">></span> Definición 
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">dd</span>
-          <span class="gris">></span> 
-          <span class="comentario">&lt;!-- description definition --></span><br>
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">dd </span> 
+        <span class="gris">></span> Definición 
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">dd</span>
+        <span class="gris">></span> 
+        <span class="comentario">&lt;!-- description definition --></span><br>
 
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">dl</span>
-          <span class="gris">></span><br><br>     
-        </div>  
-      </div>      
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">dl</span>
+        <span class="gris">></span><br><br>     
+      </div>    
     </details>
     
-    <h2>Las listas se pueden anidar</h2>
+    <h4 class="body-subtitle__subtitle">Las listas se pueden anidar</h4>
     <div class="code col2">
       <div style="display: flex;">
         <ul>

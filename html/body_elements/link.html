@@ -12,9 +12,9 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
     <hgroup>
-      <h1>Enlaces</h1>
+      <h1 class="body-title">Enlaces</h1>
       <p>Elementos para enlazar con otro texto, un sitio web, una imagen, etc.</p>
       <hr>
     </hgroup>
@@ -22,75 +22,70 @@
 
   <main>
     <details>
-      <summary>a</summary>
+      <summary><h2 class="details-summary">a</h2></summary>
       <p>Elemento enlace. Es buena práctica utilizarlo cuándo la acción que se busca es de navegación entre páginas. Los estilos por defecto son: <span style="color: blue;">Sin visitar </span><span style="color: red;">Activo </span><span style="color: purple;">Visitado</span>. El cursor cambia al hacer hover.</p>
       <details>
-        <summary>Crear Marcapáginas</summary>
+        <summary><h3 class="details-summary">Crear Marcapáginas</h3></summary>
         <p>Añadir id al elemento al que se quiere llegar. En el enlace se añade ese #id en su href.</p>
-        <div class="code">
-          <a href="#button" >Ir al button</a>
-          <div class="code black" style="margin-top: 15px;">
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">a </span> 
-            <span class="atributo"> href</span>
-            =
-            <span class="valor">"#button"</span>
-            <span class="gris">></span> 
-            Ir al button 
-            <span class="gris">&lt;/</span> 
-            <span class="etiqueta">a </span> 
-            <span class="gris">></span>  <br><br>
-            
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">button </span> 
-            <span class="atributo"> id</span>
-            =
-            <span class="valor">"button"</span>
-            <span class="gris">></span> 
-            Esto es un button 
-            <span class="gris">&lt;/</span> 
-            <span class="etiqueta">button </span> 
-            <span class="gris">></span>           
-          </div>
-          <p>La página hace scroll hasta el destino si está en la misma página. Si se quiere hacer un marcador a un elemento en otro documento se utiliza otra ruta en el href del enlace.</p>
-          <div class="code black" style="margin-top: 15px;">
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">a </span> 
-            <span class="atributo"> href</span>
-            =
-            <span class="valor">"nombredelarchivo.html#button"</span>
-            <span class="gris">></span>        
-          </div>
+        <a href="#button" >Ir al button</a>
+        <div class="code black" style="margin-top: 15px;">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">a </span> 
+          <span class="atributo"> href</span>
+          =
+          <span class="valor">"#button"</span>
+          <span class="gris">></span> 
+          Ir al button 
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">a </span> 
+          <span class="gris">></span>  <br><br>
+          
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">button </span> 
+          <span class="atributo"> id</span>
+          =
+          <span class="valor">"button"</span>
+          <span class="gris">></span> 
+          Esto es un button 
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">button </span> 
+          <span class="gris">></span>           
+        </div>
+        <p>La página hace scroll hasta el destino si está en la misma página. Si se quiere hacer un marcador a un elemento en otro documento se utiliza otra ruta en el href del enlace.</p>
+        <div class="code black" style="margin-top: 15px;">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">a </span> 
+          <span class="atributo"> href</span>
+          =
+          <span class="valor">"nombredelarchivo.html#button"</span>
+          <span class="gris">></span>        
         </div>
       </details>
       <details>
-        <summary>Imagen como enlace</summary>
-        <div class="code">
-          <a href="#button" ><img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen enrutada desde internet" width="200"></a>
-          <div class="code black" style="margin-top: 15px;">
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">a </span> 
-            <span class="atributo"> href</span>
-            =
-            <span class="valor">"#button"</span>
-            <span class="gris">></span> 
-      
-            <span class="gris">&lt;</span> 
-            <span class="etiqueta">img </span> 
-            <span class="atributo"> src</span>
-            =
-            <span class="valor">"rutaalaimagen"</span>
-            <span class="gris">></span> 
-            
-            <span class="gris">&lt;/</span> 
-            <span class="etiqueta">a </span> 
-                     
-          </div>
+        <summary><h3 class="details-summary">Imagen como enlace</h3></summary>
+        <a href="#button" ><img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen enrutada desde internet" width="200"></a>
+        <div class="code black" style="margin-top: 15px;">
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">a </span> 
+          <span class="atributo"> href</span>
+          =
+          <span class="valor">"#button"</span>
+          <span class="gris">></span> 
+    
+          <span class="gris">&lt;</span> 
+          <span class="etiqueta">img </span> 
+          <span class="atributo"> src</span>
+          =
+          <span class="valor">"rutaalaimagen"</span>
+          <span class="gris">></span> 
+          
+          <span class="gris">&lt;/</span> 
+          <span class="etiqueta">a </span>                     
         </div>
       </details>
-      <p><strong>Atributos</strong></p>
+      <p class="details-subtitle">Atributos</p>
       <details>
-        <summary>href</summary>
+        <summary><h3 class="details-summary">href</h3></summary>
         <p>Especifica el destino del enlace.</p>
         <ul>
           <li><strong>mailto:</strong> Se utiliza para dirigir a un email.
@@ -105,42 +100,51 @@
               <span class="gris">&lt;/</span> 
               <span class="etiqueta">a </span> 
               <span class="gris">></span> 
-            </p></li>
+            </p>
+          </li>
+          <li><strong>tel:</strong> Se utiliza para dirigir a una llamada de teléfono.
+            <p class="code black">
+              <span class="gris">&lt;</span> 
+              <span class="etiqueta">a </span> 
+              <span class="atributo"> href</span>
+              =
+              <span class="valor">"tel:+34666666666"</span>
+              <span class="gris">></span> 
+              Llamar 
+              <span class="gris">&lt;/</span> 
+              <span class="etiqueta">a </span> 
+              <span class="gris">></span> 
+            </p>
+          </li>
         </ul>
       </details>
       <details>
-        <summary>target</summary>
+        <summary><h3 class="details-summary">target</h3></summary>
         <p>Indica la forma en la que se abrirá el enlace. Hay que entenderlo como la posibilidad de que existan varios iframes dentro de otros.</p>
-        <details>
-          <summary>_self</summary>
-          <p>Pisa la página en la que estabas. La misma página que ocupaba.</p>
-        </details>
-        <details>
-          <summary>_blank</summary>
-          <p>Abre una nueva ventana.</p>
-        </details>
-        <details>
-          <summary>_parent</summary>
-          <p>Pisa la ventana que contiene la página en la que se encuentra el enlace.</p>
-        </details>
-        <details>
-          <summary>_top</summary>
-          <p>Se abre en la página con mayor jerarquía de todas algo así como el primer padre.</p>
-        </details>
-        <details>
-          <summary>seleccionable</summary>
-          <p>Se puede indicar en el target el nombre del iframe en el que quieres que se abra el enlace.</p>
-        </details>
-        <div class="code"><iframe style="width: 100%;" src="iframes/demo_iframe.htm" height="400" width="600" title="Iframe Example"></iframe></div> </li>
-
+        <ul>
+          <li>
+            <p><strong>_self: </strong>Pisa la página en la que estabas. La misma página que ocupaba.</p>
+          </li>
+          <li>
+            <p><strong>_blank: </strong>Abre una nueva ventana.</p>
+          </li>
+          <li>
+            <p><strong>_parent: </strong>Pisa la ventana que contiene la página en la que se encuentra el enlace.</p>
+          </li>
+          <li>
+            <p><strong>_top: </strong>Se abre en la página con mayor jerarquía de todas algo así como el primer padre.</p>
+          </li>
+          <li>
+            <p><strong>seleccionable: </strong>Se puede indicar en el target el nombre del iframe en el que quieres que se abra el enlace.</p>
+          </li>
+        </ul>
+        <iframe style="width: 100%;" src="iframes/demo_iframe.htm" height="400" width="600" title="Iframe Example"></iframe>
       </details>
     </details>
     <details>
-      <summary id="button">button</summary>
+      <summary id="button"><h2 class="details-summary">button</h2></summary>
       <p>Trae estilos de botón por defecto. Junto con código JS inyectado funciona como un enlace, pero sólo no hace nada. Es buena práctica utilizarlo en ocasiones en las que se ejecute una acción que no sea propia de navegar entre páginas.</p>
-      <div class="code">
-        <button>Ejemplo de button sin JavaScript</button>
-      </div>
+      <button>Ejemplo de button sin JavaScript</button>
     </details>
   </main>
   

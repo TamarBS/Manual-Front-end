@@ -12,9 +12,9 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a> 
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div> 
     <hgroup>
-      <h1>Formulario</h1>
+      <h1 class="body-title">Formulario</h1>
       <p>Recoge la información que mete el usuario en el formulario para enviarla a una base de datos.</p>
       <hr>
     </hgroup>
@@ -22,9 +22,8 @@
   
   <main>
     
-    <h2>Sintaxis de un formulario</h2>
+    <h2 class="body-subtitle">Sintaxis de un formulario</h2>
     <div class="code black" style="margin-top: 15px;">
-  
       <span class="gris">&lt;</span> 
       <span class="etiqueta">form </span> 
       <span class="gris">></span> 
@@ -56,22 +55,21 @@
       <span class="gris">&lt;/</span> 
       <span class="etiqueta">form </span> 
       <span class="gris">></span> 
-    
     </div>
 
-    <h2>Lista de Elementos HTML de un formulario</h2>
+    <h2 class="body-subtitle">Lista de Elementos HTML de un formulario</h2>
     <details>
-      <summary>label</summary>
+      <summary><h3 class="details-summary">label</h3></summary>
       <p>Letrero. El lector de pantalla lo lee cuándo el usuario hace focus en el input al que acompaña. Sirve de area clicable del input al que acompaña. El valor del atributo "for" del label y el "id" del input tiene que ser el mismo para poder relacionarlos.</p>
     </details>
     
     <details>
-      <summary>input</summary>
+      <summary><h3 class="details-summary">input</h3></summary>
       <p>Campo para recoger la información aportada por el usuario.</p>
-      <h3>Tipos de input</h3>
+      <h4 class="details-subtitle">Tipos de input</h4>
       <p>Dependiendo del valor de su atributo "type" su aspecto y funcionalidad varía.</p>
       <details>
-        <summary>text</summary>
+        <summary><h5 class="details-summary">text</h5></summary>
         <p>Campo de texto corto.</p>
         <form>
           <label for="ftext">Input text</label>
@@ -80,7 +78,7 @@
       </details>
       
       <details>
-        <summary>radio</summary>
+        <summary><h5 class="details-summary">radio</h5></summary>
         <p>Permite seleccionar sólo uno de varias opciones añadiendo un name común a todas las opciones. Su nombre viene de los botones de las radios antiguas en las que pulsando uno de los botones se deseleccionaba el anterior.</p>
         <form>
           <label for="fradio">Input radio </label>
@@ -91,7 +89,7 @@
       </details>
       
       <details>
-        <summary>checkbox</summary>
+        <summary><h5 class="details-summary">checkbox</h5></summary>
         <p>Permite selección múltiple.</p>
         <form>
           <label for="fcheckbox">Input checkbox </label>
@@ -102,7 +100,7 @@
       </details>
       
       <details>
-        <summary>button</summary>
+        <summary><h5 class="details-summary">button</h5></summary>
         <p>Opción para añadir un botón que haga alguna acción.</p>
         <form>
           <label for="fbutton">Input button </label>
@@ -111,7 +109,7 @@
       </details>
       
       <details>
-        <summary>submit</summary>
+        <summary><h5 class="details-summary">submit</h5></summary>
         <p>Botón de enviar formulario.</p>
         <form>
           <label for="fsubmit">Input submit </label>
@@ -120,7 +118,7 @@
       </details>
       
       <details>
-        <summary>range</summary>
+        <summary><h5 class="details-summary">range</h5></summary>
         <p>Selector interactivo de un rango de cifras.</p>
         <form>
           <label for="frange">Input range</label>
@@ -129,7 +127,7 @@
       </details>
       
       <details>
-        <summary>number</summary>
+        <summary><h5 class="details-summary">number</h5></summary>
         <p>Campo de texto que sólo acepta cifras. Se pueden añadir max y min.</p>
         <form>
           <label for="fnumber">Input number</label>
@@ -138,7 +136,7 @@
       </details>
       
       <details>
-        <summary>color</summary>
+        <summary><h5 class="details-summary">color</h5></summary>
         <p>Selector de color.</p>
         <form>
           <label for="fcolor">Input color</label>
@@ -147,7 +145,7 @@
       </details>
       
       <details>
-        <summary>date</summary>
+        <summary><h5 class="details-summary">date</h5></summary>
         <p>Campo de texto sólo para fechas. Algunos navegadores incluyen un date-picker para poder seleccionar más facilmente las fechas.</p>
         <p>Atributos min y max con valores en formato fecha para acotar las fechas que se pueden seleccionar. Si la fecha elegida no está dentro de las fechas posibles aparece un aviso al incluir los datos y también al pulsar submit.</p>
         <form>
@@ -157,7 +155,7 @@
       </details>
       
       <details>
-        <summary>datetime-local</summary>
+        <summary><h5 class="details-summary">datetime-local</h5></summary>
         <p>Campo de texto para fecha y hora.</p>
         <form>
           <label for="fdatetime">Input datetime-local</label>
@@ -166,7 +164,7 @@
       </details>
       
       <details>
-        <summary>email</summary>
+        <summary><h5 class="details-summary">email</h5></summary>
         <p>Campo de texto especial para direcciones de correo web que valida si los valores incluidos parecen una dirección de correo o no</p>
         <form>
           <label for="femail">Input email</label>
@@ -175,7 +173,7 @@
       </details>
       
       <details>
-        <summary>file</summary>
+        <summary><h5 class="details-summary">file</h5></summary>
         <p>Botón para seleccionar archivos. Al pulsar abre la carpeta de archivos local.</p>
         <form>
           <label for="ffile">Input email</label>
@@ -184,17 +182,17 @@
       </details>
       
       <details>
-        <summary>hidden</summary>
+        <summary><h5 class="details-summary">hidden</h5></summary>
         <p>Para incluir en el envío del formulario datos que son necesarios pero el usuario no necesita ver. Nunca usar este elemento para temas de seguridad porque aunque en la web no se ve, se puede acceder desde el inspector.</p>
       </details>
       
       <details>
-        <summary>image</summary>
+        <summary><h5 class="details-summary">image</h5></summary>
         <p>Permite utilizar una imagen como botón de submit</p>
       </details>
       
       <details>
-        <summary>month</summary>
+        <summary><h5 class="details-summary">month</h5></summary>
         <p>Campo de texto especial sólo para seleccionar mes y año.</p>
         <form>
           <label for="fmonth">Input month</label>
@@ -203,7 +201,7 @@
       </details>
       
       <details>
-        <summary>password</summary>
+        <summary><h5 class="details-summary">password</h5></summary>
         <p>Campo que oculta el contenido</p>
         <form>
           <label for="fpass">Input password</label>
@@ -212,7 +210,7 @@
       </details>
       
       <details>
-        <summary>reset</summary>
+        <summary><h5 class="details-summary">reset</h5></summary>
         <p>Botón que vacía los campos del formulario</p>
         <form>
           <label for="freset">Input reset</label>
@@ -221,7 +219,7 @@
       </details>
       
       <details>
-        <summary>search</summary>
+        <summary><h5 class="details-summary">search</h5></summary>
         <p>Un campo buscador. Es basicamente lo mismo que un campo de texto pero aparece una x que borra el contenido si se pulsa</p>
         <form>
           <label for="fsearch">Search Google:</label>
@@ -230,7 +228,7 @@
       </details>
       
       <details>
-        <summary>tel</summary>
+        <summary><h5 class="details-summary">tel</h5></summary>
         <p>Campo de texto especial para números de teléfono. Con el atributo pattern se indica el formato aceptado.</p>
         <form>
           <label for="ftel">Input tel</label>
@@ -239,7 +237,7 @@
       </details>
       
       <details>
-        <summary>time</summary>
+        <summary><h5 class="details-summary">time</h5></summary>
         <p>Campo de texto especial para hora, minuto y segundo.</p>
         <form>
             <label for="ftime">Input time</label>
@@ -248,7 +246,7 @@
       </details>
 
       <details>
-        <summary>url</summary>
+        <summary><h5 class="details-summary">url</h5></summary>
         <p>Campo de texto especial para url que validará si lo introducido parece o no una url real.</p>
         <form>
           <label for="furl">Input url</label>
@@ -257,7 +255,7 @@
       </details>
 
       <details>
-        <summary>week</summary>
+        <summary><h5 class="details-summary">week</h5></summary>
         <p>Campo de texto especial para seleccionar un número de semana y un año.</p>
         <form>
           <label for="fweek">Input week</label>
@@ -265,105 +263,101 @@
         </form>
       </details>
 
-      <h3>Atributos del input</h3>
+      <h4 class="details-subtitle">Atributos del input</h4>
       <details>
-        <summary>checked</summary>
+        <summary><h5 class="details-summary">checked</h5></summary>
         <p>Indica que una opción será preseleccionada. Por ejemplo en campos como radio o checkbox.</p>
       </details>
 
       <details>
-        <summary>disabled</summary>
+        <summary><h5 class="details-summary">disabled</h5></summary>
         <p>No se puede editar. Se verá en gris. Es un campo inactivo.</p>
       </details>
 
       <details>
-        <summary>max</summary>
+        <summary><h5 class="details-summary">max</h5></summary>
         <p>Valor máximo del input. Pueden ser cifras, fechas, horas, etc.</p>
       </details>
 
       <details>
-        <summary>maxlength</summary>
+        <summary><h5 class="details-summary">maxlength</h5></summary>
         <p>Máximo número de caracteres permitidos en un campo de texto.</p>
       </details>
 
       <details>
-        <summary>min</summary>
+        <summary><h5 class="details-summary">min</h5></summary>
         <p>Valor mínimo del input. Pueden ser cifras, fechas, horas, etc.</p>
       </details>
 
       <details>
-        <summary>pattern</summary>
+        <summary><h5 class="details-summary">pattern</h5></summary>
         <p>Indica el patrón que se acepta en el input. Por ejemplo en teléfono se puede añadir para aceptar sólo un formato de espacios, límite de números y símbolos, etc.</p>
       </details>
 
       <details>
-        <summary>readonly</summary>
+        <summary><h5 class="details-summary">readonly</h5></summary>
         <p>Campo que no se puede editar, sólo se puede leer.</p>
       </details>
 
       <details>
-        <summary>required</summary>
+        <summary><h5 class="details-summary">required</h5></summary>
         <p>Campo obligatorio. El formulario no se enviará si estos campos obligatorios no tienen información.</p>
       </details>
 
       <details>
-        <summary>size</summary>
+        <summary><h5 class="details-summary">size</h5></summary>
         <p>Indica el ancho del campo medido en ancho de cada caracter.</p>
       </details>
 
       <details>
-        <summary>step</summary>
+        <summary><h5 class="details-summary">step</h5></summary>
         <p>En campos numéricos indica el salto de unidades que hace al pulsar en las flechitas de más y menos. Funciona para los input type = number, range, date, datetime-local, month, time y week.</p>
       </details>
 
       <details>
-        <summary>value</summary>
+        <summary><h5 class="details-summary">value</h5></summary>
         <p>El valor por defecto para ese input.</p>
       </details>
 
       <details>
-        <summary>placeholder</summary>
+        <summary><h5 class="details-summary">placeholder</h5></summary>
         <p>Texto que sirve de ejemplo para el contenido del campo. Se puede usar para dar pistas al usuario del formato que puede utilizar en el campo. Ese valor no se envía en el formulario y desaparece cuándo el usuario rellena.</p>
       </details>
 
       <details>
-        <summary>autofocus</summary>
+        <summary><h5 class="details-summary">autofocus</h5></summary>
         <p>Especifica que el campo aparecerá como seleccionado al cargar la página. Sólo debería haber un autofocus en el primero de los campos del formulario, así es muy fácil empezar a rellenar sin tener que andar clickando.</p>
       </details>
 
       <details>
-        <summary>autocomplete</summary>
+        <summary><h5 class="details-summary">autocomplete</h5></summary>
         <p>Para dar la oportunidad a autocompletar un elemento sin que sirva para todo el form. Algunos navegadores tienen bloqueada esta función.</p>
       </details>
 
       <details>
-        <summary>form</summary>
+        <summary><h5 class="details-summary">form</h5></summary>
         <p>Este atributo sirve para relacionar un input que está fuera de la etiqueta form y hacer que igualmente se envíe en los datos del formulario, aunque esté fuera. Es necesario que el atributo "form" del input tenga el mismo valor que el id del form.</p>
       </details>
 
       <details>
-        <summary>formaction</summary>
+        <summary><h5 class="details-summary">formaction</h5></summary>
         <p>Igual que el atributo "action" del elemento form, sirve para especificar a qué documento.php se enviará. Sobreescribe el action del elemento form y sólo funciona en los input type = submit y image.</p>
       </details>
 
       <details>
-        <summary>formenctype</summary>
+        <summary><h5 class="details-summary">formenctype</h5></summary>
         <p>Igual que el atributo "enctype" del elemento form, define el encriptado de la info del formulario. Sólo sirve con el método "post" y con los input type = submit y image. Tiene tres posibles valores:</p>
-        
-        <details>
-          <summary>application/x-www-form-urlencoded</summary>
-          <p>Todos los caracteres se codifican antes de ser enviados, es el por defecto.</p>
-        </details>
-
-        <details>
-          <summary>multipart/form-data</summary>
-          <p>Es necesario si el usuario envía un archivo a través del formulario.</p>
-        </details>
-
-        <details>
-          <summary>text/plain</summary>
-          <p>Los datos se mandan sin ninguna codificación. No se recomienda por temas de seguridad.</p>
-        </details>
+        <ul>
+          <li>
+            <p><strong>application/x-www-form-urlencoded: </strong>Todos los caracteres se codifican antes de ser enviados, es el por defecto.</p>
+          </li>
+          <li>
+            <p><strong>multipart/form-data: </strong>Es necesario si el usuario envía un archivo a través del formulario.</p>
+          </li>
+          <li>
+            <p><strong>text/plain: </strong>Los datos se mandan sin ninguna codificación. No se recomienda por temas de seguridad.</p>
+          </li>
+        </ul>
       </details>
 
       <details>
@@ -384,284 +378,267 @@
     </details>
 
     <details>
-      <summary>search</summary>
+      <summary><h3 class="details-summary">search</h3></summary>
       <p>La etiqueta engloba el form y el input search sólo para indicar al navegador que se trata de un buscador. Es una etiqueta semántica.</p>
     </details>
     
     <details>
-      <summary>select</summary>
+      <summary><h3 class="details-summary">select</h3></summary>
       <p>Permite seleccionar varias opciones que se definen cada una dentro de un elemento &lt; option>.</p>
       <p>Existe la etiqueta "optgroup" que sirve para agrupar opciones. El valor se le da en un atributo label.</p>
-      <div class="code">
-        <label for="cars" >Elige un coche:</label>
-        <select name="cars" id="cars">
-          <optgroup label="Coches alemanes">
-            <option value="volvo">Volvo</option>
-            <option value="bmw">Bmw</option>            
-          </optgroup>
-          <optgroup label="Coches suizos">
-            <option value="fiat">Fiat</option>
-            <option value="audi">Audi</option>
-          </optgroup>
-        </select>
-
-        <div class="code black" >
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">select </span> 
-          <span class="atributo"> name</span>
+      <label for="cars" >Elige un coche:</label>
+      <select name="cars" id="cars">
+        <optgroup label="Coches alemanes">
+          <option value="volvo">Volvo</option>
+          <option value="bmw">Bmw</option>            
+        </optgroup>
+        <optgroup label="Coches suizos">
+          <option value="fiat">Fiat</option>
+          <option value="audi">Audi</option>
+        </optgroup>
+      </select>
+      <div class="code black" >
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">select </span> 
+        <span class="atributo"> name</span>
+        =
+        <span class="valor">"cars"</span>
+        <span class="atributo"> id</span>
+        =
+        <span class="valor">"cars"</span>
+        <span class="gris">></span> 
+        <br>
+          <span class="gris hijo">&lt;</span> 
+          <span class="etiqueta">optgroup </span>
+          <span class="atributo"> label</span>
           =
-          <span class="valor">"cars"</span>
-          <span class="atributo"> id</span>
-          =
-          <span class="valor">"cars"</span>
+          <span class="valor">"Coches alemanes"</span> 
           <span class="gris">></span> 
-          <br>
-            <span class="gris hijo">&lt;</span> 
-            <span class="etiqueta">optgroup </span>
-            <span class="atributo"> label</span>
+          <br>    
+            <span class="gris nieto">&lt;</span> 
+            <span class="etiqueta">option </span>
+            <span class="atributo"> value</span>
             =
-            <span class="valor">"Coches alemanes"</span> 
+            <span class="valor">"volvo"</span> 
             <span class="gris">></span> 
-            <br>    
-              <span class="gris nieto">&lt;</span> 
-              <span class="etiqueta">option </span>
-              <span class="atributo"> value</span>
-              =
-              <span class="valor">"volvo"</span> 
-              <span class="gris">></span> 
-              Volvo
-              <span class="gris">&lt;/</span> 
-              <span class="etiqueta">option </span>
-              <span class="gris">></span> 
-              <br>     
-            <span class="gris hijo">&lt;/</span> 
-            <span class="etiqueta">optgroup </span>
+            Volvo
+            <span class="gris">&lt;/</span> 
+            <span class="etiqueta">option </span>
             <span class="gris">></span> 
-            <br>  
-          <span class="gris">&lt;/</span> 
-          <span class="etiqueta">form </span>
-          <span class="gris">></span>
-        </div>
-        
-        <h3>Atributos</h3>
-        <details>
-          <summary>selected </summary>
-          <p>La primera opción será la seleccionada por defecto. Para elegir otra opción por defecto se le añade "selected"</p>
-        </details>
-
-        <details>
-          <summary>size </summary>
-          <p>En la etiqueta select con valores numéricos. Añade de alto el número de opciones elegido. Si se elige un size de 3 el alto del select dejará ver, sin hacer scroll ni despegar, tres opciones.</p>
-        </details>
-
-        <details>
-          <summary>multiple </summary>
-          <p>Permite seleccionar más de una opción pulsando <kbd>ctrl</kbd></p>
-        </details>
-
-      </div>
-    </details>
-    
-    <details>
-      <summary>textarea</summary>
-      <p>Campo de texto con espacio de alto para varias frases.</p>
-      <h3>Atributos</h3>
-      <details>
-        <summary>rows</summary>
-        <p>Con valor numérico define el número de líneas de texto que ocupará el campo de texto.</p>
-      </details>
-
-      <details>
-        <summary>cols</summary>
-        <p>Define el ancho del campo de texto.</p>
-      </details>
-      
-    </details>
-    
-    <details>
-      <summary>fieldset</summary>
-      <p>Enmarca el formulario y con la etiqueta "legend" añade un título. El fieldset va dentro de la etiqueta form, y dentro del fieldset van los demás elementos del formulario.</p>
-      <div class="code">
-        <form>
-          <fieldset>
-            <legend> Legend </legend>
-            <label for="fname">Nombre:</label><br>
-            <input type="text" id="fname" name="fname" ><br>
-            <label for="lname">Apellido:</label><br>
-            <input type="text" id="lname" name="lname" ><br><br>
-            <input type="submit" value="Enviar">
-          </fieldset>
-        </form>
-      </div>
-    </details>
-    
-    <details>
-      <summary>datalist</summary>
-      <p>Es algo así como un select (dropdown) pero que está relacionado con un input y por lo tanto permite también añadir texto. Hace como de buscador entre las opciones que contiene.</p>
-      <div class="code">
-        <form>
-          <input list="browsers">
-          <datalist id="browsers">
-            <option value="Edge">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
-          </datalist>
-          <label>Selecciona un navegador</label>
-        </form>
-
-        <div class="code black" style="margin-top: 15px;">
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">form </span> 
-          <span class="gris">></span> 
-          <br>
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">input </span> 
-          <span class="atributo"> list</span>
-          =
-          <span class="valor">"browsers"</span> 
-          <span class="gris">></span> 
-          <br>
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">datalist </span> 
-          <span class="atributo"> id</span>
-          =
-          <span class="valor">"browsers"</span> 
-          <span class="gris">></span> 
-          <br>
-          <span class="gris nieto">&lt;</span> 
-          <span class="etiqueta">option </span> 
-          <span class="atributo"> value</span>
-          =
-          <span class="valor">"..."</span> 
-          <span class="gris">></span> 
-          <br>
-          <span class="gris nieto">&lt;</span> 
-          <span class="etiqueta">option </span> 
-          <span class="atributo"> value</span>
-          =
-          <span class="valor">"..."</span> 
-          <span class="gris">></span> 
-          <br>
+            <br>     
           <span class="gris hijo">&lt;/</span> 
-          <span class="etiqueta">datalist </span> 
+          <span class="etiqueta">optgroup </span>
           <span class="gris">></span> 
-          <br>
-          <span class="gris">&lt;/</span> 
-          <span class="etiqueta">form </span> 
-          <span class="gris">></span> 
-          <br>
-        </div>
-
-        <p>El input y el datalist comparten valor en sus atributos list y id.</p>
-      </div>      
+          <br>  
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">form </span>
+        <span class="gris">></span>
+      </div>
+      
+      <h4 class="details-subtitle">Atributos</h4>
+      <ul>
+        <li>
+          <p><strong>selected: </strong>La primera opción será la seleccionada por defecto. Para elegir otra opción por defecto se le añade "selected".</p>
+        </li>
+        <li>
+          <p><strong>size: </strong>En la etiqueta select con valores numéricos. Añade de alto el número de opciones elegido. Si se elige un size de 3 el alto del select dejará ver, sin hacer scroll ni despegar, tres opciones.</p>
+        </li>
+        <li>
+          <p><strong>multiple: </strong>Permite seleccionar más de una opción pulsando <kbd>ctrl</kbd></p>
+        </li>
+      </ul>
     </details>
     
     <details>
-      <summary>output</summary>
-      <p>Muestra el resultado de una operación (como las llevadas a cabo por un script).</p>
-      <div class="code">
+      <summary><h3 class="details-summary">textarea</h3></summary>
+      <p>Campo de texto con espacio de alto para varias frases.</p>
+      <h4 class="details-subtitle">Atributos</h4>
+      <ul>
+        <li>
+          <p><strong>rows: </strong>Con valor numérico define el número de líneas de texto que ocupará el campo de texto.</p>
+        </li>
+        <li>
+          <p><strong>cols: </strong>Define el ancho del campo de texto.</p>
+        </li>
+      </ul>
+    </details>
+    
+    <details>
+      <summary><h3 class="details-summary">fieldset</h3></summary>
+      <p>Enmarca el formulario y con la etiqueta "legend" añade un título. El fieldset va dentro de la etiqueta form, y dentro del fieldset van los demás elementos del formulario.</p>
+      <form>
+        <fieldset>
+          <legend> Legend </legend>
+          <label for="fname">Nombre:</label><br>
+          <input type="text" id="fname" name="fname" ><br>
+          <label for="lname">Apellido:</label><br>
+          <input type="text" id="lname" name="lname" ><br><br>
+          <input type="submit" value="Enviar">
+        </fieldset>
+      </form>
+    </details>
+    
+    <details>
+      <summary><h3 class="details-summary">datalist</h3></summary>
+      <p>Es algo así como un select (dropdown) pero que está relacionado con un input y por lo tanto permite también añadir texto. Hace como de buscador entre las opciones que contiene.</p>
+      <form>
+        <input list="browsers">
+        <datalist id="browsers">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+        <label>Selecciona un navegador</label>
+      </form>
 
-        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      <div class="code black" style="margin-top: 15px;">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">form </span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">input </span> 
+        <span class="atributo"> list</span>
+        =
+        <span class="valor">"browsers"</span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">datalist </span> 
+        <span class="atributo"> id</span>
+        =
+        <span class="valor">"browsers"</span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="gris nieto">&lt;</span> 
+        <span class="etiqueta">option </span> 
+        <span class="atributo"> value</span>
+        =
+        <span class="valor">"..."</span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="gris nieto">&lt;</span> 
+        <span class="etiqueta">option </span> 
+        <span class="atributo"> value</span>
+        =
+        <span class="valor">"..."</span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="gris hijo">&lt;/</span> 
+        <span class="etiqueta">datalist </span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">form </span> 
+        <span class="gris">></span> 
+        <br>
+      </div>
+
+      <p>El input y el datalist comparten valor en sus atributos list y id.</p>     
+    </details>
+    
+    <details>
+      <summary><h3 class="details-summary">output</h3></summary>
+      <p>Muestra el resultado de una operación (como las llevadas a cabo por un script).</p>
+      <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
           <input type="number"  id="a" name="a" value="50"> 
           +
           <input type="number" id="b" name="b" value="50">
           =
           <output name="x" for="a b">100</output>
-        </form>
-
-        <div class="code black" style="margin-top: 15px;">
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">form </span> 
-          <span class="atributo"> oninput</span>
-          =
-          <span class="valor">"x.value=parseInt(a.value)+parseInt(b.value)"</span> 
-          
-          <span class="gris">></span> 
-          <br>
-          <span style="color: #00a151;"> &lt;-- El script hace que se sume a + b y se guarde en una variable x --></span>
-          <br>  
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">input </span> 
-          <span class="atributo"> type</span>
-          =
-          <span class="valor">"number"</span> 
-          <span class="atributo"> id</span>
-          =
-          <span class="valor">"a"</span> 
-          <span class="atributo"> name</span>
-          =
-          <span class="valor">"a"</span> 
-          <span class="atributo"> value</span>
-          =
-          <span class="valor">"50"</span> 
-          <span class="gris">></span> 
-          <br>     
-          +
-          <br>
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">input </span> 
-          <span class="atributo"> type</span>
-          =
-          <span class="valor">"number"</span> 
-          <span class="atributo"> id</span>
-          =
-          <span class="valor">"b"</span> 
-          <span class="atributo"> name</span>
-          =
-          <span class="valor">"b"</span> 
-          <span class="atributo"> value</span>
-          =
-          <span class="valor">"50"</span> 
-          <span class="gris">></span> 
-          <br>    
-          =
-          <br>   
-          <span class="gris hijo">&lt;</span> 
-          <span class="etiqueta">output </span> 
-          <span class="atributo"> name</span>
-          =
-          <span class="valor">"x"</span> 
-          <span class="atributo"> for</span>
-          =
-          <span class="valor">"a b"</span> 
-          <span class="gris">></span> 100
-          <span class="gris">&lt;/</span> 
-          <span class="etiqueta">output </span> 
-          <span class="gris">></span> 
-          <br> 
-          <span class="gris">&lt;/</span> 
-          <span class="etiqueta">form </span> 
-          <span class="gris">></span> 
-        </div>
-      </div>      
+      </form>
+      <div class="code black" style="margin-top: 15px;">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">form </span> 
+        <span class="atributo"> oninput</span>
+        =
+        <span class="valor">"x.value=parseInt(a.value)+parseInt(b.value)"</span> 
+        
+        <span class="gris">></span> 
+        <br>
+        <span style="color: #00a151;"> &lt;-- El script hace que se sume a + b y se guarde en una variable x --></span>
+        <br>  
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">input </span> 
+        <span class="atributo"> type</span>
+        =
+        <span class="valor">"number"</span> 
+        <span class="atributo"> id</span>
+        =
+        <span class="valor">"a"</span> 
+        <span class="atributo"> name</span>
+        =
+        <span class="valor">"a"</span> 
+        <span class="atributo"> value</span>
+        =
+        <span class="valor">"50"</span> 
+        <span class="gris">></span> 
+        <br>     
+        +
+        <br>
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">input </span> 
+        <span class="atributo"> type</span>
+        =
+        <span class="valor">"number"</span> 
+        <span class="atributo"> id</span>
+        =
+        <span class="valor">"b"</span> 
+        <span class="atributo"> name</span>
+        =
+        <span class="valor">"b"</span> 
+        <span class="atributo"> value</span>
+        =
+        <span class="valor">"50"</span> 
+        <span class="gris">></span> 
+        <br>    
+        =
+        <br>   
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">output </span> 
+        <span class="atributo"> name</span>
+        =
+        <span class="valor">"x"</span> 
+        <span class="atributo"> for</span>
+        =
+        <span class="valor">"a b"</span> 
+        <span class="gris">></span> 100
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">output </span> 
+        <span class="gris">></span> 
+        <br> 
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">form </span> 
+        <span class="gris">></span> 
+      </div>  
     </details>
     
-    <h2>Atributos</h2>
+    <h2 class="body-subtitle">Atributos</h2>
     <details>
-      <summary>name</summary>
+      <summary><h3 class="details-summary">name</h3></summary>
       <p>Los campos del formulario tienen que tener un atributo "name" único (excepto radio en el que sólo se selecciona una opción, por eso comparten name) para poder ser enviados.</p>
     </details>
 
     <details>
-      <summary>accept-charset</summary>
+      <summary><h3 class="details-summary">accept-charset</h3></summary>
       <p>Especifica el tipo de caracteres que se acepta</p>
     </details>
 
     <details>
-      <summary>rel</summary>
+      <summary><h3 class="details-summary">rel</h3></summary>
       <p>Especifica una relación entre un recurso y el documento actual (nidea de lo que significa esto)</p>
     </details>
 
     <details>
-      <summary>enctype</summary>
+      <summary><h3 class="details-summary">enctype</h3></summary>
       <p>Sólo para metodo "post". Indica cómo se debe encriptar los valores recogidos al mandarlos.</p>
     </details>
 
-    <h4>Atributos en la etiqueta &lt;form></h4>
+    <h4 class="body-subtitle__subtitle">Atributos en la etiqueta &lt;form></h4>
     <details>
-      <summary>action</summary>
+      <summary><h5 class="details-summary">action</h5></summary>
       <p>Define dónde se enviarán los datos recogidos por el Formulario al pulsar submit.</p>
       <div class="code black">
         <span class="gris">&lt;</span> 
@@ -713,14 +690,14 @@
     </details>
 
     <details>
-      <summary>target</summary>
+      <summary><h5 class="details-summary">target</h5></summary>
       <p>Define dónde se abre la respuesta tras pulsar enviar el formulario.</p>
     </details>
 
     <details>
-      <summary>method</summary>
+      <summary><h5 class="details-summary">method</h5></summary>
       <p>Define el método para enviar la info. Puede ser "get" (que envía los datos a traves del texto de la url) o "post"(lo envía dentro del cuerpo de la solicitud HTTP)</p>
-      <p><strong>Diferencias entre get y post</strong></p>
+      <p class="details-subtitle">Diferencias entre get y post</p>
       <ul>
         <li>Get no es seguro porque los datos son visibles en la url. Post sí es seguro porque se envía oculto.</li>
         <li>Get tiene límite de 2048 caracteres en la url. Post no tiene límite</li>
@@ -729,12 +706,12 @@
     </details>
 
     <details>
-      <summary>autocomplete</summary>
+      <summary><h5 class="details-summary">autocomplete</h5></summary>
       <p>Define si permite autocompletado o no. Sus valores son: "on" "off". Algunos navegadores tienen bloqueada esta función.</p>
     </details>
 
     <details>
-      <summary>novalidate</summary>
+      <summary><h5 class="details-summary">novalidate</h5></summary>
       <p>Si aparece significa que los datos recogidos no hace falta validarlos. No tiene valores, es sólo poner la palabra.</p>
     </details>
     
