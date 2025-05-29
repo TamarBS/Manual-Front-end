@@ -12,9 +12,9 @@
 </head>
 <body>
   <header>
-    <a class="button back" href="index.html">Volver al Índice</a>
+    <div class="button back"><a  href="index.html">Volver al Índice</a></div>
     <hgroup>
-      <h1>Estilos <dfn id="exCss"><abbr title="Cascading Style Sheets">CSS</abbr></dfn></h1>
+      <h1 class="body-title">Estilos <dfn id="exCss"><abbr title="Cascading Style Sheets">CSS</abbr></dfn></h1>
       <p>Hoja de estilos en cascada. Es el lenguaje que aporta el diseño al html.</p>
       <hr>
     </hgroup>
@@ -22,7 +22,7 @@
 
   <main>
 
-    <h2>Sintáxis</h2>
+    <h2 class="body-subtitle">Sintáxis</h2>
     <div class="code black">
       <span class="clase">selector</span>
       <span class="llave">{</span>
@@ -33,25 +33,42 @@
       <span class="llave">}</span>
     </div>
     <details>
-      <summary>selector</summary>
+      <summary><h3 class="details-summary">Selector</h3></summary>
       <p>Se utiliza para encontrar el elemento HTML que se quiere afectar con estilos.</p>
-      <p><strong>Se pueden dividir en 5 categorías:</strong></p>
+      <p class="details-subtitle">Se pueden dividir en 5 categorías:</p>
       <ul>
-        <li><p><strong>simple: </strong>Selecciona en base a los atributos name (nombre de la etiqueta), id (#nombre del id) y class (.nombre de la clase).</p></li>
-        <li><p><strong>combinator: </strong>Seleccionan elementos en función a una relación específica.</p></li>
+        <li><p><strong>Simple: </strong>Selecciona en base a los atributos name (nombre de la etiqueta), id (#nombre del id) y class (.nombre de la clase).</p></li>
+        <li><p><strong>Combinator: </strong>Seleccionan elementos en función a una relación específica.</p></li>
         <li><p><strong>Pseudo-class: </strong>Selectores en base a ciertos estados.</p></li>
         <li><p><strong>Pseudo-elements: </strong>Seleccionan una parte del elemento.</p></li>
         <li><p><strong>Attribute: </strong>Selecciona elementos basado en su atributo o valor del atributo.</p></li>
       </ul>
-      <div class="code">
-        <p>Ejemplos de selectores:</p>
-        <p><strong>.center {...} </strong>Afecta a todos los elementos con clase center.</p>
-        <p><strong>p.center {...} </strong>Afecta a los elementos p que tengan la clase center.</p>
-        <p><strong>* {} </strong>Selector universal. Afecta a todos los Elementos HTML.</p>
-        <p><strong>.center</strong></p>
-        <p><strong>h1, h2, h3 {...} </strong>Afectan los mismos estilos a los elementos h1, h2 y h3.</p>
+      <p class="details-subtitle">Ejemplos de selectores:</p>
+      <p><strong>.center {...} </strong>Afecta a todos los elementos con clase center.</p>
+      <p><strong>p.center {...} </strong>Afecta a los elementos p que tengan la clase center.</p>
+      <p><strong>* {} </strong>Selector universal. Afecta a todos los Elementos HTML.</p>
+      <p><strong>.center</strong></p>
+      <p><strong>h1, h2, h3 {...} </strong>Afectan los mismos estilos a los elementos h1, h2 y h3.</p>
+    </details>
+    
+    <h2 class="body-subtitle">Particularidades</h2>
+    <details>
+      <summary><h3 class="details-summary">Comentarios</h3></summary>
+      <div class="code black">
+        <span class="comentario">/* texto del comentario */</span>
       </div>
     </details>
+
+    <h2 class="body-subtitle">Lista de propiedades CSS por categorías</h2>
+    <div class="index">
+      <nav aria-label="propiedades css">
+        <a href="propiedades_css/color.html">Colores</a>
+        <a href="propiedades_css/ornamental.html">Decorativos</a>
+        <a href="propiedades_css/spaces.html">Espaciados</a>
+        <a href="propiedades_css/size.html">Tamaños</a>
+  
+      </nav>
+    </div>
 
     <!-- Contenido provisional. En esta sección irá el índice a los contenidos específicos de mi manual de CSS -->
     <h2>Propiedades CSS que aparecieron en el tutorial de HTML</h2>

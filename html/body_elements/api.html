@@ -12,9 +12,9 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de Elementos HTML</a>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
     <hgroup>
-      <h1>Web APIs</h1>
+      <h1 class="body-title">Web APIs</h1>
       <p><strong>A</strong>pplication <strong>P</strong>rogramming <strong>I</strong>nterface. Interfaz de programación de aplicaciones. Interfaz que ofrece un sinfín de funciones y subrutinas para expandir las posibilidades del navegador, ofreciendo herramientas para diferentes propósitos.</p>
     </hgroup>
     <p><strong>Se inicializan con un script</strong></p>
@@ -23,113 +23,106 @@
   </header>
 
   <main>
-    <h2>APIs de HTML5</h2>
+    <h2 class="body-subtitle">APIs de HTML5</h2>
     <details>
-      <summary>API de Geolocalizazción</summary>
+      <summary><h3 class="details-summary">Geolocalizazción</h3></summary>
       <p>Accede a la localización del usuario.</p>
-      <div class="code">
-        <p>Al clickar el botón se mostrará mi latitud y longitud.</p>
-        <button onclick="getLocation()">Localízame</button>
-        <p id="mandaloca"></p>
-        <script>
-          const x = document.getElementById("mandaloca");
+      <p>Al clickar el botón se mostrará mi latitud y longitud.</p>
+      <button onclick="getLocation()">Localízame</button>
+      <p id="mandaloca"></p>
+      <script>
+        const x = document.getElementById("mandaloca");
 
-          function getLocation() {
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(success, error);
-            } else { 
-              x.innerHTML = "Tu navegador no permite la Geolocalización.";
-            }
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(success, error);
+          } else { 
+            x.innerHTML = "Tu navegador no permite la Geolocalización.";
           }
+        }
 
-          function success(position) {
-            x.innerHTML = "Latitud: " + position.coords.latitude + 
-            "<br>Longitud: " + position.coords.longitude;
-          }
+        function success(position) {
+          x.innerHTML = "Latitud: " + position.coords.latitude + 
+          "<br>Longitud: " + position.coords.longitude;
+        }
 
-          function error() {
-            alert("Lo siento, no es posible la geolocalización.");
-          }
-          </script>
-      </div>      
-    </details>
-    <details>
-      <summary>API Drag and drop</summary>
-      <p>Permite usar esa opción de drag and drop.</p>
-      <div class="code">
-        <p>Ejemplo de un drag and drop de texto.</p>
-        <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" style="width: 350px; height: 70px; padding: 10px; border: 1px solid #aaa;"></div>
-        <div id="div2" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" style="width: 350px; height: 70px; padding: 10px; border: 1px solid #aaa;">
-          <h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</h1>
-        </div>
-        
-        <script>
-          function dragstartHandler(ev) {
-            ev.dataTransfer.setData("text", ev.target.id);
-          }
-
-          function dragoverHandler(ev) {
-            ev.preventDefault();
-          }
-
-          function dropHandler(ev) {
-            ev.preventDefault();
-            const data = ev.dataTransfer.getData("text");
-            ev.target.appendChild(document.getElementById(data));
-          }
+        function error() {
+          alert("Lo siento, no es posible la geolocalización.");
+        }
         </script>
+    </details>
+    <details>
+      <summary><h3 class="details-summary">Drag and drop</h3></summary>
+      <p>Permite usar esa opción de drag and drop.</p>
+      <p>Ejemplo de un drag and drop de texto.</p>
+      <div id="div1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" style="width: 350px; height: 70px; padding: 10px; border: 1px solid #aaa;"></div>
+      <div id="div2" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)" style="width: 350px; height: 70px; padding: 10px; border: 1px solid #aaa;">
+        <h1 id="h1" draggable="true" ondragstart="dragstartHandler(event)">W3Schools.com</h1>
+      </div>
+      
+      <script>
+        function dragstartHandler(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
 
-      </div>      
+        function dragoverHandler(ev) {
+          ev.preventDefault();
+        }
+
+        function dropHandler(ev) {
+          ev.preventDefault();
+          const data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      </script>
     </details>
     <details>
-      <summary>API Almacenamiento Web</summary>
+      <summary><h3 class="details-summary">Almacenamiento Web</h3></summary>
       <p>Permite a los navegadores almacenar datos de una forma más intuitiva que las cookies.</p>
-      <div class="code">
-        <p>Contador de clicks</p>
-        <button onclick="clickCounter()" type="button">Clícame!</button>
-        <p id="result"></p>
-        <script>
-          function clickCounter() {
-            const x = document.getElementById("result");
-            if (typeof(Storage) !== "undefined") {
-              if (localStorage.clickcount) {
-                localStorage.clickcount = Number(localStorage.clickcount)+1;
-              } else {
-                localStorage.clickcount = 1;
-              }
-              x.innerHTML = "Has clicado " + localStorage.clickcount + " veces!";
+      <p>Contador de clicks</p>
+      <button onclick="clickCounter()" type="button">Clícame!</button>
+      <p id="result"></p>
+      <script>
+        function clickCounter() {
+          const x = document.getElementById("result");
+          if (typeof(Storage) !== "undefined") {
+            if (localStorage.clickcount) {
+              localStorage.clickcount = Number(localStorage.clickcount)+1;
             } else {
-              x.innerHTML = "Lo siento, tu navegador no soporta esta API!";
+              localStorage.clickcount = 1;
             }
+            x.innerHTML = "Has clicado " + localStorage.clickcount + " veces!";
+          } else {
+            x.innerHTML = "Lo siento, tu navegador no soporta esta API!";
           }
-        </script>   
-        <p>localStorage guarda la info aunque se cierre la pestaña. sessionStorage pierde la info guardada en cuánto se cierra la pestaña.</p>     
-      </div>      
+        }
+      </script>   
+      <p>localStorage guarda la info aunque se cierre la pestaña. sessionStorage pierde la info guardada en cuánto se cierra la pestaña.</p>      
     </details>
     <details>
-      <summary>API Trabajadores web</summary>
+      <summary><h3 class="details-summary">Trabajadores web</h3></summary>
       <p>Web workers. Permite a JavaScript trabajar en segundo plano sin afectar al rendimiento de la página. Normalmente se utiliza para scripts difícilis de procesar para que aunque tarde en ejecutarse no afecte a la interactividad de la web, ya que la web espera a que se cargue el JavasCript para empezar a ser interactiva.</p>
     </details>
     <details>
-      <summary>API eventos enviados al servidor</summary>
+      <summary><h3 class="details-summary">Eventos enviados al servidor</h3></summary>
       <p>Permite a una web actualizarse automáticamente.</p>
     </details>
     <details>
-      <summary>API canvas</summary>
+      <summary><h3 class="details-summary">Canvas</h3></summary>
       <p>Permite al usuario dibujar cosas en el momento gracias a JavaScript.</p>
     </details>
 
-    <h2>Buenas prácticas</h2>
+    <h2 class="body-subtitle">Buenas prácticas</h2>
     <details>
-      <summary>Revisa la capacidad de los navegadores para soportar la API</summary>
+      <summary><h3 class="details-summary">Revisa la capacidad de los navegadores para soportar la API</h3></summary>
       <p>Asegúrate de incluir un script o mensaje que el navegador pueda soportar en caso de que la API no funcione.</p>
     </details>
     <details>
-      <summary>Mensajes de error</summary>
+      <summary><h3 class="details-summary">Mensajes de error</h3></summary>
       <p>Asegúrate de incluir manejadores de error para avisar al usuario en caso de problema, para no dejarlo sin un porqué.</p>
     </details>
     <details>
-      <summary>Pide permiso al usuario</summary>
+      <summary><h3 class="details-summary">Pide permiso al usuario</h3></summary>
       <p>Siempre que se necesite de información sensible del usuario, por ejemplo, su localización, preguntar en un prompt si consiente.</p>
     </details>
   </main>

@@ -1,35 +1,29 @@
 body {
   margin: 0 10%;
-  padding: 5% 0;
+  padding: 5rem 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
-  line-height: 21px;
-  
 }
-/* Encabezados */
-header {
-  margin-bottom: 30px;
-}
+header { margin-bottom: 3rem; }
 
-h1, h2 {
+/* Encabezados */
+.body-title { 
+  margin-top: 0px;
+  line-height: 2rem;
+  text-transform: uppercase; 
+}
+.body-subtitle, .body-subtitle__subtitle {
   text-transform: uppercase;
 }
-h1 {
-  font-size: 2em;
-  line-height: 1em;
-  margin-top: 60px;
-}
-h2 {
-  font-size: 1.5em;
-  line-height: 1em;
-}
-h3 {
-  font-size: 1.3em;
-  line-height: 1.3em;
-}
+  
 /* ----------------------------- */
 
-/* Índice */
+/* Índices */
+.index-title, .index-subtitle { text-transform: uppercase; }
+.index-subtitle { 
+  font-size: 0.83em;
+  color: grey;
+  font-weight: bold; 
+}
 .index nav {
   display: flex;
   flex-direction: column;
@@ -37,64 +31,84 @@ h3 {
   flex-wrap: wrap;
 }
 .index a {
-  padding: 5px 15px;
+  padding: 5px 10px;
   font-size: 1.1em;
   line-height: 1.5em;
-  text-underline-offset: 0.2em;
-  background-color: whitesmoke;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: gainsboro;
 }
-.index a:link {
-  color: black;
-}
-.index a:active {
-  color: red;
-}
-.index a:visited {
-  color: purple;
-}
+.index a:link { color: black; }
 .index a:hover {
+  color: white;
   font-weight: bold;
+  background-color: teal;
 }
 /* ----------------------------- */
 
 /* Botones */
 .button {
   margin: 0;
-  padding: 5px 15px;
+  width: fit-content;
   border-radius: 5px;
   border-width: 2px;
   border-style: solid;
-  text-decoration: none;
-  text-transform: uppercase;
+}
+.button a { 
+  display: block;
+  box-sizing: border-box;
+  padding: 7px 15px 5px;
+  width: 100%;
   font-size: 1em;
   font-weight: 600;
+  text-decoration: none; 
+  text-transform: uppercase;
 }
 .back {
   background-color: white;
-  color: black;
-  border-color: rgb(224, 224, 224);
+  border-color: gainsboro;
+  margin-bottom: 2rem;
 }
 .back:hover {
-  background-color: rgb(224, 224, 224);
+  background-color: teal;
+  border-color: teal;
 }
+.back a { color: black; }
+.back:hover a { color: white; }
 /* ----------------------------- */
 
-/* Accourdion usando la etiqueta details */
+/* Accordion usando la etiqueta details */
 details {
   margin-bottom: 15px;
   padding: 5px 15px;
-  background-color: whitesmoke;
+  background-color: gainsboro;
+  border-radius: 5px;
 }
 summary {
   cursor: pointer;
   font-weight: bold;
 }
+details .details-summary { /* Para prevenir el display block de algunos headings. Va en el elemento HTML, no en el summary.*/
+  font-size: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  font-weight: bold;
+  margin: 0;
+  max-width: 90%;
+}
+details .details-subtitle {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  font-weight: normal;
+  text-transform: uppercase;
+}
 /* ----------------------------- */
 
 /* Listas */
-ul {
-	list-style: none;
-}
+ul { 
+  padding-left: 20px;
+  list-style: square;
+ }
 /* ----------------------------- */
 
 /* Contenedores */
@@ -109,9 +123,11 @@ ul {
  background-color: black;
  color: white; 
  font-family: monospace;
- line-height: 20px;
+ font-size: 1rem;
+ line-height: 1.2rem;
  margin-top: 15px;
 }
+/* Clases para las palabras que representan código */
 .gris {
   color: grey;
 }
@@ -152,13 +168,12 @@ ul {
 
 /* Estilos para los atajos de teclado */
 kbd {
-  margin-left: 5px;
-  margin-right: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  background-color: gainsboro;
+  margin: 5px;
+  padding: 5px 10px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: black;
   border-radius: 50px;
 }
 /* ----------------------------- */
@@ -168,17 +183,16 @@ kbd {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
   padding-top: 15px;
 }
 
-#paletaColoresHTML >div {
-  width: 20%;
-  height: 80px;
-  font-size: 12px;
-  text-align: center;
+#paletaColoresHTML>div {
+  font-size: 1rem;
   box-sizing: border-box;
   padding: 5px;
-  border: 5px solid whitesmoke;
+  border: 1px solid black;
 }
 
 /* ------------------------------------- */

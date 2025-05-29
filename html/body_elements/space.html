@@ -13,43 +13,39 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de elementos HTML</a>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
     <hgroup>
-      <h1>Espacios</h1>
+      <h1 class="body-title">Espacios</h1>
       <p>Elementos que añaden espacios vacíos o diseños que ayudan a organizar los espacios.</p>
       <hr>
     </hgroup>
   </header>
   <main>
     <details>
-      <summary>br</summary>
+      <summary><h2 class="details-summary">br</h2></summary>
       <p>salto de línea.</p>
-      <p class="code">Ejemplo de<br>saltos de<br>línea con &lt;br></p>
+      <p>Ejemplo de<br>saltos de<br>línea con &lt;br></p>
     </details>
 
     <details>
-      <summary>wbr</summary>
+      <summary><h2 class="details-summary">wbr</h2></summary>
       <p>En casos de texto muy largo sin espacios que puede no caber en el ancho de pantalla, se añade esta etiqueta para que el navegador corte el texto por ahí. Es útil por ejemplo para url muy largas. Así el salto de línea será más controlado.</p>
-      <div class="code">
-        <p>Ejemplo sin wbr:</p>
-        <div style="width: 200px;">
-          <p style="background-color: rgb(196, 255, 228);">ejemplodeurlquesevaacortarporcualquierpartesinrespetarlaspalabrascompletas</p>
-        </div>
-        <p>Ejemplo con wbr:</p>
-        <div style="width: 200px;">
-          <p style="background-color: rgb(196, 255, 228);">ejemplodeurl<wbr>quesevaacortar<wbr>porcualquierparte<wbr>sinrespetar<wbr>laspalabras<wbr>completas</p>
-        </div>
+      <p>Ejemplo sin wbr:</p>
+      <div style="width: 200px;">
+        <p style="background-color: rgb(196, 255, 228);">ejemplodeurlquesevaacortarporcualquierpartesinrespetarlaspalabrascompletas</p>
+      </div>
+      <p>Ejemplo con wbr:</p>
+      <div style="width: 200px;">
+        <p style="background-color: rgb(196, 255, 228);">ejemplodeurl<wbr>quesevaacortar<wbr>porcualquierparte<wbr>sinrespetar<wbr>laspalabras<wbr>completas</p>
       </div>
     </details>
 
     <details>
-      <summary>hr</summary>
+      <summary><h2 class="details-summary">hr</h2></summary>
       <p>Añade una línea horizontal.</p>
-      <div class="code">
-        <p>Ejemplo de separación con &lt;hr></p>
-        <hr>
-        <p>Texto a continuación</p>
-      </div>
+      <p>Ejemplo de separación con &lt;hr></p>
+      <hr>
+      <p>Texto a continuación</p>
     </details>
 
   </main>

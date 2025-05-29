@@ -13,78 +13,78 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a la lista de elementos HTML</a>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
     <hgroup>
-      <h1>Formatos de texto</h1>
+      <h1 class="body-title">Formatos de texto</h1>
       <p>Existen diferentes marcados de texto para cambiar el aspecto del texto.</p>
       <hr>
     </hgroup>
   </header>
 
   <main>
-    <h2>Elementos HTML para formato de texto</h2>
+    <h2 class="body-subtitle">Elementos HTML para formato de texto</h2>
     <details>
-      <summary>b</summary>
+      <summary><h3 class="details-summary">b</h3></summary>
       <p>bold. texto en negrita.</p>
     </details>
 
     <details>
-      <summary>strong</summary>
+      <summary><h3 class="details-summary">strong</h3></summary>
       <p>Como la negrita, pero significa palabra importante para los motores de búsqueda.</p>
     </details>
 
     <details>
-      <summary>i</summary>
+      <summary><h3 class="details-summary">i</h3></summary>
       <p>Italics. Cursiva. Se suele utilizar para palabras extrangeras, terminología técnica, el nombre de un barco, etc.</p>
     </details>
 
     <details>
-      <summary>em</summary>
+      <summary><h3 class="details-summary">em</h3></summary>
       <p><em>Emfasis. Cursiva, pero paa los lectores de texto marcará una pronunciación enfática.</em></p>
     </details>
 
     <details>
-      <summary>mark</summary>
+      <summary><h3 class="details-summary">mark</h3></summary>
       <p><mark>marker. Cómo subrayado por un fosforito.</mark></p>
     </details>
 
     <details>
-      <summary>small</summary>
+      <summary><h3 class="details-summary">small</h3></summary>
       <p><small>Texto más pequeñito.</small></p>
     </details>
 
     <details>
-      <summary>del</summary>
+      <summary><h3 class="details-summary">del</h3></summary>
       <p><del>delete. Texto tachado porque se entiende como eliminado del párrafo.</del></p>
     </details>
 
     <details>
-      <summary>s</summary>
+      <summary><h3 class="details-summary">s</h3></summary>
       <p>Indica que un texto ya no es correcto, está desactualizado, no es relevante, no es adecuado, etc. Aparece el texto tachado. Es algo así como el del, pero su semántica indica un matíz diferente.</p>
     </details>
 
     <details>
-      <summary>ins</summary>
+      <summary><h3 class="details-summary">ins</h3></summary>
       <p><ins>inserted. Texto añadido, algo así como el del, pero en vez de ser rechazado del texto, este es un añadido. Se representa subrayando.</ins></p>
     </details>
 
     <details>
-      <summary>sub</summary>
+      <summary><h3 class="details-summary">sub</h3></summary>
       <p><sub>subtext. Texto que se coloca por debajo del texto.</sub></p>
     </details>
 
     <details>
-      <summary>sup</summary>
+      <summary><h3 class="details-summary">sup</h3></summary>
       <p><sup>suppertext. Texto que se coloca por encima del texto.</sup></p>
     </details>
 
     <details>
-      <summary>span</summary>
+      <summary><h3 class="details-summary">span</h3></summary>
       <p>Elemento inline que se suele utilizar para aplicar estilos diferentes sólo a una <span style="color: coral;">parte del</span> texto.</p>
     </details>
 
     <details>
-      <summary>pre</summary>
+      <summary><h3 class="details-summary">pre</h3></summary>
       <p><pre>preformatted. Texto que
       respeta     los espacios que 
   se añadan   o saltos    de
@@ -95,46 +95,44 @@
     </details>
 
     <details>
-      <summary>code</summary>
+      <summary><h3 class="details-summary">code</h3></summary>
       <p><code>Presenta el código en monoscope, como pre, pero sin respetar saltos de línea ni espacios en blanco. Se utiliza para mostrar código del ordenador.</code></p>
     </details>
 
     <details>
-      <summary>kbd</summary>
+      <summary><h3 class="details-summary">kbd</h3></summary>
       <p>Keyboad. Fuente monoscope y sirve para indicar atajos de teclado.</p>
     </details>
 
     <details>
-      <summary>bdo</summary>
+      <summary><h3 class="details-summary">bdo</h3></summary>
       <p>bi-dimensional override. Dirección de escritura.</p>
-      <div class="code">
-        <bdo style="font-weight: bold;" dir="rtl">ejemplo de frase con la dirección cambiada.</bdo>
-        <div class="code black">
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">bdo </span> 
-          <span class="atributo">dir</span> =
-          <span class="valor">"rtl"</span>
-          <span class="gris">></span> ejemplo de fra...
+      <bdo style="font-weight: bold;" dir="rtl">ejemplo de frase con la dirección cambiada.</bdo>
+      <div class="code black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">bdo </span> 
+        <span class="atributo">dir</span> =
+        <span class="valor">"rtl"</span>
+        <span class="gris">></span> ejemplo de fra...
 
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">bdo </span> 
-          <span class="gris">></span> 
-        </div> 
-        <p>rtl = right to left , ltr = left to right </p>   
-      </div>
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">bdo </span> 
+        <span class="gris">></span> 
+      </div> 
+      <p>rtl = right to left , ltr = left to right </p>   
     </details>
 
     <details>
-      <summary>samp</summary>
+      <summary><h3 class="details-summary">samp</h3></summary>
       <p>Sample output. Resultado de programa de ordenador. Algo así como la etiqueta que indica que un contenido es el resultado de el cálculo o funcionalidad de la máquina. También se ve como monoscope.</p>
     </details>
 
     <details>
-      <summary>var</summary>
+      <summary><h3 class="details-summary">var</h3></summary>
       <p>variable. Para indicar un contenido que corresponde a una variable. Se muestra en cursiva.</p>
     </details>
 
-    <h2>Caracteres reservados</h2>
+    <h2 class="body-subtitle">Caracteres reservados</h2>
     <div class="code">
       <p>Ej (&lt;, >) </p>
       <p>Para poder usarlos como texto existen las <strong>entidades</strong></p>
@@ -152,15 +150,15 @@
       <p>ASCII fue el primer estandar de codificación de símbolos.</p>
     </div>
 
-    <h2>Otros Elementos poco usados</h2>
+    <h2 class="body-subtitle">Otros Elementos poco usados</h2>
     <details>
-      <summary>bdi</summary>
+      <summary><h3 class="details-summary">bdi</h3></summary>
       <p>bi-directional Isolation. Es útil para otros alfabetos que se escriben de derecha a izquierda y siguen otras normas. Por ejemplo en el alfabeto árabe se colocan en lugares diferentes a los esperados. Para controlar esto se usa el alfabeto entre etiquetas bdi. </p>
       <p>Ej sin y con bdi: User إيان: 90 points  ≠ User <bdi>إيان</bdi>: 90 points</p>
     </details>
 
     <details>
-      <summary>ruby</summary>
+      <summary><h3 class="details-summary">ruby</h3></summary>
       <p>Normalmente utilizado en japonés, es una etiqueta que contiene un texto que va acompañado de una aclaración sobre cómo se pronuncia. <br> Los caracteres de la pronunciación van entre etiqutas "rt"</p>
       <ruby>
       漢 <rt> ㄏㄢˋ </rt>
@@ -169,7 +167,7 @@
     </details>
 
     <details>
-      <summary>u</summary>
+      <summary><h3 class="details-summary">u</h3></summary>
       <p>unarticulated. Es algo así como texto diferente del texto normal. Normalmente texto mal escrito o nombres propios en chino.</p>
     </details>
 

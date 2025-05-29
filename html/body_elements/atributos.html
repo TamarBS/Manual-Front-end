@@ -12,69 +12,65 @@
 <body>
 
   <header>
-    <a class="button back" href="../body.html">Volver a Body</a>
-    <h1>Atributos de los elementos HTML</h1>
+    <div class="button back"><a  href="../body.html">Volver a la lista de Elementos HTML</a></div>
+    <h1 class="body-title">Atributos de los elementos HTML</h1>
     <hr>
   </header>
 
   <main>
-    <h2>Algunos de los atributos más utilizados</h2>
+    <h2 class="body-subtitle">Algunos de los atributos más utilizados</h2>
     <details > <!-- Class-->
-      <summary>class </summary>
+      <summary><h3 class="details-summary">class </h3></summary>
       <p>Diferencia mayúsculas de minúsculas.  <strong>Nunca</strong> comenzar con número ni contener espacios. Dar a varios elementos los mismos estilos. (Punto "<strong>.</strong>") siempre delante del nombre de la clase.</p>
-      <p class="code">class=".clase1 .clase2 .clase3"</p>
+      <p>class=".clase1 .clase2 .clase3"</p>
     </details>
     <details > <!-- id -->
-      <summary>id</summary>
+      <summary><h3 class="details-summary">id</h3></summary>
       <p>Diferencia mayúsculas de minúsculas. <strong>Nunca</strong> comenzar con número ni contener espacios. Sólo un único id por elemento. Nombre id <strong>único</strong> en todo el proyecto. <strong>'#'</strong> siempre delante del nombre del id.</p>
-    <p class="code">id="#id"</p>
+    <p>id="#id"</p>
     </details>
     <details > <!-- title -->
-      <summary>title</summary>
+      <summary><h3 class="details-summary">title</h3></summary>
       <p>Sirve como tooltip.</p>
-      <div class="code">
-        <p title="aquí ejemplo de un tooltip">Posa un rato el ratón</p>
-        <p class="code black">
-          <span class="gris">&lt;</span> 
-          <span class="etiqueta">p </span> 
-          <span class="atributo"> title</span>
-          =
-          <span class="valor">"aquí ejemplo de un tooltip"</span>
-          <span class="gris">></span> 
-          Posa un rato el ratón
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">p</span>
-          <span class="gris">></span> 
-        </p>
-      </div>
+      <p title="aquí ejemplo de un tooltip">Posa un rato el ratón</p>
+      <p class="code black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">p </span> 
+        <span class="atributo"> title</span>
+        =
+        <span class="valor">"aquí ejemplo de un tooltip"</span>
+        <span class="gris">></span> 
+        Posa un rato el ratón
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">p</span>
+        <span class="gris">></span> 
+      </p>
     </details>
     <details > <!-- href -->
-      <summary>href</summary>
+      <summary><h3 class="details-summary">href</h3></summary>
       <p>Hyperlink reference</p>
     </details>
     <details ><!-- src -->
-      <summary>src</summary>
+      <summary><h3 class="details-summary">src</h3></summary>
       <p>Source</p>
     </details>
     <details ><!-- width y height -->
-      <summary>Width y height</summary>
+      <summary><h3 class="details-summary">Width y height</h3></summary>
       <p>Ancho y alto. Valor como número sin px porque se da por supuesto</p>
     </details>
     <details ><!-- alt -->
-      <summary>alt</summary>
+      <summary><h3 class="details-summary">alt</h3></summary>
       <p>Alternative text. Aparece cuándo el elemento no carga bien o en caso de lectores para ciegos.</p>
     </details>
     <details ><!-- style -->
-      <summary>style</summary>
+      <summary><h3 class="details-summary">style</h3></summary>
       <p>Para hacer cambios de estilo sólo en ese elemento</p>
-      <div class="code">
-        <p>El valor de este atributo es diferente:
-          <p>&lt;tagname style="<strong>property:value; property:value;</strong> "></p>
-        </p>
-      </div>
+      <p>El valor de este atributo es diferente:
+        <p>&lt;tagname style="<strong>property:value; property:value;</strong> "></p>
+      </p>
     </details>
 
-    <h2>Enlaces a listados de todos los atributos</h2>
+    <h2 class="body-subtitle">Enlaces a listados de todos los atributos</h2>
     <div class="index">
       <nav aria-label="Listas de todos los atributos">
         <a href="https://www.w3schools.com/tags/ref_attributes.asp">Lista de todos los atributos HTML de W3Schools</a>
