@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Propiedades CSS decorativas</title> 
+  <meta name="description" content="Propiedades que sirven para decorar fondos, añadir imágenes,etc.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Propiedades CSS decorativas</h1>
+      <p>Propiedades que decoran fondos, elementos, con mucha presencia.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2>Lista de propiedades</h2>
+    <details>
+      <summary><h3 class="details-summary">Fondos</h3></summary>
+      <p>Sirve para decorar fondos de elemento.</p>
+      <p class="details-subtitle">Fondos de color</p>
+      <p><strong>background-color: </strong></p>Cambia el color de fondo.</p>
+      <div class="col2">
+        <div>
+          <p style="background-color: red;">Fondo rojo</p>
+        </div>
+        <div>
+          <p style="background-color: green;">Fondo verde</p>
+        </div>
+      </div>   
+      <p class="details-subtitle">Fondos con imagen</p>  
+      <details>
+        <summary><h4 class="details-summary">background-image</h4></summary>
+        <p>El fondo del elemento será una imagen.</p>
+        <div class="code black">
+          <span class="propiedad">background-image</span>:
+          <span class="valorCss">url("urldeimagen.jpg")</span>;
+        </div>
+        <p>Por defecto la imagen se repite hasta cubrir todo el elemento.</p>
+      </details>
+      <details>
+        <summary><h4 class="details-summary">background-repeat</h4></summary>
+        <p>Controla la repetición de las imágenes</p>
+        <p class="details-subtitle">Posibles valores</p>
+        <ul>
+          <li><p><strong>repeat-x: </strong>Para que sólo se repita horizontalmente.</p></li>
+          <li><p><strong>repeat-y: </strong>Para que sólo se repita verticalmente.</p></li>
+          <li><p><strong>no-repeat: </strong>Para que no se repita. Aparece sólo una vez.</p></li>
+          <li><p><strong>repeat: </strong>es el por defecto. Indica que la imagen se repita para cubir todo el fondo, tanto horizontalmente como verticalmente.</p></li>
+          <li><p><strong>space: </strong>se repetirá solo las veces que sea posible repetir la imagen en su tamaño original sin que quede ninguna cortada. Lo consigue dejando espacio horizontal y vertical entre las imágenes.</p></li>
+          <li><p><strong>round: </strong>nunca corta una imagen, pero adapta el tamaño de la imagen para que esto sea posible. Es decir, si calcula que caben dos imágenes enteras y otra más cortada pondrá el límite de imágenes en tres, y para que la tercera imagen no se corte, lo que hace es reducir el tamaño de la imagen hasta que quepan las tres sin recortar ninguna.</p></li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4 class="details-summary">background-attachment</h4></summary>
+        <p>Define si la imagen se queda fija o se sigue viendo en pantalla cuándo se hace scroll.</p>
+        <p class="details-subtitle">Posibles valores</p>
+        <ul>
+          <li><p><strong>scroll: </strong>será visible al hacer el scroll.</p></li>
+          <li><p><strong>fixed: </strong>se quedará fija.</p></li>
+          <li><p><strong>local: </strong>se comporta como un sticky. Será visible al hacer scroll dentro de su padre y fuera será fixed.</p></li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4 class="details-summary">background-position</h4></summary>
+        <p>Define la posición de la imagen con respecto a su padre.</p>
+        <p class="details-subtitle">Posibles valores</p>        
+        <ul>
+          <li><p><strong>top right bottom left: </strong>combinando como se quiera estas propiedades se permite colocar la imágen pegada arriba, abajo o a los lados o combinaciones de varias.</p></li>
+          <li><p><strong>x% y%: </strong>posiciona la imagen calculando el porcentaje del padre para colocar la esquina superior izquierda.</p></li>
+          <li><p><strong>xpx ypx: </strong>posiciona la esquina superior izquierda de la imagen en la coordenada x e y de su padre.</p></li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4 class="details-summary">background-clip</h4></summary>
+        <p>Define los margenes a respetar por la imagen.</p>
+        <p class="details-subtitle">Posibles valores</p>        
+        <ul>
+          <li><p><strong>border-box: </strong>ocupa todo el espacio.</p></li>
+          <li><p><strong>padding-box: </strong>respeta el padding.</p></li>
+          <li><p><strong>content-box: </strong>sólo ocupa el espacio del contenido.</p></li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4 class="details-summary">background-origin</h4></summary>
+        <p>Define la coordenada de inicio de la imagen respetando los margenes.</p>
+        <p class="details-subtitle">Posibles valores</p>        
+        <ul>
+          <li><p><strong>border-box: </strong>se coloca pegado a arriba a la izquierda.</p></li>
+          <li><p><strong>padding-box: </strong>se coloca pegado a arriba a la izquierda respetando el padding.</p></li>
+          <li><p><strong>content-box: </strong>se coloca pegado a arriba a la izquierda del espacio del contenido.</p></li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4 class="details-summary">background-size</h4></summary>
+        <p>Define el tamaño de la imagen con respecto a su padre.</p>
+        <p class="details-subtitle">Posibles valores</p>        
+        <ul>
+          <li><p><strong>auto: </strong>el tamaño de la imagen respeta su tamaño original.</p></li>
+          <li><p><strong>xxpx: </strong>le dará un tamaño concreto.</p></li>
+          <li><p><strong>xx%: </strong>le dará un tamaño concreto calculando el ancho de su padre.</p></li>
+          <li><p><strong>cover: </strong>agrandará la imagen proporcionalmente hasta que el ancho se ajuste. Es posible que la imagen se corte.</p></li>
+          <li><p><strong>contain: </strong>agrandará la imagen proporcionalmente hasta que toque con alguno de sus límites tanto horizontal como vertical.</p></li>
+        </ul>
+      </details>
+      
+      <p class="details-subtitle">Propiedad aglutinadora</p>
+      <p>Igual que pasa en border y otras propiedades, se puede usar una propiedad que agrutine estas propiedades css en una sola.</p>
+      <h4 class="details-summary">background</h4>
+      <p>El orden de los valores será:</p>
+      <div class="code black">
+        <span class="propiedad">background</span>:
+        <span class="valorCss"> background-color background-image background-repeat background-attachment background-position</span>;
+      </div>
+
+    </details>
+    
+    <details>
+      <summary><h3 class="details-summary">Bordes</h3></summary>
+      <p>Crea un borde.</p>
+      <p style="border:2px solid red;">Borde rojo</p>
+      <p style="border:2px solid green;">Borde verde</p>
+      <div class="code black">
+        <span class="propiedad">border</span>:
+        <span class="valorCss">2px solid red;</span>
+        <br>
+        <span class="propiedad">border</span>:
+        <span class="valorCss">border-width border-style border-color;</span>
+      </div>
+      <p>Se puede afectar sólo uno de los lados con las siguientes propiedades: <strong>border-top, border-right, border-bottom, border-left</strong>.</p>
+      <p style="border-left:8px solid green;">Borde verde</p>
+      <p class="details-subtitle">Tres propiedades obligatorios:</p>
+      <details>
+        <summary>border-width</summary>
+        <p>Ancho de línea.</p>
+        <p class="details-subtitle">Posibles valores</p>
+        <ul>
+          <li><p><strong>xxpx: </strong>Se define el ancho de borde en unidades.</p></li>
+          <li><p><strong>thin, medium o thick: </strong>Tres valores predefinidos.</p></li>
+        </ul>
+      </details>
+      <details>
+        <summary id="border-style">border-style</summary>
+        <p>Estilo de la línea.</p>
+        <p style="border: 5px dotted black; padding: 5px;"><strong>dotted: </strong>punteada</p>
+        <p style="border: 5px dashed black; padding: 5px;"><strong>dashed: </strong>línea discontinua</p>
+        <p style="border: 5px solid black; padding: 5px;" ><strong>solid: </strong>linea continua</p>
+        <p style="border: 5px double black; padding: 5px;"><strong>double: </strong>doble línea</p>
+        <p style="border: 10px groove black; padding: 5px;"><strong>groove: </strong>Algo así como un borde que contiene dos colores y le da algo de profundidad</p>
+        <p style="border: 10px ridge black; padding: 5px;" ><strong>ridge: </strong>Cómo el groove, pero inverso.</p>
+        <p>En groove y ridge les pongo ancho de línea mayor para que se vea el efecto mejor.</p>
+        <p style="border: 5px inset black; padding: 5px;" ><strong>inset: </strong>Efecto perspectiva hacia dentro</p>
+        <p style="border: 5px outset black; padding: 5px;"><strong>outset: </strong>Con efecto perspectiva hacia afuera</p>
+        <p style="border: 5px hidden black; padding: 5px;"><strong>hidden: </strong>Sin borde</p>
+        <p style="border: 5px none black; padding: 5px;"> <strong>none: </strong>Sin borde</p>
+        <p class="details-subtitle">Se pueden aplicar varios estilos de borde a la vez</p>
+        <p style="border-style: dotted dashed solid double;"><strong>mixto: </strong>Se pueden añadir diferentes estilos para cada lado.</p>
+        <div class="code black">
+          <span class="propiedad">border-style</span>:
+          <span class="valorCss">dotted dashed solid double</span>;
+        </div>
+      </details>
+      <p><strong>border-color: </strong>color del borde.</p>
+      <p>Se pueden afectar solo uno de los lados con la siguiente sintaxis de la propiedad: </p>
+      <div class="code black">
+        <span class="propiedad">border-top/right/bottom/left-width/style/color</span>:
+        <br>
+        EJ.: <br>
+        <span class="propiedad">border-bottom-style</span>:
+        <span class="valorCss">dotted</span>;
+        <br>
+        <p style="border:2px solid green; border-bottom-style: dotted;">Borde verde</p>
+      </div>
+      <p class="details-subtitle">Otras propiedades</p>
+      <p><strong>border-radius: </strong>si se quiere añadir borde redondeado</p>
+      <p style="border:2px solid green; border-radius: 25px;">border-radius: 25px</p>
+    </details>
+  </main>
+
+</body>
+</html>

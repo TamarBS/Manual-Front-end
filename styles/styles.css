@@ -202,8 +202,9 @@ kbd {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  gap: 5%;
 }
 .col2>div {
-  width: 47%;
+  width: 47.5%;
 }
 /* ------------------------------------- */

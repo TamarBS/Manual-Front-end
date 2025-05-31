@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Propiedades de texto</title> 
+  <meta name="description" content="Propiedades que cambian los estilos del texto">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Propiedades de texto</h1>
+      <p>Propiedades que hacen cambios de estilo en cualquier aspecto que afecta al texto en una página web.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2 class="body-subtitle">Propiedades de estilo</h2>
+    <details>
+      <summary><h3 class="details-summary">color</h3></summary>
+      <p>Cambia el color del texto.</p>
+      <p style="color: red;">Texto rojo</p>
+      <p style="color: green;">Texto verde</p>
+    </details>
+    <details>
+      <summary><h3 class="details-summary">background-color</h3></summary>
+      <p>Cambia el color de fondo del texto.</p>
+      <p style="background-color: red;">Texto rojo</p>
+      <p style="background-color: green;">Texto verde</p>
+    </details>
+    <details>
+      <summary><h4 class="details-summary">text-shadow</h4></summary>
+      <p>Aporta sombra al texto</p>
+      <div class="code black">
+        <span class="propiedad">text-shadow</span>:
+        <span class="valorCss">height-shadow-origin vertical-shadow-origin blur-radius color/none/initial/inherit, (añadir más sobras);</span>
+      </div>
+      <p style="text-shadow: 5px 5px 10px blue, 10px 10px purple;">Texto con dos sombras. Una en coordenadas 5x5 px con un blur de 10px y color azul y otra morada en 10x10 px.</p>
+
+    </details>
+    <details>
+      <summary><h4 class="details-summary">font-family</h4></summary>
+      <p>Define la fuente elegida para aplicar en el texto</p>
+      <p>Su valor es el nombre de la fuente. Si el nombre tiene espacios, tiene que ir entre " "</p>
+      <p>El valor debe contener varias opciones de fuentes, en caso de que el navegador no soporte alguna de la fuente elegida. Se suelen poner en torno a dos opciones más de fuente parecidas a la del diseño original.</p>
+      <div class="code black">
+        <span class="propiedad">font-family</span>:
+        <span class="valorCss">fuente principal, fuente segura, fuente genérica más parecida;</span>
+        <br>
+        <span class="comentario">/* Ejemplo real */</span><br>
+        <span class="propiedad">font-family</span>:
+        <span class="valorCss">"Times New Roman", Times, serif;</span>
+      </div>
+      <p>El nombre de las fuentes que no son las genéricas van en mayúscula la primera. Si son genéricas van en minúsculas: san-serif, serif, monoscope.</p>
+      <p class="details-subtitle">Las cinco familias</p>
+      <ul>
+        <li>
+          <p><strong>Serif: </strong>las letras terminan sus bordes con un adorno. Aporta elegancia y formalidad.</p>
+        </li>
+        <li>
+          <p><strong>Sans-serif: </strong>líneas rectas que aportan estilo moderno y minimalista.</p>
+          <p>Se consideran las fuentes más fáciles de leer.</p>
+        </li>
+        <li>
+          <p><strong>Monoscope: </strong>todos los caracteres ocupan el mismo espacio de ancho. Es algo así como una fuente que vale para máquina de escribir. Se suele utilizar para dar un caracter tecnológico e informático.</p>
+        </li>
+        <li>
+          <p><strong>Cursive: </strong>fuentes que imitan la forma de escribir a mano.</p>
+        </li>
+        <li>
+          <p><strong>Fantasy: </strong>fuentes creativas, decorativas fuera de lo común.</p>
+        </li>
+      </ul>
+      <p class="details-subtitle">Fuentes seguras (Web Safe Fonts)</p>
+      <p>Se les llama así a las fuentes que todos los navegadores tienen instaladas por defecto.</p>
+      <details>
+        <summary>Lista de fuentes seguras</summary>
+        <ul>
+          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">sans-serif</p>
+          <li>
+            <p>Arial</p>
+            <p>Es la fuente por defecto y la más utilizada tanto en web como en documentos impresos.</p>
+            <p style="font-family: Arial;">Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <li>
+            <p>Verdana</p>
+            <p>Fuente popular y fácil de leer incluso en tamaños pequeños.</p>
+            <p style="font-family: Verdana;">Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <li>
+            <p>Tahoma</p>
+            <p style="font-family: Tahoma;">Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <li>
+            <p>"Trebuchet MS"</p>
+            <p>Creada por Microsoft en 1996. Es una fuente que no todos los sistemas operativos móviles soportan.</p>
+            <p style='font-family: "Trebuchet MS";'>Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">serif</p>
+          <li>
+            <p>"Times New Roman"</p>
+            <p>Fuente popular con estilo profesional muy utilizado en periódicos y páginas de noticias.</p>
+            <p style='font-family: "Times New Roman";'>Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <li>
+            <p>Georgia</p>
+            <p style="font-family: Georgia;">Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <li>
+            <p>Garamond</p>
+            <p style="font-family: Garamond;">Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">monoscope</p>
+          <li>
+            <p>"Courier New"</p>
+            <p style='font-family: "Courier New";'>Ejemplo para ver el estilo de la fuente</p>
+          </li>
+          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">cursive</p>
+          <li>
+            <p>"Brush Script MT"</p>
+            <p style='font-family: "Brush Script MT";'>Ejemplo para ver el estilo de la fuente</p>
+          </li>
+        </ul>
+      </details>
+    </details>
+    <details>
+      <summary><h5 class="details-summary">font-size</h5></summary>
+      <p>Tamaño del texto. 16px es el por defecto de los navegadores.</p>
+      <p>Existen dos tipos de tamaños:</p>
+      <ul>
+        <li>
+          <p><strong>absoluto: </strong>Valores concretos que no se pueden editar desde el navegador. Malo para accesibilidad. Valores en px</p>
+        </li>
+        <li>
+          <p><strong>relativo: </strong>Valores en función de otros elementos que permiten editar desde el navegadro. Bueno para accesibilidad. Valores como em o vw.</p>
+          <ul>
+            <li>
+              <p>em: 1em = a la fuente por defecto de una página. Y de ahí se calcula. Por ejemplo 1.875x16 =30px.</p>
+              <p>Estos valores dan algún error de compatibilidad en algunos navegadores. Para solucionar el error en fody poner (font-size: 100%;) y ya no daría error.</p>
+            </li>
+            <li>
+              <p>sw: view widht. El ancho de la página. Calcula el tamaño en función del ancho de pantalla, es decir. el tamaño del dispositivo.</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </details>
+
+    <h2 class="body-subtitle">Posición del texto</h2>
+    <details>
+      <summary><h3 class="details-summary">text-align</h3></summary>
+      <p>Cambia la justificación del texto.</p>
+      <p>Si la dirección del texto es de izquierda a derecha, el valor por defecto es left, pero si la dirección del texto es derecha a izquierda el pordefecto pasa a ser rigth.</p>
+      <p class="details-subtitle">Valores</p>
+      <details>
+        <summary><p class="details-summary">left</p></summary>
+        <p>Pega el texto a la izquierda.</p>
+        <p class="details-subtitle">Ejemplo de poco texto</p>
+        <p style="text-align: left;">Pegado a la izquierda, por defecto.</p>
+        <p class="details-subtitle">Ejemplo de mucho texto</p>
+        <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <details>
+        <summary><p class="details-summary">right</p></summary>
+        <p>Pega el texto a la derecha.</p>
+        <p class="details-subtitle">Ejemplo de poco texto</p>
+        <p style="text-align: right">Pegado a la derecha</p>
+        <p class="details-subtitle">Ejemplo de mucho texto</p>
+        <p style="text-align: right;">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <details>
+        <summary><p class="details-summary">center</p></summary>
+        <p>Centra el texto.</p>
+        <p class="details-subtitle">Ejemplo de poco texto</p>
+        <p style="text-align: center">Texto centrado</p>
+        <p class="details-subtitle">Ejemplo de mucho texto</p>
+        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <details>
+        <summary><p class="details-summary">justify</p></summary>
+        <p>Ajusta el texto para ocupar el ancho completo.</p>
+        <p class="details-subtitle">Ejemplo de poco texto</p>
+        <p style="text-align: justify">Texto justificado.</p>
+        <p class="details-subtitle">Ejemplo de mucho texto</p>
+        <p style="text-align: justify;">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <p><strong>initial: </strong>devuelve el valor por defecto.</p>
+      <p><strong>inherit: </strong>hereda la propiedad de su padre</p>
+    </details>
+    <details>
+      <summary><p class="details-summary">text-align-last</p></summary>
+      <p>Cambia la justificación sólo de la última línea de texto.</p>
+      <p>Si se aplica text-align-last a un div que contiene tres párrafos, la última línea de texto tendrá estos estilos en los tres párrafos. Si se quiere sólo para el último de los párrafos hay que usar el selector :last-child.</p>
+      <div class="code black">
+        <span class="comentario">&lt;-- Para que afecte sólo al último p dentro de un div --></span>
+        <br>
+        <span class="clase">div p:last-child</span>
+        <span class="llave">{ </span>
+        <span class="propiedad">text-align-last</span>:
+        <span class="valorCss">center</span>;
+        <span class="llave"> }</span>
+      </div>
+      <p class="details-subtitle">Valores</p>
+
+      <p><strong>auto: </strong>La última línea de texto se alinea al valor por defecto.</p>
+      <details>
+        <summary><p class="details-summary">left o start</p></summary>
+        <p>Pega el texto de la última línea a la izquierda.</p>
+        <p>Puede tener dos nombres porque left significa la dirección del texto (left to right). Start significa principio de la línea. Son valores similares.</p>
+        <p style="text-align: right; text-align-last: left">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <details>
+        <summary><p class="details-summary">right o end</p></summary>
+        <p>Pega el texto de la última línea a la derecha.</p>
+        <p>Puede tener dos nombres porque right significa la dirección del texto (rigth to left). End significa final de la línea. Son valores similares.</p>
+        <p style="text-align: left; text-align-last: right">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <details>
+        <summary><p class="details-summary">center</p></summary>
+        <p style="text-align: justify; text-align-last: center">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <details>
+        <summary><p class="details-summary">justify</p></summary>
+        <p>Ajusta el texto de la última línea para ocupar el ancho completo.</p>
+        <p style="text-align: center; text-align-last: justify">Lorem ipsum dolor sit amet consectetur adipiscing elit inceptos mus leo est vivamus facilisis, ultricies tortor nostra iaculis rhoncus diam dictumst non sociosqu ut cursus. Vitae ad rhoncus neque volutpat rutrum scelerisque praesent facilisi fermentum semper, sollicitudin augue tellus justo curabitur pharetra a convallis. Massa nullam rhoncus primis fermentum placerat non sed, nunc enim lacinia magnis fames potenti nostra, est habitant sodales aliquet cras cum.</p>
+      </details>
+      <p><strong>initial: </strong>devuelve el valor por defecto.</p>
+      <p><strong>inherit: </strong>hereda la propiedad de su padre.</p>
+    </details>
+    <details>
+      <summary><h3 class="details-summary">direction</h3></summary>
+      <p>Junto con unicode-bidi sirve para cambiar la dirección del texto. Esta propiedad coloca el texto pegado a la derecha y símbolos como el punto al principio, pero no cambia el orden de las letras para que se lea de derecha a izquierda.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li>
+          <p><strong>ltr: </strong>de izquierda a derecha.</p>
+        </li>
+        <li>
+          <p><strong>rtl: </strong>de derecha a izquierda.</p>
+        </li>
+        <li>
+          <p><strong>initial: </strong>devuelve el valor por defecto.</p>
+        </li>
+        <li>
+          <p><strong>inherit: </strong>hereda la propiedad de su padre.</p>
+        </li>
+      </ul>
+      <details>
+        <summary><h3 class="details-summary">unicode-bidi</h3></summary>
+        <p>Junto con direction sirve para cambiar la dirección del texto. Esta propiedad permite colocar cada letra de direcha a izquierda. Junto con lo que hace direction que lo coloca pegado a la izquierda y coloca los signos al principio, se consigue una escritura completamente de derecha a izquierda.</p>
+        <p>Esta propiedad sola no imprime nada en pantalla.</p>
+        <p class="details-subtitle">Valores</p>
+        <ul>
+          <li>
+            <p>normal</p>
+          </li>
+          <li>
+            <p>embed</p>
+          </li>
+          <li>
+            <p>bidi-override</p>
+          </li>
+          <li>
+            <p>isolate</p>
+          </li>
+          <li>
+            <p>isolate-override</p>
+          </li>
+          <li>
+            <p>plaintext</p>
+          </li>
+        </ul>
+      </details>
+    </details>
+    <details>
+      <summary><h3 class="details-summary">vertical-align</h3></summary>
+      <p>Sirve para la alineación vertical del texto.</p>
+      <p class="details-subtitle">Valores</p>
+
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px;">baseline<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:baseline;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px;">lenght 25px<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:25px;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px;">% -50%<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:-50%;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px;">sub<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:sub;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px;">super<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:super;"></p>
+      <p>Los siguientes aparecen con border para ver el espacio que les da un line-height más alto que la altura de la fuente del texto.</p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px; border: 1px solid black; line-height: 2em;">top<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:top;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px; border: 1px solid black; line-height: 2em;">text-top<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:text-top;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px; border: 1px solid black; line-height: 2em;">middle<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:middle;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px; border: 1px solid black; line-height: 2em;">bottom<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:bottom;"></p>
+      <p style="font-size: 2em; text-decoration: underline line-through overline; text-decoration-thickness:1px; border: 1px solid black; line-height: 2em;">text-bottom<img src="../images/star.png" alt="Ejemplo visual de vertical-align" style="vertical-align:text-bottom;"></p>
+    </details>
+
+    <h2 class="body-subtitle">Cambios de formato del texto</h2>
+    <details>
+      <summary><h3 class="details-summary">text-decoration</h3></summary>
+      <p>Permite añadir líneas al texto.</p>
+      <p>Con valor none las líneas desaparecen del texto.</p>
+
+      <p class="details-subtitle">Propiedades específicas</p>
+      <details>
+        <summary><h4 class="details-summary">text-decoration-line</h4></summary>
+        <p>Añade una línea al texto</p>
+        <ul>
+          <li><p style="text-decoration-line: overline;" >overline</p></li>
+          <li><p style="text-decoration-line: line-through;" >line-through</p></li>
+          <li><p style="text-decoration-line: underline;" >underline</p></li>
+          <li><p style="text-decoration-line: overline line-through underline;" >varias a la vez</p></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><h4 class="details-summary">text-decoration-color</h4></summary>
+        <p>Permite editar el color de las líneas añadidas a un texto</p>
+        <p style="text-decoration: underline red;">Texto con línea debajo y roja</p>
+      </details>
+
+      <details>
+        <summary><h4 class="details-summary">text-decoration-style</h4></summary>
+        <p>Permite editar el estilo de las líneas añadidas a un texto</p>
+        <p style="text-decoration: underline wavy;">Texto con línea debajo y wavy</p>
+      </details>
+
+      <details>
+        <summary><h4 class="details-summary">text-decoration-thickness</h4></summary>
+        <p>Permite editar el ancho de las líneas añadidas a un texto</p>
+        <p style="text-decoration: underline 1px;">Texto con línea debajo y 1px de ancho de línea.</p>
+        <p style="text-decoration: underline 5px;">Texto con línea debajo y 5px de ancho de línea.</p>
+      </details>
+
+      <p class="details-subtitle">Propiedad aglutinadora</p>
+      <div class="code black">
+        <span class="propiedad">text-decoration</span>:
+        <span class="valorCss">line color style thickness</span>;
+      </div>
+
+    </details>    
+    <details>
+      <summary><h4 class="details-summary">text-transform</h4></summary>
+      <p>Sirve para controlar las minúsculas y mayúsculas en los textos</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li><p><strong>uppercase: </strong>todas las letras en mayúsuclas.</p></li>
+        <li><p><strong>lowercase: </strong>todas las letras en minúsculas.</p></li>
+        <li><p><strong>capitalize: </strong>todas las primeras letras de cada palabra en mayúsuclas.</p></li>
+      </ul>
+    </details>
+    <details>
+      <summary><h4 class="details-summary">font-weight</h4></summary>
+      <p>El grosor de la línea del texto</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li><p style="font-weight: normal;">normal</p></li>
+        <li><p style="font-weight: 100;">100</p></li>
+        <li><p style="font-weight: 600;">600</p></li>
+        <li><p style="font-weight: bold;">bold</p></li>
+        <li><p style="font-weight: bolder;">bolder</p></li>
+        <li><p style="font-weight: lighter;">lighter</p></li>
+      </ul>
+    </details>  
+    <details>
+      <summary><h4 class="details-summary">font-style</h4></summary>
+      <p>Formatos títpicos de texto como: normal, <span style="font-style: italic;">italic, </span><span style="font-style: oblique;">oblique</span></p>
+    </details>
+    <details>
+      <summary><h4 class="details-summary">font-variant</h4></summary>
+      <p>Estilo de texto que las pone en mayúsculas pero haciendo que la mayúsucla tenga mayor tamaño</p>
+      <p style="font-variant: normal;">Ejemplo normal de Font Variants</p>
+      <p style="font-variant: small-caps;">Ejemplo small-caps de Font Variants</p>
+    </details>
+
+    <h2 class="body-subtitle">Espaciados</h2>
+    <details>
+      <summary><h4 class="details-summary">text-indent</h4></summary>
+      <p>Controla el espacio de indentación de un texto.</p>
+      <p style="text-indent: 2em;">Este texto tiene un text-indent de 2em</p>
+    </details>
+    <details>
+      <summary><h4 class="details-summary">letter-spacing</h4></summary>
+      <p>Espacio entre caracteres</p>
+      <p style="letter-spacing: 10px">Ejemplo de letter-spacing de 10px.</p>
+      <p style="letter-spacing: -2px;">Ejemplo de letter-spacing de -2px.</p>
+    </details>
+    <details>
+      <summary><h4 class="details-summary">line-height</h4></summary>
+      <p>Determina el espacio entre líneas de texto.</p>
+      <div class="col2">
+        <div>
+          <p>line-height de 2.</p>
+          <p style="line-height: 2;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div>
+          <p>line-height de 0.8.</p>
+          <p style="line-height: 0.8;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary><h4 class="details-summary">word-spacing</h4></summary>
+        <p>Espacio entre palabras</p>
+        <div class="col2">
+          <div>
+            <p style="word-spacing: 10px;">Ejemplo de word-spacing de 10px.</p>
+          </div>
+          <div>
+            <p style="word-spacing: -2px;">Ejemplo de word-spacing de -2px.</p>
+          </div>
+        </div>
+    </details>
+    <details>
+      <summary>
+        <h4 class="details-summary">white-space</h4>
+      </summary>
+      <p>Define cómo ajustarse al espacio teniendo o no en cuenta los saltos de línea</p>
+      <p class="details-subtitle">Ejemplos visuales</p>
+      <p>El texto tiene un salto de línea después de: "Lorem ipsum dolor sit amet,"</p>
+      <p style="white-space: nowrap;"><strong>nowrap: </strong>Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p style="white-space: normal;"><strong>normal: </strong>Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p style="white-space: pre;"><strong>pre: </strong>Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </details>
+
+  </main>
+
+</body>
+</html>
