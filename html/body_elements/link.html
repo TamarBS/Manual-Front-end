@@ -140,7 +140,53 @@
         </ul>
         <iframe style="width: 100%;" src="iframes/demo_iframe.htm" height="400" width="600" title="Iframe Example"></iframe>
       </details>
+      <p class="details-subtitle">Estilos populares para los enlaces</p>
+      <a href="#">Por defecto</a>
+      <a href="#" style="text-decoration: none; color: green; display: block; margin: 15px 0;">Texto sin subrayado y en otro color</a>
+      <a href="#" style="text-decoration: none; border: 2px solid green; display: block; margin: 15px 0; padding: 10px; width: 100px;">Enlace como botón</a>
+      <a href="#" style="text-decoration: none; color: white; background-color: red; display: block; margin: 15px 0; padding: 10px; width: 100px;">Botón solid</a>
+      <p class="details-subtitle">Selectores CSS</p>
+      <details>
+        <summary>
+          <p class="details-summary">Estados de los enlaces</p>
+        </summary>
+        <ul>
+          <li>
+            <p><strong>a:link</strong> estado del enlace sin visitar. Por defecto en azul.</p>
+          </li>
+          <li>
+            <p><strong>a:visited</strong> enlace ya visitado. Por defecto en morado.</p>
+          </li>
+          <li>
+            <p><strong>a:hover</strong> cuándo el ratón está sobre el enlace.</p>
+          </li>
+          <li>
+            <p><strong>a:active</strong> justo en el momento en el que es clickado. Por defecto en rojo.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>
+          <p class="details-summary">Lista de cursores</p>
+        </summary>
+        <p>Para cada enlace es interesante elegir el tipo de cursor más adecuado que encaje mejor con el contenido y acción del enlace.</p>
+        <ul>
+          <li><p><strong>auto text: </strong>cursor para texto.</p></li>
+          <li><p><strong>crosshair: </strong> cruz negra.</p></li>
+          <li><p><strong>default: </strong> flecha blanca.</p></li>
+          <li><p><strong>e-resize w-resize: </strong> flecha horizontal blanca con dos puntas a cada lado.</p></li>
+          <li><p><strong>help: </strong> flecha blanca y signo de interrogación.</p></li>
+          <li><p><strong>move: </strong>cruz de flechas blancas.</p></li>
+          <li><p><strong>n-resize s-resize: </strong> flecha vertical de dos puntas norte sur.</p></li>
+          <li><p><strong>ne-resize sw-resize: </strong>flecha con dos puntas apuntando noreste y suroeste.</p></li>
+          <li><p><strong>nw-resize se-resize: </strong>flecha con dos puntas apuntando nuroeste y sudeste.</p></li>
+          <li><p><strong>pointer: </strong>mano con indice señalando.</p></li>
+          <li><p><strong>progress: </strong>flecha y círculo de cargando.</p></li>
+          <li><p><strong>wait: </strong>círculo de cargando.</p></li>
+        </ul>        
+      </details>
     </details>
+
     <details>
       <summary id="button"><h2 class="details-summary">button</h2></summary>
       <p>Trae estilos de botón por defecto. Junto con código JS inyectado funciona como un enlace, pero sólo no hace nada. Es buena práctica utilizarlo en ocasiones en las que se ejecute una acción que no sea propia de navegar entre páginas.</p>

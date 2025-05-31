@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="stylesheet" href="../styles/styles.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
   
   <title>Propiedades de texto</title> 
   <meta name="description" content="Propiedades que cambian los estilos del texto">
@@ -58,31 +60,32 @@
         <span class="valorCss">"Times New Roman", Times, serif;</span>
       </div>
       <p>El nombre de las fuentes que no son las genéricas van en mayúscula la primera. Si son genéricas van en minúsculas: san-serif, serif, monoscope.</p>
-      <p class="details-subtitle">Las cinco familias</p>
-      <ul>
-        <li>
-          <p><strong>Serif: </strong>las letras terminan sus bordes con un adorno. Aporta elegancia y formalidad.</p>
-        </li>
-        <li>
-          <p><strong>Sans-serif: </strong>líneas rectas que aportan estilo moderno y minimalista.</p>
-          <p>Se consideran las fuentes más fáciles de leer.</p>
-        </li>
-        <li>
-          <p><strong>Monoscope: </strong>todos los caracteres ocupan el mismo espacio de ancho. Es algo así como una fuente que vale para máquina de escribir. Se suele utilizar para dar un caracter tecnológico e informático.</p>
-        </li>
-        <li>
-          <p><strong>Cursive: </strong>fuentes que imitan la forma de escribir a mano.</p>
-        </li>
-        <li>
-          <p><strong>Fantasy: </strong>fuentes creativas, decorativas fuera de lo común.</p>
-        </li>
-      </ul>
-      <p class="details-subtitle">Fuentes seguras (Web Safe Fonts)</p>
-      <p>Se les llama así a las fuentes que todos los navegadores tienen instaladas por defecto.</p>
       <details>
-        <summary>Lista de fuentes seguras</summary>
+        <summary><p class="details-summary">Las cinco familias</p></summary>
         <ul>
-          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">sans-serif</p>
+          <li>
+            <p><strong>Serif: </strong>las letras terminan sus bordes con un adorno. Aporta elegancia y formalidad.</p>
+          </li>
+          <li>
+            <p><strong>Sans-serif: </strong>líneas rectas que aportan estilo moderno y minimalista.</p>
+            <p>Se consideran las fuentes más fáciles de leer.</p>
+          </li>
+          <li>
+            <p><strong>Monoscope: </strong>todos los caracteres ocupan el mismo espacio de ancho. Es algo así como una fuente que vale para máquina de escribir. Se suele utilizar para dar un caracter tecnológico e informático.</p>
+          </li>
+          <li>
+            <p><strong>Cursive: </strong>fuentes que imitan la forma de escribir a mano.</p>
+          </li>
+          <li>
+            <p><strong>Fantasy: </strong>fuentes creativas, decorativas fuera de lo común.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary><p class="details-summary">Fuentes seguras (Web Safe Fonts)</p></summary>
+        <p>Se les llama así a las fuentes que todos los navegadores tienen instaladas por defecto.</p>
+        <p class="details-subtitle">sans-serif</p>
+        <ul>
           <li>
             <p>Arial</p>
             <p>Es la fuente por defecto y la más utilizada tanto en web como en documentos impresos.</p>
@@ -102,7 +105,9 @@
             <p>Creada por Microsoft en 1996. Es una fuente que no todos los sistemas operativos móviles soportan.</p>
             <p style='font-family: "Trebuchet MS";'>Ejemplo para ver el estilo de la fuente</p>
           </li>
-          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">serif</p>
+        </ul>
+        <p class="details-subtitle">serif</p>
+        <ul>
           <li>
             <p>"Times New Roman"</p>
             <p>Fuente popular con estilo profesional muy utilizado en periódicos y páginas de noticias.</p>
@@ -116,18 +121,159 @@
             <p>Garamond</p>
             <p style="font-family: Garamond;">Ejemplo para ver el estilo de la fuente</p>
           </li>
-          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">monoscope</p>
+        </ul>
+        <p class="details-subtitle">monoscope</p>
+        <ul>
           <li>
             <p>"Courier New"</p>
             <p style='font-family: "Courier New";'>Ejemplo para ver el estilo de la fuente</p>
           </li>
-          <p style="font-weight: bold; color: grey; font-size: 1em; padding: 10px; background-color: white;">cursive</p>
+        </ul>
+        <p class="details-subtitle">cursive</p>
+        <ul>  
           <li>
             <p>"Brush Script MT"</p>
             <p style='font-family: "Brush Script MT";'>Ejemplo para ver el estilo de la fuente</p>
           </li>
         </ul>
       </details>
+      <details>
+        <summary><p class="details-summary">Google fonts</p></summary>
+        <p>Enlazando a la web de Google Fonts se puede acceder a más de mil fuentes sin necesidad de descargar.</p>
+        <a href="https://fonts.google.com/">Ir a la web de Google Fonts</a>
+        <details>
+          <summary><p class="details-summary">Enlazar Google Fonts en un documento HTML</p></summary>
+          <div class="code black">
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">head</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">link</span>
+            <span class="atributo">rel</span>=
+            <span class="valor">"stylesheet"</span>
+            <span class="atributo">href</span>=
+            <span class="valor">"https://fonts.googleapis.com/css?family=Sofia|Audiowide|Trirong"</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">style</span>
+            <span class="gris">></span>
+            <br>
+            <span class="clase hijo">body</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad nieto">font-family</span>:
+            <span class="valorCss">"Sofia", sans-serif;</span>
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="clase hijo">h1</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad nieto">font-family</span>:
+            <span class="valorCss">Audiowide, sans-serif;</span>
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="clase hijo">p</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad nieto">font-family</span>:
+            <span class="valorCss">Trirong, sans-serif;</span>
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">style</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">head</span>
+            <span class="gris">></span>
+            <br>
+    
+          </div>
+          <p>La fuente elegida va al final de la url. Se puede añadir más de una fuente separando los nombre de fuente con un | aunque cargar varias fuentes así puede ralentizar la web.</p>
+        </details>
+        <details>
+          <summary><p class="details-summary">Aplicar estilos a fuentes de Google Fonts</p></summary>
+          <p>En la url de enlace de la fuente de Google Fonts, después de el nombre de la fuente se añade & y seguido effect=nombre del efecto. El elemento a afectar tiene que tener una clase que lo relacione con el efecto. Esta clase tiene que empezar por font-effect- seguido del nombre del efecto.</p>
+          <div class="code black">
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">head</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">link</span>
+            <span class="atributo">rel</span>=
+            <span class="valor">"stylesheet"</span>
+            <span class="atributo">href</span>=
+            <span class="valor">"https://fonts.googleapis.com/css?family=Sofia&effect=fire"</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">style</span>
+            <span class="gris">></span>
+            <br>
+            <span class="clase hijo">body</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad nieto">font-family</span>:
+            <span class="valorCss">"Sofia", sans-serif;</span>
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">style</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">head</span>
+            <span class="gris">></span>
+            <br>            
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">body</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris hijo">&lt;</span>
+            <span class="etiqueta">h1</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"font-effect-fire"</span>
+            <span class="gris">></span>
+            Sofia on Fire
+            <span class="gris hijo">&lt;/</span>
+            <span class="etiqueta">h1</span>
+            <span class="gris">></span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">body</span>
+            <span class="gris">></span>
+            <br>
+          </div>
+          <p class="font-effect-fire">Sofia on Fire</p>
+          <p>Igual que la fuentes se pueden añadir varios efectos colocando un | .</p>
+        </details>
+      </details>
+      <details>
+        <summary><p class="details-summary">Combinar fuentes</p></summary>
+        <p>Existen una serie de normas para conseguir una buena combinación de fuentes.</p>
+        <ol type="1">
+          <li>
+            <p><strong>Complementarias: </strong>Elegir dos fuentes que se complementen. Que no sean ni muy parecidas ni muy diferentes.</p>
+          </li>
+          <li>
+            <p><strong>Superfamilias: </strong>Existen fuentes que contienen subfuentes que quizá son sans serif, serif y monoscope. Entonces ya contiene un buen emparejamiento de tipos de fuente. Trabajo hecho.</p>
+          </li>
+          <li>
+            <p><strong>Contraste: </strong>Que se note que son familias diferentes, sin ser cosas que no tienen relación. Por ejemplo, fuentes san-serif y serif suelen ser combinables.</p>
+          </li>
+          <li>
+            <p><strong>Sólo una fuente principal: </strong>Dejar el peso sólo a una de las fuentes. Es decir, tamaños grandes y negritas y títulos sólo a una de las fuentes. La otra para los contenidos y textos de menor tamaño e importancia.</p>
+          </li>
+        </ol>
+      </details>
+      </div>
     </details>
     <details>
       <summary><h5 class="details-summary">font-size</h5></summary>
@@ -425,8 +571,19 @@
         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <p style="white-space: pre;"><strong>pre: </strong>Lorem ipsum dolor sit amet, 
         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </details>
+    </details>
 
+    <h2 class="body-subtitle">Propiedad aglutinadora</h2>
+    <div class="code black">
+      <span class="propiedad">font</span>:
+      <span class="valorCss">font-style font-variant font-weight font-size/line-height font-family</span>;
+      <br>
+      <span class="comentario">&lt;-- Ejemplo --></span>
+      <br>
+      <span class="propiedad">font</span>:
+      <span class="valorCss">italic small-cap bold 12px/30px Georgia, serif</span>;
+    </div>
+    <p>Font-size y font-family son necesarios, el resto si no están se les da el valor por defecto.</p>
   </main>
 
 </body>

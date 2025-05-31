@@ -96,6 +96,19 @@
         <span class="etiqueta">ol</span>
         <span class="gris">></span> 
       </div>
+      <p class="details-subtitle">Dar estilos CSS</p>
+      <details>
+        <summary><p class="details-summary">list-style-type</p></summary>
+        <p class="details-subtitle">Valores</p>
+        <ul>
+          <li>
+            <p><strong>upper-roman: </strong>el numerador de lista ordenada son número romanos.</p>
+          </li>
+          <li>
+            <p><strong>lower-alpha: </strong>el numerador de lista ordenada son letras en minúsculas.</p>
+          </li>          
+        </ul>
+      </details>
     </details>
     <details>
       <summary><h3 class="details-summary">Lista no ordenada</h3></summary>
@@ -127,6 +140,19 @@
         <span class="valor">disc | circle | square | none</span> ;
         <span style="color: yellow;">}</span>  
       </div>
+      <p class="details-subtitle">Dar estilos CSS</p>
+      <details>
+        <summary><p class="details-summary">list-style-type</p></summary>
+        <p class="details-subtitle">Valores</p>
+        <ul>
+          <li>
+            <p><strong>circle: </strong>el marcador de lista ul es un círculo de sólo el borde.</p>
+          </li>
+          <li>
+            <p><strong>square: </strong>el marcador de lista ul es un cuadrado solid negro.</p>
+          </li>        
+        </ul>
+      </details>      
     </details>
     <details>
       <summary><h3 class="details-summary">Lista de definifiones</h3></summary>
@@ -167,7 +193,7 @@
       </div>    
     </details>
     
-    <h4 class="body-subtitle__subtitle">Las listas se pueden anidar</h4>
+    <h3 class="body-subtitle__subtitle">Las listas se pueden anidar</h3>
     <div class="code col2">
       <div style="display: flex;">
         <ul>
@@ -226,6 +252,35 @@
       </div>
     </div>
     
+    <h2 class="body-subtitle">Estilos CSS</h2>
+    <details>
+      <summary><p class="details-summary">list-style-image</p></summary>
+      <p>Para utilizar una imagen prediseñada como icono de lista.</p>
+      <p>El valor es la url a la imagen.</p>
+    </details>
+    <details>
+      <summary><p class="details-summary">list-style-position</p></summary>
+      <p>Define si la imagen bullet está dentro del cuadro de texto o fuera.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul style="list-style-position: outside;">
+        <li style="border: 1px solid black;">outside</li>
+        <li style="border: 1px solid black;">outside</li>
+      </ul>
+      <ul style="list-style-position: inside;">
+        <li style="border: 1px solid black;">inside</li>
+        <li style="border: 1px solid black;">inside</li>
+      </ul>
+    </details>
+    <details>
+      <summary><p class="details-summary">list-style-type</p></summary>
+      <p>Para quitar los iconos bullet de una lista. Con valor none.</p>
+    </details> 
+    <h3 class="body-subtitle__subtitle">Propiedad aglutinadora</h3>   
+    <div class="code black">
+      <span class="gris">&lt;</span>
+      <span class="propiedad">list-style</span>:
+      <span class="valorCss">"type position image"</span>;
+    </div>
   </main>
 
 
