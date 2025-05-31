@@ -25,6 +25,201 @@
 
   <main>
     <details>
+      <summary><h2 class="details-summary">audio</h2></summary>
+      <p>Igual que el vídeo, permite atributos "controls", "muted" y "autoplay" y dentro van los source con varios formatos. El texto dentro de esta etiqueta sólo se ve si el navegador no carga los audios.</p>
+    </details>    
+    <details>
+      <summary><h2 class="details-summary">canvas</h2></summary>
+      <p>Espacio para crear gráfico mediante JavaScript. Tiene que tener un id para enlazar con el javascript y tamaño de alto y ancho para que no tiemble la página al cargar. Permite crear rectángulos, círculos, textos con diseños especiales, añadir imágenes, etc.</p>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">figure</h2></summary>
+      <p>Contenedor para imágenes, ilustraciones, diagramas, fotos, etc. con pie de foto. El elemento "figcaption" sirve como pie de foto y tiene que ir dentro del figure.</p>
+      <figure>
+        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen enrutada desde internet" width="200">
+        <figcaption>Pie de foto</figcaption>
+      </figure>
+
+      <div class="code black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">figure </span> 
+        <span class="gris">></span> <br>
+
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">img </span>
+        <span class="atributo"> src</span>=
+        <span class="valor">"url-imagen"</span>
+        <span class="atributo"> alt</span>=
+        <span class="valor">"texto-alternativo"</span>
+        <span class="atributo"> width</span>=
+        <span class="valor">"xxx"</span>
+        <span class="gris">></span> <br>
+
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">figcaption </span>
+        <span class="gris">></span>
+        Pie de foto
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">figcaption </span> 
+        <span class="gris">></span> 
+        <br>
+
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">figure </span> 
+        <span class="gris">></span> <br>
+      </div>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">i</h2></summary>
+      <p>icon. Etiqueta para añadir icono desde una librería a través del class.</p>
+      <p>También funcionaría colocando la clase en cualquier elemento inline, por ejemplo span. Pero i es más específico para iconos.</p>
+      <div class="code black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">head</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">script</span>
+        <span class="atributo">src</span>=
+        <span class="valor">"https://kit.fontawesome.com/a076d05399.js"</span>
+        <span class="atributo">crossorigin</span>=
+        <span class="valor">"anonymous"</span>
+        <span class="gris">></span>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">script</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">head</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">body</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">i</span>
+        <span class="atributo">class</span>=
+        <span class="valor">"fas fa-cloud"</span>
+        <span class="gris">></span>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">i</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">i</span>
+        <span class="atributo">class</span>=
+        <span class="valor">"fas fa-heart"</span>
+        <span class="gris">></span>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">i</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris hijo">&lt;</span>
+        <span class="etiqueta">i</span>
+        <span class="atributo">class</span>=
+        <span class="valor">"fas fa-car"</span>
+        <span class="gris">></span>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">i</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">body</span>
+        <span class="gris">></span>
+        <br>
+      </div>
+      <p class="details-subtitle">Librerías de iconos populares</p>
+      <a href="https://fontawesome.com/">Font awesome</a>
+      <a href="https://icons.getbootstrap.com/">Bootstrap</a>
+      <a href="https://fonts.google.com/icons">Google</a>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">iframes</h2></summary>
+      <p>Espacios dónde se pueden incluir una página web dentro de otra.</p>
+      <p><strong>Para evitar saltos al cargar la página: </strong>dar valores width, height.</p>
+
+      <iframe src="" name="iframe_a" title="Ejemplo de Iframe activado con un link" style="width: 100%;"></iframe>
+      <p><a href="../../index.html" target="iframe_a">Abrir página en el iframe</a></p>
+      
+      <div class="code black">
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">iframe </span>
+        <span class="atributo"> src</span>=
+        <span class="valor">" "</span>
+        <span class="atributo"> name</span>=
+        <span class="valor">"iframe_name"</span>
+        <span class="atributo"> title</span>=
+        <span class="valor">"..."</span>
+        <span class="atributo"> style</span>=
+        <span class="valor">"width:100%"</span>
+        <span class="gris">></span> 
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">iframe </span> 
+        <span class="gris">></span> <br>
+
+        <span class="gris hijo">&lt;</span> 
+        <span class="etiqueta">a </span>
+        <span class="atributo"> href</span>=
+        <span class="valor">"url al sitio"</span>
+        <span class="atributo"> target</span>=
+        <span class="valor">"iframe_name"</span>
+        <span class="gris">></span> Abrir página en el iframe
+        <span class="gris">&lt;/</span> 
+        <span class="etiqueta">a </span> 
+        <span class="gris">></span> <br>
+      </div>
+      
+      <details>
+        <summary><h3 class="details-summary">¿Cómo reproducir vídeos de youtube?</h3></summary>
+        <p>En un elemento iframe añadir los atributos de alto y ancho y en el "src" poner "https:/www.youtube.com" + "/embed" (de embedded, inyectado) + "/el-id-del-vídeo(buscarlo en el url)"</p>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">iframe</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">src</span>
+          =
+          <span class="valor">"https://www.youtube.com/embed/tgbNymZ7vqY"</span>
+          <span class="gris">></span>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">iframe</span>
+          <span class="gris">></span>
+        </div>
+        <p>Después del id del vídeo se pueden añadir otras opciones como:</p>
+        <ul>
+          <li><p><strong>autoplay=1: </strong>que se reproduzca al cargar.</p> </li>
+          <li><p><strong>mute=1: </strong> que se reproduzca sin sonido.</p></li>
+          <li><p><strong>loop=1: </strong>para que se reproduzca en bucle.</p></li>
+          <li><p><strong>controls=0: </strong>para que no se vean los controles.</p></li>
+        </ul>
+        <p>Se añade un símbolo "?" después del id y entre valores un &.</p>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">iframe</span>
+          <span class="atributo">width</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">height</span>
+          =
+          <span class="valor">"315"</span>
+          <span class="atributo">src</span>
+          =
+          <span class="valor">"https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"</span>
+          <span class="gris">></span>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">iframe</span>
+          <span class="gris">></span>
+        </div>
+        <p>Se pueden reproducir listas de vídeos colocando en el src varias url separadas por coma. ","</p>
+      </details>
+         
+    </details>
+    <details>
       <summary><h2 class="details-summary">img</h2></summary>
       <p>Espacio reservado para contener una imagen. Darle siempre valores width y height para que al cargar la página no de saltos al cargar el contenido. Los estilos css son más prioritarios que los valores de los atributos. Recomendable usar siempre atributos: alt, height and width.</p>
       <p>Acepta formatos animados como '.gif'</p>
@@ -171,132 +366,6 @@
       </div>
 
       <p><strong>media: </strong>condición de tamaño para empezar a aplicar esa imagen.</p>    
-    </details>
-    <details>
-      <summary><h2 class="details-summary">iframes</h2></summary>
-      <p>Espacios dónde se pueden incluir una página web dentro de otra.</p>
-      <p><strong>Para evitar saltos al cargar la página: </strong>dar valores width, height.</p>
-
-      <iframe src="" name="iframe_a" title="Ejemplo de Iframe activado con un link" style="width: 100%;"></iframe>
-      <p><a href="../../index.html" target="iframe_a">Abrir página en el iframe</a></p>
-      
-      <div class="code black">
-        <span class="gris hijo">&lt;</span> 
-        <span class="etiqueta">iframe </span>
-        <span class="atributo"> src</span>=
-        <span class="valor">" "</span>
-        <span class="atributo"> name</span>=
-        <span class="valor">"iframe_name"</span>
-        <span class="atributo"> title</span>=
-        <span class="valor">"..."</span>
-        <span class="atributo"> style</span>=
-        <span class="valor">"width:100%"</span>
-        <span class="gris">></span> 
-        <span class="gris">&lt;/</span> 
-        <span class="etiqueta">iframe </span> 
-        <span class="gris">></span> <br>
-
-        <span class="gris hijo">&lt;</span> 
-        <span class="etiqueta">a </span>
-        <span class="atributo"> href</span>=
-        <span class="valor">"url al sitio"</span>
-        <span class="atributo"> target</span>=
-        <span class="valor">"iframe_name"</span>
-        <span class="gris">></span> Abrir página en el iframe
-        <span class="gris">&lt;/</span> 
-        <span class="etiqueta">a </span> 
-        <span class="gris">></span> <br>
-      </div>
-      
-      <details>
-        <summary><h3 class="details-summary">¿Cómo reproducir vídeos de youtube?</h3></summary>
-        <p>En un elemento iframe añadir los atributos de alto y ancho y en el "src" poner "https:/www.youtube.com" + "/embed" (de embedded, inyectado) + "/el-id-del-vídeo(buscarlo en el url)"</p>
-        <div class="code black">
-          <span class="gris">&lt;</span>
-          <span class="etiqueta">iframe</span>
-          <span class="atributo">width</span>
-          =
-          <span class="valor">"315"</span>
-          <span class="atributo">height</span>
-          =
-          <span class="valor">"315"</span>
-          <span class="atributo">src</span>
-          =
-          <span class="valor">"https://www.youtube.com/embed/tgbNymZ7vqY"</span>
-          <span class="gris">></span>
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">iframe</span>
-          <span class="gris">></span>
-        </div>
-        <p>Después del id del vídeo se pueden añadir otras opciones como:</p>
-        <ul>
-          <li><p><strong>autoplay=1: </strong>que se reproduzca al cargar.</p> </li>
-          <li><p><strong>mute=1: </strong> que se reproduzca sin sonido.</p></li>
-          <li><p><strong>loop=1: </strong>para que se reproduzca en bucle.</p></li>
-          <li><p><strong>controls=0: </strong>para que no se vean los controles.</p></li>
-        </ul>
-        <p>Se añade un símbolo "?" después del id y entre valores un &.</p>
-        <div class="code black">
-          <span class="gris">&lt;</span>
-          <span class="etiqueta">iframe</span>
-          <span class="atributo">width</span>
-          =
-          <span class="valor">"315"</span>
-          <span class="atributo">height</span>
-          =
-          <span class="valor">"315"</span>
-          <span class="atributo">src</span>
-          =
-          <span class="valor">"https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"</span>
-          <span class="gris">></span>
-          <span class="gris">&lt;/</span>
-          <span class="etiqueta">iframe</span>
-          <span class="gris">></span>
-        </div>
-        <p>Se pueden reproducir listas de vídeos colocando en el src varias url separadas por coma. ","</p>
-      </details>
-         
-    </details>
-    <details>
-      <summary><h2 class="details-summary">figure</h2></summary>
-      <p>Contenedor para imágenes, ilustraciones, diagramas, fotos, etc. con pie de foto. El elemento "figcaption" sirve como pie de foto y tiene que ir dentro del figure.</p>
-      <figure>
-        <img src="https://www.w3schools.com/html/img_girl.jpg" alt="Imagen enrutada desde internet" width="200">
-        <figcaption>Pie de foto</figcaption>
-      </figure>
-
-      <div class="code black">
-        <span class="gris">&lt;</span> 
-        <span class="etiqueta">figure </span> 
-        <span class="gris">></span> <br>
-
-        <span class="gris hijo">&lt;</span> 
-        <span class="etiqueta">img </span>
-        <span class="atributo"> src</span>=
-        <span class="valor">"url-imagen"</span>
-        <span class="atributo"> alt</span>=
-        <span class="valor">"texto-alternativo"</span>
-        <span class="atributo"> width</span>=
-        <span class="valor">"xxx"</span>
-        <span class="gris">></span> <br>
-
-        <span class="gris hijo">&lt;</span> 
-        <span class="etiqueta">figcaption </span>
-        <span class="gris">></span>
-        Pie de foto
-        <span class="gris">&lt;/</span> 
-        <span class="etiqueta">figcaption </span> 
-        <span class="gris">></span> 
-        <br>
-
-        <span class="gris">&lt;/</span> 
-        <span class="etiqueta">figure </span> 
-        <span class="gris">></span> <br>
-      </div>
-    </details>
-    <details>
-      <summary><h2 class="details-summary">canvas</h2></summary>
-      <p>Espacio para crear gráfico mediante JavaScript. Tiene que tener un id para enlazar con el javascript y tamaño de alto y ancho para que no tiemble la página al cargar. Permite crear rectángulos, círculos, textos con diseños especiales, añadir imágenes, etc.</p>
     </details>
     <details>
       <summary><h2 class="details-summary">svg</h2></summary>
@@ -539,10 +608,7 @@
         </li>
       </ul>
     </details>
-    <details>
-      <summary><h2 class="details-summary">audio</h2></summary>
-      <p>Igual que el vídeo, permite atributos "controls", "muted" y "autoplay" y dentro van los source con varios formatos. El texto dentro de esta etiqueta sólo se ve si el navegador no carga los audios.</p>
-    </details>
+
   </main>
 
 </body>
