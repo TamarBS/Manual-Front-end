@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Propiedades que afectan los tamaños</title> 
+  <meta name="description" content="Propiedades CSS que afectan el tamaño de los elementos.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Propiedades que afectan los tamaños</h1>
+      <p>Propiedades que afectan el tamaño de los elementos.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2 class="body-subtitle">Ancho y alto</h2>
+    <details>
+      <summary><h2 class="details-summary">widht height</h2></summary>
+      <p><strong>width</strong> es el ancho, <strong>height</strong> es el alto.</p>
+      <p>Estas propiedades no incluyen el padding, los bores o los márgenes. Sólo define el tamaño del contenido del elemento.</p>
+      <p>Pueden tener valores: auto/px/cm/%/initial/inherit.</p>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">max-width, min-width, max-height, min-height</h2></summary>
+        <p>Tamaños máximos y mínimos para altos y anchos.</p>
+        <p>Pueden tener valores: auto/px/cm/%/initial/inherit.</p>
+        <p>Tiene prioridad frente a otra propiedad de sólo ancho y alto.</p>
+    </details>
+    <h2 class="body-subtitle">Box model</h2>
+    <p>Es la forma en la que están compuestos todos los Elementos HTML. Todos los elementos se pueden considerar como una especie de caja.</p>
+    <div class="col2">
+      <div>
+        <div style="background-color: grey; margin: 0; padding: 0.5em;">
+          <p style="text-align: center;">Margin</p>
+          <div style="background-color: green; margin: 0; padding: 0.5em;">
+            <p style="text-align: center;">Border</p>
+              <div style="background-color: grey; margin: 0; padding: 0.5em;">
+                <p style="text-align: center;">Padding</p>
+                <div style="background-color: whitesmoke; margin: 0; padding: 1em;">
+                  <p style="text-align: center;">Content</p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <details>
+          <summary><h2 class="details-summary">box-sizing</h2></summary>
+          <p>Esta propiedad afecta la manera en la que se define el ancho y alto de un elemento teniendo en cuenta el tamaño añadido de su padding y su border.</p>
+          <p>No afecta al margin de los elementos.</p>
+        </details>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>

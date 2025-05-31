@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Espacios</title> 
+  <meta name="description" content="Propiedades CSS que afectan a los espacios vacíos y margenes de los elementos.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Espacios</h1>
+      <p>Propiedades CSS que afectan los espacios vacíos y los márgenes de los elementos</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <details>
+      <summary><h2 class="details-summary">margin</h2></summary>
+      <p>Definen margenes fuera de los bordes del elemento.</p>
+      <p>Las propiedades pueden ser: margin, margin-top/right/bottom/left.</p>
+      <p>Pueden tener valores: auto/px/pt/cm/%/inherit.</p>
+      <p>Se admiten valores negativos.</p>
+      <p>El valor auto situa el elemento en el centro del ancho.</p>
+      <p><strong>margin collapse: </strong>los margenes top y bottom se colapsan. Es decir, s tengo dos elementos, al de encima le pongo margin 70px y al de debajo 20px, la distancia no será 70+20, se quedará en 70.</p>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">padding</h2></summary>
+      <p>Definen márgenes dentro de los bordes del elemento entre los límites y el contenido.</p>
+      <p>Las porpiedades pueden ser: padding, padding-top/right/bottom/left.</p>
+      <p>Los valores pueden ser: px/pt/cm/%</p>
+      <p>No se admiten valores negativos.</p>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">outline</h2></summary>
+      <p>Es un espacio añadido entre el border y el margin. Sirve como un segundo border para destacar. Es como el margin en cuánto a que no forma parte del tamaño del elemento.</p>
+      <p class="details-subtitle">Propiedades del outline</p>
+      <ul>
+        <li>
+          <p><strong>outline-style: </strong>Igual que border, puede ser: dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden.</p>
+          <a href="ornamental.html#border-style">Ir a la lista de estilos de border-style.</a>
+        </li>
+        <li>
+          <p><strong>outline-color: </strong>lo mismo que border, es para elegir el color del borde.</p>
+        </li>
+        <li>
+          <p><strong>outline-width: </strong>igual que el border. Es el ancho de la línea y puede tener valores px/pt/cm/em/etc y también valores predeterminados thin, medium y thick.</p>
+        </li>
+        <li>
+          <p><strong>outline-offset: </strong>define el espacio vacío entre la línea del outline y del border. Este espacio no contiene color ni estilos, es siempre transparente.</p>
+        </li>
+      </ul>
+      <p class="details-subtitle">Propiedad aglutinadora</p>
+      <p><strong>outline: </strong>puede contener: outline-width, outline-style y outline-color. El orden no importa.</p>
+    </details>
+  </main>
+
+</body>
+</html>
