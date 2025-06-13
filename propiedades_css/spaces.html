@@ -27,7 +27,11 @@
       <p>Las propiedades pueden ser: margin, margin-top/right/bottom/left.</p>
       <p>Pueden tener valores: auto/px/pt/cm/%/inherit.</p>
       <p>Se admiten valores negativos.</p>
-      <p>El valor auto situa el elemento en el centro del ancho.</p>
+      <p>El valor auto situa el elemento en el centro del ancho pero es obligatorio que exista un valor para width que no sea 100%. Elementos inline como img se pueden centrar si se le da un display:block;.</p>
+      <div class="details__example">
+        <div style="margin: auto; max-width: 50%; border: 1px solid grey; padding: 1em;">Ejemplo de un div que se coloca centrado con margin auto.</div>
+        <img src="../images/star.png" style="display: block; margin: auto;">
+      </div>
       <p><strong>margin collapse: </strong>los margenes top y bottom se colapsan. Es decir, s tengo dos elementos, al de encima le pongo margin 70px y al de debajo 20px, la distancia no será 70+20, se quedará en 70.</p>
     </details>
     <details>

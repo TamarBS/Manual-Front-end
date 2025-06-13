@@ -13,9 +13,8 @@
       .webpage {
         border: 3px solid black;
         background-color: white;
-        width: 400px;
         text-align: center;
-        margin: auto;
+        box-sizing: border-box;
       }
       .webpage *{
         border: 3px solid black;
@@ -62,8 +61,8 @@
 
     <h2 class="body-subtitle">Elementos HTML para el esqueleto base</h2>
     <p>Las webs comparten una estructura de organiación de contenidos basada en varios Elementos HTML que facilitan el orden y la familiaridad.</p>
-    <div class="col2">
-      <div class="webpage">
+    <div class="col-container">
+      <div class="webpage two-cols">
         <header>Header</header>
         <nav>Nav</nav>
         <div class="grid">
@@ -74,7 +73,7 @@
 
         <footer>Footer</footer>
       </div>   
-      <div>
+      <div class="two-cols">
         <details>
           <summary><h3 class="details-summary">header</h3></summary>
           <p>Cabecera del documento o sección. Suele contener, logo, autoría y un elemento de título h1 - h6.</p>
