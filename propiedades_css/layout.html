@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Disposición de elementos</title> 
+  <meta name="description" content="Porpiedades que afectan estilos de colocación y disposición de elementos.">
+
+  <style>
+    #display-contents-example-padre{
+      border: 2px solid green;
+      padding: 1em;
+      color: green;
+    }
+    #display-contents-example-hijo{
+      border: 2px solid darkgoldenrod;
+      margin-top: 1em;
+      padding: 1em;
+      color: darkgoldenrod;
+    }
+    #display-contents-example-nieto{
+      border: 2px solid lightsalmon;
+      margin-top: 1em;
+      padding: 1em;
+      color: lightsalmon;
+    }
+    .example-button {
+      display: block;
+      margin-bottom: 1em;
+      padding: 0.5em;
+      text-align: center;
+    }
+
+    .container__flex-example--row {
+      display: flex;
+      gap: 1em;
+      margin-bottom: 1em;
+    }
+    .container__flex-example--col {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    .box-example {
+      width: 3em;
+      height: 3em;
+    }
+    .box-example--first {
+      background-color: greenyellow;
+      color: white;
+    }
+    .box-example--second {
+      background-color: darkgreen;
+      color: white;
+    }
+    .box-example--third {
+      background-color: darkolivegreen;
+      color: white;
+    }
+
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1em;
+    }
+
+    .greenDiv{
+      background-color: lightgreen;
+      width: 80%;
+      margin: 3px;
+      aspect-ratio: 4/1;
+    }
+  </style>
+
+  <script src="../js/functions.js"></script>
+
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Disposición de elementos</h1>
+      <p>Algunas propiedades sirven para definir el comportamiento de los elementos con respecto a otros. Se aplica un orden específico, una colocación dentro de la página y ocupan un espacio determinado.</p>
+      <hr>
+    </hgroup>
+  </header>
+  
+  <main>
+    
+    <details>
+      <summary><h2 class="details-summary">display</h2></summary>
+      <p>Esta propiedad se utiliza para definir cómo se verá el elemento en la pantalla.</p>
+      <p>Cada elemento tiene su propio valor por defecto, que puede ser block o inline.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li>
+          <p><strong>inline: </strong>ocupan el ancho del contenido sólamente. No se le puede añadir ancho, alto ni márgenes al contenedor. ( span a img )</p>
+        </li>
+        <li>
+          <p><strong>block: </strong>ocupan todo el ancho de pantalla. ( div headings p form header footer section )</p>
+        </li>
+        <li>
+          <p><strong>inline-block: </strong>Igual que inline, pero permite aplicar márgenes, alto y ancho al contenedor.</p>
+        </li>
+        <li class="li--hidden">
+          <details>
+            <summary>contents</summary>
+            <p>Hace desaparecer el contenedor del elemento al que se aplica, ascendiendo a sus hijos a un nivel superior en el DOM. El contenedor desaparece pero no los contenidos.</p>
+            <div class="col-container details__example">
+                <div style="height: 203px;">
+                  <div id="display-contents-example-padre">Padre
+                    <div id="display-contents-example-hijo">Hijo
+                      <div id="display-contents-example-nieto">Nieto</div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button id="display-contents-button-padre" class="example-button" onclick="hideFather()">Aplicar al padre</button>
+                  <button id="display-contents-button-hijo" class="example-button" onclick="hideSon()">Aplicar al hijo</button>
+                  <button id="display-contents-button-nieto" class="example-button" onclick="hideGrandson()">Aplicar al nieto</button>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li class="li--hidden">
+          <details>
+            <summary>flex</summary>
+            <p>Convierte el elemento en un contenedor que ocupa todo el ancho disponible y permite contener elementos que se situen de manera flexible dentro de él.</p>
+            <div class="details__example col-container">
+              <div>
+                <p>Horizontal</p>
+                <div class="container__flex-example--row">
+                  <div class="box-example box-example--first"></div>
+                  <div class="box-example box-example--second"></div>
+                  <div class="box-example box-example--third"></div>
+                </div>
+              </div>
+              <div>
+                <p>Vertical</p>
+                <div class="container__flex-example--col">
+                  <div class="box-example box-example--first"></div>
+                  <div class="box-example box-example--second"></div>
+                  <div class="box-example box-example--third"></div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li>
+          <p><strong>inline-flex: </strong>Cómo flex, pero sin ocupar todo el ancho disponible. Sólo el ancho del elemento. Se convierte en un contenedor y permite contener elementos que se situen de manera flexible dentro de él.</p>
+        </li>
+        <li class="li--hidden">
+          <details>
+            <summary>grid</summary>
+            <p>Es como el flex pero no actúa solo para una fila de elementos, sino para una cuadrícula de filas y columnas.</p>
+            <div class="details__example example-grid">
+              <div class="box-example box-example--first"></div>
+              <div class="box-example box-example--second"></div>
+              <div class="box-example box-example--third"></div>
+              <div class="box-example box-example--first"></div>
+              <div class="box-example box-example--second"></div>
+              <div class="box-example box-example--third"></div>
+            </div>
+          </details>
+        </li>
+        <li>
+          <p><strong>inline-grid: </strong>Es como grid, pero no ocupa todo el ancho disponible, sólo el ancho de su contenido.</p>
+        </li>
+        <li>
+          <p><strong>none: </strong>El elemento no se ve. Desaparece y deja de ocupar su sitio. Se suele utilizar junto con JavaScript para ocultar elementos sin tener que eliminarlos. Si se quiere ocultar un elemento pero que respete su sitio mejor utilizar visibility:hidden;</p>
+        </li>
+        <li>
+          <p><strong>initial: </strong>Le aplica su valor por defecto.</p>
+        </li>
+        <li>
+          <p><strong>inherit: </strong>Hereda su valor del padre.</p>
+        </li>
+        <li>
+          <p><strong>list-item: </strong>Aplica el mismo comportamiento a cualquier elemento que si fuera un li dentro de una lista.</p>
+        </li>
+        <li>
+          <p><strong>run-in: </strong>No encontré mucha info, pero por lo visto se adapta según el display que tienen los elementos de alrededor.</p>
+        </li>
+        <li class="li--hidden">
+          <details>
+            <summary>Valores para tablas</summary>
+            Estos valores de display, sólo son útiles para tablas.
+            <ul>
+              <li>
+                <p><strong>inline-table: </strong>Permite colocar una tabla dentro de un texto sin que la tabla ocupe todo el ancho, sólo el ancho de su contenido. Los elementos table por defecto son display="block".</p>
+              </li>
+              <li>
+                <p><strong>table: </strong>El elemento actúa como una tabla. Supongo que display block.</p>
+              </li>
+              <li>
+                <p><strong>table-caption: </strong>El elemento actúa como el título de una tabla.</p>
+              </li>
+              <li>
+                <p><strong>table-column-group: </strong>El elemento se comporta como un colgroup.</p>
+              </li>
+              <li>
+                <p><strong>table-header-group: </strong>El elemento se comporta como un thead de tabla.</p>
+              </li>
+              <li>
+                <p><strong>table-footer-group: </strong>El elemento se comporta como un tfood de tabla.</p>
+              </li>
+              <li>
+                <p><strong>table-row-group: </strong>El elemento se comporta como un tbody de tabla.</p>
+              </li>
+              <li>
+                <p><strong>table-cell: </strong>El elemento se comporta como un td de tabla.</p>
+              </li>
+              <li>
+                <p><strong>table-column: </strong>El elemento se comporta como un col de tabla.</p>
+              </li>
+              <li>
+                <p><strong>table-row: </strong>El elemento se comporta como un tr de tabla.</p>
+              </li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">position</h2></summary>
+      <p>Define el método de posicionamiento para un elemento.</p>
+      <ul>
+        <li>
+          <p><strong>static: </strong>Es el valor por defecto. Se posiciona acorde al flujo normal de la página. No le aplican las propiedades top, right, bottom, left.</p>
+          <div style="position: static; width: 80px; height:50px; background-color: white; border: 2px solid grey;"><p style="margin: 0;">static</p></div>
+        </li>
+        <li>
+          <p><strong>relative: </strong>Relativo a su posición normal. Le afecta las propiedades top, right, bottom, left.</p>
+          <div style="position: relative; width: 80px; height:50px; background-color: white; border: 2px solid grey; left: 1em;"><p style="margin: 0;">relative left:16px</p></div>
+        </li>
+        <li>
+          <p><strong>fixed: </strong>El elemento se queda fijo en la pantalla y no ocupa espacio. Le afectan las propietades top, right, bottom, left y no responde al scroll. Como si se quedara pegado en una parte de la pantalla.</p>
+          <div style="position: fixed; width: 80px; height:50px; background-color: white; border: 2px solid grey; top: 20px; right: 20px;"><p style="margin: 0;">fixed top-right:20px</p></div>
+        </li>
+        <li>
+          <p><strong>absolute: </strong>Se posiciona relativo al elemento padre más cercano que tenga propiedad relative. Si no tiene ningún padre, utiliza el body. No ocupa espacio, como fixed.</p>
+          <div style="position: relative; width: 150px; height:80px; background-color: white; border: 2px solid grey;">
+            <p style="margin: 0;">padre relative</p>
+            <div style="position: absolute; background-color: whitesmoke; border: 2px solid grey; top: 20px; left: 20px;"><p style="margin: 0;">absolute top-left 20px</p></div>
+          </div>
+        </li>
+        <li>
+          <p><strong>sticky: </strong>Tiene un comportamiento que mezcla relative y fixed. Da la impresión de que al hacer scroll se queda pegado a una parte de la pantalla. Se necesita mínimo uno de los valores top, right, bottom, left que indicará en qué momento del scroll se va a quedar pegado.</p>
+          <div style="position: sticky; width: 80px; height:50px; background-color: white; border: 2px solid grey; bottom: 0;"><p style="margin: 0;">sticky bottom 0</p></div>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">z-index</h2></summary>
+      <p>Esta propiedad define el orden de pila del elemento. Permite posicionar elementos por encima de otros. Puede contener valores positivos o negativos.</p>
+      <p>La propiedad sólo funciona si va acompañada de un elemento con position absolute, relative, fixed o sticky. También funciona en los hijos de un contenedor display flex (flex items).</p>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">overflow</h2></summary>
+      <p>Controla lo que le pasa al contenido de un elemento que es demasiado grande y no cabe en su sitio, se desborda. Permite cortar o añadir barras de scroll.</p>
+      <p>Esta propiedad sólo funciona en elementos block con un alto definido.</p>
+      <ul>
+        <li><p><strong>overflow-x: </strong>afecta sólo al eje x.</p></li>
+        <li><p><strong>overflow-y: </strong>afecta sólo al eje y.</p></li>
+        <li class="li--hidden">
+          <details>
+            <summary>overflow-anchor</summary>
+            <p>Permite anclar el texto en la posición de scroll. Esto es útil para que el texto no se baje si se genera un contenido nuevo. Por ejemplo, en un texto, un botón crea rectángulos arriba del todo.</p>
+            <div class="col-container details__example">
+              <div class="two-cols">
+                <p>overflow-anchor: none;</p>
+                <div style="overflow: scroll; overflow-anchor: none; height: 200px; border: 2px solid grey;">
+                  <div id="newBoxesOne"></div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <button onclick="addBoxOne()">Añadir rectángulo</button>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <p>En este ejemplo al pulsar el botón el texto se baja y hay que darle al scroll para volver al punto del texto dónde estábamos. Los rectángulos creados empujan el texto hacia abajo.</p>
+              </div>
+              <div class="two-cols">
+                <p>overflow-anchor: auto;</p>
+                <div style="overflow: scroll; overflow-anchor: auto; height: 200px; border: 2px solid grey;">
+                  <div id="newBoxesTwo"></div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <button onclick="addBoxTwo()">Añadir rectángulo</button>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <p>Es el valor por defecto.</p>
+                <p>En este ejemplo al pulsar el botón el texto NO se baja y seguimos en el mismo punto del texto dónde estábamos.</p>
+              </div>
+            </div>
+          </details>
+        </li>
+        <li class="li--hidden">
+          <details>
+            <summary><h2 class="details-summary">overflow-wrap</h2></summary>
+            <p>Define si las palabras largas que se desbordan de su contenedor se pueden o no cortar y pasar a la siguiente línea.</p>
+            <p class="details-subtitle">Valores</p>
+            <ul>
+              <li><p><strong>normal: </strong>las palabras largas se desbordan</p></li>
+              <li><p><strong>anywhere / break-word: </strong>se supone que son diferentes y break-word tiene en cuenta espacios y guiones para separar por palabras, pero a mí no me lo hace, para mí funcionan igual. Hacen que la palabra larga se corte ajustándose al contenedor y dividiéndose en la siguiente línea.</p></li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li><p><strong>visible: </strong>El valor por defecto. El contenido no se corta y se desborda de su contenedor.</p></li>
+        <li><p><strong>hidden: </strong>El contenido se recorta y se deja de ver lo que esté desbordado.</p></li>
+        <li><p><strong>scroll: </strong>El contenido se corta y lo que esté desbordado se puede ver utilizando las barras de scroll que esta propiedad añade. Añade tanto barra de scroll vertical como horizontal, aunque no se necesite.</p></li>
+        <li><p><strong>auto: </strong>lo mismo que scroll, pero sólo añade las barras de scroll si hacen falta.</p></li>
+      </ul>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">float</h2></summary>
+      <p>Propiedad que permite colocar elementos a la derecha o izquierda de otros.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li><p><strong>left: </strong>el elemento se coloca a la izquierda del todo de su contenedor.</p> </li>
+        <li><p><strong>right: </strong>el elemento se coloca a la derecha del todo de su contenedor.</p></li>
+        <li><p><strong>none: </strong>Es el por defecto. No se coloca de ninguna manera diferente a la esperada.</p></li>
+        <li><p><strong>inherit: </strong>hereda la propiedad float de su padre.</p></li>
+      </ul>
+      <div class="details__example" style="overflow: auto;">
+        <div style="border: 2px solid green; float: left; width: 50px;">Float left 1</div>
+        <div style="border: 2px solid peru; float:right; width:50px;">Float right 2</div>
+        <div style="border: 2px solid green; float: left; width: 50px;">Float left 3</div>
+        <div style="border: 2px solid peru; float:right; width:50px;">Float right 4</div>
+        <div style="border: 2px solid green; float: left; width: 50px;">Float left 5</div>
+        <div style="border: 2px solid peru; float:right; width:50px;">Float right 6</div>
+      </div>
+      <div class="code black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">div</span>
+        <span class="propiedad">style</span>
+        <span class="valor">"float:left"</span>
+        <span class="gris">></span>
+        Float left 1
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">div</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">div</span>
+        <span class="propiedad">style</span>
+        <span class="valor">"float:right"</span>
+        <span class="gris">></span>
+        Float left 2
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">div</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">div</span>
+        <span class="propiedad">style</span>
+        <span class="valor">"float:left"</span>
+        <span class="gris">></span>
+        Float left 3
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">div</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">div</span>
+        <span class="propiedad">style</span>
+        <span class="valor">"float:right"</span>
+        <span class="gris">></span>
+        Float left 4
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">div</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">div</span>
+        <span class="propiedad">style</span>
+        <span class="valor">"float:left"</span>
+        <span class="gris">></span>
+        Float left 5
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">div</span>
+        <span class="gris">></span>
+        <br>
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">div</span>
+        <span class="propiedad">style</span>
+        <span class="valor">"float:right"</span>
+        <span class="gris">></span>
+        Float left 6
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">div</span>
+        <span class="gris">></span>
+        <br>
+      </div>
+      <p>De alguna manera float hace que elementos block como un div se hagan inline y sea posible colocar varios uno al lado del otro de forma vertical.</p>
+      <div class="details__example" style="overflow: auto;">
+        <div style="border: 2px solid green; float: left; width: 50px;">Float left fuera</div>
+        <div style="border: 2px solid peru; float: right; width: 50px;">Float Right fuera</div>
+        <div style="border: 4px solid aquamarine;">
+          Div sin float. El texto del elemento aprovecha cada espacio vacío de su contendor padre no ocupado por los float. El comportamiento del texto es diferente al de su contenedor. El texto parece reconocer el espacio de los float, mientras el contenedor no. Por eso los float aparecen dentro del div aunque en código estén fuera y se desbordan en el eje y.
+          <div style="border: 2px solid peru; float: right; width: 50px;">Float Right dentro</div>
+        </div>
+      </div>
+      <p> Tiene un comportamiento especial cuándo va seguido de elementos sin float, porque se posiciona como relative top-left=0 o top-right=0 permitiendo que el texto lo rodee aunque para el contenedor sea como si estuviera en una position absolute, no reconoce su espacio ocupado en la coordenada y, pero sí en su coordenada x.</p>
+      <p class="details-subtitle">Clearfix</p>
+      <p>Para que no ocurra el desbordamiento se puede añadir un overflow:auto; al contenedor para que reconozca el alto del elemento float. Esto también hará visual la diferencia de elementos tal cual se define en código. Si están fuera o dentro, separandolos en columnas. A este "hack" se le conoce como Clearfix.</p>  
+      <div class="details__example">
+        <div style="border: 2px solid green; float: left;">Float left</div>
+        <div style="border: 2px solid peru; float: right;">Float Right</div>
+        <div style="border: 4px solid aquamarine; overflow: auto;">
+          Div sin float con overflow:auto; El texto se desplaza a la derecha dejando espacio al float:left; y también respeta el espacio para el float:right que contiene. El float:right; es más alto que el contenedor y se desborda, porque el contenedor no reconoce su height pero sí su width.
+          <div style="border: 2px solid peru; float: right; width: 100px;">Float Right dentro del elemento sin float</div>
+        </div>
+      </div>
+      <p>Puede ocurrir que al añadir overflow:auto; al contenedor aparezcan barras de scroll no deseadas. Para conseguir el resultado deseado se pueden utilizar la siguiente clase.</p>
+      <div class="code black">
+        <span class="clase">.clearfix</span>
+        <span class="comentario">::after</span>
+        <span class="llave">{</span>
+        <br>
+        
+        <span class="propiedad hijo">content</span>:
+        <span class="valorCss">""</span>;
+        <br>
+        <span class="propiedad hijo">clear</span>:
+        <span class="valorCss">both</span>;
+        <br>
+        <span class="propiedad hijo">display</span>:
+        <span class="valorCss">table</span>;
+        <br>
+        <span class="llave">}</span>
+      </div>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">clear</h2></summary>
+      <p>Permite colocar elementos debajo de otros que tengan alguna propiedad float.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li><p><strong>none: </strong>Es el por defecto y no afecta en nada al elemento.</p></li>
+        <li><p><strong>left: </strong> Se coloca debajo de los elementos con float:left;</p></li>
+        <li><p><strong>right: </strong>Se coloca debajo de los elementos con float:right;</p></li>
+        <li><p><strong>both: </strong>Se coloca debajo de los elementos con float tanto left como right.</p></li>
+        <li><p><strong>inherit: </strong>Hereda la propiedad clear de su pariente.</p></li>
+      </ul>
+      <div class="col-container">
+        <div class="details__example">
+          <div style="border: 2px solid green; float: left; width: 45px;">Float left</div>
+          <div style="border: 2px solid peru; float: right; width: 45px; height: 100px;">Float Right</div>
+          <p>Elemento sin clear </p>
+        </div>
+        <div class="details__example">
+          <div style="border: 2px solid green; float: left; width: 45px;">Float left</div>
+          <div style="border: 2px solid peru; float: right; width: 45px; height: 100px;">Float Right</div>
+          <p style="clear: left;">Elemento con clear left</p>
+        </div>
+        <div class="details__example">
+          <div style="border: 2px solid green; float: left; width: 45px;">Float left</div>
+          <div style="border: 2px solid peru; float: right; width: 45px; height: 100px;">Float Right</div>
+          <p style="clear: right;">Elemento con clear right</p>
+        </div>
+        <div class="details__example">
+          <div style="border: 2px solid green; float: left; width: 45px;">Float left</div>
+          <div style="border: 2px solid peru; float: right; width: 45px; height: 100px;">Float Right</div>
+          <p style="clear: both;">Elemento con clear both</p>
+        </div>
+      </div>
+    </details>
+  </main>
+  <script>
+    function addBoxOne(){
+      let newBoxesDiv = document.querySelector("#newBoxesOne");
+      let newDiv = document.createElement("div");
+      newDiv.className = "greenDiv";
+      newBoxesDiv.appendChild(newDiv);
+    }
+    function addBoxTwo(){
+      let newBoxesDiv = document.querySelector("#newBoxesTwo");
+      let newDiv = document.createElement("div");
+      newDiv.className = "greenDiv";
+      newBoxesDiv.appendChild(newDiv);
+    }
+  </script>
+</body>
+</html>

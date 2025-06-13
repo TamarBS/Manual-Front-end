@@ -47,6 +47,9 @@ header { margin-bottom: 3rem; }
 /* ----------------------------- */
 
 /* Botones */
+button {
+  cursor: pointer;
+}
 .button {
   margin: 0;
   width: fit-content;
@@ -102,12 +105,21 @@ details .details-subtitle {
   font-weight: normal;
   text-transform: uppercase;
 }
+.details__example {
+  padding: 1em;
+  background-color: whitesmoke;
+  border-radius: 0.3em;
+}
 /* ----------------------------- */
 
 /* Listas */
 ul { 
   padding-left: 20px;
   list-style: square;
+ }
+ .li--hidden {
+  list-style-type: none;
+  margin-left: -2em;
  }
 /* ----------------------------- */
 
@@ -197,14 +209,28 @@ kbd {
 
 /* ------------------------------------- */
 
-/* Contenido en dos columnas */
-.col2 {
+/* Contenido en columnas */
+.col-container {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  gap: 5%;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 1em;
 }
-.col2>div {
-  width: 47.5%;
+.two-cols {
+  width: calc(100%/2);
+}
+@media only screen and (max-width: 600px) {
+  .col-container {
+    flex-direction: column;
+  }
+  .two-cols {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .two-cols {
+    width: calc(50%/2);
+  }
 }
 /* ------------------------------------- */
