@@ -9,6 +9,20 @@
   <title>Estilos CSS</title>
   <meta name="description" content="Tutorial sobre CSS">
 
+  <style>
+    span:lang(en) {
+      background-color: cornflowerblue;
+      font-weight: bold;
+    }
+    .selection--highlighted::selection {
+      background-color: yellow;
+      color: red;
+    }
+    dialog::backdrop {
+      background-color: lightgreen;
+    }
+  </style>
+
 </head>
 <body>
   <header>
@@ -27,9 +41,9 @@
       <span class="clase">selector</span>
       <span class="llave">{</span>
       <span class="propiedad">propiedad</span>:
-      <span class="valorCss">valor</span>;
+      <span class="valor-css">valor</span>;
       <span class="propiedad">propiedad</span>:
-      <span class="valorCss">valor</span>;
+      <span class="valor-css">valor</span>;
       <span class="llave">}</span>
     </div>
     <details>
@@ -37,10 +51,188 @@
       <p>Se utiliza para encontrar el elemento HTML que se quiere afectar con estilos.</p>
       <p class="details-subtitle">Se pueden dividir en 5 categorías:</p>
       <ul>
-        <li><p><strong>Simple: </strong>Selecciona en base a los atributos name (nombre de la etiqueta), id (#nombre del id) y class (.nombre de la clase).</p></li>
-        <li><p><strong>Combinator: </strong>Seleccionan elementos en función a una relación específica.</p></li>
-        <li><p><strong>Pseudo-class: </strong>Selectores en base a ciertos estados.</p></li>
-        <li><p><strong>Pseudo-elements: </strong>Seleccionan una parte del elemento.</p></li>
+        <li class="li--details-exception">
+          <details>
+            <summary>Simple</summary>
+            <p>Selecciona en base a los nombres identificadores.</p>
+            <ul>
+              <li><p><strong>id: </strong>#nombre del id</p></li>
+              <li><p><strong>class: </strong>.nombre de la clase</p></li>
+              <li><p><strong>name: </strong>nombre de la etiqueta</p></li>
+            </ul>
+            <p>Se pueden utilizar diferentes selectores que afecten a varios nombres identificadores a la vez mediante coma ,</p>
+            <div class="code black">
+              <span class="clase">.clase, #id, nombre-de-etiqueta</span>
+              <span class="llave">{</span>...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Los estilos afectarán a la clase, al id y a la etiqueta.--&gt;</span>
+            </div>
+          </details>
+          
+        </li>
+        <li class="li--details-exception">
+          <details>
+            <summary>Combinators</summary>
+            <p>Seleccionan elementos en función a una relación específica entre ellos.</p>
+            <ul>
+              <li class="li--indented">
+                <p><strong>( space ) descendant: </strong>Afecta a todos los hijos del tipo referido. </p>
+                <p>Ej.: div p (Afecta a todos los p hijos, nietos, etc que contenga el div)</p>
+              </li>
+              <li class="li--indented">
+                <p><strong> > child: </strong>Afecta a los hijos directos que contiene el elemento.</p>
+                <p>Ej.: div > p (Afecta a sus p hijos pero no a sus p nietos)</p>
+              </li>
+              <li class="li--indented">
+                <p><strong> + next sibling: </strong>Afecta sólo al elemento referido que va inmediatamente después del elemento seleccionado.</p>
+                <p>Ej.: div + p (Afecta a su p hermano sólo si está situado inmediatamente después. Si hay otro elemento entre medias no le afectará)</p>
+              </li>
+              <li class="li--indented">
+                <p><strong> ~ subsequent-sibling: </strong>Afecta a los elementos referidos que van después de él y se consideran hermanos. Sólo los que van después y no antes. Se diferencia del sibling porque no tienen que ser los inmediatamente siguientes, en este caso sí pueden haber otros elementos entre medias.</p>
+                <p>Ej.: div ~ p (Afecta a todos los p hermanos del div que se coloquen por debajo de él)</p>
+                <p></p>
+              </li>
+            </ul>
+          </details>
+
+        </li>
+        <li class="li--details-exception">
+          <details>
+            <summary>Pseudo-class</summary>
+            <p>Selectores en base a ciertos estados.</p>
+            <div class="code black">
+              <span class="clase">selector</span>
+              <span class="comentario">:pseudo-class </span>
+              <span class="llave">{</span>
+              <br>
+              <span class="propiedad hijo">propiedad</span>:
+              <span class="valor-css">valor</span>;
+              <br>
+              <span class="llave">}</span>
+            </div>
+            <p class="details-subtitle">Estados de los elementos:</p>
+            <ul>
+              <li>
+                <p><strong>:hover : </strong>El ratón está pasando por encima del area del elemento.</p>
+                <p>¡IMPORTANTE! El hover tiene que ir después de las pseudo-clases :link y visited, si no, no funciona.</p>
+              </li>
+              <li><p><strong>:visited : </strong>Enlace ya visitado.</p></li>
+              <li><p><strong>:link : </strong>Por defecto. Enlace sin visitar.</p></li>
+              <li>
+                <p><strong>:active : </strong>El elemento está siento clickado en ese momento. No confundir con focus que es el elemento recibiendo el foco, mediante tab o selección.</p>
+                <p>¡IMPORTANTE! el active tiene que ir después del hover, si no, no funciona.</p>
+              </li>
+              <li><p><strong>:first-child :</strong>afecta al elemento que es el primer hijo de algún otro elemento.</p></li>
+              <li class="li--details-exception">
+                <details>
+                  <summary>:lang</summary>
+                  <p>Permite definir estilos especiales para elementos que contienen la propiedad lang. Es decir, en un texto puedo tener varias palabras en inglés y querer mostrarlas con estilos especiales.</p>
+                  <p>En esta frase hay terminos en <span lang="en">English </span>que se quieren estilar de <span lang="en">different</span> manera.</p>
+                  <div class="code black">
+                    <span class="gris">&lt;</span>
+                    <span class="etiqueta">style</span>
+                    <span class="gris">></span>
+                    <br>
+                    <span class="clase hijo">span</span>
+                    <span class="comentario">:lang(en)</span>
+                    <span class="llave">{</span>
+                    <br>
+                    <span class="propiedad nieto">background-color</span>:
+                    <span class="valor-css">cornflowerblue</span>;
+                    <br>
+                    <span class="propiedad nieto">font-weight</span>:
+                    <span class="valor-css">bold</span>;
+                    <br>
+                    <span class="hijo llave">}</span>
+                    <br>
+                    <span class="gris">&lt;/</span>
+                    <span class="etiqueta">style</span>
+                    <span class="gris">></span>
+                    <br><br>
+
+                    <span class="gris">&lt;</span>
+                    <span class="etiqueta">p</span>
+                    <span class="gris">></span>
+                    En esta frase hay terminos en
+                    <span class="gris">&lt;</span>
+                    <span class="etiqueta">span</span>
+                    <span class="atributo">lang</span>=
+                    <span class="valor">"en"</span>
+                    <span class="gris">></span>
+                    English
+                    <span class="gris">&lt;/</span>
+                    <span class="etiqueta">span</span>
+                    <span class="gris">></span>
+                    que se quier...
+                    <span class="gris">&lt;/</span>
+                    <span class="etiqueta">p</span>
+                    <span class="gris">></span>
+                  </div>
+                </details>
+              </li>
+              <li><p><strong>focus : </strong>El elemento está recibiendo el foco, bien mediante tabulaciones o bien después de hacer click. No confundir con active que es el elemento siento clickado en ese momento.</p></li>
+            </ul>
+            <p>Específicos para inputs</p>
+            <ul>
+              <li><p><strong>valid : </strong></p>Afecta a los input con un valor válido.</li>
+              <li><p><strong>invalid : </strong></p>Afecta a los input y fieldset con valores no validos.</li>
+              <li><p><strong>required : </strong>Afecta a input que tengan el atributo required.</p></li>
+              <li><p><strong>optional : </strong>Afecta cualquier input, select o textarea que no tenga el atributo required.</p></li>
+            </ul>
+          </details>
+        </li>
+        <li class="li--details-exception">
+          <details>
+            <summary>Pseudo-elements</summary>
+            <p>Seleccionan una parte del elemento.</p>
+            <p class="details-subtitle">lista de pseudo-elementos</p>
+            <div class="code black">
+              <span class="clase">selector</span>
+              <span class="comentario">::pseudo-element </span>
+              <span class="llave">{</span>
+              <br>
+              <span class="propiedad hijo">propiedad</span>:
+              <span class="valor-css">valor</span>;
+              <br>
+              <span class="llave">}</span>
+            </div>
+            <p>Utilizar :: en lugar de solo uno : es una actualización de CSS3 para destinguir pseudo-clases de pseudo-elementos.</p>
+            <ul>
+              <li>
+                <p><strong>::first-line : </strong>afecta la primera línea de un texto. Sólo afecta a los elementos tipo block.</p>
+              </li>
+              <li><p><strong>::first-letter : </strong>afecta a la primera letra. Sólo funciona con elementos tipo block.</p></li>
+              <li><p><strong>::before : </strong>aplica algún estilo delante del contenido del elemento.</p></li>
+              <li><p><strong>::after : </strong>aplica algún estilo detrás del contenido del elemento.</p></li>
+              <li><p><strong>::marker : </strong>afecta los estilos de los marcadores en las listas (Los marcadores son los rectángulos, puntos o números delante de los li)</p></li>
+              <li class="li--details-exception">
+                <details>
+                  <summary>::selection</summary>
+                  <p>Afecta los estilos del subrayado que aparece cuando se selecciona un area del texto.</p>
+                  <div class="details__example">
+                    <p class="selection--highlighted">Subraya con la selección del ratón para ver el estilo de fondo amarillo y texto rojo del ::selected.</p>
+                  </div>
+                </details>
+              </li>
+              <li class="li--details-exception">
+                <details>
+                  <summary>::backdrop</summary>
+                  <p>Aplica estilos al fondo que aparece detrás de los cuadros de dialogo, popup, modales, ventanas emergentes, etc. Por defecto el color es un gris con transparencia.</p>
+                  <div class="details__example">
+                    <button id="dialogBtn">Abrir ventana</button>
+                    <dialog id="myDialog">
+                      <form method="dialog">
+                        <p>El fondo de esta ventana emergente está afectada por el pseudo-selector ::backdrop.</p>
+                        <button>Cerrar ventana</button>
+                      </form>
+                    </dialog>
+                  </div>
+                </details>
+              </li>
+          </ul> 
+          </details>
+        </li>
         <li><p><strong>Attribute: </strong>Selecciona elementos basado en su atributo o valor del atributo.</p></li>
       </ul>
       <p class="details-subtitle">Ejemplos de selectores:</p>
@@ -84,6 +276,13 @@
     </div>
 
   </main>
+
+  <script>
+    const dialogBtn = document.getElementById('dialogBtn');
+    const myDialog = document.getElementById('myDialog');
+
+    dialogBtn.addEventListener('click', () => myDialog.showModal());
+  </script>
 
 </body>
 </html
