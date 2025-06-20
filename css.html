@@ -230,10 +230,66 @@
                   </div>
                 </details>
               </li>
-          </ul> 
+            </ul> 
           </details>
         </li>
-        <li><p><strong>Attribute: </strong>Selecciona elementos basado en su atributo o valor del atributo.</p></li>
+        <li class="li--details-exception">
+          <details>
+            <summary>Por el atributo</summary>
+            <p>Selecciona elementos basado en su atributo o valor del atributo.</p>
+            <div class="code black">
+              <span class="clase">elementoHTML[atributo]</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que tengan el atributo. --&gt;</span>
+              <br><br>
+              <span class="clase">elementoHTML[atributo="valor"]</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que tengan el atributo que contenta el valor. --&gt;</span>
+              <br><br>
+              <span class="clase">elementoHTML[atributo~="palabra"]</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que contengan la palabra dentro del valor del atributo. Solo afecta si la palabra está separada por espacios, por ejemplo -flores no funcionará al estar unido al guión. --&gt;</span>
+              <br><br>
+              <span class="clase">elementoHTML[atributo|="valor"</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que contengan sólo la palabra exacta dentro del valor del atributo o también funcionando si la palabra está seguida de un guión para unirlo a otro término. --&gt;</span>
+              <br><br>
+              <span class="clase">elementoHTML[atributo^="valor"</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que contengan como primer valor del atributo, ese valor definido, que no tiene porqué ser una palabra entera. --&gt;</span>
+              <br><br>
+              <span class="clase">elementoHTML[atributo$="valor"</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que contengan como último valor del atributo, ese valor definido, que no tiene porqué ser una palabra entera. --&gt;</span>
+              <br><br>
+              <span class="clase">elementoHTML[atributo*="valor"</span>
+              <span class="llave">{</span>
+              ...
+              <span class="llave">}</span>
+              <br>
+              <span class="comentario">&lt;!-- Aplicará estilos a los elementos que contengan en algún lugar de su valor del atributo, ese valor definido, que no tiene porqué ser una palabra entera. --&gt;</span>
+              <br><br>
+            </div>
+          </details>
+        </li>
       </ul>
       <p class="details-subtitle">Ejemplos de selectores:</p>
       <p><strong>.center {...} </strong>Afecta a todos los elementos con clase center.</p>
