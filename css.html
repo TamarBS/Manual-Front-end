@@ -319,7 +319,7 @@
       <p>Los nombres de más de una palabra se separan por un guíon: contact-form</p>
     </details>
     <details>
-      <summary><h3 class="details-summary">Unidades</h3></summary>
+      <summary><h3 class="details-summary">Unidades de medida</h3></summary>
       <p>Las unidades que se pueden utilizar son medidas<strong>absolutas</strong> o <strong>relativas</strong>.</p>
       <p>No debe haber un espacio entre el valor y la medida, pero si el valor es 0 no hace falta poner la medida. Ej.: 15px 0;</p>
       <p class="details-title">Medidas absolutas</p>
@@ -364,6 +364,39 @@
           <p><strong>%: </strong>Relativo al elemento padre.</p>
         </li>
       </ul>
+    </details>
+    <details>
+      <summary>
+        <h3 class="details-summary">Espeficidad de jerarquía</h3>
+      </summary>
+      <p>La jerarquía a la hora de aplicar unos estilos u otros en CSS siguen este orden:</p>
+      <ol>
+        <li>
+          <p><strong>inline style: </strong>Tiene la máxima prioridad, pero es una práctica poco aconsejada. Son los estilos inline dentro del propio elemento HTML.</p>
+        </li>
+        <li>
+          <p><strong>id: </strong>Estilos aplicados a un id único.</p>
+        </li>
+        <li>
+          <p><strong>clases: </strong>Estilos aplicados a una clase específica.</p>
+        </li>
+        <li>
+          <p><strong>atributos: </strong>Estilos que utlizan selectores de atributo. </p>
+        </li>
+        <li>
+          <p><strong>elementos y pseudo-elementos: </strong>Estilos aplicados a las etiquetas o pseudoelementos tipo bejor y after.</p>
+        </li>
+      </ol>
+      <p>En caso de tener el mismo selecctor, tendrá más prioridad la que esté escrita en la línea más próxima al final del documento.</p>
+      <p>En caso de ser elemento + id, o id sólo o elemento + atributo id con su valor, el de mayor prioridad es elemento+id, después sólo id y por último el atributo tipo id. Esto es así porque siempre gana la que es más específica.</p>
+      <p>Tiene más prioridad los estilos en el documento que los css externos.</p>
+      <p>El selector global * tiene la mínima especificidad de todas, por tanto la menor jerarquía.</p>
+      <p class="details-subtitle">La máxima prioridad usando !important</p>
+      <p>Es un recurso para conseguir la mayor prioridad y asegurar que se aplicará el estilo css que lleva este valor.</p>
+      <div class="code black">
+        <span class="propiedad">background-color</span>:
+        <span class="valor-css">red </span> !important ;
+      </div>
     </details>
 
     <h2 class="body-subtitle">Lista de propiedades CSS por categorías</h2>
