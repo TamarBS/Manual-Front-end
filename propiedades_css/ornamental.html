@@ -120,6 +120,21 @@
         <span class="valor-css"> background-color background-image background-repeat background-attachment background-position</span>;
       </div>
 
+      <p class="details-subtitle">Image Sprites</p>
+      <p>Es una colección de varias imágenes unidas en una sola. Esto puede ayudar a mejorar el rendimiento de una página web que pasa de tener que cargar varias imagenes diferentes a sólo tener que cargar una sola. Esto reduce el número de llamadas al servidor y permite ahorrar más ancho de banda.</p>
+      <p>Para mostrar la imagen que nos interesa hay que añadirle a la propiedad background unos valores de coordenadas que definen el origen top-left. Asignar un alto y un ancho que será la cantiad de imagen que se verá desde ese punto de origen definido.</p>
+      <div class="code black">
+        <span class="propiedad">width</span>:
+        <span class="valor-css">40px</span>;
+        <br>
+        <span class="propiedad">height</span>:
+        <span class="valor-css">40px</span>;
+        <br>
+        <span class="propiedad">background</span>:
+        <span class="valor-css">url(archivo.jpg) (left)px 
+          (top)px</span>;
+      </div>
+      <p>Si el elemento es un img, se necesita añadir una imagen transparente al atributo scr para que funcione correctamente.</p>
     </details>
     
     <details>
