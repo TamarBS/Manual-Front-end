@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Contadores CSS</title> 
+  <meta name="description" content="Variable CSS que sirve para crear contadores.">
+
+  <style>
+    .code {
+        counter-reset: section;
+    }
+    .counter {
+        counter-reset: subsection;
+    }
+    .counter::before {
+        counter-increment: section;
+        content: "Sección " counter(section) ": ";
+    }
+    .subcounter::before {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) " ";
+    }
+  </style>
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Contadores CSS</h1>
+      <p>Los contadores son variables CSS que permiten enumerar contenidos. Esto puede ser muy útil en textos largos para poder hacer una buena jerarquía de títulos y subtítulos y facilitar su indexado y posterior búsqueda rápida.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <div class="code col-container">
+        <div>
+            <p class="counter">Título</p>
+            <p class="subcounter">Subtítulo</p>
+            <p class="counter">Título</p>
+            <p class="subcounter">Subtítulo</p>
+            <p class="subcounter">Subtítulo</p>
+        </div>
+        <div class="code black">
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">style</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="hijo clase">.code</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="nieto propiedad">counter-reset</span>:
+            <span class="valor-css">section</span>;
+            <br>
+            <span class="hijo llave">}</span>
+            <br>
+            <span class="hijo clase">.counter</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="nieto propiedad">counter-reset</span>:
+            <span class="valor-css">subsection</span>;
+            <br>
+            <span class="hijo llave">}</span>
+            <br>
+            <span class="hijo clase">.counter::before {</span>
+            <br>
+            <span class="nieto propiedad">crounter-increment</span>:
+            <span class="valor-css">section</span>;
+            <br>
+            <span class="nieto propiedad">content</span>:
+            <span class="valor">"Sección" </span>
+            <span class="llave">counter</span>(
+            <span class="propiedad">section</span>)
+            <span class="valor">": "</span>;
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="hijo clase">.subcounter::before {</span>
+            <br>
+            <span class="nieto propiedad">crounter-increment</span>:
+            <span class="valor-css">subsection</span>;
+            <br>
+            <span class="nieto propiedad">content</span>:
+            <span class="llave">counter</span>(
+            <span class="propiedad">section</span>)
+            <span class="valor">"."</span>
+            <span class="llave">counter</span>(
+            <span class="propiedad">subsection</span>)
+            <span class="valor">" "</span>;
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">style</span>
+            <span class="gris">&gt;</span>
+            <br><br>
+            <span class="gris">&lt;</span>
+            <span class="etiqueta">div</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"code"</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="hijo gris">&lt;</span>
+            <span class="etiqueta">p</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"counter"</span>
+            <span class="gris">&gt;</span>
+            Título
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">p</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="hijo gris">&lt;</span>
+            <span class="etiqueta">p</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"subcounter"</span>
+            <span class="gris">&gt;</span>
+            Subtítulo
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">p</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="hijo gris">&lt;</span>
+            <span class="etiqueta">p</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"counter"</span>
+            <span class="gris">&gt;</span>
+            Título
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">p</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="hijo gris">&lt;</span>
+            <span class="etiqueta">p</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"subcounter"</span>
+            <span class="gris">&gt;</span>
+            Subtítulo
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">p</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="hijo gris">&lt;</span>
+            <span class="etiqueta">p</span>
+            <span class="atributo">class</span>=
+            <span class="valor">"subcounter"</span>
+            <span class="gris">&gt;</span>
+            Subtítulo
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">p</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="gris">&lt;/</span>
+            <span class="etiqueta">div</span>
+            <span class="gris">&gt;</span>
+            <br>
+            <span class="comentario">&lt;!-- En este ejemplo se definen dos counter-reset porque el content de cada uno se quiere mostrar de forma diferente. "Sección x" o "x.x". En caso de querer hacer un counter anidado todos con el mismo counter se puede utilizar content: counters(id, ".") " "; --&gt;</span>
+        </div>
+    </div>
+
+    <p class="body-title">Propiedades de los contadores CSS </p>
+    <ul>
+        <li>
+            <p><strong>counter-reset: </strong>Crea o resetea un contador. El valor es libre y sirve para dar un identificador a ese contador en concreto. Se puede añadir un número detrás del id con el primer valor con el que se quiere trabajar.</p>
+        </li>
+        <li>
+            <p><strong>counter-increment: </strong>Define que ese elemento tendrá un contador. Su valor es el nombre que se haya decidido dar en el counter-reset. Por defecto el contador incrementa pero si se quiere hacer que el contador decrezca se añade después del id un número (-1). Así el contador hará un número menos cada vez. Si se quiere incrementar de dos en dos se añade un 2.</p>
+        </li>
+        <li>
+            <p><strong>content: </strong>El texto que se añadirá al contador, tipo: Sección 1... Parte 1.3... etc. Se puede añadir el tipo de contador que se quiere después del contenido, por ejemplo upper-roman para usar números romanos.</p>
+        </li>
+        <li>
+            <p><strong>counter() counters() : </strong>Añaden el valor del contador dentro del content. counters es más común para lista anidadas que van a tener el mismo tipo de contador.</p>
+        </li>
+    </ul>
+    <p>Es necesario aplicar primero el counter-reset al elemento que contendrá todos los contadores.</p>
+    <p>Después se definen los elementos que llevarán el contador y se aplica el counter-increment y el content.</p>
+  </main>
+
+</body>
+</html>
