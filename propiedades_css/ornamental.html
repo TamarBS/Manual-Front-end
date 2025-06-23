@@ -38,12 +38,15 @@
       <p class="details-subtitle">Fondos con imagen</p>  
       <details>
         <summary><h4 class="details-summary">background-image</h4></summary>
-        <p>El fondo del elemento será una imagen.</p>
+        <p>El fondo del elemento será una o varias imágenes.</p>
         <div class="code black">
           <span class="propiedad">background-image</span>:
-          <span class="valor-css">url("urldeimagen.jpg")</span>;
+          <span class="valor-css">url("urldeimagen.jpg"), url("urldeimagen.jpg")</span>;
+          <span class="propiedad">background-position</span>:
+          <span class="valor-css">right bottom, left top</span>;
         </div>
         <p>Por defecto la imagen se repite hasta cubrir todo el elemento.</p>
+        <p>En caso de tener más de una imagen de fondo, la primera es la que queda por encima. Los demás valores se pueden aplicar separando por comas para poder aplicar valores diferentes a cada imagen.</p>
       </details>
       <details>
         <summary><h4 class="details-summary">background-repeat</h4></summary>
@@ -106,8 +109,8 @@
           <li><p><strong>auto: </strong>el tamaño de la imagen respeta su tamaño original.</p></li>
           <li><p><strong>xxpx: </strong>le dará un tamaño concreto.</p></li>
           <li><p><strong>xx%: </strong>le dará un tamaño concreto calculando el ancho de su padre.</p></li>
-          <li><p><strong>cover: </strong>agrandará la imagen proporcionalmente hasta que el ancho se ajuste. Es posible que la imagen se corte.</p></li>
-          <li><p><strong>contain: </strong>agrandará la imagen proporcionalmente hasta que toque con alguno de sus límites tanto horizontal como vertical.</p></li>
+          <li><p><strong>cover: </strong>agrandará la imagen proporcionalmente hasta cubrir el eje más grande. Es posible que la imagen se corte.</p></li>
+          <li><p><strong>contain: </strong>ajusta la imagen proporcionalmente hasta cubrir el eje más pequeño. Nunca se corta la imagen.</p></li>
         </ul>
       </details>
       
@@ -196,6 +199,18 @@
       <p class="details-subtitle">Otras propiedades</p>
       <p><strong>border-radius: </strong>si se quiere añadir borde redondeado</p>
       <p style="border:2px solid green; border-radius: 25px;">border-radius: 25px</p>
+      <p>También es posible aplicar bordes de forma diferente a las diferentes esquinas. También se puede añadir un borde elíptico.</p>
+      <p style="border:2px solid green; border-radius: 25px / 15px;">border-radius: 25px / 15px</p>
+      <p><strong>border-image: </strong>si se quiere añadir borde siguiendo un patrón de imagen.</p>
+      <p>Esta propiedad consta de tres valores:</p>
+      <ul>
+        <li>La imagen para utilizar como borde</li>
+        <li>La forma de dividir la imagen y repetirla en el borde</li>
+        <li>Definir si las secciones centrales deben repetirse o estirarse (round or stretch)</li>
+      </ul>
+      <p style="  border: 10px solid transparent; border-image: url(../images/border.png) 30 round;">border: 10px solid transparent; border-image: url(../images/border.png) 30 round;</p>
+      <img src="../images/border.png" alt="patrón de cuadrados rojos y amarillos.">
+      <p>Esta propiedad es un atajo para las propiedades: border-image-source, border-image-slice, border-image-width, border-image-outset y border-image-repeat.</p>
     </details>
   </main>
 
