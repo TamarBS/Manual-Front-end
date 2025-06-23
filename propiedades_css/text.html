@@ -573,6 +573,61 @@
         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </details>
 
+    <h2 class="body-subtitle">Texto desbordado</h2>
+    <details>
+      <summary>
+        <h4 class="details-summary">text-overflow</h4>
+      </summary>
+      <p>Cuándo el texto se desborda se puede hacer que se corte y no se vea lo desbordado de las siguientes dos maneras:</p>
+      <ul>
+        <li>
+          <p><strong>clip: </strong>el texto se corta y sólo se ve lo que queda dentro del contenedor.</p>
+        </li>
+        <li>
+          <p><strong>ellipsis: </strong>el texto se corta y aparecen tres puntos suspensivos ... justo antes de llegar al borde del contenedor.</p>
+        </li>
+      </ul>
+      <p>Para recuperar el texto y que se vea se utiliza overflow: visible.</p>
+    </details>
+    <details>
+      <summary>
+        <h4 class="details-summary">word-wrap</h4>
+      </summary>
+      <p>Permiten que el texto desbordado se salga o se recorte como sea para encajar dentro del ancho del contenedor.</p>
+      <p><strong>break-word: </strong>si una palabra larga se desborda, este valor la cortará por dónde sea para que pase a la siguiente línea y se vea siempre dentro de su contenedor.</p>
+    </details>
+    <details>
+      <summary>
+        <h4 class="details-summary">word-break</h4>
+      </summary>
+      <p>Especifica las reglas a la hora de recortar una palabra larga que se desborda.</p>
+      <ul>
+        <li>
+          <p><strong>keep-all: </strong>respeta las palabras y corta por los guiónes.</p>
+        </li>
+        <li>
+          <p><strong>break-all: </strong>no respeta nada, corta por el último caracter que cabe en el ancho.</p>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>
+        <h4 class="details-summary">writing-mode</h4>
+      </summary>
+      <p>Formas en horizontal o vertical de escribir el texto.</p>
+      <ul>
+        <li>
+          <p><strong>horizontal-tb: </strong> en horizontal</p>
+        </li>
+        <li>
+          <p><strong>vertical-rl: </strong><span style="writing-mode: vertical-rl; width: 20%; border: 1px solid black; padding: 1em;">Vertical de derecha a izquierda</span> se coloca a la parte más a la derecha de su contenedor</p>
+        </li>
+        <li>
+          <p><strong>vertical-lr: </strong><span style="writing-mode: vertical-lr; width: 20%; border: 1px solid black; padding: 1em;">Vertical de izquierda a derecha</span> se coloca a la parte más izquierda de su contenedor</p>
+        </li>
+      </ul>
+    </details>
+
     <h2 class="body-subtitle">Propiedad aglutinadora</h2>
     <div class="code black">
       <span class="propiedad">font</span>:
