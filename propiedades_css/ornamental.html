@@ -212,6 +212,28 @@
       <img src="../images/border.png" alt="patrón de cuadrados rojos y amarillos.">
       <p>Esta propiedad es un atajo para las propiedades: border-image-source, border-image-slice, border-image-width, border-image-outset y border-image-repeat.</p>
     </details>
+    <details>
+      <summary>
+        <h3 class="details-summary">Shadow</h3>
+      </summary>
+      <p>Sombras para elementos y para texto. Existen dos propiedades</p>
+      <ul>
+        <li>
+          <p><strong>text-shadow: </strong>añade una repetición del texto con separación en el eje x e y y con efectos de color y difuminado.</p>
+          <p style="text-shadow: 2px 2px 5px grey">text-shadow: 2px 2px 5px(blur) grey;</p>
+          <p style="text-shadow: 0 0 3px red; font-weight: bolder;">Efecto neon poniendo x e y a 0</p>
+          <p style="text-shadow: 0 0 3px red, 0 0 5px greenyellow; font-weight: bolder;">Sombra multiple, separando por una coma</p>
+          <p style="font-size: 2em; color: coral; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Varias sombras de 1 px sin blur negras que se posicionan en x-1 x1 y-1 y1</p>
+        </li>
+        <li>
+          <p><strong>box-shadow: </strong> añade una repetición de la caja con separación en el eje x e y con efectos de color y difuminado.</p>
+          <div style="background-color: white; box-shadow: 10px 10px 5px lightskyblue;">box-shadow: 10px 10px 5px(blur) lightskyblue;</div>
+          <div style="margin-top: 1em; background-color: white; box-shadow: 10px 10px 5px 9px lightskyblue;">box-shadow: 10px 10px 5px 9px(radio de expansión) lightskyblue;</div>
+          <p class="details-subtitle">inset</p>
+          <div style="margin-top: 1em; background-color: white; box-shadow: 10px 10px 5px lightskyblue inset;">box-shadow: 10px 10px 5px lightskyblue inset;</div>
+        </li>
+      </ul>
+    </details>
   </main>
 
 </body>
