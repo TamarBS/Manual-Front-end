@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Animaciones con CSS</title> 
+  <meta name="description" content="Propiedades CSS que permiten animar elementos sin utilizar Javascript."> 
+
+  <style>
+    .square--animated {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: example;
+      animation-duration: 4s;      
+    }
+    @keyframes example {
+      0%   {background-color: red;}
+      25%  {background-color: yellow;}
+      50%  {background-color: blue;}
+      100% {background-color: green;}
+    }
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div> 
+    <hgroup>
+      <h1 class="body-title">Animaciones con CSS</h1>
+      <p>Propiedades que permiten animar elementos HTML sin necesidad de aplicar Javascript. Permite cambiar tantos estilos de los elementos se quiera las veces que se quiera.</p>
+      <p>Es necesario definir los keyframes.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <div class="col-container">
+      <div class="code black">
+        <span class="clase">@keyframes nombreDeKeyframe</span>:
+        <span class="llave">{</span>
+        <br>
+        <span class="clase hijo">0%</span>
+        <span class="llave">{</span>
+        <span class="propiedad">background-color</span>:
+        <span class="valor-css">red</span>;
+        <span class="llave">}</span> 
+        <br>
+        <span class="clase hijo">25%</span>
+        <span class="llave">{</span>
+        <span class="propiedad">background-color</span>:
+        <span class="valor-css">yellow</span>;
+        <span class="llave">}</span> 
+        <br>
+        <span class="clase hijo">50%</span>
+        <span class="llave">{</span>
+        <span class="propiedad">background-color</span>:
+        <span class="valor-css">blue</span>;
+        <span class="llave">}</span> 
+        <br>
+        <span class="clase hijo">100%</span>
+        <span class="llave">{</span>
+        <span class="propiedad">background-color</span>:
+        <span class="valor-css">green</span>;
+        <span class="llave">}</span> 
+        <br>
+        <span class="llave">}</span>
+        <br>
+        <span class="clase">div</span>
+        <span class="llave">{</span>
+        <br>
+        <span class="hijo propiedad">widht</span>:
+        <span class="valor-css">100px</span>;
+        <br>
+        <span class="hijo propiedad">height</span>:
+        <span class="valor-css">100px</span>;
+        <br>
+        <span class="hijo propiedad">background-color</span>:
+        <span class="valor-css">red</span>;
+        <br>
+        <span class="hijo propiedad">animation-name</span>:
+        <span class="valor-css">nombreDeKeyframe</span>;
+        <br>
+        <span class="hijo propiedad">animation-duration</span>:
+        <span class="valor-css">4s</span>;
+        <br>
+        <span class="llave">}</span>
+      </div>
+      <div class="square--animated"></div>
+    </div>
+    <details>
+      <summary>
+        <h2 class="details-summary">@keyframes</h2>
+      </summary>
+      <p>Define que estilos tendrá el elemento en momentos concretos. Permite definir el momento del tiempo total de la animación en la que se ejecutará el cambio de estilo. En el ejemplo de código anterior se ve como se especifica como un nombre de clase los valores con porcentaje % que asignan el momento de aplicación del estilo.</p>
+      <p>En lugar de estos valores de porcentaje % se pueden usar las palabras from y to que indican 0% y 100%, inicio y final.</p>
+      <p>Para que estos cambios de estilo se identifiquen con un elemento en concreto al @keyframes lo acompaña una palabra libre que habrá que relacionar dentro de las propiedades del elemento. En el ejemplo el nombre de los keyframes se vincula con la propiedad animation-name en las propiedades del div.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-name</h2>
+      </summary>
+      <p>Es la propiedad que se pone en el elemento y vincula ese elemento con uno de los keyframes. Tienen que compartir el mismo nombre.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-duration </h2>
+      </summary>
+      <p>Define el tiempo total en segundos que durará la animación. 1s</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-delay </h2>
+      </summary>
+      <p>Define el tiempo de espera antes de que la animación se arranque. Los valores se miden en segundos. 2s</p>
+      <p>El valor puede ser negativo, eso hará que la animación arranque justo en el momento que ya han pasado esos dos segundos, "comiéndose" los cambios de estilo que hubiera antes de esos dos segundos. Es decir si tengo una animación de 4s de duración pero le pongo un delay de -2segundos, la animación arrancará en el punto de la animación del keyframe 50%. Si había otros cambios de estilo antes, no se verán. Es algo así como saltarse una parte de la animación.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-iteration-count </h2>
+      </summary>
+      <p>Define el número de veces que se tiene que repetir la animación antes de que se pare. Puede ser un valor numérico o la palabra infinite para hacer un loop infinito.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-direction </h2>
+      </summary>
+      <p>Esta propiedad permite reproducir las animaciones en diferente orden. Puede tener los siguentes valores:</p>
+      <ul>
+        <li>
+          <p><strong>normal: </strong>es el valor por defecto. La dirección es la programada.</p>
+        </li>
+        <li>
+          <p><strong>reverse: </strong>la animación se reproduce inverso a como fue programada, cómo rebobinando.</p>
+        </li>
+        <li>
+          <p><strong>alternate: </strong>primero se reproduce normal y se rebobina.</p>
+        </li>
+        <li>
+          <p><strong>alternate-reverse: </strong>primero se reproduce rebobinando y luego normal.</p>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-timig-function </h2>
+      </summary>
+      <p>Especifica la curva de velociad del effecto de la animación.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li>
+          <p><strong>ease: </strong>es el por defecto. Empieza y termina despacio y en el medio se acelera.</p>
+        </li>
+        <li>
+          <p><strong>linear: </strong>la misma velocidad de inicio a fin.</p>
+        </li>
+        <li>
+          <p><strong>ease-in: </strong>sólo tiene inicio lento.</p>
+        </li>
+        <li>
+          <p><strong>ease-out: </strong>sólo tiene final lento.</p>
+        </li>
+        <li>
+          <p><strong>ease-in-out: </strong>Es como ease pero tarda más en arrancar y parar y no se acelera tanto entre medias.</p>
+        </li>
+        <li>
+          <p><strong>cubic-bezier(n,n,n,n): </strong>permite crear una curva de transición totalmente libre.</p>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation-fill-mode </h2>
+      </summary>
+      <p>Las animaciones CSS no aplican estilos al elemento hasta que no se arranca el primer milisegundo de la animación y al terminar deja de afectarle. Para poder afectar antes y después de animar existe esta propiedad. Puede contener los siguientes valores:</p>
+      <ul>
+        <li>
+          <p><strong>none: </strong>es el valor por defecto. No aplicará ningún estilo antes ni después de que arranque la animación.</p>
+        </li>
+        <li>
+          <p><strong>forwards: </strong>el elemento estará afectado por los efectos del final de la animación. </p>
+        </li>
+        <li>
+          <p><strong>backwards: </strong>el elemento estará afectado por los efectos del principio de la animación.</p>
+        </li>
+        <li>
+          <p><strong>both: </strong>el elemento estará afectado por los efectos del inicio y del final de la animación.</p>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary><h2 class="details-summary">animation-play-state</h2></summary>
+      <p>Especifica cuándo una animación está reproduciéndose(running) o está en pausa(paused).</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">animation</h2>
+      </summary>
+      <p>Es la propiedad aglutinadora.</p>
+      <div class="code black">
+        <span class="propiedad">animation</span>:
+        <span class="valor-css">nombreDeKeyframe duración tipoDeAceleración retraso repetición dirección</span>
+      </div>
+    </details>
+  </main>
+
+</body>
+</html>
