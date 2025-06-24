@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Cambios de apariencia</title>
+  <meta name="description" content="Propiedades que permiten cambiar la apariencia de un elemento.">
+
+  <style>
+    .square--red {
+      min-height: 50px;
+      padding: 1em;
+      color: white;
+      background-color: crimson;
+      position: relative;
+    }
+    .translate:hover { transform: translate(20px, 10px); }
+    .rotate:hover { transform: rotate(-20deg); }
+    .scale:hover { transform: scale(0.5, 2); }
+    .skew:hover { transform: skew(20deg, 10deg); }
+    .matrix1:hover { transform: matrix(1, -0.3, 0, 1, 0, 50); }
+    .matrix2:hover { transform: matrix(1, -0.5, 0.5, 1, 0, 0); }
+    .matrix3:hover { transform: matrix(2, 1, 0.5, 1, 90, 70); }
+    
+    .origin--10x10 { transform-origin: 10% 10%; }
+    .origin--80x90 { transform-origin: 80% 90%; }
+
+    .border { 
+      border: 2px solid black; 
+      border-radius: 50%;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Cambios de apariencia</h1>
+      <p>Propiedades CSS que permiten hacer cambios en otras propiedades del elemento, permitiendo crear transiciones.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2>transform</h2>
+    <p>Esta propiedad permite mover, rotar, escalar y deformar elementos. Puede contener valores positivos y negativos.</p>
+    <p class="body-subtitle">Valores</p>
+    
+    <details>
+      <summary>translate</summary>
+      <p>Desplaza el elemento desde su posición original.</p>
+      <div class="col-container">
+        <div class="two-cols">
+          <div class="code black">
+            <span class="propiedad">transform</span>:
+            <span class="valor-css">translate(ejex, ejey)</span>;
+          </div>
+          <p>Existen las propiedades translateX y translateY para afectar sólo al eje x o y.</p>
+        </div>
+        <div class="two-cols">
+          <div class="square--red translate">translate(20px, 10px);</div>          
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>rotate</summary>
+      <p>Rota el elemento tantos grados como se especifique.</p>
+      <div class="col-container">
+        <div class="two-cols">
+          <div class="code black">
+            <span class="propiedad">transform</span>:
+            <span class="valor-css">rotate(&Oslash;&Oslash;deg)</span>;
+          </div>
+        </div>
+        <div class="two-cols">
+          <div class="square--red rotate">rotate(-20deg)</div>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>scale</summary>
+      <p>Afecta al tamaño del elemento tomando de referencia su tamaño original.</p>
+      <div class="col-container">
+        <div class="two-cols">
+          <div class="code black">
+            <span class="propiedad">transform</span>:
+            <span class="valor-css">vecesSuX, vecesSuY</span>;
+          </div>
+          <p>Existen las propiedades scaleX y scaleY para afectar sólo al eje x o y.</p>
+        </div>
+        <div class="two-cols">
+          <div class="square--red scale">scale(0.5, 2)</div>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>skew</summary>
+      <p>Deforma el elemento. Su comportamiento es el de inclinar el eje x o y tantos grados se define desde el centro de la línea.</p>
+      <div class="col-container">
+        <div class="two-cols">
+          <div class="code black">
+            <span class="propiedad">transform</span>:
+            <span class="valor-css">&Oslash;&Oslash;degX, &Oslash;&Oslash;degY</span>;
+          </div>
+          <p>Existen las propiedades skewX y skewY para afectar sólo al eje x o y.</p>
+        </div>
+        <div class="two-cols">
+          <div class="square--red skew">skew(20deg, 10deg)</div>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>matrix</summary>
+      <p>Permite aglutinar todos los efectos en una misma propiedad. Aunque admite sólo seis parámetros que no incluyen rotate, porque esto se puede conseguir asignando la misma medida a los skew.</p>
+      <div class="code black">
+        <span class="propiedad">transform</span>:
+        <span class="valor-css">matrix</span>(
+        <span class="valor">scaleX, skewY, skewX, scaleY, translateX, translateY</span>);
+      </div>
+      <div class="col-container">
+        <div class="square--red matrix1"><p>matrix(1, -0.3, 0, 1, 0, 50)</p></div>
+        <div class="square--red matrix2"><p>matrix(1, -0.5, 0.5, 1, 0, 0)</p></div>
+        <div class="square--red matrix3"><p>matrix(2, 1, 0.5, 1, 90, 70)</p></div>
+      </div>
+    </details>
+    
+    <h2>transform-origin</h2>
+    <p>Permite cambiar la posición del centro del efecto.</p>
+    <p>Por defecto el centro de los efectos tiene valor 50% 50%. Es decir que se "gira", "agranda" o "deforma" tomando como punto de referencia la mitad exacta del elemento. </p>
+    <div class="code black">
+      <span class="propiedad">transform-origin</span>:
+      <span class="valor-css">ejex%, ejey%</span>;
+      <br>
+      <span class="comentario">&lt;!-- Tres ejemplos con el mismo rotate -20deg --&gt;</span>
+      <br>
+      <span class="propiedad">transform-origin</span>:
+      <span class="valor-css">50% 50%</span>;
+      <br>
+      <span class="propiedad">transform-origin</span>:
+      <span class="valor-css">10% 10%</span>;
+      <br>
+      <span class="propiedad">transform-origin</span>:
+      <span class="valor-css">80% 90%</span>;
+    </div>
+    <div class="col-container">
+      <div class="square--red rotate">centro
+        <div class="border" style="position: absolute; top: 50%; left: 50%;"></div>
+      </div>
+      <div class="square--red rotate origin--10x10">10x10
+        <div class="border" style="position: absolute; top: 10%; left: 10%;"></div>
+      </div>
+      <div class="square--red rotate origin--80x90">80x90
+        <div class="border" style="position: absolute; top: 80%; left: 90%;"></div>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
