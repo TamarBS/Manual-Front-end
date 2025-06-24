@@ -276,6 +276,56 @@
       </div>
     </details>
     <details>
+      <summary>
+        <h4 class="details-summary">@font-face</h4>
+      </summary>
+      <p>Cuándo se quiere utilizar una fuente que no está en el ordenador del usuario, se sube la fuente al servidor. De esta manera se puede mostrar la fuente que se quiera.</p>
+      <p class="details-subtitle">Diferentes formatos de fuente</p>
+      <ul>
+        <li>
+          <p><strong>TTF (True Type Fonts): </strong>Tipos desarrolladas en 1980 por Apple y Microsoft que son las más comunes en sus sistemas operativos.</p>
+        </li>
+        <li>
+          <p><strong>OTF (Open Type Fonts): </strong>Fuentes sólo de microsoft con un formato para funtes de ordenador escalables.</p>
+        </li>
+        <li>
+          <p><strong>WOFF (The Web Open Font Format ): </strong>Desarrollada en 2009 esencialmente para usarse en páginas web. Permite la distribución del servidor al cliente.</p>
+        </li>
+        <li>
+          <p><strong>WOFF 2.0: </strong> Como la anterior pero ofrece mejor compresión.</p>
+        </li>
+        <li>
+          <p><strong>SVG Fonts / Shapes: </strong>Es un svg que se entiende como fuente. Permite editarlo y darle efectos visuales especiales.</p>
+        </li>
+        <li>
+          <p><strong>EOT (Embedded OpenType Fonts): </strong>Creada por Microsoft son fuentes compactas para ser usadas en páginas web.</p>
+        </li>
+      </ul>
+      <div class="code black">
+        <span class="clase">@font-face</span>
+        <span class="llave">{</span>
+        <br>
+        <span class="hijo propiedad">font-family</span>:
+        <span class="valor-css">myFirstFont</span>;
+        <br>
+        <span class="hijo propiedad">src</span>:
+        <span class="valor-css">url(sansation_light.woff)</span>;
+        <span class="comentario">&lt;!-- La url de fuente siempre en minúsculas para evitar problemas con IE --&gt;</span>
+        <br>
+        <span class="llave">}</span>
+        <br>
+        <span class="clase">div</span>
+        <span class="llave">{</span>
+        <span class="propiedad">font-family</span>:
+        <span class="valor-css">myFirstFont</span>;
+        <span class="llave">}</span>
+        <br>
+      </div>
+      <p>En caso de querer utilizar la fuente en su variedad negrita hay que añadir un nuevo @font-face con la url a la versión de la fuente en negrida además de añadir la propiedad font-weight: bold;</p>
+      <p>Se pueden añadir tantos @font-face como sean necearios.</p>
+      <p>Además del font-weight también puede contener otras propiedades como font-stretch, font-style o unicode-range.</p>
+    </details>
+    <details>
       <summary><h5 class="details-summary">font-size</h5></summary>
       <p>Tamaño del texto. 16px es el por defecto de los navegadores.</p>
       <p>Existen dos tipos de tamaños:</p>
@@ -593,7 +643,7 @@
       <summary>
         <h4 class="details-summary">word-wrap</h4>
       </summary>
-      <p>Permiten que el texto desbordado se salga o se recorte como sea para encajar dentro del ancho del contenedor.</p>
+      <p>Permiten que el texto desbordado se salga o se recorte como sea para encajar dentro del ancho del contenedor. normal es el valor por defecto que deja que el texto se desborde.</p>
       <p><strong>break-word: </strong>si una palabra larga se desborda, este valor la cortará por dónde sea para que pase a la siguiente línea y se vea siempre dentro de su contenedor.</p>
     </details>
     <details>
