@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Transiciones</title> 
+  <meta name="description" content="Estilos que hacen más suave el cambio de formas de un estado a otro.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Transiciones</h1>
+      <p>Las propiedades de transición permiten hacer cambios en las propiedades y que visualmente esos cambios se realicen de forma suave y en un tiempo controlado.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <p>Para crear transiciones en CSS necesitas dos cosas:</p>
+    <ul>
+      <li>la propiedad CSS a modificar</li>
+      <li>la duración del efecto</li>
+    </ul>
+    <div class="code black">
+      <span class="propiedad">transition</span>:
+      <span class="valor-css">width 2s</span>;
+    </div>
+    <p>Se pueden añadir más de una transición de propiedad separándolas por comas.</p>
+    <div class="code black">
+      <span class="propiedad">transition</span>:
+      <span class="valor-css">width 2s, height 4s</span>;
+    </div>
+    <p class="body-subtitle">Propiedades CSS para transiciones</p>
+    <details>
+      <summary>
+        <h2 class="details-summary">transition</h2>
+      </summary>
+      <p>Especifica la propiedad y el tiempo que le llevará cambiar de estado.</p>
+      <p>También se puede aplicar la propiedad transform que afectará a la función transform que tenga el elemento.</p>
+      <p>Es la propiedad aglutinadora de transition-property y transition-duration.</p>
+      <div class="code black">
+        <span class="propiedad">transition</span>:
+        <span class="valor-css">propiedad duración timing-funtion delay</span>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">transition-delay</h2>
+      </summary>
+      <p>Permite que el efecto tarde en producirse. Los valores son segundos 1s.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">transition-duration </h2>
+      </summary>
+      <p>Es el tiempo que levará cambiar de un estado a otro.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">transition-property </h2>
+      </summary>
+      <p>Define qué propiedad es la que se verá afectada por la transición.</p>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">transition-timing-function </h2>
+      </summary>
+      <p>Especifica la curva de velociad del effecto de transición.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li>
+          <p><strong>ease: </strong>es el por defecto. Empieza y termina despacio y en el medio se acelera.</p>
+        </li>
+        <li>
+          <p><strong>linear: </strong>la misma velocidad de inicio a fin.</p>
+        </li>
+        <li>
+          <p><strong>ease-in: </strong>sólo tiene inicio lento.</p>
+        </li>
+        <li>
+          <p><strong>ease-out: </strong>sólo tiene final lento.</p>
+        </li>
+        <li>
+          <p><strong>ease-in-out: </strong>Es como ease pero tarda más en arrancar y parar y no se acelera tanto entre medias.</p>
+        </li>
+        <li>
+          <p><strong>cubic-bezier(n,n,n,n): </strong>permite crear una curva de transición totalmente libre.</p>
+        </li>
+      </ul>
+    </details>
+  </main>
+
+</body>
+</html>
