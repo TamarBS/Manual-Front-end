@@ -223,6 +223,9 @@ kbd {
 .two-cols {
   width: calc(100%/2);
 }
+.three-cols {
+  width: calc(100%/3);
+}
 @media only screen and (max-width: 600px) {
   .col-container {
     flex-direction: column;
