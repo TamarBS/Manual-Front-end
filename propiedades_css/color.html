@@ -1,155 +1,304 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="../styles/styles.css">
-  
-  <title>Propiedades para editar colores</title> 
-  <meta name="description" content="Lista de propiedades que cambian algún color">
-  
-  <style>
-    #gradiente1 {
-      height: 200px;
-      background-image: repeating-linear-gradient(red, yellow 30%, green 20%);
-    }
-    #gradiente2 {
-      height: 200px;
-      background-image: repeating-linear-gradient(red, yellow 7%, green 50%);
-    }
-  </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+    
+    <title>Propiedades para editar colores</title> 
+    <meta name="description" content="Lista de propiedades que cambian algún color">
+    
+    <style>
+      #gradiente1 {
+        height: 200px;
+        background-image: repeating-linear-gradient(red, yellow 30%, green 20%);
+      }
+      #gradiente2 {
+        height: 200px;
+        background-image: repeating-linear-gradient(red, yellow 7%, green 50%);
+      }
+      .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 0.7em;
+        flex-wrap: wrap;
+      }
+      .gallery__card {
+        position: relative;
+        background-color: white;
+        box-shadow: 0 0 5px 1px grey;
+        border-radius: 8px;
+        max-width: 95px;
+        max-height: 125px;
+      }
+      .gallery__img {
+        border-radius: 7px 7px 0 0;
+        width: 100%;
+      }
+      .gallery__text {
+        margin-left: .5em;
+        margin-top: 0;
+        font-size: 0.7em;
+      }
+      .filter--blur { filter: blur(2px); }
+      .filter--brightness { filter: brightness(150%); }
+      .filter--contrast { filter: contrast(30%); }
+      .filter--drop-shadow { filter: drop-shadow(10px 10px 5px lightskyblue); }
+      .filter--grayscale { filter: grayscale(); }
+      .filter--hue-rotate { filter: hue-rotate(90deg); }
+      .filter--invert { filter: invert(); }
+      .filter--opacity { filter: opacity(0.7); }
+      .filter--saturate { filter: saturate(12); }
+      .filter--sepia { filter: sepia(1); }
+    </style>
 
-</head>
-<body>
-  
-  <header>
-    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div> 
-    <hgroup>
-      <h1 class="body-title">Propiedades para editar colores</h1>
-      <p>Lista de propiedades CSS que cambian el color de alguna de las partes de un elementos HTML</p>
-      <hr>
-    </hgroup>
-  </header>
+  </head>
+  <body>
+    
+    <header>
+      <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div> 
+      <hgroup>
+        <h1 class="body-title">Propiedades para editar colores</h1>
+        <p>Lista de propiedades CSS que cambian el color de alguna de las partes de un elementos HTML</p>
+        <hr>
+      </hgroup>
+    </header>
 
-  <main>
-    <details>
-      <summary><h2 class="details-summary">opacity</summary>
-      <p>Se puede usar valores entre 0.0 ~ 1.0. 1 la mayor opacidad, 0 transparente.</p>
-      <p>Esta propiedad afecta a todos los hijos del elemento, así que hay que tener cuidado a la hora de usarlo. Generalmente será mejor utilizar los colores rgba para añadir un fondo de color con transparencia a un elemento.</p>
-    </details>
-    <details>
-      <summary><h2 class="details-summary">transparent</summary>
-      <p>Es una palabra clave. Se utiliza como valor y permite definir un color como transparente.</p>
-    </details>
-    <details>
-      <summary><h2 class="details-summary">currentcolor</summary>
-      <p>Es una palabra clave. Se utiliza como valor y permite definir un color como el mismo que ya esté dedinido con anterioridad en ese elemento o en algún ancestro directo.</p>
-      <p style="color: blue; border: 5px solid currentcolor;">El texto está azul y el borde hereda su color utilizando currentcolor como valor del border-color.</p>
-    </details>
-    <details>
-      <summary>
-        <h2 class="details-summary">Gradientes</h2>
-      </summary>
-      <p>Permite aplicar transiciones suaves entre varios colores. Existen tres tipos de gradientes:</p>
-      <ul>
-        <li class="li--details-exception">
-          <details>
-            <summary>
-              <h2 class="details-summary">linear</h2>
-            </summary>
-            <p>cambia de color de arriba a abajo, derecha izquierda o diagonalmente.</p>
-            <div class="code black">
-              <span class="propiedad">background-image</span>:
-              <span class="valor-css">linear-gradient(dirección o ángulo, color1 posición%, color2 posición%, ...)</span>;
+    <main>
+      <details>
+        <summary><h2 class="details-summary">opacity</summary>
+        <p>Se puede usar valores entre 0.0 ~ 1.0. 1 la mayor opacidad, 0 transparente.</p>
+        <p>Esta propiedad afecta a todos los hijos del elemento, así que hay que tener cuidado a la hora de usarlo. Generalmente será mejor utilizar los colores rgba para añadir un fondo de color con transparencia a un elemento.</p>
+      </details>
+      <details>
+        <summary><h2 class="details-summary">transparent</summary>
+        <p>Es una palabra clave. Se utiliza como valor y permite definir un color como transparente.</p>
+      </details>
+      <details>
+        <summary><h2 class="details-summary">currentcolor</summary>
+        <p>Es una palabra clave. Se utiliza como valor y permite definir un color como el mismo que ya esté dedinido con anterioridad en ese elemento o en algún ancestro directo.</p>
+        <p style="color: blue; border: 5px solid currentcolor;">El texto está azul y el borde hereda su color utilizando currentcolor como valor del border-color.</p>
+      </details>
+      <details>
+        <summary>
+          <h2 class="details-summary">Gradientes</h2>
+        </summary>
+        <p>Permite aplicar transiciones suaves entre varios colores. Existen tres tipos de gradientes:</p>
+        <ul>
+          <li class="li--details-exception">
+            <details>
+              <summary>
+                <h2 class="details-summary">linear</h2>
+              </summary>
+              <p>cambia de color de arriba a abajo, derecha izquierda o diagonalmente.</p>
+              <div class="code black">
+                <span class="propiedad">background-image</span>:
+                <span class="valor-css">linear-gradient(dirección o ángulo, color1 posición%, color2 posición%, ...)</span>;
+              </div>
+              <p>Top to bottom es el por defecto. Para añadir los valores de dirección se añade: to + dirección. Ej.: to right, de izquierda a derecha. to bottom right, de arriba a la izquierda a abajo derecha en diagonal.</p>
+              <p class="details-subtitle">Ángulo</p>
+              <p>Si se quiere añadir un angulo concreto que no sea los por defecto de top, left, bottom y right en el lugar del valor de dirección se coloca el ángulo elegido segido de "deg". Ej.; 175deg, red, yellow.</p>
+              <p class="details-subtitle">Repetición</p>
+              <p>Se pueden repetir los gradientes cambiando el valor linear-gradient() por repeating-linear-gradient().</p>
+              <p>Se puede añadir un valor de porcentaje después de cada número para controlar el espacio que ocupan y las veces que se va a repetir el gradiente.</p>
+              <p>acepta el valor de dirección también y de ángulos igual que linear-gradient().</p>
+              <div class="col-container">
+                <div id="gradiente1" class="two-cols"></div>
+                <div id="gradiente2" class="two-cols"></div>
+              </div>
+              <div class="col-container">
+                <p class="two-cols">background-image: repeating-linear-gradient(red, yellow 30%, green 20%);</p>
+                <p class="two-cols">background-image: repeating-linear-gradient(red, yellow 7%, green 50%);</p>
+              </div>
+            </details>
+          </li>
+          <li class="li--details-exception">
+            <details>
+              <summary>
+                <h2 class="details-summary">radial</h2>
+              </summary>
+              <p>Cambia de color desde un punto central hasta sus extremos.</p>
+              <div class="code black">
+                <span class="propiedad">background-image</span>:
+                <span class="valor-css">radial-gradient(forma( ellipse | circle ), tamaño ( closest-side | farthest-side | closest-corner | farthest-corner )at posición, color1 posición%, color2 posición%, ...)</span>;
+                <br>
+                <span class="propiedad">background-image</span>:
+                <span class="valor-css">radial-gradient(circle, closest-side at center, red, yellow 7%, blue 100% )</span>;
+              </div>
+              <p>Creo que lo del tamaño se define cogiendo de referencia un linear gradient que va en alguno de estas direcciones:</p>
+              <ul>
+                <li>
+                  <p><strong>closest-side: </strong>El lado más próximo. Genera el gradient en horizontal y vertical desde el centro hasta el borde más cercano y ya con eso genera el aro.</p>
+                  <div style="height: 50px; width: 50px; background-image: radial-gradient(closest-side at 60% 55%, red, orange, black);"></div>
+                </li>
+                <li>
+                  <p><strong>farthest-side: </strong>El lado más alejado. Genera el gradient en horizontal y vertical desde el centro hasta el borde más alejado y ya con eso genera el aro.</p>
+                  <div style="height: 50px; width: 50px; background-image: radial-gradient(farthest-side at 60% 55%, red, orange, black);"></div>
+                </li>
+                <li>
+                  <p><strong>closest-corner: </strong>Las esquinas más próximas. Genera el gradient desde el centro hasta la esquina más cercana y ya con eso genera el aro.</p>
+                  <div style="height: 50px; width: 50px; background-image: radial-gradient(closest-corner at 60% 55%, red, orange, black);"></div>
+                </li>
+                <li>
+                  <p><strong>farthest-corner: </strong>Las esquinas más alejadas. Genera el gradient desde el centro hasta la esquina más alejada y ya con eso genera el aro.</p>
+                  <div style="height: 50px; width: 50px; background-image: radial-gradient(farthest-corner at 60% 55%, red, orange, black);"></div>
+                </li>
+              </ul>
+              <p>Se pueden hacer repeticiones de gradientes utilizando repeating-radial-gradient en lugar de radial-gradient.</p>
+              <div style="height: 50px; width: 50px; background-image: repeating-radial-gradient(closest-side at 60% 55%, red, orange 13%, black 20%);"></div>
+            </details>
+          </li>
+          <li class="li--details-exception">
+            <details>
+              <summary>
+                <h2 class="details-summary">conic</h2>
+              </summary>
+              <p>Se explica mejor con una imagen.</p>
+              <div style="height: 50px; width: 50px; background-image: conic-gradient(red, orange);"></div>
+              <div class="code black">
+                <span class="propiedad">background-image</span>:
+                <span class="valor-css">conic-gradient(from [angle] at [position,] color [degree], ...)</span>;
+                <br>
+              </div>
+              <p class="details-subtitle">Ejemplos</p>
+              <div class="col-container">
+                <div ><div style="height: 50px; width: 50px; background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); border-radius: 50%;"></div></div>
+                <p>background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); border-radius: 50%;</p>
+              </div>
+              <div class="col-container">
+                <div ><div style="height: 50px; width: 50px; background-image: conic-gradient(at 60% 45%, red, yellow, green);"></div></div>
+                <p>background-image: conic-gradient(at 60% 45%, red, yellow, green);</p>
+              </div>
+              <div class="col-container">
+                <div ><div style="height: 50px; width: 50px; background-image: conic-gradient(from 90deg, red, yellow, green);"></div></div>
+                <p>background-image: conic-gradient(from 90deg, red, yellow, green);</p>
+              </div>
+              <div class="col-container">
+                <div ><div style="height: 50px; width: 50px; background-image: repeating-conic-gradient(red 10%, yellow 20%);"></div></div>
+                <p>background-image: repeating-conic-gradient(red 10%, yellow 20%);</p>
+              </div>
+            </details>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>
+          <h2 class="details-summary">filter</h2>
+        </summary>
+        <p>Añade un efecto de color a los elementos. Estas son las funciones filtro.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <div class="gallery">
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="gallery__img">
+                <p class="gallery__text">normal</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--blur gallery__img">
+                <p class="gallery__text">blur</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--brightness gallery__img">
+                <p class="gallery__text">brightness</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--contrast gallery__img">
+                <p class="gallery__text">contrast</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--drop-shadow gallery__img">
+                <p class="gallery__text">drop-shadow</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--grayscale gallery__img">
+                <p class="gallery__text">grayscale</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--hue-rotate gallery__img">
+                <p class="gallery__text">hue-rotate</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--invert gallery__img">
+                <p class="gallery__text">invert</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--opacity gallery__img">
+                <p class="gallery__text">opacity</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--saturate gallery__img">
+                <p class="gallery__text">saturate</p>
+              </div>
+              <div class="gallery__card">
+                <img src="../images/pineapple.jpg" alt="Piña con filtro" class="filter--sepia gallery__img">
+                <p class="gallery__text">sepa</p>
+              </div>
             </div>
-            <p>Top to bottom es el por defecto. Para añadir los valores de dirección se añade: to + dirección. Ej.: to right, de izquierda a derecha. to bottom right, de arriba a la izquierda a abajo derecha en diagonal.</p>
-            <p class="details-subtitle">Ángulo</p>
-            <p>Si se quiere añadir un angulo concreto que no sea los por defecto de top, left, bottom y right en el lugar del valor de dirección se coloca el ángulo elegido segido de "deg". Ej.; 175deg, red, yellow.</p>
-            <p class="details-subtitle">Repetición</p>
-            <p>Se pueden repetir los gradientes cambiando el valor linear-gradient() por repeating-linear-gradient().</p>
-            <p>Se puede añadir un valor de porcentaje después de cada número para controlar el espacio que ocupan y las veces que se va a repetir el gradiente.</p>
-            <p>acepta el valor de dirección también y de ángulos igual que linear-gradient().</p>
-            <div class="col-container">
-              <div id="gradiente1" class="two-cols"></div>
-              <div id="gradiente2" class="two-cols"></div>
-            </div>
-            <div class="col-container">
-              <p class="two-cols">background-image: repeating-linear-gradient(red, yellow 30%, green 20%);</p>
-              <p class="two-cols">background-image: repeating-linear-gradient(red, yellow 7%, green 50%);</p>
-            </div>
-          </details>
-        </li>
-        <li class="li--details-exception">
-          <details>
-            <summary>
-              <h2 class="details-summary">radial</h2>
-            </summary>
-            <p>Cambia de color desde un punto central hasta sus extremos.</p>
-            <div class="code black">
-              <span class="propiedad">background-image</span>:
-              <span class="valor-css">radial-gradient(forma( ellipse | circle ), tamaño ( closest-side | farthest-side | closest-corner | farthest-corner )at posición, color1 posición%, color2 posición%, ...)</span>;
-              <br>
-              <span class="propiedad">background-image</span>:
-              <span class="valor-css">radial-gradient(circle, closest-side at center, red, yellow 7%, blue 100% )</span>;
-            </div>
-            <p>Creo que lo del tamaño se define cogiendo de referencia un linear gradient que va en alguno de estas direcciones:</p>
-            <ul>
-              <li>
-                <p><strong>closest-side: </strong>El lado más próximo. Genera el gradient en horizontal y vertical desde el centro hasta el borde más cercano y ya con eso genera el aro.</p>
-                <div style="height: 50px; width: 50px; background-image: radial-gradient(closest-side at 60% 55%, red, orange, black);"></div>
-              </li>
-              <li>
-                <p><strong>farthest-side: </strong>El lado más alejado. Genera el gradient en horizontal y vertical desde el centro hasta el borde más alejado y ya con eso genera el aro.</p>
-                <div style="height: 50px; width: 50px; background-image: radial-gradient(farthest-side at 60% 55%, red, orange, black);"></div>
-              </li>
-              <li>
-                <p><strong>closest-corner: </strong>Las esquinas más próximas. Genera el gradient desde el centro hasta la esquina más cercana y ya con eso genera el aro.</p>
-                <div style="height: 50px; width: 50px; background-image: radial-gradient(closest-corner at 60% 55%, red, orange, black);"></div>
-              </li>
-              <li>
-                <p><strong>farthest-corner: </strong>Las esquinas más alejadas. Genera el gradient desde el centro hasta la esquina más alejada y ya con eso genera el aro.</p>
-                <div style="height: 50px; width: 50px; background-image: radial-gradient(farthest-corner at 60% 55%, red, orange, black);"></div>
-              </li>
-            </ul>
-            <p>Se pueden hacer repeticiones de gradientes utilizando repeating-radial-gradient en lugar de radial-gradient.</p>
-            <div style="height: 50px; width: 50px; background-image: repeating-radial-gradient(closest-side at 60% 55%, red, orange 13%, black 20%);"></div>
-          </details>
-        </li>
-        <li class="li--details-exception">
-          <details>
-            <summary>
-              <h2 class="details-summary">conic</h2>
-            </summary>
-            <p>Se explica mejor con una imagen.</p>
-            <div style="height: 50px; width: 50px; background-image: conic-gradient(red, orange);"></div>
-            <div class="code black">
-              <span class="propiedad">background-image</span>:
-              <span class="valor-css">conic-gradient(from [angle] at [position,] color [degree], ...)</span>;
-              <br>
-            </div>
-            <p class="details-subtitle">Ejemplos</p>
-            <div class="col-container">
-              <div ><div style="height: 50px; width: 50px; background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); border-radius: 50%;"></div></div>
-              <p>background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg); border-radius: 50%;</p>
-            </div>
-            <div class="col-container">
-              <div ><div style="height: 50px; width: 50px; background-image: conic-gradient(at 60% 45%, red, yellow, green);"></div></div>
-              <p>background-image: conic-gradient(at 60% 45%, red, yellow, green);</p>
-            </div>
-            <div class="col-container">
-              <div ><div style="height: 50px; width: 50px; background-image: conic-gradient(from 90deg, red, yellow, green);"></div></div>
-              <p>background-image: conic-gradient(from 90deg, red, yellow, green);</p>
-            </div>
-            <div class="col-container">
-              <div ><div style="height: 50px; width: 50px; background-image: repeating-conic-gradient(red 10%, yellow 20%);"></div></div>
-              <p>background-image: repeating-conic-gradient(red 10%, yellow 20%);</p>
-            </div>
-          </details>
-        </li>
-      </ul>
-    </details>
-  </main>
+          </div>
+          <div class="two-cols">
+            <details>
+              <summary>blur(&Oslash;px)</summary>
+              <p>Efecto borroso.</p>
+            </details>
+            <details>
+              <summary>brightness(&Oslash;%)</summary>
+              <p>Controla el nivel de brillo. Los valore son porcentajes</p>
+              <p>valor&gt;100% aclara la imagen</p>
+              <p>valor&lt;100% oscurece la imagen</p>
+              <p>100% es el valor por defecto de la imagen. Sin cambios</p>
+              <p>0% = imagen negra</p>
+            </details>
+            <details>
+              <summary>contrast(&Oslash;%)</summary>
+              <p>Cambia el nivel de contraste. El contraste es la diferencia de tonalidad entre varios colores. A más contraste más diferencia de tono en los colores comparados.</p>
+              <p>valor&gt;100% aumenta el contraste</p>
+              <p>valor&lt;100% disminuye el contraste</p>
+              <p>100% es el valor por defecto de la imagen. Sin cambios</p>
+              <p>0% = imagen gris</p>
+            </details>
+            <details>
+              <summary>drop-shadow(ejeX ejeY blur color)</summary>
+              <p>Añade un efecto de sombra sobre la imagen. Se aplican los valores de box-shadow sin la opción de inset o outset.</p>
+            </details>
+            <details>
+              <summary>grayscale(&Oslash;% | &Oslash;.&Oslash;)</summary>
+              <p>Convierte los colores en escala de grises. Valores en % entre 100 y 0 o entre 1 y 0</p>
+              <p>100% y 1 = totalmente gris</p>
+              <p>0% y 0 = el color original de la imagen</p>
+            </details>
+            <details>
+              <summary>hue-rotate(&Oslash;deg)</summary>
+              <p>Se sustituyen los tonos de la imagen en función de los grados del ángulo elegido. Hay que imaginar la rueda de colores y ese cambio de ángulo será la distancia al color de la imagen.</p>
+              <p>No es fácil de controlar, pero es un efecto parecido al invert que permite aplicar una gama de colores mayor.</p>
+              <p>0deg es la imagen original</p>
+            </details>
+            <details>
+              <summary>invert(&Oslash;% | &Oslash;.&Oslash;)</summary>
+              <p>Cambia los colores por su color contrario. 100% y 1 son colores totalmente invertidos, 0% y 0 la imagen original.</p>
+            </details>
+            <details>
+              <summary>opacity(&Oslash;% | &Oslash;.&Oslash;)</summary>
+              <p>Aporta grados de transparencia.</p>
+              <p>100% y 1 es la imagen original</p>
+              <p>0% y 0 es la imagen transparente.</p>
+            </details>
+            <details>
+              <summary>saturate(&Oslash;% | &Oslash;.&Oslash;)</summary>
+              <p>Vuelve los tonos de color más saturados, es decir, más próximos a su tonalidad pura, sin aclarados ni oscurecidos.</p>
+              <p>valor&gt;100%|1 aumenta la intensidad de tono</p>
+              <p>valor&lt;100%|1 disminuye la intensidad de tono</p>
+              <p>100%|1 es el valor por defecto de la imagen. Sin cambios</p>
+              <p>0%|0 = imagen gris</p>
+            </details>
+            <details>
+              <summary>sepia(&Oslash;% | &Oslash;.&Oslash;)</summary>
+              <p>Torna los colores a un matiz ocre, anaranjado, marrón. Aporta sentimiento de pasado, nostalgia. 100% y 1 son colores totalmente sepia, 0% y 0 la imagen original.</p>
+            </details>
+          </div>
+        </div>
+      </details>
+    </main>
 
-</body>
+  </body>
 </html>
