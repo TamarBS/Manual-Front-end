@@ -8,6 +8,32 @@
   
   <title>Propiedades CSS decorativas</title> 
   <meta name="description" content="Propiedades que sirven para decorar fondos, añadir imágenes,etc.">
+
+  <style>
+
+    .gallery__card {
+      padding: .5em;
+      max-width: 120px;
+    }
+    .gallery__img { border-radius: 0; }
+    .gallery__text {
+      margin-bottom: 0;
+    }
+
+    .clip--circle { clip-path: circle(50%); }
+    .clip--moon { clip-path: circle(50% at right); }
+    .clip--ellipse { clip-path: ellipse(50% 35%); }
+    .clip--pentagono { clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 20% 100%, 0% 40% ); }
+    .clip-- {  }
+
+    .shape--circle { shape-outside: circle(50%); }
+
+    .img-text { 
+      float: left;
+      max-width: 65px; 
+    }
+  </style>
+
 </head>
 <body>
   
@@ -139,7 +165,6 @@
       </div>
       <p>Si el elemento es un img, se necesita añadir una imagen transparente al atributo scr para que funcione correctamente.</p>
     </details>
-    
     <details>
       <summary><h3 class="details-summary">Bordes</h3></summary>
       <p>Crea un borde.</p>
@@ -241,6 +266,60 @@
           <div style="margin-top: 1em; background-color: white; box-shadow: 10px 10px 5px lightskyblue inset;">box-shadow: 10px 10px 5px lightskyblue inset;</div>
         </li>
       </ul>
+    </details>
+    <details>
+      <summary>
+        <h3 class="details-summary">clip-path</h3>
+      </summary>
+      <p>Permite recortar un elementos en formas básicas.</p>
+      <div class="col-container">
+        <div class="two-cols">
+          <details>
+            <summary>circle(&Oslash;%)</summary>
+            <p>Recorta la imagen en forma de círculo.</p>
+            <p>Se puede añadir otro valor a la función para situar el centro. Por defecto se coloca en el centro de la imagen, pero se puede colocar en (left, right, top, bottom) creando ilusión de media luna.</p></p>
+          </details>
+          <details>
+            <summary>ellipse(&Oslash;% &Oslash;%)</summary>
+            <p>Recorta la imagen en forma de elipse.</p>
+            <p>Igual que en circle se puede situar el centro en las posiciones: left, right, top, bottom creando ilusión de media luna. </p>
+          </details>
+          <details>
+            <summary>polygon(ejeX% ejeY%, ejeX% ejeY%, ejeX% ejeY%, ... )</summary>
+            <p>Recorta la imagen en forma de polígono.</p>
+            <p>Puede tener tantos parámetros como puntos se quieran añadir al polígono.</p>
+          </details>
+          <details>
+            <summary>shape-outside</summary>
+            <p>Permite adaptar contenidos a una forma clip-path. Por ejemplo por defecto cuando hay una img y un texto el texto se adapta a la imagen de forma rectangular incluso si esta es redonda.</p>
+            <p>Es algo así cómo recortar, no sólo la imagen, sino su contenedor, permitiendo que lo que tenga alrededor se ajuste mejor a su nueva forma recortada. Su valor es el mismo que el clip-path.</p>
+            <img src="../images/pineapple.jpg" alt="Piña dentro de un círculo" class="img-text clip--circle">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac laoreet quam, id aliquet nisl. Etiam id eros ligula. Aenean euismod, enim sed mollis feugiat, magna massa cursus leo, ut maximus metus eros non ante.  </p>
+            <img src="../images/pineapple.jpg" alt="Piña dentro de un círculo" class="img-text clip--circle shape--circle">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac laoreet quam, id aliquet nisl. Etiam id eros ligula. Aenean euismod, enim sed mollis feugiat, magna massa cursus leo, ut maximus metus eros non ante. </p>
+          </details>
+        </div>
+        <div class="two-cols">
+          <div class="gallery">
+            <div class="gallery__card">
+              <img src="../images/pineapple.jpg" alt="Piña recortada en forma de círculo" class="clip--circle gallery__img">
+              <p class="gallery__text">clip-path: cicle(50%);</p>
+            </div>
+            <div class="gallery__card">
+              <img src="../images/pineapple.jpg" alt="Piña recortada en forma de media luna" class="clip--moon gallery__img">
+              <p class="gallery__text">clip-path: cicle(50% at right);</p>
+            </div>
+            <div class="gallery__card">
+              <img src="../images/pineapple.jpg" alt="Piña recortada en forma de elipse" class="clip--ellipse gallery__img">
+              <p class="gallery__text">clip-path: ellipse(50% 35%);</p>
+            </div>
+            <div class="gallery__card">
+              <img src="../images/pineapple.jpg" alt="Piña recortada en forma de pentagono" class="clip--pentagono gallery__img">
+              <p class="gallery__text">clip-path: polygon(50% 0%, 100% 20%, 80% 100%, 20% 100%, 20% 20% );</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </details>
   </main>
 

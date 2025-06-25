@@ -240,3 +240,28 @@ kbd {
   }
 }
 /* ------------------------------------- */
+
+/* Galería de card con imagen y texto */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 0.7em;
+  flex-wrap: wrap;
+}
+.gallery__card {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 5px 1px grey;
+  border-radius: 8px;
+  max-width: 95px;
+}
+.gallery__img {
+  border-radius: 7px 7px 0 0;
+  width: 100%;
+}
+.gallery__text {
+  margin-left: .5em;
+  margin-top: 0;
+  font-size: 0.7em;
+}
+/* ------------------------------------- */      
