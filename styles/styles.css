@@ -265,3 +265,27 @@ kbd {
   font-size: 0.7em;
 }
 /* ------------------------------------- */      
+
+/* Contador CSS */
+.counter__container--tilt-number { counter-reset: section; }
+.counter__title--tilt-number {
+  position: relative;
+  background-color: whitesmoke;
+  margin-left: 15px;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+.counter__title--tilt-number::before {
+  counter-increment: section;
+  content: counter(section);
+  display: block;
+  position: absolute;
+  top: -4px;
+  left: -16px;
+  font-size: 2em;
+  font-weight: bold;
+  color: darkgrey;
+  transform: rotate(340deg);
+  z-index: -1;
+}
+/* ------------------------------------- */  
