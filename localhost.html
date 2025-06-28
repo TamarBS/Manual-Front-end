@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="styles/styles.css">
+  
+  <title>localhost</title> 
+  <meta name="description" content="Servidor local">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="index.html">Volver al Índice</a></div> 
+    <hgroup>
+      <h1 class="body-title">localhost</h1>
+      <p>Es una dirección de red especial que se refiere a tu propio ordenador local. Permite al navegador comuniarse con software y aplicaciones que se ejecutan localmente.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2 class="body-subtitle">¿Cómo funciona?</h2>
+    <p>Funciona mediante el uso de la dirección IP especial de loopback. Un <dfn>loopback </dfn>se refiere a una dirección o interfaz virtual que permite que un dispositivo se comunique consigo mismo.</p>
+    <p>Mediante las palabras localhost en el navegador, entiende que tiene que contectarse con la IP del ordenador y esto le permite acceder a los archivos locales de forma segura sin necesidad de internet.</p>
+    <p>En desarrollo se suele configurar un servidor web local en la máquina, como Apache, Nginx o específicos para el lenguaje de programación utilizado.</p>
+    <h2 class="body-subtitle">¿Cómo utilizarlo?</h2>
+    <div class="counter__container--tilt-number">
+      <p class="counter__title--tilt-number">Instalar un servidor web.</p>
+      <p>Apache, Nginx, XAMPP, MAMP, WAMP. Yo he trabajado con MAMP (el elefantito).</p>
+      <p class="counter__title--tilt-number">Configurar el MAMP. </p>
+      <p>Encender el servidor en el botón on-off. </p>
+      <p>MAMP&gt;preferencias&gt;Server&gt;Document root.  </p>
+      <p>Añadir la ruta al proyecto que se quiere ver en localhost.</p>
+      <p>Aceptar.</p>
+      <p class="counter__title--tilt-number">Abrir en el navegador.</p>
+      <p>En la url escribir <q>localhost</q> o también servirá escribir "127.0.0.1".</p>
+      <p>Con esto ya se debería estar viendo el proyecto en localhost.</p>
+      <p class="counter__title--tilt-number">Cerrar al terminar.</p>
+      <p>No dejar abierto. Pulsa de nuevo el botón on-off para apagar el MAMP.</p>
+    </div>
+  </main>
+</body>
+</html>
