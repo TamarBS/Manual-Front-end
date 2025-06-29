@@ -9,6 +9,21 @@
   <title>Propiedades CSS decorativas</title> 
   <meta name="description" content="Propiedades que sirven para decorar fondos, añadir imágenes,etc.">
 
+  <style>
+
+    .mask-text {
+      color: transparent;
+      background-image: url('../images/pineapple.jpg'); 
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-size: 3em;
+      line-height: 1em;
+      font-weight: bold;
+      background-position: right;
+    }
+
+  </style>
+
 </head>
 <body>
   
@@ -91,6 +106,41 @@
           <li><p><strong>padding-box: </strong>respeta el padding.</p></li>
           <li><p><strong>content-box: </strong>sólo ocupa el espacio del contenido.</p></li>
         </ul>
+        <p class="details-subtitle">Texto con imagen de fondo.</p>
+        <div class="code black">
+          <div class="mask-text">Texto con máscara</div>
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">style</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="clase hijo">.mask-text</span>
+          <span class="llave"> {</span>
+          <br>
+          <span class="propiedad nieto">background-image</span>:
+          <span class="valor-css">url('...ruta a la img... ')</span>;
+          <br>
+          <span class="propiedad nieto">color</span>:
+          <span class="valor-css">transparente</span>;
+          <br>
+          <span class="propiedad nieto">background-clip</span>:
+          <span class="valor-css">text</span>;
+          <br>
+          <span class="llave hijo">}</span>
+          <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">style</span>
+          <span class="gris">&gt;</span>
+          <br><br>
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">div</span>
+          <span class="propiedad ">class</span>=
+          <span class="valor">"mask-text"</span>
+          <span class="gris">&gt;</span>
+          Texto con máscara
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">div</span>
+          <span class="gris">&gt;</span>
+        </div>
       </details>
       <details>
         <summary><h4 class="details-summary">background-origin</h4></summary>
