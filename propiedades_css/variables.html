@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>:root y var()</title> 
+  <meta name="description" content="Variables CSS que permiten afectar a varias clases con un sólo cambio.">
+</head>
+
+  <style>
+
+    :root {
+      --primary-color : blue ;
+    }
+
+    .container-variable {
+      border: 5px solid var(--primary-color);
+      background-color: whitesmoke;
+      padding: 1em;
+    }
+    .container-variable .body-subtitle {
+      color: var(--primary-color);
+    }
+
+    .container-variable hr {
+      border-color: var(--primary-color);
+    }
+
+    .container-variable button {
+      background-color: var(--primary-color);
+      color: whitesmoke;
+    }
+    .container-variable button:hover {
+      background-color: whitesmoke;
+      color: var(--primary-color);
+      border: 2px solid var(--primary-color);
+    }
+
+  </style>
+
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">:root y var() </h1>
+      <p>La función var() permite insertar el valor de una variable CSS. Es decir, permite crear una variable que afectará a varias clases a la vez. Por ejemplo, si creamos una variable "Color principal" podremos conseguir que cambie el valor del color en todas las clases que están llamando a esta función var().</p>
+      <p>La función var() afecta al DOM, lo que significa que puede ser cambiado utilizando JavaScript.</p>
+      <p>Por supuesto var() también funciona en los media queries.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2>Sintáxis</h2>
+    <p>¡IMPORTANTE! Es obligatorio que el nombre tenga dos guiones delante. El nombre es necesario para que funcione, el valor no. El valor se utiliza como un plan B en caso de que la variable no se encuentre. </p>
+    <div class="code black">
+      <span class="valor-css">var(--name, valor)</span>
+      <br>
+      <span class="comentario">&lt;!-- El nombre de la variable siempre empieza con dos guiones "--" y distingue entre mayúsculas y minúsculas --&gt;</span>
+    </div>
+    <p>Las variables se puede crear de forma global o local.</p>
+    <p>Para crearlas de manera global se declara dentro de un selector <strong>:root</strong>. Las variables globales pueden afectar a todos los selectores del documento.</p>
+    <p>Para crearlas de manera local se añade el nombre dentro del selector que se quiera afectar. Las variables locales sólo afectan a ese selector.</p>
+    <div class="code black">
+      <span class="comentario">&lt;!-- GLOBAL --&gt;</span>
+      <br>
+      <span class="clase">:root</span>
+      <span class="llave">{</span>
+      <br>
+      <span class="propiedad hijo">--variable1</span>:
+      <span class="valor-css">red</span>;
+      <br>
+      <span class="propiedad hijo">--variable2</span>:
+      <span class="valor-css">green</span>;
+      <br>
+      <span class="llave">}</span>
+      <br>
+      <span class="clase">selector</span>
+      <span class="llave">{</span>
+      <br>
+      <span class="propiedad hijo">--variable1</span>:
+      <span class="valor-css">blue</span>;
+      <span class="comentario">&lt;!-- Esta es una variable local que afectará solo a este selector. Hace que la variable1 afecte con otro color sólo a este elemento. --&gt;</span>
+      <br>
+      <span class="propiedad hijo">color</span>:
+      <span class="valor-css">var(--variable1)</span>;
+      <br>
+      <span class="propiedad hijo">background-color</span>:
+      <span class="valor-css">var(--variable2)</span>;
+      <br>
+      <span class="llave">{</span>
+    </div>
+
+    <h2>Cambiar variables CSS con JavaScript</h2>
+    <p>Al afectar la función var() el DOM es posible afectarlo con JavaScript, lo que permite hacer cambios en las variables.</p>
+    <div class="code">
+      Se accede a las propiedades del root con el siguiente método:
+      <p>var r = document.querySelector(':root');</p>
+      Crear una función en la que se llame al nombre de la variable con la que se quiere trabajar.
+      <p>function myFunction() { r.style.setProperty( '--blue', 'lightblue' ); }</p>
+      Esta función hace que el valor de la variable --blue cambie de lo que tenga y pase a tener el valor lightblue.
+    </div>
+    <div class="col-container">
+      <div class="two-cols">
+        <div class="container-variable">
+          <p class="body-subtitle">Título </p>
+          <p>Cuerpo del texto.</p>
+          <hr>
+          <button>Botón</button>
+        </div>
+      </div>
+      <div class="two-cols">
+        <button type="button" onclick="myFunction_get()">Volver todo rojo</button>
+        <button type="button" onclick="myFunction_set()">Volver todo verde</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var r = document.querySelector(':root');
+
+    function myFunction_get() {
+      r.style.setProperty('--primary-color', 'red');
+    }
+
+    function myFunction_set() {
+      r.style.setProperty('--primary-color', 'green');
+    }
+  </script>
+
+</body>
+</html>
