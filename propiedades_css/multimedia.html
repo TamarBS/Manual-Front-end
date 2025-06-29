@@ -49,6 +49,40 @@
       -webkit-mask-image: url(../images/border.png);
       mask-image: url(../images/border.png);
     }
+    .mask2 {
+      -webkit-mask-image: linear-gradient(black, transparent);
+      mask-image: linear-gradient(black, transparent);
+    }
+
+    .composite .gallery__img {
+      width: 6em;
+      height: 6em;
+      background: linear-gradient(to right, turquoise, purple, pink);
+      mask-image: 
+        radial-gradient(circle, black 60%, transparent 0),
+        linear-gradient(45deg, transparent 45%, black 0 55%, transparent 0);
+    }
+    .mask-composite-add { mask-composite: add; }
+    .mask-composite-subtract { mask-composite: subtract; }
+    .mask-composite-intersect { mask-composite: intersect; }
+    .mask-composite-exclude { mask-composite: exclude; }
+
+    .clip .gallery__mask {
+      width: 80px;
+      height: 80px;
+      background-color: green;
+      border: 30px solid blue;
+      padding: 5px;
+      mask-image: radial-gradient(circle, black 50%, transparent 0);
+    }
+
+    .mask-clip-border { mask-clip: border-box; }
+    .mask-clip-content { mask-clip: content-box; }
+    .mask-clip-padding { mask-clip: padding-box; }
+    .mask-clip-fill { mask-clip: fill-box; }
+    .mask-clip-stroke { mask-clip: stroke-box; }
+    .mask-clip-view { mask-clip: view-box; }
+    .mask-clip-no { mask-clip: no-clip; }
 
   </style>
 
@@ -220,51 +254,305 @@
         <h2 class="details-summary">mask-image</h2>
       </summary>
       <p>Efecto para fusionar dos imágenes. Se llama máscara porque el efecto es el de utilizar la forma de una de las imágenes enmascarándola con el contenido de la otra.</p>
-      <p>Una capa mask-image puede ser un png, un svg, un gradiente, o un elemento svg.Lo importante es que la imagen que aporte la forma deseada tenga transparencia.</p>
-      <div class="mask1">
-      <img src="../images/pineapple.jpg" alt="Piña con una máscara damero" width="300" height="200">
-      </div>
-      <div class="code black">
-        <span class="gris">&lt;</span>
-        <span class="etiqueta">style</span>
-        <span class="gris">&gt;</span>
-        <br>
-        <span class="clase hijo">.mask</span>
-        <span class="llave">{</span>
-        <br>
-        <span class="propiedad nieto">mask-image</span>:
-        <span class="valor-css">url(...ruta a la imagen con trasnparencia...)</span>;
-        <br>
-        <span class="llave hijo">}</span>
-        <br>
-        <span class="gris">&lt;/</span>
-        <span class="etiqueta">style</span>
-        <span class="gris">&gt;</span>
-        <br><br>
-        <span class="gris">&lt;</span>
-        <span class="etiqueta">div</span>
-        <span class="propiedad">class</span>=
-        <span class="valor">"mask"</span>
-        <span class="gris">&gt;</span>
-        <br>
-        <span class="gris hijo">&lt;</span>
-        <span class="propiedad">img</span>
-        <span class="propiedad">src</span>=
-        <span class="valor">"...ruta a la imagen jpg..."</span>
-        <span class="propiedad">alt</span>=
-        <span class="valor">" ... "</span>
-        <span class="propiedad">width</span>=
-        <span class="valor">"&Oslash;"</span>
-        <span class="propiedad">height</span>=
-        <span class="valor">"&Oslash;"</span>
-        <span class="gris">&gt;</span>
-        <br>
-        <span class="gris">&lt;/</span>
-        <span class="etiqueta">div</span>
-        <span class="gris">&gt;</span>
-        <br>
-      </div>
-      <p class="details-sbutitle">Gradientes</p>
+      <details>
+        <summary>Dos imágenes</summary>
+        <p>Una capa mask-image puede ser un png, un svg, un gradiente, o un elemento svg.Lo importante es que la imagen que aporte la forma deseada tenga transparencia.</p>
+        <div class="mask1">
+        <img src="../images/pineapple.jpg" alt="Piña con una máscara damero" width="300" height="200">
+        </div>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">style</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="clase hijo">.mask</span>
+          <span class="llave">{</span>
+          <br>
+          <span class="propiedad nieto">mask-image</span>:
+          <span class="valor-css">url(...ruta a la imagen con trasnparencia...)</span>;
+          <br>
+          <span class="llave hijo">}</span>
+          <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">style</span>
+          <span class="gris">&gt;</span>
+          <br><br>
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">div</span>
+          <span class="propiedad">class</span>=
+          <span class="valor">"mask"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris hijo">&lt;</span>
+          <span class="propiedad">img</span>
+          <span class="propiedad">src</span>=
+          <span class="valor">"...ruta a la imagen jpg..."</span>
+          <span class="propiedad">alt</span>=
+          <span class="valor">" ... "</span>
+          <span class="propiedad">width</span>=
+          <span class="valor">"&Oslash;"</span>
+          <span class="propiedad">height</span>=
+          <span class="valor">"&Oslash;"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">div</span>
+          <span class="gris">&gt;</span>
+          <br>
+        </div>
+      </details>
+      <details>
+        <summary>Gradientes</summary>
+        <p>El gradiente va de negro a transparente, siendo negro lo más opaco.</p>
+        <div class="mask2">
+        <img src="../images/pineapple.jpg" alt="Piña con una máscara gradiente" width="300" height="200">
+        </div>
+        <div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">style</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="clase hijo">.mask</span>
+          <span class="llave">{</span>
+          <br>
+          <span class="propiedad nieto">mask-image</span>:
+          <span class="valor-css">linear-gradient(color-opaco, transparent)</span>;
+          <br>
+          <span class="llave hijo">}</span>
+          <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">style</span>
+          <span class="gris">&gt;</span>
+          <br><br>
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">div</span>
+          <span class="propiedad">class</span>=
+          <span class="valor">"mask"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris hijo">&lt;</span>
+          <span class="propiedad">img</span>
+          <span class="propiedad">src</span>=
+          <span class="valor">"...ruta a la imagen jpg..."</span>
+          <span class="propiedad">alt</span>=
+          <span class="valor">" ... "</span>
+          <span class="propiedad">width</span>=
+          <span class="valor">"&Oslash;"</span>
+          <span class="propiedad">height</span>=
+          <span class="valor">"&Oslash;"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">div</span>
+          <span class="gris">&gt;</span>
+          <br>
+        </div>
+        <p>Se pueden utilizar los tipos de gradiente "radial-gradient(circle | ellipse)".</p>
+      </details>
+      <details>
+        <summary>SVG Mask element</summary>
+        <p>El elemento HTML &lt;mask&gt; dentro de otro elemento &lt;svg&gt; permiten crear efectos de máscara.</p>
+        <div class="col-container">
+          <div class="three-cols">
+            <svg width="300" height="200">
+              <mask id="svgmask1">
+                <polygon fill="#ffffff" points="100 0, 200 200, 0 200"></polygon>
+              </mask>
+              <image xlink:href="../images/pineapple.jpg" mask="url(#svgmask1)" >
+            </svg>
+          </div>
+          <div><div class="code black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">svg</span>
+          <span class="atributo">width</span>=
+          <span class="valor">"300"</span>
+          <span class="atributo">height</span>=
+          <span class="valor">"200"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris hijo">&lt;</span>
+          <span class="etiqueta">mask</span>
+          <span class="atributo">id</span>=
+          <span class="valor">"id-del-svg"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris nieto">&lt;</span>
+          <span class="etiqueta">polygon</span>
+          <span class="atributo">fill</span>=
+          <span class="valor">" color-solid "</span>
+          <span class="atributo">points</span>=
+          <span class="valor">"100 0, 200 200, 0 200"</span>
+          <span class="gris">&gt;</span>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">polygon</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris hijo">&lt;/</span>
+          <span class="etiqueta">mask</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris hijo">&lt;</span>
+          <span class="etiqueta">image</span>
+          <span class="atributo">xlink:href</span>=
+          <span class="valor">"ruta-a-la-img"</span>
+          <span class="atributo">mask</span>=
+          <span class="valor">"url(#id-del-svg)"</span>
+          <span class="gris">&gt;</span>
+          <br>
+          <span class="gris">&lt;/</span>
+          <span class="etiqueta">svg</span>
+          <span class="gris">&gt;</span>
+          <br>
+        </div></div>
+        </div>
+      </details>
+      <p class="details-subtitle">Propiedades complemento</p>
+      <details>
+        <summary>mask-clip</summary>
+        <p>Define qué areas son afectadas por la máscara.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <details>
+              <summary>border-box | border </summary>
+              <p>Incluye en la máscara el borde y padding.</p>
+            </details>
+            <details>
+              <summary>content-box | content </summary>
+              <p>Sólo incluye el contenido. Sin bordes ni padding.</p>
+            </details>
+            <details>
+              <summary>padding-box | padding </summary>
+              <p>Incle el padding pero no el borde.</p>
+            </details>
+            <details>
+              <summary>fill-box </summary>
+              <p>Es como el content-box pero se define como el cuadro delimitador del objeto.</p>
+            </details>
+            <details>
+              <summary>stroke-box </summary>
+              <p>Es como el border-box pero se define como cuadro delimitador del trazo.</p>
+            </details>
+            <details>
+              <summary>view-box </summary>
+              <p>Utiliza el SVG más cercano como referencia.</p>
+              <p>No hay ejemplo en la galería de tarjetas, así que no sé si funcionaría.</p>
+            </details>
+            <details>
+              <summary>no-clip </summary>
+              <p>No se recorta.</p>
+              <p>*Hice una prueba y recorta igual que border-box.</p>
+            </details>
+            <details>
+              <summary>text</summary>
+              <p>Recorta la máscara al texto del elemento.</p>
+              <p>*No he conseguido hacer que funcione. Es más funcional utilizar background-clip.</p>
+            </details>
+          </div>
+          <div class="two-cols gallery clip">
+            <div class="gallery__card">
+              <div class="gallery__mask mask-clip-border">
+                <img src="../images/pineapple.jpg" alt="Piña con máscara de recorte border-box" class="gallery__img ">
+              </div>
+              <p class="gallery__text">border-box</p>
+            </div>
+            <div class="gallery__card">
+              <div class="gallery__mask mask-clip-content">
+                <img src="../images/pineapple.jpg" alt="Piña con máscara de recorte content-box" class="gallery__img ">
+              </div>
+              <p class="gallery__text">content-box </p>
+            </div>
+            <div class="gallery__card">
+              <div class="gallery__mask mask-clip-padding">
+                <img src="../images/pineapple.jpg" alt="Piña con máscara de recorte padding-box" class="gallery__img ">
+              </div>
+              <p class="gallery__text">padding-box </p>
+            </div>
+            <div class="gallery__card">
+              <div class="gallery__mask mask-clip-fill">
+                <img src="../images/pineapple.jpg" alt="Piña con máscara de recorte fill-box" class="gallery__img ">
+              </div>
+              <p class="gallery__text">fill-box </p>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>mask-composite </summary>
+        <p>Define de qué manera se combinarán las imagenes.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <details>
+              <summary>add </summary>
+              <p>Las dos se ven una encima de otra. Es el valor por defecto.</p>
+            </details>
+            <details>
+              <summary>subtract</summary>
+              <p>Una imagen se elimina en la otra</p>
+            </details>
+            <details>
+              <summary>intersect</summary>
+              <p>Se ve sólo en las áreas en las que coinciden.</p>
+            </details>
+            <details>
+              <summary>Exclude</summary>
+              <p>Una de las imágenes se elimina de la otra sólo por dónde coinciden.</p>
+            </details>
+          </div>
+          <div class="two-cols gallery composite">
+            <div class="gallery__card">
+              <div class="gallery__img mask-composite-add"></div>
+              <p class="gallery__text">add </p>
+            </div>
+            <div class="gallery__card">
+              <div class="gallery__img mask-composite-subtract"></div>
+              <p class="gallery__text">subtract </p>
+            </div>
+            <div class="gallery__card">
+              <div class="gallery__img mask-composite-intersect"></div>
+              <p class="gallery__text">intersect</p>
+            </div>
+            <div class="gallery__card">
+              <div class="gallery__img mask-composite-exclude"></div>
+              <p class="gallery__text">exclude</p>
+            </div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>mask-mode </summary>
+        <p>Permite dar un estilo llamado luminance que es algo así como un filtro de imagen con brillo al máximo.</p>
+        <ul>
+          <li>
+            <p><strong>match-source: </strong>El modo por defecto. Es como alpha, pero para elementos SVG &lt;mask&gt; se comporta de manera diferente.</p>
+          </li>
+          <li>
+            <p><strong>luminance: </strong>Aporta ese filtro de brillo al máximo.</p>
+          </li>
+          <li>
+            <p><strong>alpha: </strong> Es como el match-source.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>mask-origin </summary>
+        <p>Define el punto de origen y colocación de la imagen sobre la máscara. Es una propiedad muy parecida a mask-clip.</p>
+        <p>Los valores son como los mask-clip: border-box, content-box, padding-box, fill-box, stroke-box y view-box.</p>
+      </details>
+      <details>
+        <summary>mask-position </summary>
+        <p>Define la posición sobre la imagen de la máscara. Por defecto es top-left y se repite horizontalmente y verticalmente.</p>
+        <p>Los valores pueden ser (top, left, bottom, right), &Oslash;% y puntos.</p>
+      </details>
+      <details>
+        <summary>mask-repeat </summary>
+        <p>Controla la repetición de la máscara sobre la imagen.</p>
+        <p>Sus posibles valores son: repeat, repeat-x, repeat y, space (la máscara se repite tantas veces como sea posible sin que se corte y el gap se distribuye equitativamente.), round (la máscara se repite y se puede cortar pero se intenta adaptar al tamaño aunque se tenga que distorsionar.) y no-repeat. </p>
+      </details>
+      <details>
+        <summary>mask-size </summary>
+        <p>Controla el tamaño de la máscara.</p>
+        <p>Los valores pueden ser auto(por defecto el tamaño de la imagen de máscara), px, em, %, etc. contain y cover.</p>
+      </details>
     </details>
   </main>
 
