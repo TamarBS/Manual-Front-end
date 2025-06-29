@@ -103,218 +103,244 @@
   </header>
 
   <main>
-    <h2>transform</h2>
-    <p>Esta propiedad permite mover, rotar, escalar y deformar elementos. Puede contener valores positivos y negativos.</p>
-    <p class="body-subtitle">Funciones transform</p>
-    
     <details>
-      <summary>translate</summary>
-      <p>Desplaza el elemento desde su posición original.</p>
-      <div class="col-container">
-        <div class="two-cols">
-          <div class="code black">
-            <span class="propiedad">transform</span>:
-            <span class="valor-css">translate(ejex, ejey)</span>;
-          </div>
-          <p>Existen las funciones transform translateX y translateY para afectar sólo al eje x o y.</p>
-        </div>
-        <div class="two-cols">
-          <div class="square--red translate">translate(20px, 10px);</div>          
-        </div>
-      </div>
-    </details>
-    <details>
-      <summary>rotate</summary>
-      <p>Rota el elemento tantos grados como se especifique.</p>
-      <div class="col-container">
-        <div class="two-cols">
-          <div class="code black">
-            <span class="propiedad">transform</span>:
-            <span class="valor-css">rotate(&Oslash;&Oslash;deg)</span>;
-          </div>
-        </div>
-        <div class="two-cols">
-          <div class="square--red rotate">rotate(-20deg)</div>
-        </div>
-      </div>
-      <p>Existen las funciones transform rotateX, rotateY y rotateZ. En el eje x e y hace un efecto de papel que gira sobre un eje. El z responde como el rotate normal.</p>
-      <div class="col-container">
-        <div class="square--red rotateX">rotateX(180deg);</div> 
-        <div class="square--red rotateY">rotateY(180deg);</div> 
-        <div class="square--red rotateZ">rotateZ(20deg);</div> 
-      </div>
-      <p>En 90 y 270 grados el rotate x e y no se ve porque sería como ver una hoja de papel de canto.</p>
-      <p class="details-subtitle">Propiedad aglutinadora 3D</p>
-      <div class="code black">
-        <span class="propiedad">transform</span>:
-        <span class="valor-css">retate3d(x, y, z, &Oslash;deg)</span>;
-      </div>
-    </details>
-    <details>
-      <summary>scale</summary>
-      <p>Afecta al tamaño del elemento tomando de referencia su tamaño original.</p>
-      <div class="col-container">
-        <div class="two-cols">
-          <div class="code black">
-            <span class="propiedad">transform</span>:
-            <span class="valor-css">vecesSuX, vecesSuY</span>;
-          </div>
-          <p>Existen las funciones transform scaleX y scaleY para afectar sólo al eje x o y.</p>
-        </div>
-        <div class="two-cols">
-          <div class="square--red scale">scale(0.5, 2)</div>
-        </div>
-      </div>
-    </details>
-    <details>
-      <summary>skew</summary>
-      <p>Deforma el elemento. Su comportamiento es el de inclinar el eje x o y tantos grados se define desde el centro de la línea.</p>
-      <div class="col-container">
-        <div class="two-cols">
-          <div class="code black">
-            <span class="propiedad">transform</span>:
-            <span class="valor-css">&Oslash;&Oslash;degX, &Oslash;&Oslash;degY</span>;
-          </div>
-          <p>Existen las funciones transform skewX y skewY para afectar sólo al eje x o y.</p>
-        </div>
-        <div class="two-cols">
-          <div class="square--red skew">skew(20deg, 10deg)</div>
-        </div>
-      </div>
-    </details>
-    <details>
-      <summary>matrix</summary>
-      <p>Permite aglutinar todos los efectos en una misma propiedad. Aunque admite sólo seis parámetros que no incluyen rotate, porque esto se puede conseguir asignando la misma medida a los skew.</p>
-      <div class="code black">
-        <span class="propiedad">transform</span>:
-        <span class="valor-css">matrix</span>(
-        <span class="valor">scaleX, skewY, skewX, scaleY, translateX, translateY</span>);
-      </div>
-      <div class="col-container">
-        <div class="square--red matrix1"><p>matrix(1, -0.3, 0, 1, 0, 50)</p></div>
-        <div class="square--red matrix2"><p>matrix(1, -0.5, 0.5, 1, 0, 0)</p></div>
-        <div class="square--red matrix3"><p>matrix(2, 1, 0.5, 1, 90, 70)</p></div>
-      </div>
+      <summary><h2 class="details-summary">transform</h2></summary>
+      <p>Esta propiedad permite mover, rotar, escalar y deformar elementos. Puede contener valores positivos y negativos.</p>
+      <p class="body-subtitle">Funciones transform</p>
+      
       <details>
-        <summary>matrix3d()</summary>
-        <p>Esta funcion permite aglutinar todos los efectos en un estilo 3D.</p>
-        <p>Enlazo a continuación una página para entender visualmente lo que significa cada parámetro.</p>
-        <a href="https://ramlmn.github.io/visualizing-matrix3d/" target="_blank">Editor de parámetros matrix3d</a>
+        <summary>translate</summary>
+        <p>Desplaza el elemento desde su posición original.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <div class="code black">
+              <span class="propiedad">transform</span>:
+              <span class="valor-css">translate(ejex, ejey)</span>;
+            </div>
+            <p>Existen las funciones transform translateX y translateY para afectar sólo al eje x o y.</p>
+          </div>
+          <div class="two-cols">
+            <div class="square--red translate">translate(20px, 10px);</div>          
+          </div>
+        </div>
       </details>
-    </details>
-    
-    <p class="body-subtitle">Otras propiedades relacionadas con trasform</p>
-    <details>
-      <summary>
-        <h3 class="details-summary">transform-origin</h3>
-      </summary>
-      <p>Permite cambiar la posición del centro del efecto.</p>
-      <p>Por defecto el centro de los efectos tiene valor 50% 50%. Es decir que se "gira", "agranda" o "deforma" tomando como punto de referencia la mitad exacta del elemento. </p>
-      <div class="code black">
-        <span class="propiedad">transform-origin</span>:
-        <span class="valor-css">ejex%, ejey%</span>;
-        <br>
-        <span class="comentario">&lt;!-- Tres ejemplos con el mismo rotate -20deg --&gt;</span>
-        <br>
-        <span class="propiedad">transform-origin</span>:
-        <span class="valor-css">50% 50%</span>;
-        <br>
-        <span class="propiedad">transform-origin</span>:
-        <span class="valor-css">10% 10%</span>;
-        <br>
-        <span class="propiedad">transform-origin</span>:
-        <span class="valor-css">80% 90%</span>;
-      </div>
-      <div class="col-container">
-        <div class="square--red rotate">centro
-          <div class="border" style="position: absolute; top: 50%; left: 50%;"></div>
-        </div>
-        <div class="square--red rotate origin--10x10">10x10
-          <div class="border" style="position: absolute; top: 10%; left: 10%;"></div>
-        </div>
-        <div class="square--red rotate origin--80x90">80x90
-          <div class="border" style="position: absolute; top: 80%; left: 90%;"></div>
-        </div>
-      </div>
-    </details>
-    <details>
-      <summary>
-        <h3 class="details-summary">transform-style</h3>
-      </summary>
-      <p>Define si los elementos se muestran en un plano 2D o en 3D. Solo funciona acompañando elementos con propiedades transform.</p>
-      <div class="col-container">
-        <div class="two-cols">
-          <div class="code black">
-            <span class="propiedad">transform-style</span>:
-            <span class="valor-css">flat</span>;
-          </div>
-          <div id="div1">
-            <div id="div2">Red
-            <div id="div3">Yellow</div>
-            </div>
-          </div>
-          <p>Da la sensación de que nunca se cortan.</p>
-        </div>
-        <div class="two-cols">
-          <div class="code black">
-            <span class="propiedad">transform-style</span>:
-            <span class="valor-css">preserve-3d</span>;
-          </div>
-          <div id="div1">
-            <div id="div2" class="transform-style">Red
-            <div id="div3">Yellow</div>
-            </div>
-          </div>
-          <p>Se percibe la perspectiva y como un elemento está atravesando al otro.</p>
-        </div>
-      </div>
-    </details>
-    <details>
-      <summary>
-        <h3 class="details-summary">perspective</h3>
-      </summary>
-      <p>Define lo lejos que está el elemento del usuario. Es el hijo el que verá aplicados los efectos de perspectiva pero se colocan en el padre.</p>
-      <div class="col-container">
-        <div class="pers-father three-cols">perspective:none
-          <div class="pers-son">Texto dentro del elemento</div>
-        </div>
-        <div class="pers-father three-cols pers-200">perspective: 200px
-          <div class="pers-son pers-rotate">Texto dentro del elemento</div>
-        </div>
-        <div class="pers-father three-cols pers-100">perspective: 100px
-          <div class="pers-son pers-rotate">Texto dentro del elemento</div>
-        </div>
-      </div>
       <details>
-        <summary>
-          <h3 class="details-summary">perspective-origin</h3>
-        </summary>
-        <p>Sólo funciona acompañado de la propiedad perspective.</p>
-        <p>Define el ángulo desde el que setá viendo el elemento el usuario. Es el hijo el que verá aplicados los efectos de perspectiva pero se colocan en el padre.</p>
+        <summary>rotate</summary>
+        <p>Rota el elemento tantos grados como se especifique.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <div class="code black">
+              <span class="propiedad">transform</span>:
+              <span class="valor-css">rotate(&Oslash;&Oslash;deg)</span>;
+            </div>
+          </div>
+          <div class="two-cols">
+            <div class="square--red rotate">rotate(-20deg)</div>
+          </div>
+        </div>
+        <p>Existen las funciones transform rotateX, rotateY y rotateZ. En el eje x e y hace un efecto de papel que gira sobre un eje. El z responde como el rotate normal.</p>
+        <div class="col-container">
+          <div class="square--red rotateX">rotateX(180deg);</div> 
+          <div class="square--red rotateY">rotateY(180deg);</div> 
+          <div class="square--red rotateZ">rotateZ(20deg);</div> 
+        </div>
+        <p>En 90 y 270 grados el rotate x e y no se ve porque sería como ver una hoja de papel de canto.</p>
+        <p class="details-subtitle">Propiedad aglutinadora 3D</p>
         <div class="code black">
-          <span class="propiedad">perspective-origin</span>:
-          <span class="valor-css">ejeX(left center right length %) ejeY(top center bottom length %)</span>;
+          <span class="propiedad">transform</span>:
+          <span class="valor-css">retate3d(x, y, z, &Oslash;deg)</span>;
+        </div>
+      </details>
+      <details>
+        <summary>scale</summary>
+        <p>Afecta al tamaño del elemento tomando de referencia su tamaño original.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <div class="code black">
+              <span class="propiedad">transform</span>:
+              <span class="valor-css">vecesSuX, vecesSuY</span>;
+            </div>
+            <p>Existen las funciones transform scaleX y scaleY para afectar sólo al eje x o y.</p>
+          </div>
+          <div class="two-cols">
+            <div class="square--red scale">scale(0.5, 2)</div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>skew</summary>
+        <p>Deforma el elemento. Su comportamiento es el de inclinar el eje x o y tantos grados se define desde el centro de la línea.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <div class="code black">
+              <span class="propiedad">transform</span>:
+              <span class="valor-css">&Oslash;&Oslash;degX, &Oslash;&Oslash;degY</span>;
+            </div>
+            <p>Existen las funciones transform skewX y skewY para afectar sólo al eje x o y.</p>
+          </div>
+          <div class="two-cols">
+            <div class="square--red skew">skew(20deg, 10deg)</div>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>matrix</summary>
+        <p>Permite aglutinar todos los efectos en una misma propiedad. Aunque admite sólo seis parámetros que no incluyen rotate, porque esto se puede conseguir asignando la misma medida a los skew.</p>
+        <div class="code black">
+          <span class="propiedad">transform</span>:
+          <span class="valor-css">matrix</span>(
+          <span class="valor">scaleX, skewY, skewX, scaleY, translateX, translateY</span>);
         </div>
         <div class="col-container">
-          <div class="pers-father two-cols pers-200 pers-origin-lt">perspective: 200px, perspective-origin: left top;
-            <div class="pers-son pers-rotate">Texto dentro del elemento</div>
+          <div class="square--red matrix1"><p>matrix(1, -0.3, 0, 1, 0, 50)</p></div>
+          <div class="square--red matrix2"><p>matrix(1, -0.5, 0.5, 1, 0, 0)</p></div>
+          <div class="square--red matrix3"><p>matrix(2, 1, 0.5, 1, 90, 70)</p></div>
+        </div>
+        <details>
+          <summary>matrix3d()</summary>
+          <p>Esta funcion permite aglutinar todos los efectos en un estilo 3D.</p>
+          <p>Enlazo a continuación una página para entender visualmente lo que significa cada parámetro.</p>
+          <a href="https://ramlmn.github.io/visualizing-matrix3d/" target="_blank">Editor de parámetros matrix3d</a>
+        </details>
+      </details>
+      
+      <p class="body-subtitle">Otras propiedades relacionadas con trasform</p>
+      <details>
+        <summary>
+          <h3 class="details-summary">transform-origin</h3>
+        </summary>
+        <p>Permite cambiar la posición del centro del efecto.</p>
+        <p>Por defecto el centro de los efectos tiene valor 50% 50%. Es decir que se "gira", "agranda" o "deforma" tomando como punto de referencia la mitad exacta del elemento. </p>
+        <div class="code black">
+          <span class="propiedad">transform-origin</span>:
+          <span class="valor-css">ejex%, ejey%</span>;
+          <br>
+          <span class="comentario">&lt;!-- Tres ejemplos con el mismo rotate -20deg --&gt;</span>
+          <br>
+          <span class="propiedad">transform-origin</span>:
+          <span class="valor-css">50% 50%</span>;
+          <br>
+          <span class="propiedad">transform-origin</span>:
+          <span class="valor-css">10% 10%</span>;
+          <br>
+          <span class="propiedad">transform-origin</span>:
+          <span class="valor-css">80% 90%</span>;
+        </div>
+        <div class="col-container">
+          <div class="square--red rotate">centro
+            <div class="border" style="position: absolute; top: 50%; left: 50%;"></div>
           </div>
-          <div class="pers-father two-cols pers-200 pers-origin-rb">perspective: 200px. perspective-origin: right bottom;
-            <div class="pers-son pers-rotate">Texto dentro del elemento</div>
+          <div class="square--red rotate origin--10x10">10x10
+            <div class="border" style="position: absolute; top: 10%; left: 10%;"></div>
+          </div>
+          <div class="square--red rotate origin--80x90">80x90
+            <div class="border" style="position: absolute; top: 80%; left: 90%;"></div>
           </div>
         </div>
       </details>
       <details>
-        <summary>perspective()</summary>
-        <p>También es posible utilizar esta propiedad como una función transform, igual que rotate, scale, etc.</p>
+        <summary>
+          <h3 class="details-summary">transform-style</h3>
+        </summary>
+        <p>Define si los elementos se muestran en un plano 2D o en 3D. Solo funciona acompañando elementos con propiedades transform.</p>
+        <div class="col-container">
+          <div class="two-cols">
+            <div class="code black">
+              <span class="propiedad">transform-style</span>:
+              <span class="valor-css">flat</span>;
+            </div>
+            <div id="div1">
+              <div id="div2">Red
+              <div id="div3">Yellow</div>
+              </div>
+            </div>
+            <p>Da la sensación de que nunca se cortan.</p>
+          </div>
+          <div class="two-cols">
+            <div class="code black">
+              <span class="propiedad">transform-style</span>:
+              <span class="valor-css">preserve-3d</span>;
+            </div>
+            <div id="div1">
+              <div id="div2" class="transform-style">Red
+              <div id="div3">Yellow</div>
+              </div>
+            </div>
+            <p>Se percibe la perspectiva y como un elemento está atravesando al otro.</p>
+          </div>
+        </div>
+      </details>
+      <details>
+        <summary>
+          <h3 class="details-summary">perspective</h3>
+        </summary>
+        <p>Define lo lejos que está el elemento del usuario. Es el hijo el que verá aplicados los efectos de perspectiva pero se colocan en el padre.</p>
+        <div class="col-container">
+          <div class="pers-father three-cols">perspective:none
+            <div class="pers-son">Texto dentro del elemento</div>
+          </div>
+          <div class="pers-father three-cols pers-200">perspective: 200px
+            <div class="pers-son pers-rotate">Texto dentro del elemento</div>
+          </div>
+          <div class="pers-father three-cols pers-100">perspective: 100px
+            <div class="pers-son pers-rotate">Texto dentro del elemento</div>
+          </div>
+        </div>
+        <details>
+          <summary>
+            <h3 class="details-summary">perspective-origin</h3>
+          </summary>
+          <p>Sólo funciona acompañado de la propiedad perspective.</p>
+          <p>Define el ángulo desde el que setá viendo el elemento el usuario. Es el hijo el que verá aplicados los efectos de perspectiva pero se colocan en el padre.</p>
+          <div class="code black">
+            <span class="propiedad">perspective-origin</span>:
+            <span class="valor-css">ejeX(left center right length %) ejeY(top center bottom length %)</span>;
+          </div>
+          <div class="col-container">
+            <div class="pers-father two-cols pers-200 pers-origin-lt">perspective: 200px, perspective-origin: left top;
+              <div class="pers-son pers-rotate">Texto dentro del elemento</div>
+            </div>
+            <div class="pers-father two-cols pers-200 pers-origin-rb">perspective: 200px. perspective-origin: right bottom;
+              <div class="pers-son pers-rotate">Texto dentro del elemento</div>
+            </div>
+          </div>
+        </details>
+        <details>
+          <summary>perspective()</summary>
+          <p>También es posible utilizar esta propiedad como una función transform, igual que rotate, scale, etc.</p>
+        </details>
+      </details>
+      <details>
+        <summary>
+          <h3 class="details-summary">backface-visibility</h3>
+        </summary>
+        <p>Define si se muestra o hace desaparecer la cara b de los elementos. La cara que se vería invertida como en un espejo.</p>
+        <p>Puede tener valor hidden o visible.</p>
       </details>
     </details>
     <details>
       <summary>
-        <h3 class="details-summary">backface-visibility</h3>
+        <h2 class="details-summary">resizing</h2>
       </summary>
-      <p>Define si se muestra o hace desaparecer la cara b de los elementos. La cara que se vería invertida como en un espejo.</p>
-      <p>Puede tener valor hidden o visible.</p>
+      <p>Permite que el usuario pueda manipular el tamaño del contenedor del elemento.</p>
+      <div class="code black">
+        <span class="propiedad">resize</span>:
+        <span class="valor-css">none | horizontal | vertical | both</span>
+      </div>
+      <div class="col-container">
+        <div class="three-cols">
+          <div style="resize: horizontal; overflow: scroll; background-color: white;">
+          Resize horizontal</div>
+        </div>
+        <div class="three-cols">
+          <div style="resize: vertical; overflow: scroll; background-color: white;">
+          Resize vertical</div>
+        </div>
+        <div class="three-cols">
+          <div style="resize: both; overflow: scroll; background-color: white;">
+          Resize both</div>
+        </div>
+      </div>
     </details>
   </main>
 
