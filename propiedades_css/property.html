@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Regla @property</title> 
+  <meta name="description" content="Variable CSS que permite hacer cambios en valores."> 
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Regla @property</h1>
+      <p>Se utiliza para reasignar nuevos valores a propiedades CSS sin necesidad de JavaScript.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2>Funcionalidad</h2>
+    <p>Con esta variable CSS se puede conseguir cambiar el valor de las propiedades como con :root y var() pero incluso extendiendo sus posibilidades.</p>
+    <p>Al tener que especificar el tipo de dato se previenen errores.</p>
+    <p>El initial-value define un valor por defecto para esa propiedad, por lo que si en algún otro selector el valor tiene algún error, aún así se seguira aplicando la propiedad por defecto, teniendo una especia de propiedad plan B.</p>
+    <p>El valor de si es heredable o no se puede controlar. </p>
+    <p>Lo interesate de esa variable es que hace cosas que no se pueden hacer con var():</p>
+    <ul>
+      <li>
+        <p>reasignar valor fuera de la clase en la que está la propuedad definida</p>
+        <div class="code black">
+          <span class="clase">@property --my-bg-color</span>
+          <span class="llave">{</span>
+            <br>
+          <span class="hijo propiedad">syntax</span>:
+          <span class="valor-css">"&lt;color&gt;"</span>;
+          <br>
+          <span class="hijo propiedad">inherits</span>:
+          <span class="valor-css">true</span>;
+          <br>
+          <span class="hijo propiedad">initial-value</span>:
+          <span class="valor-css">lightgrey</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">div</span>
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">background-color</span>:
+          <span class="valor-css">var(--my-bg-color)</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.fresh</span>
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">--my-bg-color</span>:
+          <span class="valor-css">red</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+        </div>
+      </li>
+      <li>
+        <p>Crear animaciones</p>
+        <p>Junto con @keyframe se puede conseguir animar el css.</p>
+        <div class="code">
+          <p>Ejemplo</p>
+          <div class="ex1" id="grad1"></div>
+          <div class="code black">
+            <span class="clase">@property --startColor</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad hijo">syntax</span>:
+            <span class="valor-css">"&lt;color&gt;"</span>;
+            <br>
+            <span class="propiedad hijo">inherits</span>:
+            <span class="valor-css">false</span>;
+            <br>
+            <span class="propiedad hijo">initial-value</span>:
+            <span class="valor-css">purple</span>;
+            <br>
+            <span class="llave">}</span>
+            <br>
+            <span class="clase">@property --endColor</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad hijo">syntax</span>:
+            <span class="valor-css">"&lt;color&gt;"</span>;
+            <br>
+            <span class="propiedad hijo">inherits</span>:
+            <span class="valor-css">false</span>;
+            <br>
+            <span class="propiedad hijo">initial-value</span>:
+            <span class="valor-css">white</span>;
+            <br>
+            <span class="llave">}</span>
+            <br>
+            <span class="clase">.ex1</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad hijo">background</span>:
+            <span class="valor-css">linear-gradient(var(--startColor),var(--endColor));</span>;
+            <br>
+            <span class="propiedad hijo">animation</span>:
+            <span class="valor-css">gradient 3s linear infinite</span>;
+            <br>
+            <span class="llave">}</span>
+            <br>
+            <span class="clase">@keyframes gradient</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad hijo">0%</span>,
+            <span class="propiedad hijo">100%</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad nieto">--startColor</span>:
+            <span class="valor-css">purple</span>;
+            <br>
+            <span class="propiedad nieto">--endColor</span>:
+            <span class="valor-css">white</span>;
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="propiedad hijo">50%</span>
+            <span class="llave">{</span>
+            <br>
+            <span class="propiedad nieto">--startColor</span>:
+            <span class="valor-css">white</span>;
+            <br>
+            <span class="propiedad nieto">--endColor</span>:
+            <span class="valor-css">purple</span>;
+            <br>
+            <span class="llave hijo">}</span>
+            <br>
+            <span class="llave">}</span>
+            <br>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
+    <h2>Sintaxis</h2>
+    <p>Consta de tres propiedades: syntax (tipo de propiedad que se va a afectar), inherits (indica si sus hijos heredarán o no el valor afectado) y initial-value (el valor que se quiere reasignar).</p>
+    <div class="code black">
+      <span class="clase">@property --myColor</span>
+      <span class="llave">{</span>
+        <br>
+      <span class="propiedad hijo">syntax</span>:
+      <span class="valor-css">"&lt;color&gt;"</span>;
+      <br>
+      <span class="propiedad hijo">inherits</span>:
+      <span class="valor-css">true</span>;
+      <br>
+      <span class="propiedad hijo">initial-value</span>:
+      <span class="valor-css">lightgray</span>;
+      <br>
+      <span class="llave">}</span>
+    </div>
+    <p>Para utilizar la variable @property creada se llama dentro de un var().</p>
+  </main>
+
+</body>
+</html>
