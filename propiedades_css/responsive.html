@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Responsive</title> 
+  <meta name="description" content="Funcionalidades CSS para controlar la adecuación de los diseños en diferentes dispositivos.">
+
+  <style>
+    /* @property --horquilla {
+      syntax: "<color>";
+      inherits: false;
+      initial-value: black;
+    }
+
+    .line {
+      border: 5px solid var(--horquilla); 
+      height: 5px; 
+      background-color: var(--horquilla);
+      border-top: 5px solid white;
+      border-bottom: 5px solid white;
+    }
+    
+    .max-min {
+      --horquilla: blue;
+    }
+
+    .all {
+      --horquilla : green;
+    } */
+
+    .phone-portrait {
+      background-color: orange;
+      display: none;
+    }
+    .phone-landscape {
+      background-color: orangered;
+      display: none;
+    }
+    .laptop {
+      background-color: greenyellow;
+      display: none;
+    }
+    .desktop {
+      background-color: red;  
+      display: none;
+    }
+
+    @media (max-width:360px) and (orientation: portrait){ .phone-portrait {display: block;} }
+    @media (max-width:360px) and (orientation: landscape) { .phone-landscape {display: block;} }
+    @media (max-width:1439px) and (min-width:361px) { .laptop {display: block;} }
+    @media (min-width:1440px) { .desktop {display: block;} }
+
+  </style>
+
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div>
+    <hgroup>
+      <h1 class="body-title">Responsive</h1>
+      <p>Hace referencia a la correcta adaptación del diseño web en los diferentes dispositivos y tamaños desde los que un usuario puede utilizar la página web.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2 class="body-subtitle">Media queries</h2>
+    <p>Significa "consulta de medios", es decir, las media queries hacen una consulta para obtener información del tamaño de dispositivo, orientación y resolución de pantalla del cliente.</p>
+    <p>Es una regla CSS que permite: obtener el alto y ancho del visor, la orientación (landscape=horizontal o portrait=vertical) y la resolución de pantalla..</p>
+    <p>Comúnmente se utiliza para hacer estilos especiales en medidas separadas en los conceptos: desktop=pantalla de ordenador de sobremesa, laptop=pantalla de portátil, tablets=pantalla de tablet y mobile=pantalla de teléfonos inteligentes.</p>
+    <div class="code">
+      <p class="body-subtitle__subtitle">Sintaxis</p>
+      <div class="code black">
+        <span class="clase">@media</span> not|only
+        <span class="clase">tipo de medio (all | print | screen)</span> and
+        <span class="clase">características del medio</span> and
+        <span class="clase">características del medio</span>
+        <span class="llave">{</span>
+        <br>
+        ...
+        <br>
+        <span class="llave">}</span>
+      </div>
+      <p>El tipo de medio es opcional ponerlo. El por defecto es all. Sin embargo si quieres utilizar el not o el only es necesario especificar el tipo de medio.</p>
+      <p>En función de si la consulta de tamaño de pantalla, orientación o resolución coincide con el dispositivo, la media query devolverá true o false. Cuándo el resultado de la consulta es true, todos los estilos dentro de la media query son ciertos y por lo tanto se aplican. Si el resultado es falso esos estilos permanecen inactivos.</p>
+    </div>
+
+    <h3 class="body-subtitle__subtitle">Tipos de medio</h3>
+    <p>Dependiendo del medio por el que se mostrará el proyecto puede ser:</p>
+    <ul>
+      <li>
+        <p><strong>all: </strong>Para los dos tipos de medio. Online y Offline. Virtual y físico.</p>
+      </li>
+      <li>
+        <p><strong>print: </strong>Preparado para impresoras. Medio físico de impresión.</p>
+      </li>
+      <li>
+        <p><strong>screen: </strong>Preparado para pantallas digitales. Medio virtual.</p>
+      </li>
+    </ul>
+
+    <h3 class="body-subtitle__subtitle">Características de los medios</h3>
+    <p>Se especifican ciertas características para definir en qué casos se van a aplicar esas reglas media queries.</p>
+    <ul>
+      <li>
+        <p><strong>orientation: </strong>La orientación landscape o portrait.</p>
+      </li>
+      <li>
+        <p><strong>max-height: </strong>Empieza a contar desde arriba a abajo</p>
+      </li>
+      <li>
+        <p><strong>min-height: </strong>Empieza a contar desde abajo a arriba.</p>
+      </li>
+      <li>
+        <p><strong>height: </strong>Todo el alto de pantalla.</p>
+      </li>
+      <li>
+        <p><strong>max-width: </strong>Empieza a contar desde la izquierda hasta la derecha</p>
+      </li>
+      <li>
+        <p><strong>min-width:</strong>Empieza a contar desde la derecha hacia la izquierda</p>
+      </li>
+      <li>
+        <p><strong>width: </strong>Todo el ancho de pantalla</p>
+      </li>
+    </ul>
+    <div class="code">
+      <div class="col-container">
+        <div class="three-cols">
+          <p style="text-align: center;">max-width 100px</p>
+          <div class="line"></div>
+        </div>
+        <div class="three-cols">
+          <p style="text-align: center;">max-width 200px, min-width 200px</p>
+          <div class="line max-min"></div>
+        </div>
+        <div class="three-cols">
+          <p style="text-align: center;">min-width 100px</p>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="line all">300px</div>
+      <p>Para trabajar en tamaños pequeñas se usa el max-width.</p>
+      <p>Para tamaños grandes se utiliza el min-width.</p>
+      <p>Y para tamaños intermedios se utiliza el max-width con el min-width en el tamaño resultante de la intersección de ambos. En la gráfica la línea azul.</p>
+    </div>
+
+    <h3 class="body-subtitle">Ejemplo práctico</h3>
+    <div class="phone-portrait">
+      <p>Estas viéndolo en un smartphone en posición vertical</p>
+      <div class="code black">
+        <span class="clase">@media</span>(
+        <span class="propiedad">max-width</span>:
+        <span class="valor">360px</span>) and (
+        <span class="propiedad">orientation</span>:
+        <span class="valor">portrait</span>)
+        <span class="llave">{</span>
+        <span class="clase">.phone-portrait</span>
+        <span class="llave">{</span>
+        <span class="propiedad">display</span>:
+        <span class="valor">block</span>;
+        <span class="llave">}</span>
+          <span class="llave">}</span>
+      </div>
+    </div>
+    <div class="phone-landscape">
+      <p>Estás viéndolo en un smartphone en posición horizontal</p>
+      <div class="code black">
+        <span class="clase">@media</span>(
+        <span class="propiedad">max-width</span>:
+        <span class="valor">360px</span>) and (
+        <span class="propiedad">orientation</span>:
+        <span class="valor">landscape</span>)
+        <span class="llave">{</span>
+        <span class="clase">.phone-landscape</span>
+        <span class="llave">{</span>
+        <span class="propiedad">display</span>:
+        <span class="valor">block</span>;
+        <span class="llave">}</span>
+          <span class="llave">}</span>
+      </div>
+    </div>
+    <div class="laptop">
+      <p>Estás viéndolo en una tablet o portátil</p>
+      <div class="code black">
+        <span class="clase">@media</span>(
+        <span class="propiedad">max-width</span>:
+        <span class="valor">1439px</span>) and (
+        <span class="propiedad">min-width</span>:
+        <span class="valor">361px</span>)
+        <span class="llave">{</span>
+        <span class="clase">.laptop</span>
+        <span class="llave">{</span>
+        <span class="propiedad">display</span>:
+        <span class="valor">block</span>;
+        <span class="llave">}</span>
+          <span class="llave">}</span>
+      </div>
+    </div>
+    <div class="desktop">
+      <p>Estás viéndolo en la pantalla de un ordenador de sobremesa o en una tele.</p>
+      <div class="code black">
+        <span class="clase">@media</span>(
+        <span class="propiedad">min-width</span>:
+        <span class="valor">1440px</span>)
+        <span class="llave">{</span>
+        <span class="clase">.desktop</span>
+        <span class="llave">{</span>
+        <span class="propiedad">display</span>:
+        <span class="valor">block</span>;
+        <span class="llave">}</span>
+          <span class="llave">}</span>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
