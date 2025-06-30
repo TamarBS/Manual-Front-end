@@ -85,6 +85,18 @@
         ...
         <br>
         <span class="llave">}</span>
+        <br>
+        <span class="comentario">&lt;!-- se pueden añadir nuevas media queries a continuación separándolo por comas --&gt;</span>
+        <br>
+        <span class="clase">@media</span>
+        <span class="clase">(max-width:360px)</span> and
+        <span class="clase">(min-width:1100px)</span>,
+        <span class="clase">(min-width:1101px)</span>
+        <span class="llave">{</span>
+        <br>
+        ...
+        <br>
+        <span class="llave">}</span>
       </div>
       <p>El tipo de medio es opcional ponerlo. El por defecto es all. Sin embargo si quieres utilizar el not o el only es necesario especificar el tipo de medio.</p>
       <p>En función de si la consulta de tamaño de pantalla, orientación o resolución coincide con el dispositivo, la media query devolverá true o false. Cuándo el resultado de la consulta es true, todos los estilos dentro de la media query son ciertos y por lo tanto se aplican. Si el resultado es falso esos estilos permanecen inactivos.</p>
