@@ -21,6 +21,26 @@
   </header>
 
   <main>
+
+    <h2>Sintaxis</h2>
+    <p>Consta de tres propiedades: syntax (tipo de propiedad que se va a afectar), inherits (indica si sus hijos heredarán o no el valor afectado) y initial-value (el valor que se quiere reasignar).</p>
+    <div class="code black">
+      <span class="clase">@property --myColor</span>
+      <span class="llave">{</span>
+        <br>
+      <span class="propiedad hijo">syntax</span>:
+      <span class="valor-css">"&lt;color&gt;"</span>;
+      <br>
+      <span class="propiedad hijo">inherits</span>:
+      <span class="valor-css">true</span>;
+      <br>
+      <span class="propiedad hijo">initial-value</span>:
+      <span class="valor-css">lightgray</span>;
+      <br>
+      <span class="llave">}</span>
+    </div>
+    <p>Para utilizar la variable @property creada se llama dentro de un var().</p>
+
     <h2>Funcionalidad</h2>
     <p>Con esta variable CSS se puede conseguir cambiar el valor de las propiedades como con :root y var() pero incluso extendiendo sus posibilidades.</p>
     <p>Al tener que especificar el tipo de dato se previenen errores.</p>
@@ -141,25 +161,7 @@
         </div>
       </li>
     </ul>
-    
-    <h2>Sintaxis</h2>
-    <p>Consta de tres propiedades: syntax (tipo de propiedad que se va a afectar), inherits (indica si sus hijos heredarán o no el valor afectado) y initial-value (el valor que se quiere reasignar).</p>
-    <div class="code black">
-      <span class="clase">@property --myColor</span>
-      <span class="llave">{</span>
-        <br>
-      <span class="propiedad hijo">syntax</span>:
-      <span class="valor-css">"&lt;color&gt;"</span>;
-      <br>
-      <span class="propiedad hijo">inherits</span>:
-      <span class="valor-css">true</span>;
-      <br>
-      <span class="propiedad hijo">initial-value</span>:
-      <span class="valor-css">lightgray</span>;
-      <br>
-      <span class="llave">}</span>
-    </div>
-    <p>Para utilizar la variable @property creada se llama dentro de un var().</p>
+  
   </main>
 
 </body>
