@@ -591,8 +591,8 @@
       </summary>
       <p>Flexible Box Layout module. Módulo de diseño de cajas flexibles. Sirve para organizar objetos en filas o columnas sin necesidad de utilizar las propiedades float o position.</p>
       <p>Existe otro método de diseño llamado Grid que también cumple con esta función de organización de objetos. La diferencia es que flex funciona de manera unidireccional, es decir, horizontal o vertical y Grid funciona para las dos a la vez, es decir, permite crear cuadrículas de elementos con filas y columnas.</p>
-      <p>Consiste siempre de dos elementos: <strong>flex container</strong> y <strong>flex items</strong>.</p>
-      <p class="details-subtitle">Propiedades flex</p>
+      <p>Consta siempre de: <strong>flex container</strong> y <strong>flex items</strong>.</p>
+      <p class="details-subtitle">Propiedades flex-container</p>
       <details>
         <summary>display:flex</summary>
         <p>Propiedad y valor del contenedor para poder utilizar las propiedades flex.</p>
@@ -700,7 +700,7 @@
         </ul>
       </details>
 
-      <p class="details-subtitle">Flex-items</p>
+      <p class="details-subtitle">Propiedades flex-item</p>
       <p>Los hijos directos de un contenedor display:flex; pasan directamente a ser flex-items.</p>
       <details>
         <summary>order</summary>
@@ -732,6 +732,344 @@
         <p>Permite afectar la alineación vertical de un sólo flex-item con respecto al alto del contenedor. Puede sobrescribir los valores de align-items del contenedor, es decir, tiene más prioridad.</p>
       </details>
     </details>
+    <details>
+      <summary>Grid</summary>
+      <p>Grid Layout Module. Módulo de diseño en cuadrícula con filas y columnas.</p>
+      <p>Consta siempre de <strong>grid-container</strong> y <strong>grid-items</strong>.</p>
+      
+      <p class="details-subtitle">Propiedades grid-container</p>
+      <p>Elementos con estilo display:grid | inline-grid;. Esta propiedad permite hacer una organización de contenidos en filas y columnas, como una cuadrícula.</p>
+      <details>
+        <summary>grid-template-columns y grid-template-rows, número de filas y columnas</summary>
+        <p>Define la cantidad de filas y columnas que tendrá el grid.</p>
+        <p>Admite los valores px, %, em y fr(fraction). Fraction calcula el tamaño en función del resto de grid-items, por lo que es una buena opción para hacer grids responsive.</p>
+        <p>Si en un grid de cuatro columnas se añaden más de cuatro grid-items automáticamente se crea una segunda fila y se añade a continuación.</p>
+        <p class="details-subtitle">Propiedades</p>
+        <ul>
+          <li>
+            <p><strong>grid-template-rows: </strong>Define el número de filas y puede definir también el tamaño concreto de cada fila. Los valores son una lista separada por espacios en el que cada valor indica una fila y su tamaño. El valor auto asigna el mismo tamaño para todas las filas.</p>
+            <p>Ejemplo: grid-template-rows: auto auto;</p>
+            <p>*En caso de tener asignados valores a dos filas y crearse grid-items para ser tres filas, en la tercera fila no se aplica el último valor de la propiedad, sino el valor por defecto, auto.</p>
+          </li>
+          <li>
+            <p><strong>grid-template-columns: </strong>Define el número de columnas y puede definir también el tamaño concreto de cada collumna. Los valores son una lista separada por espacios en el que cada valor indica una columna y su tamaño. El valor auto asigna el mismo tamaño para todas las columnas.</p>
+            <p>Ejemplo: grid-template-columns: 100px 20px;</p>
+          </li>
+          <li>
+            <p><strong>grid: </strong>Propiedad aglutinadora.</p>
+            <p>grid: none|grid-template-rows / grid-template-columns|grid-template-areas|grid-template-rows / [grid-auto-flow] grid-auto-columns|[grid-auto-flow] grid-auto-rows / grid-template-columns;</p>
+          </li>
+          <li>
+            <p><strong>grid-template: </strong>Propiedad aglutinadora.</p>
+            <p>grid-template: none|grid-template-rows / grid-template-columns|grid-template-areas;</p>
+          </li>
+        </ul>
+      </details>    
+      <details>
+        <summary>grid-auto-..., tamaño de celdas</summary>
+        <p>Como el grid-column, grid-row, controla el tamaño de las celdas, pero es una propiedad para el container, no el item</p>
+        <p>grid-template: none|grid-template-rows / grid-template-columns|grid-template-areas|initial|inherit;</p>
+        <p class="details-subtitle">Valores</p>
+        <ul>
+          <li>
+            <p><strong>auto </strong>Valor por defecto, el tamaño de las columnas se determina con el ancho total del contenedor.</p>
+          </li>
+          <li>
+            <p><strong>max-content: </strong>... me planto aquí, no me parece tan importante como para perder más tiempo recopilando información.</p>
+          </li>
+          <li>
+            <p><strong>min-content: </strong></p>
+          </li>
+          <li>
+            <p><strong>minmax(): </strong></p>
+          </li>
+          <li>
+            <p><strong>fint-content(): </strong></p>
+          </li>
+          <li>
+            <p><strong>length: </strong></p>
+          </li>
+          <li>
+            <p><strong>%: </strong></p>
+          </li>
+        </ul>
+      </details>  
+      <details>
+        <summary>gap</summary>
+        <p>Es el espacio entre grid-items.</p>
+        <p class="details-subtitle">Valores</p>
+        <ul>
+          <li>
+            <p><strong>column-gap: </strong>Espacio entre columnas.</p>
+          </li>
+          <li>
+            <p><strong>row-gap: </strong>Espacio entre filas.</p>
+          </li>
+          <li>
+            <p><strong>gap: </strong>Espacio entre filas y columnas. Se puede añadir un valor para que sean igual las dos o dos valores gap: row column;</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>justify-content</summary>
+        <p>Igual que en flex, organiza los grid-items horizontalmente.</p>
+        <p>Al ancho total sumado de todos los grid-items tiene que ser menor al ancho total para que esta propiedad haga algún efecto.</p>
+        <ul class="li--indented">
+          <li>
+            <p><strong>center: </strong>Los grid-items se colocan centrados dejando márgenes a los lados.</p>
+          </li>
+          <li>
+            <p><strong>start: </strong>Se alinean al inicio del ancho disponible.</p>
+          </li>
+          <li>
+            <p><strong>end: </strong>Se alinean al final del ancho disponible.</p>
+          </li>
+          <li>
+            <p><strong>space-around: </strong>El espacio se reparte entre los grid-items.En los márgenes puede haber menos espacio que entre los grid-items.</p>
+          </li>
+          <li>
+            <p><strong>space-between: </strong>No hay margenes laterales y el espacio se reparte todo entre los grid-items.</p>
+          </li>
+          <li>
+            <p><strong>space-evenly: </strong>El espacio total se reparte de manera equitativa tanto en márgenes laterales como entre los grid-items.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>align-content</summary>
+        <p>Igual que en flex, organiza los grid-items de manera vertical.</p>
+        <p>Al alto total sumado de todos los grid-items tiene que ser menor al alto total para que esta propiedad haga algún efecto.</p>
+        <ul class="li--indented">
+          <li>
+            <p><strong>center: </strong>Los grid-items se colocan centrados dejando márgenes a los lados.</p>
+          </li>
+          <li>
+            <p><strong>start: </strong>Se alinean al inicio del alto disponible.</p>
+          </li>
+          <li>
+            <p><strong>end: </strong>Se alinean al final del alto disponible.</p>
+          </li>
+          <li>
+            <p><strong>space-around: </strong>El espacio se reparte entre los grid-items.En los márgenes puede haber menos espacio que entre los grid-items.</p>
+          </li>
+          <li>
+            <p><strong>space-between: </strong>No hay margenes top-bottom y el espacio se reparte todo entre los grid-items.</p>
+          </li>
+          <li>
+            <p><strong>space-evenly: </strong>El espacio total se reparte de manera equitativa tanto en márgenes top-bottom como entre los grid-items.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>place-content</summary>
+        <p>Es una propiedad aglutinadora para align-content y justify-content.</p>
+        <p>El ancho y alto total sumado de todos los grid-items tiene que ser menor al ancho y alto total para que esta propiedad haga algún efecto.</p>
+      </details>
+
+      <p class="details-subtitle">Propiedades grid-item</p>
+      <p>Todos los hijos directos de un grid-container pasan a ser grid-items.</p>
+      <details>
+        <summary>grid-column y grid-row tamaño</summary>
+        <p>Imaginando una cuadrícula con las líneas que separan los cuadrados numeradas de izqueirda a derecha y de arriba a abajo nos hacemos una idea de cómo están asignadas las coordenadas de cualquier grid.</p>
+        <p>Pensar en esos números nos ayudará a utilizar las siguientes propiedades:</p>
+        <ul>
+          <li>
+            <p><strong>grid-cloumn-start: </strong>Especifican dónde empieza un grid-item de manera horizontal. Su valor es un número que corresponde a alguna línea vertical de la cuadrícula.</p>
+          </li>
+          <li>
+            <p><strong>grid-column-end: </strong>Especifican dónde acaba un grid-item de manera horizontal. Su valor es un número que corresponde a alguna línea vertical de la cuadrícula.</p>
+          </li>
+          <li>
+            <p><strong>grid-row-start: </strong>Especifican dónde empieza un grid-item de manera vertical. Su valor es un número que corresponde a alguna línea horizontal de la cuadrícula.</p>
+          </li>
+          <li>
+            <p><strong>grid-row-end: </strong>Especifican dónde termina un grid-item de manera vertical. Su valor es un número que corresponde a alguna línea horizontal de la cuadrícula.</p>
+          </li>
+          <li>
+            <p><strong>grid-column: </strong>Es una propiedad aglutinadora de grid-column-start y grid-column-end.</p>
+            <div class="code black">
+              <span class="propiedad">grid-column</span>:
+              <span class="valor-css">start</span> / span
+              <span class="valor-css">end </span>;
+            </div>
+          </li>
+          <li>
+            <p><strong>grid-row: </strong>Es una propiedad aglutinadora de grid-row-start y grid-row-end.</p>
+            <div class="code black">
+              <span class="propiedad">grid-row</span>:
+              <span class="valor-css">start</span> / span
+              <span class="valor-css">end </span>;
+            </div>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>grid-area</summary>
+        <p>Es una propiedad aglutinadora para grid-row-start, grid-column-start, grid-row-end y grid-column-end. </p>
+        <div class="code black">
+          <span class="propiedad">grid-area</span>:
+          <span class="valor-css">1</span>/
+          <span class="valor-css">1</span>/ span
+          <span class="valor-css">4</span>/ span
+          <span class="valor-css">1</span>;
+        </div>
+        <p>La propiedad permite crear un nombre y luego utilizarlo en otra propiedad grid-template-areas como unidad de medida.</p>
+        <div class="code black">
+          <span class="clase">.item1</span>
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">grid-area</span>:
+          <span class="valor-css">myArea</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">grid-container</span>
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">grid-template-areas</span>:
+          <span class="valor-css">' myArea myArea myArea myArea myArea '</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+        </div>
+        <div style="display: grid; grid-template-areas: 'myArea myArea myArea myArea myArea'; background-color: white;">
+          <div style="grid-area: myArea; ">
+            <p>1</p>
+          </div>
+          <div>
+            <p>2</p>
+          </div>
+          <div>
+            <p>3</p>
+          </div>
+          <div>
+            <p>4</p>
+          </div>
+          <div>
+            <p>5</p>
+          </div>
+          <div>
+            <p>6</p>
+          </div>
+        </div>
+        <p>*Colocar comillas en grid-template-areas es importante porque delimita cada fila. Así que es posible crear varias filas con diferente número de items de esta manera.</p>
+        <p>En lugar de escribir un myArea(que podría ser cualquier otro nombre) se puede añadir un "." punto, que representa que irá un grid-item sin nombre. Esto sirve para ocasiones en las que el myArea grande no se quiere hacer en el ancho total, sino para que ocupe sólo tres myAreas.</p>
+        <div style="display: grid; grid-template-areas: 'myArea myArea myArea . . '; background-color: white;">
+          <div style="grid-area: myArea; ">
+            <p>1</p>
+          </div>
+          <div>
+            <p>2</p>
+          </div>
+          <div>
+            <p>3</p>
+          </div>
+          <div>
+            <p>4</p>
+          </div>
+          <div>
+            <p>5</p>
+          </div>
+          <div>
+            <p>6</p>
+          </div>
+          <div>
+            <p>7</p>
+          </div>
+          <div>
+            <p>8</p>
+          </div>
+        </div>
+        <p>Esta propiedad grid-area también puede servir para reordenar los contenidos y que no se muestren en el orden en el que están en código. Esto se consigue asignándole valores numéricos separados por / que indicarán su posición. grid-area: row / column ;</p>
+        <div class="code black">
+          <span class="clase">.item1 </span>
+          <span class="llave">{</span>
+          <span class="propiedad">grid-area</span>:
+          <span class="valor-css">1 / 2</span>;
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.item2 </span>
+          <span class="llave">{</span>
+          <span class="propiedad">grid-area</span>:
+          <span class="valor-css">2 / 1</span>;
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.item3 </span>
+          <span class="llave">{</span>
+          <span class="propiedad">grid-area</span>:
+          <span class="valor-css">1 / 1</span>;
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.item4 </span>
+          <span class="llave">{</span>
+          <span class="propiedad">grid-area</span>:
+          <span class="valor-css">1 / 2</span>;
+          <span class="llave">}</span>
+          <br>
+        </div>
+      </details>
+      <details>
+        <summary>justify-self</summary>
+        <p>Sirve para ajustar el ancho del grid-item a su espacio en el grid. Permitirá añadir espacios vacíos dentro de su celda, colocando el item de diferentes maneras.</p>
+        <ul>
+          <li>
+            <p><strong>auto: </strong>valor por defecto. heredado del pariente.</p>
+          </li>
+          <li>
+            <p><strong>normal: </strong>Como stretch a veces y otras como start.</p>
+          </li>
+          <li>
+            <p><strong>stretch: </strong>Ocupa todo el ancho posible.</p>
+          </li>
+          <li>
+            <p><strong>start: </strong>Se coloca al principio.</p>
+          </li>
+          <li>
+            <p><strong>left: </strong>Se coloca a la izquierda.</p>
+          </li>
+          <li>
+            <p><strong>center: </strong>Se coloca centrado con espacio a los lados.</p>
+          </li>
+          <li>
+            <p><strong>end: </strong>Se coloca al final.</p>
+          </li>
+          <li>
+            <p><strong>right: </strong>Se coloca a la izquierda.</p>
+          </li>
+          <li>
+            <p><strong>overflow-alignment: </strong>como start, pero reconoce si el contenido se desborda y elige la mejor opción.</p>
+          </li>
+          <li>
+            <p><strong>baseline alignment: </strong>Alineado con la baseline del padre.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>align-self</summary>
+        <p>Sirve para ajustar el alto del grid-item a su espacio en el grid. Permitirá añadir espacios vacíos dentro de su celda, colocando el item de diferentes maneras.</p>
+        <ul>
+          <li>
+            <p><strong>auto: </strong>valor por defecto. heredado del pariente.</p>
+          </li>
+          <li>
+            <p><strong>stretch: </strong>Ocupa todo el alto posible.</p>
+          </li>
+          <li>
+            <p><strong>flex-start: </strong>Se coloca al principio.</p>
+          </li>
+          <li>
+            <p><strong>center: </strong>Se coloca centrado con espacio arriba y abajo.</p>
+          </li>
+          <li>
+            <p><strong>flex-end: </strong>Se coloca al final.</p>
+          </li>
+          <li>
+            <p><strong>baseline: </strong>Alineado con la baseline del padre.</p>
+          </li>
+        </ul>
+      </details>
+    </details>
+
   </main>
   <script>
     function addBoxOne(){
