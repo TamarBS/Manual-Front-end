@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../styles/styles.css">
   
   <title>Disposición de elementos</title> 
-  <meta name="description" content="Porpiedades que afectan estilos de colocación y disposición de elementos.">
+  <meta name="description" content="Propiedades que afectan estilos de colocación y disposición de elementos.">
 
   <style>
     #display-contents-example-padre{
@@ -98,7 +98,7 @@
       <p class="details-subtitle">Valores</p>
       <ul>
         <li>
-          <p><strong>inline: </strong>ocupan el ancho del contenido sólamente. No se le puede añadir ancho, alto ni márgenes al contenedor. ( span a img )</p>
+          <p><strong>inline: </strong>ocupan el ancho del contenido solamente. No se le puede añadir ancho, alto ni márgenes al contenedor. ( span a img )</p>
         </li>
         <li>
           <p><strong>block: </strong>ocupan todo el ancho de pantalla. ( div headings p form header footer section )</p>
@@ -129,7 +129,7 @@
         <li class="li--details-exception">
           <details>
             <summary>flex</summary>
-            <p>Convierte el elemento en un contenedor que ocupa todo el ancho disponible y permite contener elementos que se situen de manera flexible dentro de él.</p>
+            <p>Convierte el elemento en un contenedor que ocupa todo el ancho disponible y permite contener elementos que se sitúen de manera flexible dentro de él.</p>
             <div class="details__example col-container">
               <div>
                 <p>Horizontal</p>
@@ -151,7 +151,7 @@
           </details>
         </li>
         <li>
-          <p><strong>inline-flex: </strong>Cómo flex, pero sin ocupar todo el ancho disponible. Sólo el ancho del elemento. Se convierte en un contenedor y permite contener elementos que se situen de manera flexible dentro de él.</p>
+          <p><strong>inline-flex: </strong>Cómo flex, pero sin ocupar todo el ancho disponible. Sólo el ancho del elemento. Se convierte en un contenedor y permite contener elementos que se sitúen de manera flexible dentro de él.</p>
         </li>
         <li class="li--details-exception">
           <details>
@@ -206,7 +206,7 @@
                 <p><strong>table-header-group: </strong>El elemento se comporta como un thead de tabla.</p>
               </li>
               <li>
-                <p><strong>table-footer-group: </strong>El elemento se comporta como un tfood de tabla.</p>
+                <p><strong>table-footer-group: </strong>El elemento se comporta como un tfoot de tabla.</p>
               </li>
               <li>
                 <p><strong>table-row-group: </strong>El elemento se comporta como un tbody de tabla.</p>
@@ -238,11 +238,11 @@
           <div style="position: relative; width: 80px; height:50px; background-color: white; border: 2px solid grey; left: 1em;"><p style="margin: 0;">relative left:16px</p></div>
         </li>
         <li>
-          <p><strong>fixed: </strong>El elemento se queda fijo en la pantalla y no ocupa espacio. Le afectan las propietades top, right, bottom, left y no responde al scroll. Como si se quedara pegado en una parte de la pantalla.</p>
+          <p><strong>fixed: </strong>El elemento se queda fijo en la pantalla y no ocupa espacio. Le afectan las propiedades top, right, bottom, left y no responde al scroll. Como si se quedara pegado en una parte de la pantalla.</p>
           <div style="position: fixed; width: 80px; height:50px; background-color: white; border: 2px solid grey; top: 20px; right: 20px;"><p style="margin: 0;">fixed top-right:20px</p></div>
         </li>
         <li>
-          <p><strong>absolute: </strong>Se posiciona relativo al elemento ancestro más cercano que esté posicionado. Si no tiene ningún padre, utiliza el body como referebcua a modo de último recurso. No ocupa espacio, como fixed. El ancestro posicionado también puede ser otro elemento absolute padre. Un elemento posicionado es todo aquel que tenga propiedad position mientras su valor no sea static.</p>
+          <p><strong>absolute: </strong>Se posiciona relativo al elemento ancestro más cercano que esté posicionado. Si no tiene ningún padre, utiliza el body como referencia a modo de último recurso. No ocupa espacio, como fixed. El ancestro posicionado también puede ser otro elemento absolute padre. Un elemento posicionado es todo aquel que tenga propiedad position mientras su valor no sea static.</p>
           <div style="position: relative; width: 150px; height:80px; background-color: white; border: 2px solid grey;">
             <p style="margin: 0;">padre posicionado.</p>
             <div style="position: absolute; background-color: whitesmoke; border: 2px solid grey; top: 20px; left: 20px;"><p style="margin: 0;">absolute top-left 20px</p></div>
@@ -408,7 +408,7 @@
       </div>
       <p> Tiene un comportamiento especial cuándo va seguido de elementos sin float, porque se posiciona como relative top-left=0 o top-right=0 permitiendo que el texto lo rodee aunque para el contenedor sea como si estuviera en una position absolute, no reconoce su espacio ocupado en la coordenada y, pero sí en su coordenada x.</p>
       <p class="details-subtitle">Clearfix</p>
-      <p>Para que no ocurra el desbordamiento se puede añadir un overflow:auto; al contenedor para que reconozca el alto del elemento float. Esto también hará visual la diferencia de elementos tal cual se define en código. Si están fuera o dentro, separandolos en columnas. A este "hack" se le conoce como Clearfix.</p>  
+      <p>Para que no ocurra el desbordamiento se puede añadir un overflow:auto; al contenedor para que reconozca el alto del elemento float. Esto también hará visual la diferencia de elementos tal cual se define en código. Si están fuera o dentro, separándolos en columnas. A este "hack" se le conoce como Clearfix.</p>  
       <div class="details__example">
         <div style="border: 2px solid green; float: left;">Float left</div>
         <div style="border: 2px solid peru; float: right;">Float Right</div>
@@ -583,6 +583,153 @@
         <div style="column-width: 50px; ">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
         </div>
+      </details>
+    </details>
+    <details>
+      <summary>
+        <h2 class="details-summary">Flex box</h2>
+      </summary>
+      <p>Flexible Box Layout module. Módulo de diseño de cajas flexibles. Sirve para organizar objetos en filas o columnas sin necesidad de utilizar las propiedades float o position.</p>
+      <p>Existe otro método de diseño llamado Grid que también cumple con esta función de organización de objetos. La diferencia es que flex funciona de manera unidireccional, es decir, horizontal o vertical y Grid funciona para las dos a la vez, es decir, permite crear cuadrículas de elementos con filas y columnas.</p>
+      <p>Consiste siempre de dos elementos: <strong>flex container</strong> y <strong>flex items</strong>.</p>
+      <p class="details-subtitle">Propiedades flex</p>
+      <details>
+        <summary>display:flex</summary>
+        <p>Propiedad y valor del contenedor para poder utilizar las propiedades flex.</p>
+      </details>
+      <details>
+        <summary>flex-direction</summary>
+        <p>Dirección de los flex-items. row | columna | row-reverse | column-reverse</p>
+      </details>
+      <details>
+        <summary>flex-wrap</summary>
+        <p>Determina si los contenidos se ajustarán al ancho (<strong>nowrap</strong>) o pasarán a la siguiente fila (<strong>wrap</strong>). Existe un valor que permite alterar el orden normal de los flex-items ponendo los objetos que se desbordan sobre los primeros objetos de la fila ( <strong>wrap-reverse</strong> ). </p>
+      </details>
+      <details>
+        <summary>flex-flow</summary>
+        <p>Es una propiedad aglutinadora para <strong>flex-direction</strong> y <strong>flex-wrap</strong>.</p>
+        <div class="code black">
+          <span class="propiedad">flex-flow</span>:
+          <span class="valor-css">flex-direction flex-wrap</span>;
+        </div>
+      </details>
+      <details>
+        <summary>justify-content</summary>
+        <p>Define la manera de organizar los flex-items unos con respecto a otros, con respecto al espacio entre ellos y entre los márgenes derecho e izquierdo.</p>
+        <p>Los valores pueden ser:</p>
+        <ul class="li--indented">
+          <li>
+            <p><strong>center: </strong>Los flex-items se colocan centrados dejando márgenes a los lados.</p>
+          </li>
+          <li>
+            <p><strong>flex-start: </strong>Es el por defecto. Se alinean de izquierda a derecha, dejando el margen por la derecha.</p>
+          </li>
+          <li>
+            <p><strong>flex-end: </strong>Se alinean de derecha a izquierda, dejando el margen por la izquierda.</p>
+          </li>
+          <li>
+            <p><strong>space-around: </strong>El espacio se reparte entre los flex-items.En los márgenes puede haber menos espacio que entre los flex-items.</p>
+          </li>
+          <li>
+            <p><strong>space-between: </strong>No hay margenes laterales y el espacio se reparte todo entre los flex-items.</p>
+          </li>
+          <li>
+            <p><strong>space-evenly: </strong>El espacio total se reparte de manera equitativa tanto en márgenes laterales como entre los flex-items.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>align-items</summary>
+        <p>Se utiliza cuándo el alto de los flex-items no ocupa todo el alto de su contenedor, para controlar su posición vertical.</p>
+        <p>Valores</p>
+        <ul>
+          <li>
+            <p><strong>center: </strong>Se colocan en el centro del alto de su contenedor sin ocupar todo el alto posible.</p>
+          </li>
+          <li>
+            <p><strong>flex-start: </strong>Se colocan arriba del todo.</p>
+          </li>
+          <li>
+            <p><strong>flex-end: </strong>Se colocan abajo del todo.</p>
+          </li>
+          <li>
+            <p><strong>stretch: </strong>Cambia el valor del alto de los flex-items y pasan a tener de alto lo mismo que su contenedor.</p>
+          </li>
+          <li>
+            <p><strong>baseline: </strong>Se alinea con respecto al texto. Es decir, no importa que los flex-items tengan diferentes alturas, cogerán como referencia la base del texto y todos los flex-items compartirán la misma posición para su base de texto.</p>
+            <div class="code">
+              <div style="display: flex; height: 200px; align-items: baseline; background-color: teal; position: relative;">
+                <div style="background-color: #f1f1f1; width: 100px; margin: 10px; text-align: center; line-height: 75px; font-size: 30px;"><h1>1</h1></div>
+                <div style="background-color: #f1f1f1; width: 100px; margin: 10px; text-align: center; line-height: 75px; font-size: 30px;"><h6>2</h6></div>
+                <div style="background-color: #f1f1f1; width: 100px; margin: 10px; text-align: center; line-height: 75px; font-size: 30px;"><h3>3</h3></div>  
+                <div style="background-color: #f1f1f1; width: 100px; margin: 10px; text-align: center; line-height: 75px; font-size: 30px;"><small>4</small></div> 
+                <div style="height: 2px; width: 100%; background-color: red; position: absolute; top: 112px;"></div> 
+              </div>
+            </div>
+          </li>
+          <li>
+            <p><strong>normal: </strong>Igual que stretch. Es el por defecto. Se adapta a todo el alto de su contenedor.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>align-content</summary>
+        <p>Define la manera de colocar los flex-items cuándo hay múltiples líneas con respecto al alto del contenedor. Existen los siguientes valores:</p>
+        <ul class="li--indented">
+          <li>
+            <p><strong>center: </strong>Los flex-items se colocan centrados dejando márgenes arriba y abajo.</p>
+          </li>
+          <li>
+            <p><strong>stretch: </strong>Es el por defecto. Se reparte entre el número de filas el alto total de los flex-items ocupando lo máximo posible respetando una separación entre filas.</p>
+          </li>
+          <li>
+            <p><strong>flex-start: </strong>Se alinean arriba, dejando el margen por abajo.</p>
+          </li>
+          <li>
+            <p><strong>flex-end: </strong>Se alinean abajo, dejando el margen por arriba.</p>
+          </li>
+          <li>
+            <p><strong>space-around: </strong>El espacio se reparte entre los flex-items.En los márgenes puede haber menos espacio que entre los flex-items.</p>
+          </li>
+          <li>
+            <p><strong>space-between: </strong>No hay margenes top-bottom y el espacio se reparte todo entre los flex-items.</p>
+          </li>
+          <li>
+            <p><strong>space-evenly: </strong>El espacio total se reparte de manera equitativa tanto en márgenes top-bottom como entre los flex-items.</p>
+          </li>
+        </ul>
+      </details>
+
+      <p class="details-subtitle">Flex-items</p>
+      <p>Los hijos directos de un contenedor display:flex; pasan directamente a ser flex-items.</p>
+      <details>
+        <summary>order</summary>
+        <p>Especifica el orden de aparición de los flex-items para los casos en los que no se quiera respetar el orden del código.</p>
+        <p>El valor son números y el por defecto es 0 que permite que se coloquen en orden del código.</p>
+      </details>
+      <details>
+        <summary>flex-grow</summary>
+        <p>Define cuánto va a crecer un flex-item con respecto a los demás.</p>
+        <p>El valor es un número y el 0 es el por defecto que permite que todos compartan el mismo ancho si no se especifica nada diferente.</p>
+        <p>El valor 0 hace que no sea posible hacerlo crecer.</p>
+      </details>
+      <details>
+        <summary>flex-shrink</summary>
+        <p>Shrink significa encoger. Define cuánto se va a encoger los flex-items para encajar en su contenedor. Esta propiedad permite impedir que unos flex-items se encojan como los demás.</p>
+        <p>El valor es un número siendo el por defecto 1, que permite que todos los flex-items se encojan lo mismo.</p>
+        <p>El valor 0 hace que no sea posible encogerlos.</p>
+      </details>
+      <details>
+        <summary>flex-basis</summary>
+        <p>Especifica el ancho inicial de un flex-item pero no con respecto a sus compañeros, sino en px.</p>
+      </details>
+      <details>
+        <summary>flex</summary>
+        <p>Es una propiedad aglutinadora para flex-grow, flex-shrink y flex-basis.</p>
+      </details>
+      <details>
+        <summary>align-self</summary>
+        <p>Permite afectar la alineación vertical de un sólo flex-item con respecto al alto del contenedor. Puede sobrescribir los valores de align-items del contenedor, es decir, tiene más prioridad.</p>
       </details>
     </details>
   </main>
