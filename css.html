@@ -399,6 +399,91 @@
       </div>
       <p>No se recomienda abusar de esta opción porque puede llevar a confusión. Se puede sobre-escribir un important con otro important más específico, pero esto crea una cadena con la que será dificil trabajar.</p>
     </details>
+    <details>
+      <summary>
+        <h3 class="details-summary">SASS</h3>
+      </summary>
+      <p>Es un pre-procesador CSS que reduce la repetición y ahorra tiempo y espacio. Fue diseñado por Hampton Catlin y desarrollado por Natalie Weizenbaum en 2006. Significa: Syntactically Awesome Stylesheet. Hoja de estilos sintácticamente genial.</p>
+      <p>SASS aporta algunas herramientas que CSS no, como mixins, importas, inheritances, built-in functions, etc.</p>
+      <p>Los navegadores no entienden SASS, se necesita un pre-procesador para traducirlo a CSS. Ese proceso de traducción se denomina transpiling. Los archivos SASS tiene la terminación .scss</p>
+      <details>
+        <summary>Instalación de SASS</summary>
+        <p><code>npm install -g sass</code></p>
+        <p><code>sass --version</code> para comprobar que hay una versión y ya reconoce el comando sass</p>
+        <p>Crear los archivos .scss necesarios.</p>
+        <p><code>sass source/stylesheets/index.scss build/stylesheets/index.css</code> Esto sirve para compilar esos estilos SASS en un archivo css que los navegadores puedan interpretar. Se creará el archivo .css y css.map que es un minificado y ya se verán los estilos aplicados. En la consola quedará ejecutado el compilador. Se puede detener puslando <kbd>Ctrl + C</kbd></p>
+      </details>
+      <p class="details-subtitle">Uso de SASS</p>
+      <details>
+        <summary>Variables</summary>
+        <p>Se pueden crear variables con la siguiente sintaxis: $nombre_valor : valor;</p>
+        <p>Para nombrar estas variables se escribe el nombre tal cual: propiedad: $nombre-valor;</p>
+        <p>Es posible re-definir el valor de una variable dentro de un elemento para aplicarlo sólo en ese elemento.</p>
+        <p>También es posible definir un valor para una variable dentro de un elemento y conseguir que se convierta en global añadiendo tras el valor !global. Lo aconsejable es crear un _globals.scss y incluir el documento cuándo sea necesario con un @include.</p>
+      </details>
+      <details>
+        <summary>comentarios</summary>
+        <p>Pueden ser como en CSS /* ... */ y ofrecen otra opción para comentarios inline // ...</p>
+      </details>
+      <details>
+        <summary>Selectores anidados</summary>
+        <p>Una de las propuestas de SASS para reducir repeticiones respecto a CSS es la capacidad de anidar selectores.</p>
+        <p>Dónde en CSS tendríamos que utilizar los selectores: ul li, ul a, ul p {... } en SASS se resuelve anidando: ul { li {...} a {...} p {...} }</p>
+        <p>Para que funcione la anidación con pseudo-clases hay que añadir &. Ej.: p { &:hover {...}}. Sólo con :hover no funcionará.</p>
+      </details>
+      <details>
+        <summary>Propiedades anidadas</summary>
+        <p>Algunas propiedades separadas por guiones comparten la primera palabra, por ejemplo: font-family, font-size, font-weight.</p>
+        <p>SASS permite anidar de la siguiente manera: font: { family: valor; size: valor; weight: valor; }</p>
+      </details>
+      <details>
+        <summary>parciales</summary>
+        <p>Se aconseja dividir el código scss en varios archivos para que sean más fáciles de organizar. Hay que distinguir los parciales colocando siempre un _ delante del nombre.</p>
+        <p>Estos parciales se importan al css principal mediante @use 'nombreParcial'; </p>
+        <p>Se pueden utilizar sus variables en el scss principal añadiendo al nombre del parcial delante de la variable separada por un punto. Ej.: propiedad: nombreParcial.$nombre-variable.</p>
+      </details>
+      <details>
+        <summary>mixins</summary>
+        <p>Permite crear un nombre que engloba varias propiedades.</p>
+        <div class="code black">
+          <span class="clase">@mixin</span>
+          nombreMixin(
+            <span class="etiqueta">$nombreMixin</span>:
+            <span class="valor">valor</span>
+          )
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">background</span>:
+          <span class="hijo propiedad">$nombreMixin </span>;
+          <br>
+          <span class="hijo propiedad">box-shadow</span>:
+          <span class="valor-css">0 0 1px rgba($nombreMixin, .25)</span>;
+          <br>
+          <span class="hijo propiedad">color</span>:
+          <span class="valor-css">white</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.info </span>
+          <span class="llave">{</span>
+          <br>
+          <span class="propiedad hijo">@include </span>:
+          <span class="valor-css">nombremixin </span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.alert </span>
+          <span class="llave">{</span>
+          <br>
+          <span class="propiedad hijo">@include </span>:
+          <span class="valor-css">nombremixin($nombreMixin : valorDiferente) </span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+        </div>
+        <p>Cómo en el ejemplo .alert, es posible sobre-escribir el valor del mixin si se cambia dentro de los paréntesis.</p>
+      </details>
+    </details>
 
     <h2 class="body-subtitle">Lista de propiedades CSS por categorías</h2>
     <div class="index">
