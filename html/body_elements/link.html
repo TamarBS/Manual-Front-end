@@ -171,22 +171,33 @@
         </summary>
         <p>Para cada enlace es interesante elegir el tipo de cursor más adecuado que encaje mejor con el contenido y acción del enlace.</p>
         <ul>
-          <li><p><strong>auto text: </strong>cursor para texto.</p></li>
-          <li><p><strong>crosshair: </strong> cruz negra.</p></li>
-          <li><p><strong>default: </strong> flecha blanca.</p></li>
-          <li><p><strong>e-resize w-resize: </strong> flecha horizontal blanca con dos puntas a cada lado.</p></li>
-          <li><p><strong>help: </strong> flecha blanca y signo de interrogación.</p></li>
-          <li><p><strong>move: </strong>cruz de flechas blancas.</p></li>
-          <li><p><strong>n-resize s-resize: </strong> flecha vertical de dos puntas norte sur.</p></li>
-          <li><p><strong>ne-resize sw-resize: </strong>flecha con dos puntas apuntando noreste y suroeste.</p></li>
-          <li><p><strong>nw-resize se-resize: </strong>flecha con dos puntas apuntando nuroeste y sudeste.</p></li>
-          <li><p><strong>pointer: </strong>mano con indice señalando.</p></li>
-          <li><p><strong>progress: </strong>flecha y círculo de cargando.</p></li>
-          <li><p><strong>wait: </strong>círculo de cargando.</p></li>
+          <li><p><strong style="cursor: auto; ">auto text: </strong>cursor para texto.</p></li>
+          <li><p><strong style="cursor: crosshair; ">crosshair: </strong> cruz negra.</p></li>
+          <li><p><strong style="cursor: default; ">default context-menu: </strong> flecha blanca.</p></li>
+          <li><p><strong style="cursor: e-resize; ">e-resize w-resize ew-resize: </strong> flecha horizontal blanca con dos puntas a cada lado.</p></li>
+          <li><p><strong style="cursor: help; ">help: </strong> flecha blanca y signo de interrogación.</p></li>
+          <li><p><strong style="cursor: move; ">move all-scroll: </strong>cruz de flechas blancas.</p></li>
+          <li><p><strong style="cursor: n-resize ; ">n-resize s-resize ns-resize: </strong> flecha vertical de dos puntas norte sur.</p></li>
+          <li><p><strong style="cursor: ne-resize ; ">ne-resize sw-resize nesw-resize: </strong>flecha con dos puntas apuntando noreste y suroeste.</p></li>
+          <li><p><strong style="cursor: nw-resize ; ">nw-resize se-resize: </strong>flecha con dos puntas apuntando nuroeste y sudeste.</p></li>
+          <li><p><strong style="cursor: pointer; ">pointer: </strong>mano con indice señalando.</p></li>
+          <li><p><strong style="cursor: progress; ">progress: </strong>flecha y círculo de cargando.</p></li>
+          <li><p><strong style="cursor: wait; ">wait: </strong>círculo de cargando.</p></li>
+          <li><p><strong style="cursor: alias;">alias</strong>la flecha blanca con otra flechita negra.</p></li>
+          <li><p><strong style="cursor: cell;">cell </strong>Un símbolo de más en blanco. Muy utilizado en excel para acceder a las celdas.</p></li>
+          <li><p><strong style="cursor: col-resize;">col-resize </strong>Flechas que indican que se puede cambiar el tamaño verticalmente.</p></li>
+          <li><p><strong style="cursor: row-resize;">row-resize </strong>Flechas que indican que se puede cambiar el tamaño horizontalmente.</p></li>
+          <li><p><strong style="cursor: copy;">copy </strong>flecha blanca con más negro pequeñito.</p></li>
+          <li><p><strong style="cursor: grab;">grab </strong>mano blanca abierta.</p></li>
+          <li><p><strong style="cursor: grabbing;">grabbing </strong>mano blanca cerrada como agarrando algo.</p></li>
+          <li><p><strong style="cursor: no-drop;">no-drop not-allowed </strong>símbolo de prohibido</p></li>
+          <li><p><strong style="cursor: none;">none </strong>nada, el cursor no se ve, no se sabe dónde está.</p></li>
+          <li><p><strong style="cursor: url(../../images/star.png), auto;">url </strong>permite utilizar de cursor una imagen del proyecto.</p></li>
+          <li><p><strong style="cursor: zoom-in;">zoom-in </strong>Una lupa con un símbolo de más dentro.</p></li>
+          <li><p><strong style="cursor: zoom-out;">zoom-out </strong>Una lupa con un símbolo de menos dentro.</p></li>
         </ul>        
       </details>
     </details>
-
     <details>
       <summary id="button"><h2 class="details-summary">button</h2></summary>
       <p>Trae estilos de botón por defecto. Junto con código JS inyectado funciona como un enlace, pero sólo no hace nada. Es buena práctica utilizarlo en ocasiones en las que se ejecute una acción que no sea propia de navegar entre páginas.</p>

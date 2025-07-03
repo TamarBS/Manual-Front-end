@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Regla @container</title> 
+  <meta name="description" content="Se puede hacer una condición para afectar contenedores de características similares."> 
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../css.html">Volver al listado de Propiedades CSS</a></div> 
+    <hgroup>
+      <h1 class="body-title">Regla @container</h1>
+      <p>Este selector permite definir unas características concretas para un contenedor y darle unas propiedades que sólo les afecten a esos contenedores que cumplen la condición definida.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <h2 class="body-subtitle">Sintaxis</h2>
+    <div class="code black">
+      <span class="clase">.selector</span>
+      <span class="llave">{</span>
+      <br>
+      <span class="propiedad hijo">container-name</span>:
+      <span class="valor-css">containername</span>;
+      <br>
+      <span class="propiedad hijo">container-type</span>:
+      <span class="valor-css">inline-size</span>;
+      <br>
+      <span class="llave">}</span>
+      <br>
+      <span class="clase">@container containername</span> (<span class="valor-css">containerquery</span>) <span class="llave" >{</span>
+        <br>
+        css declarations
+        <br>
+      <span class="llave" >}</span>
+      <br>
+      containerquery puede ser: aspect-ratio, block-size, height, inline-size, orientation, width.
+    </div>
+  </main>
+
+</body>
+</html>
