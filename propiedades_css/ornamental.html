@@ -89,7 +89,7 @@
       </details>
       <details>
         <summary><h4 class="details-summary">background-position</h4></summary>
-        <p>Define la posición de la imagen con respecto a su padre.</p>
+        <p>Define la posición de la imagen con respecto a su padre. Existen las propiedades específicas <strong>background-position-x</strong> y <strong>background-position-y</strong>.</p>
         <p class="details-subtitle">Posibles valores</p>        
         <ul>
           <li><p><strong>top right bottom left: </strong>combinando como se quiera estas propiedades se permite colocar la imágen pegada arriba, abajo o a los lados o combinaciones de varias.</p></li>
@@ -202,8 +202,19 @@
         <span class="propiedad">border</span>:
         <span class="valor-css">border-width border-style border-color;</span>
       </div>
-      <p>Se puede afectar sólo uno de los lados con las siguientes propiedades: <strong>border-top, border-right, border-bottom, border-left</strong>.</p>
-      <p style="border-left:8px solid green;">Borde verde</p>
+      <p>Se puede afectar sólo uno de los lados con las siguientes propiedades: <strong>border-top, border-right, border-bottom, border-left</strong> y dos lados a la vez. Ej.: border-bottom-left</p>
+      <p>Además estas propiedades de lado específico pueden ser aún más específicas y referirse a color, radius, style y width: border-(lado)-(color | radius | style | width). Ej.: border-botom-right-radius.</p>
+      <div class="code black">
+        <span class="propiedad">border-top/right/bottom/left-width/style/color</span>:
+        <br>
+        <span class="propiedad">border-bottom-style</span>:
+        <span class="valor-css">dotted</span>;
+        <br>
+        <p style="border:2px solid green; border-bottom-style: dotted;">Borde verde</p>
+        <span class="propiedad">border-left</span>:
+        <span class="valor-css">8px solid orange</span>;
+        <p style="border-left:8px solid orange;">Borde verde</p>
+      </div>      
       <p class="details-subtitle">Tres propiedades obligatorios:</p>
       <details>
         <summary>border-width</summary>
@@ -235,32 +246,40 @@
           <span class="valor-css">dotted dashed solid double</span>;
         </div>
       </details>
-      <p><strong>border-color: </strong>color del borde.</p>
-      <p>Se pueden afectar solo uno de los lados con la siguiente sintaxis de la propiedad: </p>
-      <div class="code black">
-        <span class="propiedad">border-top/right/bottom/left-width/style/color</span>:
-        <br>
-        EJ.: <br>
-        <span class="propiedad">border-bottom-style</span>:
-        <span class="valor-css">dotted</span>;
-        <br>
-        <p style="border:2px solid green; border-bottom-style: dotted;">Borde verde</p>
-      </div>
+      <details>
+        <summary>border-color</summary>
+        <p>Color del borde.</p>
+        <p>Se pueden afectar solo uno de los lados con la siguiente sintaxis de la propiedad: </p>
+      </details>
       <p class="details-subtitle">Otras propiedades</p>
-      <p><strong>border-radius: </strong>si se quiere añadir borde redondeado</p>
-      <p style="border:2px solid green; border-radius: 25px;">border-radius: 25px</p>
-      <p>También es posible aplicar bordes de forma diferente a las diferentes esquinas. También se puede añadir un borde elíptico.</p>
-      <p style="border:2px solid green; border-radius: 25px / 15px;">border-radius: 25px / 15px</p>
-      <p><strong>border-image: </strong>si se quiere añadir borde siguiendo un patrón de imagen.</p>
-      <p>Esta propiedad consta de tres valores:</p>
-      <ul>
-        <li>La imagen para utilizar como borde</li>
-        <li>La forma de dividir la imagen y repetirla en el borde</li>
-        <li>Definir si las secciones centrales deben repetirse o estirarse (round or stretch)</li>
-      </ul>
-      <p style="  border: 10px solid transparent; border-image: url(../images/border.png) 30 round;">border: 10px solid transparent; border-image: url(../images/border.png) 30 round;</p>
-      <img src="../images/border.png" alt="patrón de cuadrados rojos y amarillos.">
-      <p>Esta propiedad es un atajo para las propiedades: border-image-source, border-image-slice, border-image-width, border-image-outset y border-image-repeat.</p>
+      <details>
+        <summary>border-radius</summary>
+        <p>Si se quiere añadir borde redondeado</p>
+        <p style="border:2px solid green; border-radius: 25px;">border-radius: 25px</p>
+        <p>También es posible aplicar bordes de forma diferente a las diferentes esquinas. También se puede añadir un borde elíptico.</p>
+        <p style="border:2px solid green; border-radius: 25px / 15px;">border-radius: 25px / 15px</p>
+      </details>
+      <details>
+        <summary>border-image</summary>
+        <p>si se quiere añadir borde siguiendo un patrón de imagen.</p>
+        <p>Esta propiedad consta de tres valores:</p>
+        <ul>
+          <li>La imagen para utilizar como borde</li>
+          <li>La forma de dividir la imagen y repetirla en el borde</li>
+          <li>Definir si las secciones centrales deben repetirse o estirarse (round or stretch)</li>
+        </ul>
+        <p style="  border: 10px solid transparent; border-image: url(../images/border.png) 30 round;">border: 10px solid transparent; border-image: url(../images/border.png) 30 round;</p>
+        <img src="../images/border.png" alt="patrón de cuadrados rojos y amarillos.">
+        <p>Esta propiedad es un atajo para las propiedades: border-image-source, border-image-slice, border-image-width, border-image-outset y border-image-repeat.</p>
+      </details>
+      <details>
+        <summary>border-block y border-inline</summary>
+        <p>Es una propiedad como border, pero depende de la dirección de escritura del texto y sólo afecta a los border top y bottom (border-block) o sólo a los bordes derecho e izquierdo (border-inline). Es una propiedad lógica para que estos estilos se pueda adaptar en caso de que queramos una página que puede cambiar de idiomas entre uno occidental horizontal y otro oriental vertical.</p>
+        <p>Son propiedades aglutinadoras de: <strong>border-block-width</strong>, <strong>border-block-style </strong>, <strong>border-block-color</strong>, <strong>border-inline-width</strong>, <strong>border-inline-style </strong>, <strong>border-inline-color</strong>.</p>
+        <p>También existen otras propiedades todavía más específicas para afectar estos borde en función de la dirección del texto siendo sólo el borde superior o inferior, derecho o izquierdo.Estas propiedades son: <strong>border-block-start</strong>, <strong>border-block-start-width </strong>,<strong>border-block-start-style </strong>, <strong>border-block-start-color </strong>, <strong>border-block-end </strong>, <strong>border-block-end-width </strong>, <strong>border-block-end-style </strong>, <strong>border-block-end-color</strong>, <strong>border-inline-start</strong>, <strong>border-inline-start-width </strong>,<strong>border-inline-start-style </strong>, <strong>border-inline-start-color </strong>, <strong>border-inline-end </strong>, <strong>border-inline-end-width </strong>, <strong>border-inline-end-style </strong>, <strong>border-inline-end-color</strong>.</p>
+        <p class="details-subtitle">border-(end | start)-(end | start)-radius</p>
+        <p>Es lo mismo pero para el border radius. En este caso se define la esquina que se quiere afectar en función de si el eje y está por encima (start) o dejabo del texto (end) y el eje x si está dónde empieza la dirección del texto (start) o donde acaba (end).</p>
+      </details>
     </details>
     <details>
       <summary>
@@ -289,6 +308,61 @@
           <div style="margin-top: 1em; background-color: white; box-shadow: 10px 10px 5px 9px lightskyblue;">box-shadow: 10px 10px 5px 9px(radio de expansión) lightskyblue;</div>
           <p class="details-subtitle">inset</p>
           <div style="margin-top: 1em; background-color: white; box-shadow: 10px 10px 5px lightskyblue inset;">box-shadow: 10px 10px 5px lightskyblue inset;</div>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>
+        <h3 class="details-summary">box-decoration-break</h3>
+      </summary>
+      <p>Esta propiedad define cómo se aplicará una propiedad bacground, padding, border, border-image, box-sadow, margin y clip-path cuándo el elemento está fragmentado.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li>
+          <p><strong>slice: </strong>Es el por defecto. Se ve como si el efecto se hubiera fragmentado, cortado en trozos, igual que el contenido.</p>
+        </li>
+        <li>
+          <p><strong>clone: </strong>Cada nuevo fragmento aplicará las propiedades como si fueran elementos individuales.</p>
+        </li>
+      </ul>
+      <div class="col-container">
+        <div class="two-cols">
+          <p>box-decoration-break: clone;</p>
+          <span style="box-decoration-break: clone;" class="button">Css <br> es <br>fácil</span>
+        </div>
+        <div class="two-cols">
+          <p>box-decoration-break: slice;</p>
+          <span style="box-decoration-break: slice;" class="button">Css <br> es <br>fácil</span>
+        </div>
+      </div>
+    </details>
+    <details>
+      <summary>
+        <h3 class="details-summary">-webkit-box-reflect</h3>
+      </summary>
+      <p>Es una propiedad que crea una copia del elemento debajo a modo de reflejo, cómo si se reflejara en un lago. Tiene que ir con el prefijo -webkit porque no es una propiedad estándar.</p>
+      <p class="details-subtitle">Valores</p>
+      <ul>
+        <li>
+          <p><strong>none: </strong>El por defecto. No hay ningún reflejo.</p>
+        </li>
+        <li>
+          <p><strong>below: </strong>El reflejo se colora debajo.</p>
+        </li>
+        <li>
+          <p><strong>above: </strong>El reflejo se colora encima.</p>
+        </li>
+        <li>
+          <p><strong>left: </strong>El reflejo se colora a la izquierda.</p>
+        </li>
+        <li>
+          <p><strong>right: </strong>El reflejo se colora a la derecha.</p>
+        </li>
+        <li>
+          <p><strong>position-offset: </strong>Posición (below, above, left, right) offset (distancia con el reflejo.)</p>
+        </li>
+        <li>
+          <p><strong>position offset gradient:</strong>Posición (below, above, left, right) offset (distancia con el reflejo.) y un gradiente (hará que con el gradiente cree la sensación de una transición en el reflejo haciéndose más transparente. Es el efecto más realista.)</p>
         </li>
       </ul>
     </details>
