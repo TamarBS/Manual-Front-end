@@ -37,7 +37,7 @@
   <main>
 
     <h2 class="body-subtitle">Sintaxis</h2>
-    <div class="code black">
+    <div class="black">
       <span class="clase">selector</span>
       <span class="llave">{</span>
       <span class="propiedad">propiedad</span>:
@@ -61,7 +61,7 @@
               <li><p><strong>name: </strong>nombre de la etiqueta</p></li>
             </ul>
             <p>Se pueden utilizar diferentes selectores que afecten a varios nombres identificadores a la vez mediante coma ,</p>
-            <div class="code black">
+            <div class="black">
               <span class="clase">.clase, #id, nombre-de-etiqueta</span>
               <span class="llave">{</span>...
               <span class="llave">}</span>
@@ -101,7 +101,7 @@
           <details>
             <summary>Pseudo-class</summary>
             <p>Selectores en base a ciertos estados.</p>
-            <div class="code black">
+            <div class="black">
               <span class="clase">selector</span>
               <span class="comentario">:pseudo-class </span>
               <span class="llave">{</span>
@@ -129,7 +129,7 @@
                   <summary>:lang</summary>
                   <p>Permite definir estilos especiales para elementos que contienen la propiedad lang. Es decir, en un texto puedo tener varias palabras en inglés y querer mostrarlas con estilos especiales.</p>
                   <p>En esta frase hay terminos en <span lang="en">English </span>que se quieren estilar de <span lang="en">different</span> manera.</p>
-                  <div class="code black">
+                  <div class="black">
                     <span class="gris">&lt;</span>
                     <span class="etiqueta">style</span>
                     <span class="gris">></span>
@@ -187,7 +187,7 @@
             <summary>Pseudo-elements</summary>
             <p>Seleccionan una parte del elemento.</p>
             <p class="details-subtitle">lista de pseudo-elementos</p>
-            <div class="code black">
+            <div class="black">
               <span class="clase">selector</span>
               <span class="comentario">::pseudo-element </span>
               <span class="llave">{</span>
@@ -237,7 +237,7 @@
           <details>
             <summary>Por el atributo</summary>
             <p>Selecciona elementos basado en su atributo o valor del atributo.</p>
-            <div class="code black">
+            <div class="black">
               <span class="clase">elementoHTML[atributo]</span>
               <span class="llave">{</span>
               ...
@@ -302,7 +302,7 @@
     <h2 class="body-subtitle">Particularidades</h2>
     <details>
       <summary><h3 class="details-summary">Comentarios</h3></summary>
-      <div class="code black">
+      <div class="black">
         <span class="comentario">/* texto del comentario */</span>
       </div>
     </details>
@@ -349,7 +349,7 @@
           <p><strong>rem: </strong>relativo al tamaño de la fuente del elemento raiz.</p>
         </li>
         <li>
-          <p><strong>vw: </strong>viewport widht. relativo al 1% del ancho de pantalla.</p>
+          <p><strong>vw: </strong>viewport width. relativo al 1% del ancho de pantalla.</p>
         </li>
         <li>
           <p><strong>vh: </strong>viewport height. relativo al 1% del alto de pantalla.</p>
@@ -393,7 +393,7 @@
       <p>El selector global * tiene la mínima especificidad de todas, por tanto la menor jerarquía.</p>
       <p class="details-subtitle">La máxima prioridad usando !important</p>
       <p>Es un recurso para conseguir la mayor prioridad y asegurar que se aplicará el estilo css que lleva este valor.</p>
-      <div class="code black">
+      <div class="black">
         <span class="propiedad">background-color</span>:
         <span class="valor-css">red </span> !important ;
       </div>
@@ -404,13 +404,13 @@
         <h3 class="details-summary">SASS</h3>
       </summary>
       <p>Es un pre-procesador CSS que reduce la repetición y ahorra tiempo y espacio. Fue diseñado por Hampton Catlin y desarrollado por Natalie Weizenbaum en 2006. Significa: Syntactically Awesome Stylesheet. Hoja de estilos sintácticamente genial.</p>
-      <p>SASS aporta algunas herramientas que CSS no, como mixins, importas, inheritances, built-in functions, etc.</p>
-      <p>Los navegadores no entienden SASS, se necesita un pre-procesador para traducirlo a CSS. Ese proceso de traducción se denomina transpiling. Los archivos SASS tiene la terminación .scss</p>
+      <p>SASS aporta algunas herramientas que CSS no, como mixins, @import, inheritances, built-in functions, etc.</p>
+      <p>Los navegadores no entienden SASS, se necesita un pre-procesador para traducirlo a CSS. Ese proceso de traducción se denomina transpiling. Los archivos SASS tienen la terminación .scss</p>
       <details>
         <summary>Instalación de SASS</summary>
         <p><code>npm install -g sass</code></p>
         <p><code>sass --version</code> para comprobar que hay una versión y ya reconoce el comando sass</p>
-        <p>Crear los archivos .scss necesarios.</p>
+        <p>Crear los archivos .scss necesarios. Recordar que hay un .scss o .sass principal y los demás son partials y se nombran empezando con _ .</p>
         <p><code>sass source/stylesheets/index.scss build/stylesheets/index.css</code> Esto sirve para compilar esos estilos SASS en un archivo css que los navegadores puedan interpretar. Se creará el archivo .css y css.map que es un minificado y ya se verán los estilos aplicados. En la consola quedará ejecutado el compilador. Se puede detener puslando <kbd>Ctrl + C</kbd></p>
       </details>
       <p class="details-subtitle">Uso de SASS</p>
@@ -439,13 +439,14 @@
       <details>
         <summary>parciales</summary>
         <p>Se aconseja dividir el código scss en varios archivos para que sean más fáciles de organizar. Hay que distinguir los parciales colocando siempre un _ delante del nombre.</p>
-        <p>Estos parciales se importan al css principal mediante @use 'nombreParcial'; </p>
-        <p>Se pueden utilizar sus variables en el scss principal añadiendo al nombre del parcial delante de la variable separada por un punto. Ej.: propiedad: nombreParcial.$nombre-variable.</p>
+        <p>Estos parciales se importan al css principal mediante @import 'nombreParcial'; </p>
+        <p>No hace falta añadir la extensión. Ya identifica el programa que tiene que buscar archivos .sass o .scss.</p>
+        <!-- <p>Se pueden utilizar sus variables en el scss principal añadiendo al nombre del parcial delante de la variable separada por un punto. Ej.: propiedad: nombreParcial.$nombre-variable.</p> -->
       </details>
       <details>
         <summary>mixins</summary>
         <p>Permite crear un nombre que engloba varias propiedades.</p>
-        <div class="code black">
+        <div class="black">
           <span class="clase">@mixin</span>
           nombreMixin(
             <span class="etiqueta">$nombreMixin</span>:
@@ -458,6 +459,7 @@
           <br>
           <span class="hijo propiedad">box-shadow</span>:
           <span class="valor-css">0 0 1px rgba($nombreMixin, .25)</span>;
+          <span class="comentario">&lt;!-- Lo que va dentro de los paréntesis se denominan argumentos. --&gt;</span>
           <br>
           <span class="hijo propiedad">color</span>:
           <span class="valor-css">white</span>;
@@ -467,7 +469,7 @@
           <span class="clase">.info </span>
           <span class="llave">{</span>
           <br>
-          <span class="propiedad hijo">@include </span>:
+          <span class="propiedad hijo">@include </span>
           <span class="valor-css">nombremixin </span>;
           <br>
           <span class="llave">}</span>
@@ -475,13 +477,88 @@
           <span class="clase">.alert </span>
           <span class="llave">{</span>
           <br>
-          <span class="propiedad hijo">@include </span>:
+          <span class="propiedad hijo">@include </span>
           <span class="valor-css">nombremixin($nombreMixin : valorDiferente) </span>;
           <br>
           <span class="llave">}</span>
           <br>
         </div>
         <p>Cómo en el ejemplo .alert, es posible sobre-escribir el valor del mixin si se cambia dentro de los paréntesis.</p>
+        <p>Un mixin puede contener @include a otros mixins.</p>
+        <p>*Importante, los nombres de los mixin no distingue entre - y _. Para la máquina nombre-mixin y nombre_mixin será el mismo mixin. Cuidado con eso.</p>
+        <p>Ejemplo de mixin con argumentos que son variables:</p>
+        <div class="black">
+          <span class="clase">@mixin</span>
+          nombreMixin(
+            <span class="etiqueta">$color</span>,
+            <span class="valor">$whidth</span>
+          )
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">border</span>:
+          <span class="hijo valor-css">$width solid $color  </span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.class </span>
+          <span class="llave">{</span>
+          <br>
+          <span class="propiedad hijo">@include </span>
+          <span class="valor-css">nombremixin(red, 1px) </span>;
+          <br>
+          <span class="llave">}</span>
+        </div>
+        <p>Ejemplo de un mixin proveedor. Que no contiene nigún valor:</p>
+        <div class="black">
+          <span class="clase">@mixin</span>
+          nombreMixin(
+            <span class="etiqueta">$property</span>
+          )
+          <span class="llave">{</span>
+          <br>
+          <span class="hijo propiedad">transform: </span>:
+          <span class="hijo valor-css">$property</span>;
+          <br>
+          <span class="llave">}</span>
+          <br>
+          <span class="clase">.class </span>
+          <span class="llave">{</span>
+          <br>
+          <span class="propiedad hijo">@include </span>
+          <span class="valor-css">transform(rotate(20deg))</span>;
+          <br>
+          <span class="llave">}</span>
+        </div>
+      </details>
+      <details>
+        <summary>@extend</summary>
+        <p>Permite incluir todas las propiedades de un selector dentro de otro. Sirve para selectores que aplican muchos estilos similares y cambian sólo en uno o dos valores.</p>
+        <div class="black">
+          <span class="clase">.selector1 </span>
+          <span class="llave">{ </span>
+          <br>
+          <span class="hijo propiedad">propiedad </span>:
+          <span class="valor-css">valor </span>;
+          <br>
+          <span class="hijo propiedad">propiedad </span>:
+          <span class="valor-css">valor </span>;
+          <br>
+          <span class="hijo propiedad">propiedad </span>:
+          <span class="valor-css">valor </span>;
+          <br>
+          <span class="clase">}</span>
+          <br>
+          <span class="clase">.selector2 </span>
+          <span class="llave">{ </span>
+          <br>
+          <span class="hijo propiedad">@extend </span>
+          <span class="valor-css">.selector1 </span>;
+          <br>
+          <span class="hijo propiedad">propiedad </span>:
+          <span class="valor-css">valor </span>;
+          <br>
+          <span class="llave">{ </span>
+        </div>
       </details>
     </details>
 

@@ -151,8 +151,8 @@ ul {
 	padding: 15px;
 	border-radius: 5px;
 }
-
 .black {
+@extend .code;
  background-color: black;
  color: white; 
  font-family: monospace;

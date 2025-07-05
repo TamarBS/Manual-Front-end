@@ -146,7 +146,7 @@ ul .li--indented {
 
 /* ----------------------------- */
 /* Contenedores */
-.code {
+.code, .black {
   background-color: gainsboro;
   margin-bottom: 15px;
   padding: 15px;
