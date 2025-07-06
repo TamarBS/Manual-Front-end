@@ -12,29 +12,33 @@ header {
   margin-bottom: 3rem;
 }
 
-/* Encabezados */
-.body-title {
-  margin-top: 0px;
-  line-height: 2rem;
+/* Headings */
+.heading, .h3, .h2, .h1 {
   text-transform: uppercase;
+  line-height: 1.1em;
+  font-weight: bold;
+  margin: 1.5em 0 1em;
 }
 
-.body-subtitle, .body-subtitle__subtitle {
-  text-transform: uppercase;
+.h1 {
+  font-size: 2em;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.h2 {
+  font-size: 1.5em;
+  color: black;
+}
+
+.h3 {
+  font-size: 1.05em;
+  color: grey;
 }
 
 /* ----------------------------- */
 /* Índices */
-.index-title, .index-subtitle {
-  text-transform: uppercase;
-}
-
-.index-subtitle {
-  font-size: 0.83em;
-  color: grey;
-  font-weight: bold;
-}
-
 .index nav {
   display: flex;
   flex-direction: column;
@@ -43,8 +47,6 @@ header {
 }
 .index a {
   padding: 5px 10px;
-  font-size: 1.1em;
-  line-height: 1.5em;
   text-decoration: none;
   border-radius: 3px;
   background-color: gainsboro;
@@ -53,9 +55,17 @@ header {
   color: black;
 }
 .index a:hover {
+  background-color: teal;
+}
+.index a:hover h3 {
   color: white;
   font-weight: bold;
-  background-color: teal;
+}
+.index a h3 {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  font-weight: normal;
 }
 
 /* ----------------------------- */
@@ -173,9 +183,6 @@ ul .li--indented {
 }
 .black .llave {
   color: gold;
-}
-.black .funcion {
-  color: lemonchiffon;
 }
 .black .atributo, .black .propiedad {
   color: lightskyblue;

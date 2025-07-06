@@ -14,27 +14,44 @@
   <header>
     <div class="button back"><a  href="index.html">Volver al Índice</a></div>
     <hgroup>
-      <h1 class="body-title"><dfn id="exHtml"><abbr title="Hyper Text Markup Language">HTML</abbr></dfn></h1>
-      <p>Lenguaje de <abbr title="Asignación de diferentes funciones y aspectos a un texto mediante una etiqueta ( Palabra reservada encapsulada entre los símbolos '&lt;' y '>' ) .">marcado</abbr> de <abbr title="Texto que enlaza a otro texto.">hipertexto</abbr>. Es el lenguaje base en la creación de páginas web.</p>
+      <h1 class="h1"><dfn id="exHtml"><abbr title="Hyper Text Markup Language">HTML</abbr></dfn></h1>
+      <p>Lenguaje de <abbr title="Asignación de diferentes funciones y aspectos a un texto mediante una etiqueta ( Palabra reservada encapsulada entre los símbolos '&lt;' y '>' ) .">marcado</abbr> de <abbr title="Texto que enlaza a otro texto.">hipertexto</abbr>. Es el lenguaje base en la creación de páginas web. Fue inventado por Tim Berners-Lee en 1991.</p>
       <hr>
     </hgroup>
   </header>
 
   <main>
 
-    <h2 class="body-subtitle">Historia</h2>
-    <p>Fue inventado por Tim Berners-Lee en 1991.</p>
-    
-    <h2 class="body-subtitle">Todos los Elementos HTML</h2>
-    <div class="index">
-      <nav aria-label="elementosHtml">
-        <a href="html/esqueleto.html">Estructura básica de un documento .html</a>
-        <a href="html/head.html">Elementos HTML que normalmente van en el head</a>
-        <a href="html/body.html">Elementos HTML que normalmente van en el body</a>
-      </nav>
+    <h2 class="h2">Sintaxis</h2>
+    <p>El lenguaje está formado por los elementos HTML.</p>
+    <div class="black">
+      <span class="gris">&lt;</span> 
+      <span class="etiqueta">etiqueta </span> 
+      <span class="atributo"> atributo</span>
+      =
+      <span class="valor">"valor"</span>
+      <span class="gris">></span> 
+      contenido... 
+      <span class="gris">&lt;/</span>
+      <span class="etiqueta">etiqueta</span>
+      <span class="gris">></span> 
     </div>
+    <details>
+      <summary>Elemento vacío</summary>
+      <p>Existe otra sintaxis para elementos que no ofrecen contenido, por ejemplo un &lt;br&gt;.</p>
+      <div class="black">
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">etiqueta </span> 
+        <span class="gris">></span> 
+        <br>
+        <span class="comentario">&lt;!-- Se permite utilizar el símbolo "/" como etiqueta de cierre en los elementos vacíos --&gt;</span>
+        <span class="gris">&lt;</span> 
+        <span class="etiqueta">etiqueta </span> 
+        <span class="gris">/></span> 
+      </div>
+    </details>
 
-    <h2 class="body-subtitle">Particularidades</h2>
+    <h2 class="h2">Particularidades</h2>
     <details>
       <summary><h3 class="details-summary">No discrimina mayúsculas y minúsculas</h3></summary>
       <p>Se pueden utilizar mayúsculas y minúsculas, aunque el consenso es usar minúsculas.</p>
@@ -42,34 +59,6 @@
     <details>
       <summary><h3 class="details-summary">Los atributos no necesitan ir entrecomillados</h3></summary>
       <p>Pero el consenso es que sí aparezcan entre comillas. Da problemas no ir entrecomillado si hay espacios entre palabras. Las comillas por defecto son ("") dobles, pero en caso de que el valor quiera mostrar esas comillas, se pueden usar entonces las simples ('') y viceversa.</p>
-    </details>
-    <details>
-      <summary><h3 class="details-summary">Sintaxis de un Elemento HTML</h3></summary>
-      <div class="black">
-        <span class="gris">&lt;</span> 
-        <span class="etiqueta">etiqueta </span> 
-        <span class="atributo"> atributo</span>
-        =
-        <span class="valor">"valor"</span>
-        <span class="gris">></span> 
-        contenido... 
-        <span class="gris">&lt;/</span>
-        <span class="etiqueta">etiqueta</span>
-        <span class="gris">></span> 
-        <span class="comentario">&lt;!-- Sintaxis normal --&gt;</span>
-        <br>
-
-        <span class="gris">&lt;</span> 
-        <span class="etiqueta">etiqueta </span> 
-        <span class="gris">></span> 
-        <span class="comentario">&lt;!-- Elemento vacío --&gt;</span>
-        <br>
-
-        <span class="gris">&lt;</span> 
-        <span class="etiqueta">etiqueta </span> 
-        <span class="gris">/></span> 
-        <span class="comentario">&lt;!-- También se permite utilizar el símbolo "/" como etiqueta de cierre en los elementos vacíos --&gt;</span>
-      </div>
     </details>
     <details>
       <summary><h3 class="details-summary">Formas de vincular estilos CSS</h3></summary>
@@ -251,9 +240,20 @@
     <details>
       <summary><h3 class="details-summary">Comentarios</h3></summary>
     <p>Se pueden añadir al código y no serán visibles. Son útiles para <strong>dejar indicaciones</strong> del funcionamiento del código y claves para su mejor comprensión, para <strong>ocultar</strong> partes del código, como recordatorios y en revisiones de JavaScript para hacer debugging.</p>
-    <p class="black comentario">&lt;!-- Contenido del comentario --&gt;</p>
+    <div class="black">
+      <span class="comentario">&lt;!-- Contenido del comentario --&gt;</span>
+    </div>
     </details>
     
+    <h2 class="h2">Elementos HTML</h2>
+    <div class="index">
+      <nav aria-label="elementosHtml">
+        <a href="html/esqueleto.html">Base</a>
+        <a href="html/head.html">Head</a>
+        <a href="html/body.html">Body</a>
+      </nav>
+    </div>
+
   </main>
 
 </body>

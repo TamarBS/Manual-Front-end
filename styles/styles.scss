@@ -1,6 +1,7 @@
 $myFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $fontSize: 16px;
 $color: black;
+$grey: grey;
 $primaryColor: teal;
 $primaryBgColor: white;
 $secondaryBgColor: whitesmoke;
@@ -15,25 +16,33 @@ body {
 }
 header { margin-bottom: 3rem; }
 
-/* Encabezados */
-.body-title { 
-  margin-top: 0px;
-  line-height: 2rem;
-  text-transform: uppercase; 
-}
-.body-subtitle, .body-subtitle__subtitle {
+/* Headings */
+.heading {
   text-transform: uppercase;
+  line-height: 1.1em;
+  font-weight: bold;
+  margin: 1.5em 0 1em;
 }
-  
+.h1 {
+  @extend .heading;
+  font-size: 2em;
+  color: $color;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+.h2 {
+  @extend .heading;
+  font-size: 1.5em;
+  color: $color;
+}
+.h3 {
+  @extend .heading;
+  font-size: 1.05em;
+  color: $grey;
+}  
 /* ----------------------------- */
 
 /* Índices */
-.index-title, .index-subtitle { text-transform: uppercase; }
-.index-subtitle { 
-  font-size: 0.83em;
-  color: grey;
-  font-weight: bold; 
-}
 .index {
   nav {
     display: flex;
@@ -43,16 +52,22 @@ header { margin-bottom: 3rem; }
   }
   a {
     padding: 5px 10px;
-    font-size: 1.1em;
-    line-height: 1.5em;
     text-decoration: none;
     border-radius: 3px;
     background-color: gainsboro;
     &:link { color: black; }
     &:hover {
-      color: white;
-      font-weight: bold;
       background-color: $primaryColor;
+      h3 {
+        color: white;
+        font-weight: bold;
+      }
+    }
+    h3 {
+      margin: 0;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      font-weight: normal;
     }
   }
 }
@@ -160,11 +175,10 @@ ul {
  line-height: 1.2rem;
  margin-top: 15px;
  /* Clases para las palabras que representan código */
- .gris { color: grey; }
+ .gris { color: $grey; }
  .etiqueta { color: dodgerblue; }
  .clase { color: goldenrod; }
  .llave { color: gold; }
- .funcion { color: lemonchiffon; }
  .atributo, .propiedad { color: lightskyblue; }
  .valor, .htmlColor { color: lightsalmon; }
  .valor-css { color: lightgreen; }
@@ -245,7 +259,7 @@ kbd {
   &__card {
     position: relative;
     background-color: white;
-    box-shadow: 0 0 5px 1px grey;
+    box-shadow: 0 0 5px 1px $grey;
     border-radius: 8px;
     max-width: 95px;
   }
