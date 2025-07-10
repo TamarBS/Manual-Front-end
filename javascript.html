@@ -15,7 +15,7 @@
     <div class="button back"><a  href="index.html">Volver al Índice</a></div>
     <hgroup>
       <h1 class="h1">JavaScript</h1>
-      <p>Es el lenguaje de programación web más popular. Puede calcular, manipular y validar datos. Fue inventado por Brendan Eich en 1995. En 1997 se convirtió en un estándar ECMA-262. ECMAScript es el nombre oficial de este lenguaje.</p>
+      <p>Es un lenguaje de programación. Fue inventado por Brendan Eich en 1995.</p>
       <hr>
     </hgroup>
   </header>
@@ -23,26 +23,542 @@
   <main>
 
     <p class="h2">Sintaxis</p>
-    <p>El punto y coma separa estados. Hay que añadirlo al final de cada estado. En algunos casos no es obligatorio pero siempre es recomendable ponerlo.</p>
-    <p>Se ignoran los espacios, pero se recomiendan añadirlos para mejor comprensión del código. Poner es pacio entre operadores es una buena práctica ( = + - * / )</p>
-    <p>Se aconseja no hacer líneas de más de 80 caracteres y pasar a la siguiente línea.Cuándo una línea se pasa de caracteres se recomienda cortarla por alguno de sus operadores.</p>
-
-
-    <p class="h2">Conceptos básicos</p>
     <p>Está formado por <strong>funciones</strong> que contienen <strong>métodos</strong> y <strong>eventos</strong> que son los que arrancan las funciones.</p>
-    <p>Sí se distingue mayúsculas de minúsculas.</p>
-    <p>No se permite usar - guión como separador de palabras en nombres de variables.</p>
-    <p>Para nombrar variables la convención es empezar con una palabra en minúsuclas y seguir la siguiente con la primera en mayúsculas. Ejemplo.: firstName, lastName.</p>
+    <div class="black">
+      <span class="etiqueta">tipoVariable</span>
+      <span class="atributo">identificadorVariable</span> =
+      <span class="valor">"string"</span>;
+      <span class="comentario">// Declaración de una variable</span>
+      <br><br>
+      <span class="etiqueta">function</span>
+      <span class="identificador">nombreFunción</span>
+      <span class="llave">() {</span>
+        <br>
+      <span class="hijo propiedad">document</span>.
+      <span class="identificador">NombreMétodo</span>
+      <span class="variable">(</span>
+      <span class="valor">"idetificadorElementoHMTL"</span>
+      <span class="variable">)</span>.
+      <span class="propiedad">propiedadCSS</span>=
+      <span class="valor">"valorQueCambia"</span>;
+      <span class="comentario">// Estado para cambiar un estilo a un Elemento HTML.</span>
+      <br>
+      <span class="llave">}</span>
+    </div>
+    <p>Los programas JavaScript se ejecutan por el navegador. Se ejecutan de uno en uno en el orden en el que aparecen en el código.</p>
     
-    <p class="h2">Colocación de JavaScript en documentos HTML</p>
-    <p>Se coloca dentro de las etiquetas &lt;script&gt; &lt;/script&gt;</p>
-    <p>Puede ir tanto dentro del body como dentro del head. Colocarla al final del body ayuda a la velocidad porque será lo último que cargue de la página.</p>
-    <p>Lo más recomendable es colocarlos en documentos externos y enlazarlos en el head o el body del documento HTML de la siguiente manera:</p>
-    <p>&lt;script src="myScript.js"&gt;&lt;/script&gt;</p>
+    <details>
+      <summary>";" al final de cada estado</summary>
+      <p>Un programa de ordenador es una lista de instrucciones para ser ejecutadas por un ordenador. En programación a estas instrucciones se les llama <strong>estados</strong> (statements).</p>
+      <p>Cáda línea de código es un estado. Todos los estados tienen que terminar con punto y coma. En algunos casos no es obligatorio pero siempre es recomendable ponerlo.</p>
+    </details>
+    
+    <details>
+      <summary>Estados JavaScript</summary>
+      <p>Los estados están formados por:</p>
+      
+      <details>
+        <summary>valores</summary>
+        <p>Hay dos tipos de valores:</p>
+        
+        <details>
+          <summary>fijos / literales</summary>
+          <ul>
+            <li><p><strong>números: </strong>no llevan comillas.</p></li>
+            <li><p><strong>strings: </strong>Siempre llevan comillas. Son cadenas de texto. Los número que van entre comillas son strings y son tratados como palabras</p></li>
+            <li><p><strong>undefined :</strong> El valor no trae nada, está vacío.</p></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>variables </summary>
+          <p>Se utilizan para contener datos. Crear variables se denomina "declarar" y es buena práctica hacerlo al principio del script.</p>
+          <details>
+            <summary>automático</summary>
+            <div class="black">
+              <span class="atributo">nombreVariable</span>=
+              <span class="valor">"valor"</span>;
+            </div>
+            <p>No se declara, pero esto no es lo recomendable. Se recomienda declarar siempre las variables.</p>
+          </details>
+          <details>
+            <summary>var </summary>
+            <div class="black">
+              <span class="etiqueta">var</span>
+              <span class="atributo">nombreVariable </span>=
+              <span class="valor">"valor"</span>;
+            </div>
+            <p>Está anticuado, ya se puede utilizar sólo let and const. Reservar su úso solo para código destinado a ser ejecutado en navegadores antiguos.</p>
+            <p class="details-subtitle">Particularidades</p>
+            <ul>
+              <li>
+                <p>Tiene alcance global. Se puede acceder a la variable aunque esté dentro de llaves {}.</p>
+                <div class="black">
+                  <span class="etiqueta">var</span>
+                  <span class="atributo">nombreVariable</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// Funciona porque es global.</span>
+                  <br>
+                  <span class="llave">}</span>
+                </div>
+              </li>
+              <li>
+                <p>Permite re-declarar.</p>
+              </li>
+              <li>
+                <p>Se pueden declarar después de asignar un valor.</p>
+                <div class="black">
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">var</span>
+                  <span class="atributo">nombreVariable </span>;
+                </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>let</summary>
+            <div class="black">
+              <span class="etiqueta">let</span>
+              <span class="atributo">nombreVariable </span>=
+              <span class="valor">"valor"</span>;
+            </div>
+            <p>Es la forma moderna de var. Sus valores pueden cambiar. </p>
+            <p></p>
+            <p class="details-subtitle">Particularidades</p>
+            <ul>
+              <li>
+                <p>Tiene alcance de bloque (block scope), no global o de función. Block scope quiere decir que las declaraciones que van dentro de llaves {} no se pueden acceder desde fuera.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// NO funciona porque NO es global.</span>
+                  <br>
+                  <span class="llave">}</span>
+                </div>
+              </li>
+              <li>
+                <p>No se puede re-declarar en el mismo scope, pero sí en diferentes scopes.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="hijo etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// Funciona porque está en diferente scope</span>
+                  <br>
+                  <span class="llave">}</span>
+                  <br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// No funciona porque está en el mismo scope que la primera declaración.</span>
+                </div>
+              </li>
+              <li>
+                <p>Se tiene que declarar antes de ser usada.</p>
+                <div class="black">
+                  <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br><br>
+                  <span class="comentario">&lt;!-- Esto Sí funcionará --&gt;</span>
+                  <br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+              <li><p>No se pueden vincular con <strong>this</strong>.</p></li>
+              <li>
+                <p>Se pueden declarar varias variables en un mismo let separando con comas.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable </span> =
+                  <span class="valor">"valor"</span>,
+                  <span class="atributo">nombreVariable </span> =
+                  <span class="valor">"valor"</span>,
+                  <span class="atributo">nombreVariable </span> =
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+            </ul>
+            
+          </details>
+          <details>
+            <summary>const</summary>
+            <div class="black">
+              <span class="etiqueta">const</span>
+              <span class="atributo">nombreVariable </span>=
+              <span class="valor">"valor"</span>;
+            </div>
+            <p>Valores constantes que no van a cambiar ni va a cambiar su tipo de valor. No define un valor constante, sino que define una referencia constante a un valor. Por eso no se pueden reasignar valores, arrays u objetos, pero sí cambiar elementos de arrays u objetos.</p>
+            <div class="black">
+              <span>const cars = ["Saab", "Volvo", "BMW"];</span>
+              <br>
+              <span>cars[0] = "Toyota";</span>
+              <span class="comentario">// Es correcto</span>
+              <br><br>
+              cars = ["Toyota", "Volvo", "BMW"];
+              <span class="comentario">// Es incorrecto</span>
+            </div>
+            <p>Es decir puede cambiar elementos específicos pero no reasignar valores al identificador.</p>
+            <p class="details-subtitle">Particularidades</p>
+            <ul>
+              <li>
+                <p>Tiene alcance de bloque (block scope), no global o de función. Block scope quiere decir que las declaraciones que van dentro de llaves {} no se puede acceder desde fuera.</p>
+                <div class="black">
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// NO funciona porque NO es global.</span>
+                  <br>
+                  <span class="llave">}</span>
+                </div>
+              </li>
+              <li>
+                <p>No se puede re-declarar en el mismo scope, pero sí en diferentes scopes.</p>
+                <div class="black">
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="hijo etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// Funciona porque está en diferente scope</span>
+                  <br>
+                  <span class="llave">}</span>
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// No funciona porque está en el mismo scope que la primera declaración.</span>
+                </div>
+              </li>
+              <li>
+                <p>Se tiene que declarar antes de ser usada.</p>
+                <div class="black">
+                  <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br><br>
+                  <span class="comentario">&lt;!-- Esto Sí funcionará --&gt;</span>
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+              <li>
+                <p>No se pueden vincular con <strong>this</strong>.</p>
+              </li>
+              <li>
+                <p>Se le debe asignar un valor en el momento de ser declarada, no después.</p>
+                <div class="black">
+                  <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+            </ul>
+          </details>
+
+        </details>
+
+      </details>
+
+      <details>
+
+        <summary>operadores</summary>
+        <p>Existen diferentes tipos de operadores:</p>
+        
+        <details>
+          <summary>Aritméticos </summary>
+          <p>Sumas, restas, multiplicaciones y divisiones.</p>
+          <ul>
+            <li class="li--details-exception">
+              <details>
+                <summary>+</summary>
+                <p>suma</p>
+                <p>Cuándo se utiliza con strings sirve para unir cadenas de texto (Concatenar).</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">x</span> =
+                  <span class="valor">"Hola que"</span> +
+                  <span class="valor">"tal?"</span>;
+                  <br>
+                  <span class="comentario">x = "Hola que tal?"</span>
+                </div>
+                <p>Si un número es un string, dependiendo de su posición en la suma el resultado será diferente.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">x</span> =
+                  <span class="valor">"5"</span> +
+                  <span class="valor-css">2</span> +
+                  <span class="valor-css">3</span>;
+                  <br>
+                  <span class="comentario">// x = "523"</span>
+                  <br><br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">x</span> =
+                  <span class="valor-css">2</span> +
+                  <span class="valor-css">3</span> +
+                  <span class="valor">"5"</span>;
+                  <br>
+                  <span class="comentario">// x = "55"</span>
+                </div>
+              </details>
+            </li>
+            <li><p><strong>- </strong>resta</p></li>
+            <li><p><strong>* </strong>multiplicación</p></li>
+            <li><p><strong>/ </strong>divisón</p></li>
+            <li><p><strong>** </strong>exponente</p></li>
+            <li><p><strong>% </strong>resto de la división</p></li>
+            <li><p><strong>++ </strong>incremento</p></li>
+            <li><p><strong>-- </strong>descuento</p></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>De asignación </summary>
+          <p>Asignan valor a una variable</p>
+          <ul>
+            <li><p><strong>= </strong>x = y. Asigna un valor a una variable.</p></li>
+            <li><p><strong>+= </strong>x = x + y</p></li>
+            <li><p><strong>-= </strong>x = x - y</p></li>
+            <li><p><strong>*= </strong>x = x * y</p></li>
+            <li><p><strong>/= </strong>x = x / y</p></li>
+            <li><p><strong>%= </strong>x = x % y</p></li>
+            <li><p><strong>**= </strong>z = x ** y</p></li>
+          </ul>
+          <p>Existen operadores de asginación par todos los otros tipos de operadores. Se consiguen añadiendo un símbolo = al final.</p>
+          <ul>
+            <li><p><strong>&lt;&lt;= : </strong>cálculo bitwise con cambio hacia la izquierda.</p></li>
+            <li><p><strong>&gt;&gt;= : </strong>cálculo bitwise con cambio hacia la derecha en número árabe.</p></li>
+            <li><p><strong>&gt;&gt;&gt;= : </strong>cálculo bitwise con cambio hacia la derecha en número decimal.</p></li>
+            <li><p><strong>&= : </strong>cálculo bitwise que compara dos valores como un and.</p></li>
+            <li><p><strong>^= : </strong>cálculo bitwise que compara dos valores como un xor.</p></li>
+            <li><p><strong>|= : </strong>cálculo bitwise que compara dos valores como un or. </p></li>
+            <li><p><strong>&&= : </strong>si el primer valor es true, se asigna el segundo valor.</p></li>
+            <li><p><strong>||= : </strong>si el primer valor es false, se asigna el segundo valor.</p></li>
+            <li>
+              <p><strong>??= : </strong>si el primer valor es undefined o null se asigna el segundo valor.</p>
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>De comparación </summary>
+          <p>Comparan entre dos valores y su tipo.</p>
+          <ul>
+            <li><p><strong>==</strong>iguales en valor</p></li>
+            <li><p><strong>===</strong> igual en valor y tipo</p></li>
+            <li><p><strong>!=</strong> diferente en valor</p></li>
+            <li><p><strong>!==</strong> diferente en valor o tipo</p></li>
+            <li><p><strong>&gt;</strong> más que</p></li>
+            <li><p><strong>&lt;</strong> menos que</p></li>
+            <li><p><strong>&gt;=</strong> mayor o igual que</p></li>
+            <li><p><strong>&lt;=</strong> menor igual que</p></li>
+            <li><p><strong>?</strong> operador ternario</p></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Strings </summary>
+          <p>Cadenas de texto. Igual que los de comparación pero con strings. Las comparaciones son alfabéticas.</p>
+        </details>
+
+        <details>
+          <summary>bitwise </summary>
+          <p>Trabaja con los números en código binario. No es de uso común pero es útil para temas de seguridad y encriptación de datos.</p>
+          <ul>
+            <li><p><strong>& : </strong>and</p></li>
+            <li><p><strong>| : </strong>or</p></li>
+            <li><p><strong>~ : </strong>not</p></li>
+            <li><p><strong>^ : </strong>xor</p></li>
+            <li><p><strong>&lt;&lt; : </strong>cambio a la izquierda</p></li>
+            <li><p><strong>&gt;&gt; : </strong>cambio a la derecha en número árabe.</p></li>
+            <li><p><strong>&gt;&gt;&gt; : </strong>cambio a la derecha en número decimal.</p></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>De tipo </summary>
+          <p>Existen dos operadores:</p>
+          <ul>
+            <li><p><strong>typeof : </strong>Devuelve el tipo de variable.</p></li>
+            <li><p><strong>instanceof : </strong>Devuelve verdadero si un objeto es una instancia de un objeto. ¿?</p></li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Lógicos</summary>
+          <p>Añaden una condición.</p>
+          <ul>
+            <li><p><strong>&& : </strong>and. Se aplica a uno y otro.</p></li>
+            <li><p><strong>|| : </strong>or. Se añaden a uno u otro.</p></li>
+            <li><p><strong>! : </strong>not. Se prohibe aplicar a ese.</p></li>
+          </ul>
+        </details>
+
+      </details>
+
+      <details>
+        <summary>expresiones</summary>
+        <p>Es la convinación de valores, variables y operadores.</p>
+      </details>
+
+      <details>
+        <summary>palabras clave</summary>
+        <p>Son con las que se suele empezar. Identifican una acción JavaScript que se quiere llevar a cabo. Estas son palabras reservadas, lo que significa que no se pueden utilizar como nombres de variables.</p>
+        <ul>
+          <li><p><strong>var : </strong>variable</p></li>
+          <li><p><strong>let : </strong>bloque variable</p></li>
+          <li><p><strong>const : </strong>constante</p></li>
+          <li><p><strong>if : </strong>condición</p></li>
+          <li><p><strong>switch : </strong>diferentes opciones para elegir</p></li>
+          <li><p><strong>for : </strong>iteración</p></li>
+          <li><p><strong>function : </strong>declara una función</p></li>
+          <li><p><strong>return : </strong>devuelve un valor</p></li>
+          <li><p><strong>try : </strong>incluye un manipulador de errores</p></li>
+        </ul>
+      </details>
+
+    </details>
+    
+
+    <p class="h2">Particularidades</p>
+    
+    <details>
+      <summary>comentarios</summary>
+      <p>Son estados que no se ejecutan. Son ignorados a la hora de ejecutar estados.</p>
+      <div class="black">
+        <span class="comentario">// Comentario de una línea</span>
+        <br><br>
+        <span class="comentario">/*</span>
+        <br>
+        <span class="comentario">Comentario de </span>
+        <br>
+        <span class="comentario">varias</span>
+        <br>
+        <span class="comentario">líneas,</span>
+        <br>
+        <span class="comentario">*/</span>
+      </div>
+      <p>Los comentarios de varias líneas no se suelen utilizar. Son más utilizados para aportar documentación formal.</p>
+    </details>
+    
+    <details>
+      <summary>Ignora los espacios</summary>
+      <p>Se ignoran los espacios, pero se recomienda añadirlos para mejor comprensión del código. Poner espacio entre operadores es una buena práctica ( = + - * / )</p>
+    </details>
+
+    <details>
+      <summary>Nombre de variables</summary>
+      <p>Se denominan identificadores o nombres a los nombre de variables, funciones y palabras clave.</p>
+      <p>Para crear un nombre de identificador hay que cumplir las siguientes condiciones:</p>
+      <ul>
+        <li>
+          <p>No se permite usar - como separador de palabras.</p>
+        </li>
+        <li>
+          <p>Tienen que comenzar siempre con letras de la a-z o A-Z, el símbolo $ o el símbolo _. Se distinguen mayúsculas de minúsculas. No es lo mismo y que Y. Los símbolos $ y _ los identifica como letras.</p>           
+        </li>
+        <li>
+          <p>No puede empezar con números ni ningún otro símbolo.</p>
+        </li>
+        <li>
+          <p>Todas las variables tienen que tener su nombre identificador único.</p>
+        </li>
+        <li>
+          <p>No se pueden usar como identificadores las palabras reservadas.</p>
+        </li>
+      </ul>
+      <p>El símbolo del dolar $ no se utiliza normalmente, pero sí para los alias de la función principal en una librería JavaSacript.</p>
+      <p>El _ no se suele utilizar pero sí para alias privados y variables ocultas.</p>
+    </details>
+
+    <details>
+      <summary>Límite de caracteres por línea</summary>
+      <p>Se aconseja no hacer líneas de más de 80 caracteres y pasar a la siguiente línea. Cuándo una línea se pasa de caracteres se recomienda cortarla por alguno de sus operadores.</p>
+    </details>
+
+    <details>
+      <summary>Distingue mayúsculas de minúsculas</summary>
+      <p>Para nombrar variables la convención es empezar con una palabra en minúsuclas y seguir la siguiente con la primera en mayúsculas. Ejemplo.: firstName, lastName.</p>
+    </details>
+
+    <details>
+      <summary>Formas de vincular archivos JavaSacript</summary>
+      <p>Puede ir tanto dentro del body como dentro del head. Colocarla al final del body ayuda a la velocidad porque será lo último que cargue de la página y así no ralentiza el cargado de elementos de la página.</p>
+      <div class="black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">script</span>
+        <span class="gris">&gt;</span>
+        <br>
+        ...
+        <br>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">script</span>
+        <span class="gris">&gt;</span>
+      </div>
+      <p>Lo más recomendable es colocarlos en documentos externos y enlazarlos en el head o el body del documento HTML.</p>
+      <div class="black">
+        <span class="gris">&lt;</span>
+        <span class="etiqueta">script</span>
+        <span class="atributo">src</span> =
+        <span class="valor">"nombreArchivo.js"</span>
+        <span class="gris">&gt;</span>
+        <span class="gris">&lt;/</span>
+        <span class="etiqueta">script</span>
+        <span class="gris">&gt;</span>
+      </div>
+    </details>
+
 
     <p class="h2">Métodos HTML</p>
-
     <p class="h3">Para encontrar elementos</p>
+    
     <details>
       <summary>
         <h2 class="details-summary">getElementById()</h2>
@@ -57,25 +573,31 @@
       </summary>
       <p>Sustituye el contenido del Elemento HTML al que apunta. Se usa para cambiar el elemento HTML.</p>
     </details>
+
     <details>
       <summary>innerText</summary>
       <p>Sustituye el texto contenido en un Elemento HTML. Se usa para cambiar sólo el texto de un Elemento HTML.</p>
     </details>
+
     <details>
       <summary>document.write()</summary>
       <p>Se utiliza por razones de testeo. Este método sobre-escribe todo el HTML.</p>
     </details>
+
     <details>
       <summary>window.alert()</summary>
       <p>Crea una ventana emergente.</p>
     </details>
+
     <p>La palabra clave "window" se puede obviar porque es un objeto de alcance global. Esto significa que las variables, propiedades y métodos por defecto pertenecen al objeto window.</p>
+
     <details>
       <summary>console.log()</summary>
       <p>Este método inserta texto en la consola del navegador. No se verá en pantalla pero sí en las herramientas de desarrollo. Es útil a la hora de hacer depuración del código (debugging).</p>
     </details>
 
     <p class="h3">Para cambiar propiedades CSS</p>
+    
     <details>
       <summary>
         <h2 class="details-summary">.style.propiedad</h2>
@@ -84,38 +606,14 @@
     </details>
 
     <p class="h3">Para realizar acciones</p>
-        <details>
+    
+    <details>
       <summary>print()</summary>
       <p>Permite abrir la ventana de impresión del navegador, generando una página imprimible con los contenidos de la web.</p>
     </details>
 
-    <p class="h3">Programas JavaScript</p>
-    <p>Un programa de ordenador es una lista de instrucciones para ser ejecutadas por un ordenador. En programación estas instrucciones se les llama <strong>estados</strong>(statements).</p>
-    <p>En HTML los programas JavaScript se ejecutan por el navegador. Se ejecutan de uno en uno en el orden en el que aparecen en el código.</p>
-    <h4>Estados JavaScript</h4>
-    <p>Se componen de:</p>
-    <ul>
-      <li>
-        <p><strong>valores: </strong>Hay dos tipos de valores: fijos(literales) y variables. Literales=(números(numbers) y cadenas de texto(strings)). Variables=se utilizan para contener datos. (var, let y const). </p>
-        <p>El operador = sirve para asignar un valor a una variable.</p>
-      </li>
-      <li>
-        <p><strong>operadores: </strong>( + - * / ) Aplica operaciones aritméticas. ( = ) se utiliza para asignar valores. Los valores también pueden ser strings no sólo números.</p>
-      </li>
-      <li>
-        <p><strong>expresiones: </strong>Es la convinación de valores, variables y operadores.</p>
-      </li>
-      <li>
-        <p><strong>palabras clave: </strong>Son con las que se suele empezar. Identifican una acción JavaScript que se quiere llevar a cabo. ( var(variale) let(un bloque variable) const(constante) if(condición) switch(diferentes casos) for(iteracion) function(declara una función) return(devuelve un valor) try(incluye un manipulador de errores) ) Estas son palabras reservadas, lo que significa qu eno se pueden utilizar como nombres de variables.</p>
-      </li>
-      <li>
-        <p><strong>comentarios: </strong>Son estados que no se ejecutan. Se utiliza // o /* */ . Son ignorados a la hora de ejecutar estados.</p>
-      </li>
-    </ul>
+    <!-- En sintaxix queda añadir un ejemplo de un evento que haga inicializarse a la función -->
 
-    <p class="h3">Identifiers/Names</p>
-    <p>Se utilizan para dar nombre a variables, funciones y palabras clave.</p>
-    <p>Tienen que cumplir las siguientes normas y comenzar siempre con letras a-z o A-Z, el símbolo $ o _. No puede empezar con números ni níngún otro símbolo que no sea $ o _ .
   </main>
 
 </body>
