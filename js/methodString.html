@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Métodos para cadenas de texto</title>
+  <meta name="description" content="Métodos para utilizar con cadenas de texto">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
+    <hgroup>
+      <h1 class="h1">Métodos para cadenas de texto</h1>
+      <p>Métodos para utilizar con cadenas de texto.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    <details>
+      <summary>Controlar símbolos</summary>
+      <details>
+        <summary>isWellFormed()</summary><p>sirve para saber si un código del string da error o no. Si da error el resultado es false.</p>
+      </details>
+      <details>
+        <summary>toWellFormed()</summary><p>devuelve un nuevo string dónde los códigos que dan error en isWellFormed() se reemplazan por un caracter unicode.</p>
+      </details>
+    </details>    
+    <details>
+      <summary>Eliminar espacios en blanco</summary>
+      <details>
+        <summary>trim()</summary><p>Elimina espacios en blanco de ambos lados del string.</p>
+      </details>
+      <details>
+        <summary>trimStart()</summary><p>Sólo elimina espacios en blanco de la parte inicial de un string.</p>
+      </details>
+      <details>
+        <summary>trimEnd()</summary><p>Sólo elimina espacios en blanco de la parte final de un string.</p>
+      </details>
+    </details>    
+    <details>
+      <summary>Extraer caracteres</summary>
+      <details>
+        <summary>charAt(position)</summary><p>permite extraer caracteres de un string. </p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = "Hola";
+          <br>
+          <span class="etiqueta">let</span> caracter = text.charAt(0);
+          <br>
+          <span class="comentario">// Resultado: H</span>
+        </div>
+      </details>
+      <details>
+        <summary>charCodeAt(position) y codePointAt(): </summary><p>permite extraer caracteres de un string pero devuelve el caracter en código UTF-16 que es un número entre 0 y 65535. codePointAt() puede devolver valores por encima de 65535.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = "Hola";
+          <br>
+          <span class="etiqueta">let</span> caracter = text.charCodeAt(0);
+          <br>
+          <span class="comentario">// Resultado: 72</span>
+        </div>
+      </details>
+      <details>
+        <summary>at(position) y [ ]</summary><p>permite extraer caracteres de un string. at() permite acceder utilizando de posición del index números en negativo. [] puede devolver resultados inesperados, por ejemplo si no encuentra caracter devolverá "undefined" dónde charAt() devolvería un string vacío.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = "Hola";
+          <br>
+          <span class="etiqueta">let</span> caracter = text.at(0);
+          <br>
+          <span class="etiqueta">let</span> caracter = text[0];
+          <br>
+          <span class="comentario">// Resultado para ambos: H</span>
+          <br><br>
+          text[0] = "A"; <span class="comentario">// Es read only, por lo que no funciona y no aplicará ese cambio. Aunque no dará error en consola.</span>
+        </div>
+      </details>
+      <details>
+        <summary>slice(start, end)</summary><p>extraen parte de un string Si sólo se define el primer parámetro se extraerá el resto del string desde esa posición. Si el parámetro es un número negativo la primera prosición se cuénta de atrás hacia delante..</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = <span class="valor">"12345 manzana"</span>;
+          <br>
+          <span class="etiqueta">let</span> part = text.slice(7, 13);
+          <br>
+          <span class="comentario">// Resultado: manzana</span>
+        </div>
+      </details>
+      <details>
+        <summary>substring(start, end)</summary><p>extraen parte de un string. Si sólo se define el primer parámetro se extraerá el resto del string desde esa posición. No funciona con parámetros en negativo.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = <span class="valor">"12345 manzana"</span>;
+          <br>
+          <span class="etiqueta">let</span> part = text.substring(7, 13);
+          <br>
+          <span class="comentario">// Resultado: manzana</span>
+        </div>
+      </details>
+    </details> 
+    <details>
+      <summary>Largura en caracteres</summary>
+      <details>
+        <summary>length</summary>
+        <p>Cuenta el número de caracteres de un string.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = "Hola";
+          <br>
+          <span class="etiqueta">let</span> lenght = text.length;
+          <br>
+          <span class="comentario">// Resultado: 4</span>
+        </div>
+      </details>
+      <details>
+      <summary>padStart()</summary><p>Rellenan con un valor dado un string hasta que cumpla con la longitud de caracteres especificada.</p>
+      <div class="black">
+        <span class="etiqueta">let</span> text = 
+        <span class="valor">"5"</span>;
+        <br>
+        <span class="etiqueta">let</span> padded = text.padStart(4, "0");
+        <br>
+        <span class="comentario">// Resultado: 0005 Le añade el 0 tantas veces sea necesario para conseguir que su length sea de 4 caracteres.</span>
+      </div>
+    </details>
+    <details>
+      <summary>padEnd()</summary><p>Rellenan con un valor dado un string hasta que cumpla con la longitud de caracteres especificada.</p>
+      <div class="black">
+        <span class="etiqueta">let</span> text = 
+        <span class="valor">"5"</span>;
+        <br>
+        <span class="etiqueta">let</span> padded = text.padEnd(4, "0");
+        <br>
+        <span class="comentario">// Resultado: 5000 Le añade el 0 tantas veces sea necesario para conseguir que su length sea de 4 caracteres.</span>
+      </div>
+    </details>
+    </details>
+    <details>
+      <summary>Mayúsculas y minúsculas</summary>
+      <details>
+        <summary>toUpperCase()</summary><p>cambia todos los caracteres a mayúsculas.</p>
+      </details>
+      <details>
+        <summary>toLoswerCase()</summary><p>cambia todos los caracteres a minúsculas.</p>
+      </details>
+    </details>
+    <details>
+      <summary>repeat()</summary><p>crea un nuevo string que contiene tantas repeticiones como se haya especificado en el parámetro.</p>
+    </details>
+    <details>
+      <summary>Reemplazar partes del texto</summary>
+      <details>
+        <summary>replace()</summary><p>Reemplaza la parte de un string por otro texto.Se le pasan dos parámetros, primero la parte del string que se quiere cambiar y después la sustitución.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text = "Hola holita";
+          <br>
+          <span class="etiqueta">let</span> newText = text.replace("holita", "qué tal?);
+          <br>
+          <span class="comentario"> // Sólo cambia el término una vez, si hay varios términos iguales sólo aplicará el método en el primero.</span>
+          <br>
+          <span class="comentario">// Para cambiar todas las palabras que coincidan se añade /g al término a cambiar de la siguiente  manera:</span>
+          <br>
+          <span class="etiqueta">let</span> newText = text.replace(/holita/g, "qué tal?);
+          <br>
+          <span class="comentario">Para que no discrimine mayúsculas de minúsculas se puede usar /i. Ej.: /holita/i</span>
+        </div>
+      </details>
+      <details>
+        <summary>replaceAll()</summary><p>Permite reemplazar todas las palabras de un string. Hace como la opción de la expresión regular /holita/g.</p>
+        <div class="black">text = text.replaceAll("cats", "dogs");</div>
+      </details>
+    </details>
+    <details>
+      <summary>split()</summary><p>convierte strings en arrays. Cómo parámetro se define el separador a omitir. Si por ejemplo mi string es 1, 2, 3, 4 pondré de parámetro "," para que mi array no sea 1, ,, 2, ,, 3, ,, 4. porque el array usa comas para separar valores así que tomará como valor la coma del string.</p>
+    </details>
+    <details>
+      <summary>toString()</summary><p>convierte números en string.</p>
+    </details>
+    <details>
+      <summary>Unir</summary><p>concat() : une dos o más strings. Hace lo mismo que el operador +.</p>
+      <div class="black">
+        <span class="etiqueta">let</span> text1 = "Hola";
+        <br>
+        <span class="etiqueta">let</span> text2 = "Holita";
+        <br>
+        <span class="etiqueta">let</span> text3 = text1.concat(" ", text2);
+        <br>
+        <span class="comentario">// Resultado: Hola Holita</span>
+      </div>
+    </details>    
+  </main>
+
+</body>
+</html>
