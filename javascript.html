@@ -160,904 +160,820 @@
       </div>
     </details>
 
-
-    <p class="h2">Teoría</p>
-
     <details>
-      <summary>funciones</summary>
-      <p>Utilizan la palabra clave <strong>function</strong> seguido de un nombre de función que servirá de identificador único para inicializar la función desde los métodos.</p>
-      <p>Los paréntesis de parámetros y argumentos permiten mandar valores a la función y alojarlos. Sin estos paréntesis en vez de llamar a los parámetros de las funciones, lo que se hace es llamar a la función como tal.</p>
+      <summary>Teoría</summary>
       <details>
-        <summary>return</summary>
-        <p>Es una palabra reservada que se convertirá en el útlimo paso de la función. No hará nada el programa después del return. Sirve para alojar y mandar los resultados de la función.</p>
+        <summary>funciones</summary>
+        <p>Utilizan la palabra clave <strong>function</strong> seguido de un nombre de función que servirá de identificador único para inicializar la función desde los métodos.</p>
+        <p>Los paréntesis de parámetros y argumentos permiten mandar valores a la función y alojarlos. Sin estos paréntesis en vez de llamar a los parámetros de las funciones, lo que se hace es llamar a la función como tal.</p>
+        <details>
+          <summary>return</summary>
+          <p>Es una palabra reservada que se convertirá en el útlimo paso de la función. No hará nada el programa después del return. Sirve para alojar y mandar los resultados de la función.</p>
+        </details>
       </details>
-    </details>
-
-    <details>
-      <summary>objetos</summary>
-      <p>Los objetos son unidades de memoria que guardan identificadores y valores. También se consideran variables. Se suelen declarar con const.</p>
-      <p class="details-subtitle">Propiedades</p>
-      <p>Los objetos contienen propiedades y valores.</p>
-      <div class="black">
-        <span class="etiqueta">const</span>
-        <span class="atributo">coche</span> = 
-        <span class="llave">{</span>
-        <span class="propiedad">marca</span> : 
-        <span class="valor">"fiat"</span>,
-        <span class="propiedad">color</span> : 
-        <span class="valor">"gris"</span>,
-        <span class="propiedad">arrancar</span> : 
-        <span class="valor">arrancar()</span>
-        <span class="llave">}</span>;
-        <br>
-        coche.color = "verde";
-        <span class="comentario">// objeto . propiedad; u objeto ["propiedad"]; Para acceder a una propiedad del objeto.</span>
-      </div>
-      <p>Se pueden añadir métodos y funciones como valores de las propiedades. También se pueden añadir otros objetos como valor de las propiedades.</p>
-      <div class="black">
-        <pre>
-  myObj = {
-    name  "John",
-    age : 30,
-    myCars : {
-      car1: "Ford",
-      car2: "BMW"
+  
+      <details>
+        <summary>objetos</summary>
+        <p>Los objetos son unidades de memoria que guardan identificadores y valores. También se consideran variables. Se suelen declarar con const.</p>
+        <p class="details-subtitle">Propiedades</p>
+        <p>Los objetos contienen propiedades y valores.</p>
+        <div class="black">
+          <span class="etiqueta">const</span>
+          <span class="atributo">coche</span> = 
+          <span class="llave">{</span>
+          <span class="propiedad">marca</span> : 
+          <span class="valor">"fiat"</span>,
+          <span class="propiedad">color</span> : 
+          <span class="valor">"gris"</span>,
+          <span class="propiedad">arrancar</span> : 
+          <span class="valor">arrancar()</span>
+          <span class="llave">}</span>;
+          <br>
+          coche.color = "verde";
+          <span class="comentario">// objeto . propiedad; u objeto ["propiedad"]; Para acceder a una propiedad del objeto.</span>
+        </div>
+        <p>Se pueden añadir métodos y funciones como valores de las propiedades. También se pueden añadir otros objetos como valor de las propiedades.</p>
+        <div class="black">
+          <pre>
+    myObj = {
+      name  "John",
+      age : 30,
+      myCars : {
+        car1: "Ford",
+        car2: "BMW"
+      }
     }
-  }
-        </pre>
-      </div>
-      <p class="details-subtitle">Métodos</p>
-      <p>Los objetos pueden tener sus propios métodos.</p>
-      <div class="black">
-        coche.stop();
-        <span class="comentario">// objeto . función();</span>
-      </div>
-      <details>
-        <summary>Formas de crear objetos</summary>
+          </pre>
+        </div>
+        <p class="details-subtitle">Métodos</p>
+        <p>Los objetos pueden tener sus propios métodos.</p>
+        <div class="black">
+          coche.stop();
+          <span class="comentario">// objeto . función();</span>
+        </div>
         <details>
-          <summary>Objeto literal </summary>
-          <p>Se declara un const con su nombre de variable y una lista de propiedades:valor; entre llaves {}.</p>
-          <div class="black">
-            <span class="etiqueta">const</span>
-            <span class="atributo">person</span> =
-            <span class="llave">{}</span>;
-            <br>
-            person.firstName = 
-            <span class="valor">"John"</span>;
-            <br>
-            person.lastName = 
-            <span class="valor">"Doe"</span>;
-            <br>
-            <span class="comentario">// También se puede crear un objeto de esta manera.</span>
-          </div>
+          <summary>Formas de crear objetos</summary>
+          <details>
+            <summary>Objeto literal </summary>
+            <p>Se declara un const con su nombre de variable y una lista de propiedades:valor; entre llaves {}.</p>
+            <div class="black">
+              <span class="etiqueta">const</span>
+              <span class="atributo">person</span> =
+              <span class="llave">{}</span>;
+              <br>
+              person.firstName = 
+              <span class="valor">"John"</span>;
+              <br>
+              person.lastName = 
+              <span class="valor">"Doe"</span>;
+              <br>
+              <span class="comentario">// También se puede crear un objeto de esta manera.</span>
+            </div>
+          </details>
+          <details>
+            <summary>new Object()</summary>
+            <p>Primero se declara la variable y después de asignar las propiedades y valores.</p>
+            <div class="black">
+              <span class="etiqueta">const</span>
+              <span class="atributo">person</span> =
+              <span class="valor-css">new</span>
+              Object();
+              <br>
+              person.firstName = 
+              <span class="valor">"John"</span>;
+              <br>
+              person.lastName = 
+              <span class="valor">"Doe"</span>;
+            </div>
+          </details>
+          <details>
+            <summary>Object Constructors</summary>
+            <p>Se utiliza para construir varios objetos del mismo tipo. Es recomendable crear un nombre para el Constructor de objeto que empiece por mayúsculas.</p>
+            <div class="black">
+              <span class="etiqueta">function</span> Person(first, last, age, eye)
+              <span class="llave">{</span>
+              <br>
+              <span class="hijo etiqueta">this</span>.firstName = first;
+              <br>
+              <span class="hijo etiqueta">this</span>.lastName = last;
+              <br>
+              <span class="hijo etiqueta">this</span>.age = age;
+              <br>
+              <span class="hijo etiqueta">this</span>.eyeColor = eye;
+              <br>
+              <span class="llave">}</span>
+              <br>
+              <span class="etiqueta">const</span> myFather =
+              <span class="etiqueta">new</span> Person( <span class="valor">"John"</span>, <span class="valor">"Doe"</span>, <span class="valor-css">50</span>,<span class="valor">"blue"</span> );
+              <span class="comentario">// Se pueden crear más objetos siguiendo este mismo ejemplo en una nueva línea.</span>
+              <br>
+              document.getElementById( <span class="valor">"demo"</span> ).innerHTML = <span class="valor">"My father is" </span> + myFather.age + ".";
+              <br>
+              <span class="comentario">// Resultado: My father is 50.</span>
+            </div>
+            <p>En la función construcción <strong>this</strong> no tiene valor, se cambia por el objeto al momento en que se crea.</p>
+            <p>Las propiedades que se crean asignando un valor tendrán para todos los objetos el mismo valor.</p>
+            <div class="black">
+              <span class="etiqueta">function</span> Person(first, last, age, eye)
+              <span class="llave">{</span>
+              <br>
+              <span class="hijo etiqueta">this</span>.firstName = first;
+              <br>
+              <span class="hijo etiqueta">this</span>.lastName = last;
+              <br>
+              <span class="hijo etiqueta">this</span>.age = age;
+              <br>
+              <span class="hijo etiqueta">this</span>.eyeColor = eye;
+              <br>
+              <span class="hijo etiqueta">this</span>.nationality = "English";
+              <br>
+              <span class="llave">}</span>
+              <br>
+              <span class="etiqueta">const</span> myFather =
+              <span class="etiqueta">new</span> Person( <span class="valor">"John"</span>, <span class="valor">"Doe"</span>, <span class="valor-css">50</span>,<span class="valor">"blue"</span> );
+              <br>
+              <span class="etiqueta">const</span> myMother =
+              <span class="etiqueta">new</span> Person( <span class="valor">"Sally"</span>, <span class="valor">"Rally"</span>, <span class="valor-css">53</span>,<span class="valor">"brown"</span> );
+              <br>
+              document.getElementById( <span class="valor">"demo"</span> ).innerHTML = <span class="valor">"My father is" </span> + myFather.nationaly + <span class="valor">"My mother is" </span> + myMother.nationaly".";
+              <br>
+              <span class="comentario">// My father is Enlish My mother is English.</span>
+            </div>
+            <p>Se pueden añadir nuevas propiedades a un objeto, pero no se puede añadir una nueva propiedad al constructor. Para que funcione hay que añadir la palabra <strong>prototype</strong></p>
+            <div class="black">
+              <span class="etiqueta">myFather</span>.nationality = <span class="valor">"English"</span>;
+              <br>
+              <span class="comentario">// Funcionará</span>
+              <br>
+              <span class="etiqueta">Person</span>.nationality = <span class="valor">"English"</span>;
+              <br>
+              <span class="comentario">// No funcionará</span>
+              <br>
+              <span class="etiqueta">Person</span><span class="valor-css">.prototype</span>.nationality = <span class="valor">"English"</span>;
+              <br>
+              <span class="comentario">// Funcionará</span>
+              <br>
+            </div>
+          </details>
         </details>
         <details>
-          <summary>new Object()</summary>
-          <p>Primero se declara la variable y después de asignar las propiedades y valores.</p>
-          <div class="black">
-            <span class="etiqueta">const</span>
-            <span class="atributo">person</span> =
-            <span class="valor-css">new</span>
-            Object();
-            <br>
-            person.firstName = 
-            <span class="valor">"John"</span>;
-            <br>
-            person.lastName = 
-            <span class="valor">"Doe"</span>;
-          </div>
-        </details>
-        <details>
-          <summary>Object Constructors</summary>
-          <p>Se utiliza para construir varios objetos del mismo tipo. Es recomendable crear un nombre para el Constructor de objeto que empiece por mayúsculas.</p>
-          <div class="black">
-            <span class="etiqueta">function</span> Person(first, last, age, eye)
-            <span class="llave">{</span>
-            <br>
-            <span class="hijo etiqueta">this</span>.firstName = first;
-            <br>
-            <span class="hijo etiqueta">this</span>.lastName = last;
-            <br>
-            <span class="hijo etiqueta">this</span>.age = age;
-            <br>
-            <span class="hijo etiqueta">this</span>.eyeColor = eye;
-            <br>
-            <span class="llave">}</span>
-            <br>
-            <span class="etiqueta">const</span> myFather =
-            <span class="etiqueta">new</span> Person( <span class="valor">"John"</span>, <span class="valor">"Doe"</span>, <span class="valor-css">50</span>,<span class="valor">"blue"</span> );
-            <span class="comentario">// Se pueden crear más objetos siguiendo este mismo ejemplo en una nueva línea.</span>
-            <br>
-            document.getElementById( <span class="valor">"demo"</span> ).innerHTML = <span class="valor">"My father is" </span> + myFather.age + ".";
-            <br>
-            <span class="comentario">// Resultado: My father is 50.</span>
-          </div>
-          <p>En la función construcción <strong>this</strong> no tiene valor, se cambia por el objeto al momento en que se crea.</p>
-          <p>Las propiedades que se crean asignando un valor tendrán para todos los objetos el mismo valor.</p>
-          <div class="black">
-            <span class="etiqueta">function</span> Person(first, last, age, eye)
-            <span class="llave">{</span>
-            <br>
-            <span class="hijo etiqueta">this</span>.firstName = first;
-            <br>
-            <span class="hijo etiqueta">this</span>.lastName = last;
-            <br>
-            <span class="hijo etiqueta">this</span>.age = age;
-            <br>
-            <span class="hijo etiqueta">this</span>.eyeColor = eye;
-            <br>
-            <span class="hijo etiqueta">this</span>.nationality = "English";
-            <br>
-            <span class="llave">}</span>
-            <br>
-            <span class="etiqueta">const</span> myFather =
-            <span class="etiqueta">new</span> Person( <span class="valor">"John"</span>, <span class="valor">"Doe"</span>, <span class="valor-css">50</span>,<span class="valor">"blue"</span> );
-            <br>
-            <span class="etiqueta">const</span> myMother =
-            <span class="etiqueta">new</span> Person( <span class="valor">"Sally"</span>, <span class="valor">"Rally"</span>, <span class="valor-css">53</span>,<span class="valor">"brown"</span> );
-            <br>
-            document.getElementById( <span class="valor">"demo"</span> ).innerHTML = <span class="valor">"My father is" </span> + myFather.nationaly + <span class="valor">"My mother is" </span> + myMother.nationaly".";
-            <br>
-            <span class="comentario">// My father is Enlish My mother is English.</span>
-          </div>
-          <p>Se pueden añadir nuevas propiedades a un objeto, pero no se puede añadir una nueva propiedad al constructor. Para que funcione hay que añadir la palabra <strong>prototype</strong></p>
-          <div class="black">
-            <span class="etiqueta">myFather</span>.nationality = <span class="valor">"English"</span>;
-            <br>
-            <span class="comentario">// Funcionará</span>
-            <br>
-            <span class="etiqueta">Person</span>.nationality = <span class="valor">"English"</span>;
-            <br>
-            <span class="comentario">// No funcionará</span>
-            <br>
-            <span class="etiqueta">Person</span><span class="valor-css">.prototype</span>.nationality = <span class="valor">"English"</span>;
-            <br>
-            <span class="comentario">// Funcionará</span>
-            <br>
-          </div>
+          <summary>Mostrar objetos por pantalla</summary>
+          <p>Mostrar un objeto por pantalla con un innerHTML dará de resultado: <strong>[object Object]</strong></p>
+          <p>Esto no es lo que se espera cuándo se quiere mostrar un objeto, pero hay diferentes maneras de conseguirlo:</p>
+          <ul>
+            <li>
+              <p><strong>Por el nombre de las propiedades: </strong>Accediendo a cada una de las propiedades del objeto que se quieren mostrar creando una cadena de texto con sentido.</p>
+              <div class="black">
+                <span class="etiqueta">const</span>
+                <span class="valor-css">person</span> =
+                <span class="llave">{</span>
+                <br>      
+                <span class="atributo hijo">name</span>:
+                <span class="valor">"John"</span>,
+                <br>
+                <span class="atributo hijo">age</span>:
+                <span class="valor-css">30</span>,
+                <br>
+                <span class="atributo hijo">city</span>:
+                <span class="valor">"New York"</span>,
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                <span class="etiqueta">person</span>.
+                <span class="atributo">name</span> + 
+                <span class="valor">","</span> +
+                <span class="etiqueta">person</span>.
+                <span class="atributo">age</span> + 
+                <span class="valor">","</span> +
+                <span class="etiqueta">person</span>.
+                <span class="atributo">city</span>;
+                <br>
+                <span class="comentario">// Resultado: John, 30, New York</span>
+              </div>
+            </li>
+            <li>
+              <p><strong>Bucle de propiedades: </strong>Se puede acceder a las propiedades de un objeto creando un bucle que lo recorra y pinte cada uno de sus valores.</p>
+              <div class="black">
+                <span class="etiqueta">const</span>
+                <span class="valor-css">person</span> =
+                <span class="llave">{</span>
+                <br>      
+                <span class="atributo hijo">name</span>:
+                <span class="valor">"John"</span>,
+                <br>
+                <span class="atributo hijo">age</span>:
+                <span class="valor-css">30</span>,
+                <br>
+                <span class="atributo hijo">city</span>:
+                <span class="valor">"New York"</span>,
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                <span class="etiqueta">let</span>
+                <span class="valor-css">text</span> =
+                <span class="valor">""</span>;
+                <br>
+                <span class="etiqueta">for</span> (
+                <span class="etiqueta">let</span> x
+                <span class="etiqueta">in</span> person )
+                <span class="llave">{</span>
+                <br>
+                <span class="hijo">text += person[x] +</span>
+                <span class="vaor">" "</span>;
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                document.getElementById(
+                <span class="valor">"demo"</span>).innerHTML = text;
+                <br>
+                <span class="comentario">// Resultado: John 30 New York</span>
+              </div>
+            </li>
+            <li>
+              <p><strong>Object.values() : </strong>Crea un array de las propiedades del objeto.</p>
+              <div class="black">
+                <span class="etiqueta">const</span>
+                <span class="valor-css">person</span> =
+                <span class="llave">{</span>
+                <br>      
+                <span class="atributo hijo">name</span>:
+                <span class="valor">"John"</span>,
+                <br>
+                <span class="atributo hijo">age</span>:
+                <span class="valor-css">30</span>,
+                <br>
+                <span class="atributo hijo">city</span>:
+                <span class="valor">"New York"</span>,
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                <span class="etiqueta">const</span>
+                myArray = Objetc.values(person);
+                <br>
+                document.getElementById( <span class="valor">"demo"</span> ).innerHTML = myArray;
+                <br>
+                <span class="comentario">//Resultado: John,30,New York</span>
+              </div>
+            </li>
+            <li>
+              <p><strong>Object.entries() : </strong>Método para hacer bucles y recoger tanto las propiedades como los valores.</p>
+              <div class="black">
+                <span class="etiqueta">const</span>
+                <span class="valor-css">person</span> =
+                <span class="llave">{</span>
+                <br>      
+                <span class="atributo hijo">name</span>:
+                <span class="valor">"John"</span>,
+                <br>
+                <span class="atributo hijo">age</span>:
+                <span class="valor-css">30</span>,
+                <br>
+                <span class="atributo hijo">city</span>:
+                <span class="valor">"New York"</span>,
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                <span class="etiqueta">let</span>
+                <span class="valor-css">text</span> =
+                <span class="valor">""</span>;
+                <br>
+                <span class="etiqueta">for</span> (
+                <span class="etiqueta">let</span> [people, value ] of Object.entries(person) )
+                <span class="llave">{</span>
+                <br>
+                <span class="hijo">text += people +</span>
+                <span class="vaor">" "</span> + value + ",";
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                document.getElementById(
+                <span class="valor">"demo"</span>).innerHTML = text;
+                <br>
+                <span class="comentario">// Resultado: name John, age 30, city New York,</span>
+              </div>
+            </li>
+            <li>
+              <p><strong>JSON.stringify() : </strong>Método de JSON que convierte objetos en cadenas de texto (strings). Este método funciona en JavaScript y lo soportan los navegadores.</p>
+              <div class="black">
+                <span class="etiqueta">const</span>
+                <span class="valor-css">person</span> =
+                <span class="llave">{</span>
+                <br>      
+                <span class="atributo hijo">name</span>:
+                <span class="valor">"John"</span>,
+                <br>
+                <span class="atributo hijo">age</span>:
+                <span class="valor-css">30</span>,
+                <br>
+                <span class="atributo hijo">city</span>:
+                <span class="valor">"New York"</span>,
+                <br>
+                <span class="llave">}</span>;
+                <br>
+                document.getElementByID( <span class="valor">"demo"</span> ).innerHTML = JSON.stringify(person);
+                <br>
+                <span class="comentario">// Resultado: {"name":"John","age":30,"city":"New York"} </span>
+              </div>
+            </li>
+          </ul>
         </details>
       </details>
+  
       <details>
-        <summary>Mostrar objetos por pantalla</summary>
-        <p>Mostrar un objeto por pantalla con un innerHTML dará de resultado: <strong>[object Object]</strong></p>
-        <p>Esto no es lo que se espera cuándo se quiere mostrar un objeto, pero hay diferentes maneras de conseguirlo:</p>
-        <ul>
-          <li>
-            <p><strong>Por el nombre de las propiedades: </strong>Accediendo a cada una de las propiedades del objeto que se quieren mostrar creando una cadena de texto con sentido.</p>
+        <summary>this</summary>
+        <p>Es una palabra reservada que sirve para referirse al objeto en sí mismo.</p>
+      </details>
+  
+      <details>
+        <summary>valores</summary>
+        <p>Hay dos tipos de valores:</p>
+        
+        <details>
+          <summary>fijos / literales</summary>
+          <ul>
+            <li><p><strong>números: </strong>no llevan comillas.</p></li>
+            <li>
+              <p><strong>strings: </strong>Siempre llevan comillas. Son cadenas de texto. Los número que van entre comillas son strings y son tratados como palabras.</p>
+              <p>Los strings siempre van entre comillas, se pueden usar 'comillas simples' o "comillas dobles" indistintametne. Si se quiere que se muestre en pantalla alguna comilla, no podrá coincidir con la comilla que se esté usando para agrupar el string. Ej.: "quiero poner 'comillas'", 'quiero poner "comillas"'</p>
+              <p>Para el caso en el que se necesite utilizar los dos tipos de comilla se puede utilizar la comilla `` llamada template. Es el acento francés. Ej. `Necesito usar 'comillas simples' y "comillas dobles" en este string`</p>
+              <p>También hay otras soluciones para esto mismo sustituyendo las comas por \', \", \\, Ejemplo.: Quiero poner \'comillas\'. Quiero poner \\una barras lateral.</p>
+            </li>
+            <li><p><strong>undefined :</strong> El valor no trae nada, está vacío.</p></li>
+          </ul>
+        </details>
+  
+        <details>
+          <summary>variables </summary>
+          <p>Se utilizan para contener datos. Crear variables se denomina "declarar" y es buena práctica hacerlo al principio del script.</p>
+          <details>
+            <summary>automático</summary>
             <div class="black">
-              <span class="etiqueta">const</span>
-              <span class="valor-css">person</span> =
-              <span class="llave">{</span>
-              <br>      
-              <span class="atributo hijo">name</span>:
-              <span class="valor">"John"</span>,
-              <br>
-              <span class="atributo hijo">age</span>:
-              <span class="valor-css">30</span>,
-              <br>
-              <span class="atributo hijo">city</span>:
-              <span class="valor">"New York"</span>,
-              <br>
-              <span class="llave">}</span>;
-              <br>
-              <span class="etiqueta">person</span>.
-              <span class="atributo">name</span> + 
-              <span class="valor">","</span> +
-              <span class="etiqueta">person</span>.
-              <span class="atributo">age</span> + 
-              <span class="valor">","</span> +
-              <span class="etiqueta">person</span>.
-              <span class="atributo">city</span>;
-              <br>
-              <span class="comentario">// Resultado: John, 30, New York</span>
+              <span class="atributo">nombreVariable</span>=
+              <span class="valor">"valor"</span>;
             </div>
-          </li>
-          <li>
-            <p><strong>Bucle de propiedades: </strong>Se puede acceder a las propiedades de un objeto creando un bucle que lo recorra y pinte cada uno de sus valores.</p>
+            <p>No se declara, pero esto no es lo recomendable. Se recomienda declarar siempre las variables.</p>
+          </details>
+          <details>
+            <summary>var </summary>
             <div class="black">
-              <span class="etiqueta">const</span>
-              <span class="valor-css">person</span> =
-              <span class="llave">{</span>
-              <br>      
-              <span class="atributo hijo">name</span>:
-              <span class="valor">"John"</span>,
-              <br>
-              <span class="atributo hijo">age</span>:
-              <span class="valor-css">30</span>,
-              <br>
-              <span class="atributo hijo">city</span>:
-              <span class="valor">"New York"</span>,
-              <br>
-              <span class="llave">}</span>;
-              <br>
+              <span class="etiqueta">var</span>
+              <span class="atributo">nombreVariable </span>=
+              <span class="valor">"valor"</span>;
+            </div>
+            <p>Está anticuado, ya se puede utilizar sólo let and const. Reservar su úso solo para código destinado a ser ejecutado en navegadores antiguos.</p>
+            <p class="details-subtitle">Particularidades</p>
+            <ul>
+              <li>
+                <p>Tiene alcance global. Se puede acceder a la variable aunque esté dentro de llaves {}.</p>
+                <div class="black">
+                  <span class="etiqueta">var</span>
+                  <span class="atributo">nombreVariable</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// Funciona porque es global.</span>
+                  <br>
+                  <span class="llave">}</span>
+                </div>
+              </li>
+              <li>
+                <p>Permite re-declarar.</p>
+              </li>
+              <li>
+                <p>Se pueden declarar después de asignar un valor.</p>
+                <div class="black">
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">var</span>
+                  <span class="atributo">nombreVariable </span>;
+                </div>
+              </li>
+            </ul>
+          </details>
+          <details>
+            <summary>let</summary>
+            <div class="black">
               <span class="etiqueta">let</span>
-              <span class="valor-css">text</span> =
-              <span class="valor">""</span>;
-              <br>
-              <span class="etiqueta">for</span> (
-              <span class="etiqueta">let</span> x
-              <span class="etiqueta">in</span> person )
-              <span class="llave">{</span>
-              <br>
-              <span class="hijo">text += person[x] +</span>
-              <span class="vaor">" "</span>;
-              <br>
-              <span class="llave">}</span>;
-              <br>
-              document.getElementById(
-              <span class="valor">"demo"</span>).innerHTML = text;
-              <br>
-              <span class="comentario">// Resultado: John 30 New York</span>
+              <span class="atributo">nombreVariable </span>=
+              <span class="valor">"valor"</span>;
             </div>
-          </li>
-          <li>
-            <p><strong>Object.values() : </strong>Crea un array de las propiedades del objeto.</p>
+            <p>Es la forma moderna de var. Sus valores pueden cambiar. </p>
+            <p></p>
+            <p class="details-subtitle">Particularidades</p>
+            <ul>
+              <li>
+                <p>Tiene alcance de bloque (block scope), no global o de función. Block scope quiere decir que las declaraciones que van dentro de llaves {} no se pueden acceder desde fuera.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// NO funciona porque NO es global.</span>
+                  <br>
+                  <span class="llave">}</span>
+                </div>
+              </li>
+              <li>
+                <p>No se puede re-declarar en el mismo scope, pero sí en diferentes scopes.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="hijo etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// Funciona porque está en diferente scope</span>
+                  <br>
+                  <span class="llave">}</span>
+                  <br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// No funciona porque está en el mismo scope que la primera declaración.</span>
+                </div>
+              </li>
+              <li>
+                <p>Se tiene que declarar antes de ser usada.</p>
+                <div class="black">
+                  <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br><br>
+                  <span class="comentario">&lt;!-- Esto Sí funcionará --&gt;</span>
+                  <br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+              <li><p>No se pueden vincular con <strong>this</strong>.</p></li>
+              <li>
+                <p>Se pueden declarar varias variables en un mismo let separando con comas.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">nombreVariable </span> =
+                  <span class="valor">"valor"</span>,
+                  <span class="atributo">nombreVariable </span> =
+                  <span class="valor">"valor"</span>,
+                  <span class="atributo">nombreVariable </span> =
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+            </ul>
+            
+          </details>
+          <details>
+            <summary>const</summary>
             <div class="black">
               <span class="etiqueta">const</span>
-              <span class="valor-css">person</span> =
-              <span class="llave">{</span>
-              <br>      
-              <span class="atributo hijo">name</span>:
-              <span class="valor">"John"</span>,
-              <br>
-              <span class="atributo hijo">age</span>:
-              <span class="valor-css">30</span>,
-              <br>
-              <span class="atributo hijo">city</span>:
-              <span class="valor">"New York"</span>,
-              <br>
-              <span class="llave">}</span>;
-              <br>
-              <span class="etiqueta">const</span>
-              myArray = Objetc.values(person);
-              <br>
-              document.getElementById( <span class="valor">"demo"</span> ).innerHTML = myArray;
-              <br>
-              <span class="comentario">//Resultado: John,30,New York</span>
+              <span class="atributo">nombreVariable </span>=
+              <span class="valor">"valor"</span>;
             </div>
-          </li>
-          <li>
-            <p><strong>Object.entries() : </strong>Método para hacer bucles y recoger tanto las propiedades como los valores.</p>
+            <p>Valores constantes que no van a cambiar ni va a cambiar su tipo de valor. No define un valor constante, sino que define una referencia constante a un valor. Por eso no se pueden reasignar valores, arrays u objetos, pero sí cambiar elementos de arrays u objetos.</p>
             <div class="black">
-              <span class="etiqueta">const</span>
-              <span class="valor-css">person</span> =
-              <span class="llave">{</span>
-              <br>      
-              <span class="atributo hijo">name</span>:
-              <span class="valor">"John"</span>,
+              <span>const cars = ["Saab", "Volvo", "BMW"];</span>
               <br>
-              <span class="atributo hijo">age</span>:
-              <span class="valor-css">30</span>,
-              <br>
-              <span class="atributo hijo">city</span>:
-              <span class="valor">"New York"</span>,
-              <br>
-              <span class="llave">}</span>;
-              <br>
-              <span class="etiqueta">let</span>
-              <span class="valor-css">text</span> =
-              <span class="valor">""</span>;
-              <br>
-              <span class="etiqueta">for</span> (
-              <span class="etiqueta">let</span> [people, value ] of Object.entries(person) )
-              <span class="llave">{</span>
-              <br>
-              <span class="hijo">text += people +</span>
-              <span class="vaor">" "</span> + value + ",";
-              <br>
-              <span class="llave">}</span>;
-              <br>
-              document.getElementById(
-              <span class="valor">"demo"</span>).innerHTML = text;
-              <br>
-              <span class="comentario">// Resultado: name John, age 30, city New York,</span>
+              <span>cars[0] = "Toyota";</span>
+              <span class="comentario">// Es correcto</span>
+              <br><br>
+              cars = ["Toyota", "Volvo", "BMW"];
+              <span class="comentario">// Es incorrecto</span>
             </div>
-          </li>
-          <li>
-            <p><strong>JSON.stringify() : </strong>Método de JSON que convierte objetos en cadenas de texto (strings). Este método funciona en JavaScript y lo soportan los navegadores.</p>
-            <div class="black">
-              <span class="etiqueta">const</span>
-              <span class="valor-css">person</span> =
-              <span class="llave">{</span>
-              <br>      
-              <span class="atributo hijo">name</span>:
-              <span class="valor">"John"</span>,
-              <br>
-              <span class="atributo hijo">age</span>:
-              <span class="valor-css">30</span>,
-              <br>
-              <span class="atributo hijo">city</span>:
-              <span class="valor">"New York"</span>,
-              <br>
-              <span class="llave">}</span>;
-              <br>
-              document.getElementByID( <span class="valor">"demo"</span> ).innerHTML = JSON.stringify(person);
-              <br>
-              <span class="comentario">// Resultado: {"name":"John","age":30,"city":"New York"} </span>
-            </div>
-          </li>
-        </ul>
-      </details>
-    </details>
-
-    <details>
-      <summary>this</summary>
-      <p>Es una palabra reservada que sirve para referirse al objeto en sí mismo.</p>
-    </details>
-
-    <details>
-      <summary>valores</summary>
-      <p>Hay dos tipos de valores:</p>
-      
-      <details>
-        <summary>fijos / literales</summary>
-        <ul>
-          <li><p><strong>números: </strong>no llevan comillas.</p></li>
-          <li>
-            <p><strong>strings: </strong>Siempre llevan comillas. Son cadenas de texto. Los número que van entre comillas son strings y son tratados como palabras.</p>
-            <p>Los strings siempre van entre comillas, se pueden usar 'comillas simples' o "comillas dobles" indistintametne. Si se quiere que se muestre en pantalla alguna comilla, no podrá coincidir con la comilla que se esté usando para agrupar el string. Ej.: "quiero poner 'comillas'", 'quiero poner "comillas"'</p>
-            <p>Para el caso en el que se necesite utilizar los dos tipos de comilla se puede utilizar la comilla `` llamada template. Es el acento francés. Ej. `Necesito usar 'comillas simples' y "comillas dobles" en este string`</p>
-            <p>También hay otras soluciones para esto mismo sustituyendo las comas por \', \", \\, Ejemplo.: Quiero poner \'comillas\'</p>
-          </li>
-          <li><p><strong>undefined :</strong> El valor no trae nada, está vacío.</p></li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>variables </summary>
-        <p>Se utilizan para contener datos. Crear variables se denomina "declarar" y es buena práctica hacerlo al principio del script.</p>
-        <details>
-          <summary>automático</summary>
-          <div class="black">
-            <span class="atributo">nombreVariable</span>=
-            <span class="valor">"valor"</span>;
-          </div>
-          <p>No se declara, pero esto no es lo recomendable. Se recomienda declarar siempre las variables.</p>
+            <p>Es decir puede cambiar elementos específicos pero no reasignar valores al identificador.</p>
+            <p class="details-subtitle">Particularidades</p>
+            <ul>
+              <li>
+                <p>Tiene alcance de bloque (block scope), no global o de función. Block scope quiere decir que las declaraciones que van dentro de llaves {} no se puede acceder desde fuera.</p>
+                <div class="black">
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// NO funciona porque NO es global.</span>
+                  <br>
+                  <span class="llave">}</span>
+                </div>
+              </li>
+              <li>
+                <p>No se puede re-declarar en el mismo scope, pero sí en diferentes scopes.</p>
+                <div class="black">
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">function</span>
+                  nombreFunción <span class="llave">() {</span> 
+                  <br>
+                  <span class="hijo etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// Funciona porque está en diferente scope</span>
+                  <br>
+                  <span class="llave">}</span>
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable</span> = 
+                  <span class="valor">"valor"</span>;
+                  <span class="comentario">// No funciona porque está en el mismo scope que la primera declaración.</span>
+                </div>
+              </li>
+              <li>
+                <p>Se tiene que declarar antes de ser usada.</p>
+                <div class="black">
+                  <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br><br>
+                  <span class="comentario">&lt;!-- Esto Sí funcionará --&gt;</span>
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+              <li>
+                <p>No se pueden vincular con <strong>this</strong>.</p>
+              </li>
+              <li>
+                <p>Se le debe asignar un valor en el momento de ser declarada, no después.</p>
+                <div class="black">
+                  <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
+                  <br>
+                  <span class="etiqueta">const</span>
+                  <span class="atributo">nombreVariable </span>;
+                  <br>
+                  <span class="atributo">nombreVariable </span>=
+                  <span class="valor">"valor"</span>;
+                </div>
+              </li>
+            </ul>
+          </details>
+  
         </details>
+  
+      </details>
+  
+      <details>
+  
+        <summary>operadores</summary>
+        <p>Existen diferentes tipos de operadores:</p>
+        
         <details>
-          <summary>var </summary>
-          <div class="black">
-            <span class="etiqueta">var</span>
-            <span class="atributo">nombreVariable </span>=
-            <span class="valor">"valor"</span>;
-          </div>
-          <p>Está anticuado, ya se puede utilizar sólo let and const. Reservar su úso solo para código destinado a ser ejecutado en navegadores antiguos.</p>
-          <p class="details-subtitle">Particularidades</p>
+          <summary>Aritméticos </summary>
+          <p>Sumas, restas, multiplicaciones y divisiones.</p>
           <ul>
-            <li>
-              <p>Tiene alcance global. Se puede acceder a la variable aunque esté dentro de llaves {}.</p>
-              <div class="black">
-                <span class="etiqueta">var</span>
-                <span class="atributo">nombreVariable</span>;
-                <br>
-                <span class="etiqueta">function</span>
-                nombreFunción <span class="llave">() {</span> 
-                <br>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// Funciona porque es global.</span>
-                <br>
-                <span class="llave">}</span>
-              </div>
+            <li class="li--details-exception">
+              <details>
+                <summary>+</summary>
+                <p>suma</p>
+                <p>Cuándo se utiliza con strings sirve para unir cadenas de texto (Concatenar).</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">x</span> =
+                  <span class="valor">"Hola que"</span> +
+                  <span class="valor">"tal?"</span>;
+                  <br>
+                  <span class="comentario">x = "Hola que tal?"</span>
+                </div>
+                <p>Si un número es un string, dependiendo de su posición en la suma el resultado será diferente.</p>
+                <div class="black">
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">x</span> =
+                  <span class="valor">"5"</span> +
+                  <span class="valor-css">2</span> +
+                  <span class="valor-css">3</span>;
+                  <br>
+                  <span class="comentario">// x = "523"</span>
+                  <br><br>
+                  <span class="etiqueta">let</span>
+                  <span class="atributo">x</span> =
+                  <span class="valor-css">2</span> +
+                  <span class="valor-css">3</span> +
+                  <span class="valor">"5"</span>;
+                  <br>
+                  <span class="comentario">// x = "55"</span>
+                </div>
+              </details>
             </li>
+            <li><p><strong>- </strong>resta</p></li>
+            <li><p><strong>* </strong>multiplicación</p></li>
+            <li><p><strong>/ </strong>divisón</p></li>
+            <li><p><strong>** </strong>exponente</p></li>
+            <li><p><strong>% </strong>resto de la división</p></li>
+            <li><p><strong>++ </strong>incremento</p></li>
+            <li><p><strong>-- </strong>descuento</p></li>
+          </ul>
+        </details>
+  
+        <details>
+          <summary>De asignación </summary>
+          <p>Asignan valor a una variable</p>
+          <ul>
+            <li><p><strong>= </strong>x = y. Asigna un valor a una variable.</p></li>
+            <li><p><strong>+= </strong>x = x + y</p></li>
+            <li><p><strong>-= </strong>x = x - y</p></li>
+            <li><p><strong>*= </strong>x = x * y</p></li>
+            <li><p><strong>/= </strong>x = x / y</p></li>
+            <li><p><strong>%= </strong>x = x % y</p></li>
+            <li><p><strong>**= </strong>z = x ** y</p></li>
+          </ul>
+          <p>Existen operadores de asginación par todos los otros tipos de operadores. Se consiguen añadiendo un símbolo = al final.</p>
+          <ul>
+            <li><p><strong>&lt;&lt;= : </strong>cálculo bitwise con cambio hacia la izquierda.</p></li>
+            <li><p><strong>&gt;&gt;= : </strong>cálculo bitwise con cambio hacia la derecha en número árabe.</p></li>
+            <li><p><strong>&gt;&gt;&gt;= : </strong>cálculo bitwise con cambio hacia la derecha en número decimal.</p></li>
+            <li><p><strong>&= : </strong>cálculo bitwise que compara dos valores como un and.</p></li>
+            <li><p><strong>^= : </strong>cálculo bitwise que compara dos valores como un xor.</p></li>
+            <li><p><strong>|= : </strong>cálculo bitwise que compara dos valores como un or. </p></li>
+            <li><p><strong>&&= : </strong>si el primer valor es true, se asigna el segundo valor.</p></li>
+            <li><p><strong>||= : </strong>si el primer valor es false, se asigna el segundo valor.</p></li>
             <li>
-              <p>Permite re-declarar.</p>
-            </li>
-            <li>
-              <p>Se pueden declarar después de asignar un valor.</p>
-              <div class="black">
-                <span class="atributo">nombreVariable </span>=
-                <span class="valor">"valor"</span>;
-                <br>
-                <span class="etiqueta">var</span>
-                <span class="atributo">nombreVariable </span>;
-              </div>
+              <p><strong>??= : </strong>si el primer valor es undefined o null se asigna el segundo valor.</p>
             </li>
           </ul>
         </details>
+  
         <details>
-          <summary>let</summary>
-          <div class="black">
-            <span class="etiqueta">let</span>
-            <span class="atributo">nombreVariable </span>=
-            <span class="valor">"valor"</span>;
-          </div>
-          <p>Es la forma moderna de var. Sus valores pueden cambiar. </p>
-          <p></p>
-          <p class="details-subtitle">Particularidades</p>
+          <summary>De comparación </summary>
+          <p>Comparan entre dos valores y su tipo.</p>
           <ul>
-            <li>
-              <p>Tiene alcance de bloque (block scope), no global o de función. Block scope quiere decir que las declaraciones que van dentro de llaves {} no se pueden acceder desde fuera.</p>
-              <div class="black">
-                <span class="etiqueta">let</span>
-                <span class="atributo">nombreVariable</span>;
-                <br>
-                <span class="etiqueta">function</span>
-                nombreFunción <span class="llave">() {</span> 
-                <br>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// NO funciona porque NO es global.</span>
-                <br>
-                <span class="llave">}</span>
-              </div>
-            </li>
-            <li>
-              <p>No se puede re-declarar en el mismo scope, pero sí en diferentes scopes.</p>
-              <div class="black">
-                <span class="etiqueta">let</span>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <br>
-                <span class="etiqueta">function</span>
-                nombreFunción <span class="llave">() {</span> 
-                <br>
-                <span class="hijo etiqueta">let</span>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// Funciona porque está en diferente scope</span>
-                <br>
-                <span class="llave">}</span>
-                <br>
-                <span class="etiqueta">let</span>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// No funciona porque está en el mismo scope que la primera declaración.</span>
-              </div>
-            </li>
-            <li>
-              <p>Se tiene que declarar antes de ser usada.</p>
-              <div class="black">
-                <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
-                <br>
-                <span class="atributo">nombreVariable </span>=
-                <span class="valor">"valor"</span>;
-                <br>
-                <span class="etiqueta">let</span>
-                <span class="atributo">nombreVariable </span>;
-                <br><br>
-                <span class="comentario">&lt;!-- Esto Sí funcionará --&gt;</span>
-                <br>
-                <span class="etiqueta">let</span>
-                <span class="atributo">nombreVariable </span>;
-                <br>
-                <span class="atributo">nombreVariable </span>=
-                <span class="valor">"valor"</span>;
-              </div>
-            </li>
-            <li><p>No se pueden vincular con <strong>this</strong>.</p></li>
-            <li>
-              <p>Se pueden declarar varias variables en un mismo let separando con comas.</p>
-              <div class="black">
-                <span class="etiqueta">let</span>
-                <span class="atributo">nombreVariable </span> =
-                <span class="valor">"valor"</span>,
-                <span class="atributo">nombreVariable </span> =
-                <span class="valor">"valor"</span>,
-                <span class="atributo">nombreVariable </span> =
-                <span class="valor">"valor"</span>;
-              </div>
-            </li>
-          </ul>
-          
-        </details>
-        <details>
-          <summary>const</summary>
-          <div class="black">
-            <span class="etiqueta">const</span>
-            <span class="atributo">nombreVariable </span>=
-            <span class="valor">"valor"</span>;
-          </div>
-          <p>Valores constantes que no van a cambiar ni va a cambiar su tipo de valor. No define un valor constante, sino que define una referencia constante a un valor. Por eso no se pueden reasignar valores, arrays u objetos, pero sí cambiar elementos de arrays u objetos.</p>
-          <div class="black">
-            <span>const cars = ["Saab", "Volvo", "BMW"];</span>
-            <br>
-            <span>cars[0] = "Toyota";</span>
-            <span class="comentario">// Es correcto</span>
-            <br><br>
-            cars = ["Toyota", "Volvo", "BMW"];
-            <span class="comentario">// Es incorrecto</span>
-          </div>
-          <p>Es decir puede cambiar elementos específicos pero no reasignar valores al identificador.</p>
-          <p class="details-subtitle">Particularidades</p>
-          <ul>
-            <li>
-              <p>Tiene alcance de bloque (block scope), no global o de función. Block scope quiere decir que las declaraciones que van dentro de llaves {} no se puede acceder desde fuera.</p>
-              <div class="black">
-                <span class="etiqueta">const</span>
-                <span class="atributo">nombreVariable</span>;
-                <br>
-                <span class="etiqueta">function</span>
-                nombreFunción <span class="llave">() {</span> 
-                <br>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// NO funciona porque NO es global.</span>
-                <br>
-                <span class="llave">}</span>
-              </div>
-            </li>
-            <li>
-              <p>No se puede re-declarar en el mismo scope, pero sí en diferentes scopes.</p>
-              <div class="black">
-                <span class="etiqueta">const</span>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <br>
-                <span class="etiqueta">function</span>
-                nombreFunción <span class="llave">() {</span> 
-                <br>
-                <span class="hijo etiqueta">const</span>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// Funciona porque está en diferente scope</span>
-                <br>
-                <span class="llave">}</span>
-                <br>
-                <span class="etiqueta">const</span>
-                <span class="atributo">nombreVariable</span> = 
-                <span class="valor">"valor"</span>;
-                <span class="comentario">// No funciona porque está en el mismo scope que la primera declaración.</span>
-              </div>
-            </li>
-            <li>
-              <p>Se tiene que declarar antes de ser usada.</p>
-              <div class="black">
-                <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
-                <br>
-                <span class="atributo">nombreVariable </span>=
-                <span class="valor">"valor"</span>;
-                <br>
-                <span class="etiqueta">const</span>
-                <span class="atributo">nombreVariable </span>;
-                <br><br>
-                <span class="comentario">&lt;!-- Esto Sí funcionará --&gt;</span>
-                <br>
-                <span class="etiqueta">const</span>
-                <span class="atributo">nombreVariable </span>=
-                <span class="valor">"valor"</span>;
-              </div>
-            </li>
-            <li>
-              <p>No se pueden vincular con <strong>this</strong>.</p>
-            </li>
-            <li>
-              <p>Se le debe asignar un valor en el momento de ser declarada, no después.</p>
-              <div class="black">
-                <span class="comentario">&lt;!-- Esto NO funcionará --&gt;</span>
-                <br>
-                <span class="etiqueta">const</span>
-                <span class="atributo">nombreVariable </span>;
-                <br>
-                <span class="atributo">nombreVariable </span>=
-                <span class="valor">"valor"</span>;
-              </div>
-            </li>
+            <li><p><strong>==</strong>iguales en valor</p></li>
+            <li><p><strong>===</strong> igual en valor y tipo</p></li>
+            <li><p><strong>!=</strong> diferente en valor</p></li>
+            <li><p><strong>!==</strong> diferente en valor o tipo</p></li>
+            <li><p><strong>&gt;</strong> más que</p></li>
+            <li><p><strong>&lt;</strong> menos que</p></li>
+            <li><p><strong>&gt;=</strong> mayor o igual que</p></li>
+            <li><p><strong>&lt;=</strong> menor igual que</p></li>
+            <li><p><strong>?</strong> operador ternario</p></li>
           </ul>
         </details>
-
+  
+        <details>
+          <summary>Strings </summary>
+          <p>Cadenas de texto. Igual que los de comparación pero con strings. Las comparaciones son alfabéticas.</p>
+        </details>
+  
+        <details>
+          <summary>bitwise </summary>
+          <p>Trabaja con los números en código binario. No es de uso común pero es útil para temas de seguridad y encriptación de datos.</p>
+          <ul>
+            <li><p><strong>& : </strong>and</p></li>
+            <li><p><strong>| : </strong>or</p></li>
+            <li><p><strong>~ : </strong>not</p></li>
+            <li><p><strong>^ : </strong>xor</p></li>
+            <li><p><strong>&lt;&lt; : </strong>cambio a la izquierda</p></li>
+            <li><p><strong>&gt;&gt; : </strong>cambio a la derecha en número árabe.</p></li>
+            <li><p><strong>&gt;&gt;&gt; : </strong>cambio a la derecha en número decimal.</p></li>
+          </ul>
+        </details>
+  
+        <details>
+          <summary>De tipo </summary>
+          <p>Existen dos operadores:</p>
+          <ul>
+            <li><p><strong>typeof : </strong>Devuelve el tipo de variable.</p></li>
+            <li><p><strong>instanceof : </strong>Devuelve verdadero si un objeto es una instancia de un objeto. ¿?</p></li>
+          </ul>
+        </details>
+  
+        <details>
+          <summary>Lógicos</summary>
+          <p>Añaden una condición.</p>
+          <ul>
+            <li><p><strong>&& : </strong>and. Se aplica a uno y otro.</p></li>
+            <li><p><strong>|| : </strong>or. Se añaden a uno u otro.</p></li>
+            <li><p><strong>! : </strong>not. Se prohibe aplicar a ese.</p></li>
+          </ul>
+        </details>
+  
       </details>
-
-    </details>
-
-    <details>
-
-      <summary>operadores</summary>
-      <p>Existen diferentes tipos de operadores:</p>
-      
+  
       <details>
-        <summary>Aritméticos </summary>
-        <p>Sumas, restas, multiplicaciones y divisiones.</p>
+        <summary>palabras clave</summary>
+        <p>Son con las que se suele empezar. Identifican una acción JavaScript que se quiere llevar a cabo. Estas son palabras reservadas, lo que significa que no se pueden utilizar como nombres de variables.</p>
         <ul>
-          <li class="li--details-exception">
-            <details>
-              <summary>+</summary>
-              <p>suma</p>
-              <p>Cuándo se utiliza con strings sirve para unir cadenas de texto (Concatenar).</p>
-              <div class="black">
-                <span class="etiqueta">let</span>
-                <span class="atributo">x</span> =
-                <span class="valor">"Hola que"</span> +
-                <span class="valor">"tal?"</span>;
-                <br>
-                <span class="comentario">x = "Hola que tal?"</span>
-              </div>
-              <p>Si un número es un string, dependiendo de su posición en la suma el resultado será diferente.</p>
-              <div class="black">
-                <span class="etiqueta">let</span>
-                <span class="atributo">x</span> =
-                <span class="valor">"5"</span> +
-                <span class="valor-css">2</span> +
-                <span class="valor-css">3</span>;
-                <br>
-                <span class="comentario">// x = "523"</span>
-                <br><br>
-                <span class="etiqueta">let</span>
-                <span class="atributo">x</span> =
-                <span class="valor-css">2</span> +
-                <span class="valor-css">3</span> +
-                <span class="valor">"5"</span>;
-                <br>
-                <span class="comentario">// x = "55"</span>
-              </div>
-            </details>
-          </li>
-          <li><p><strong>- </strong>resta</p></li>
-          <li><p><strong>* </strong>multiplicación</p></li>
-          <li><p><strong>/ </strong>divisón</p></li>
-          <li><p><strong>** </strong>exponente</p></li>
-          <li><p><strong>% </strong>resto de la división</p></li>
-          <li><p><strong>++ </strong>incremento</p></li>
-          <li><p><strong>-- </strong>descuento</p></li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>De asignación </summary>
-        <p>Asignan valor a una variable</p>
-        <ul>
-          <li><p><strong>= </strong>x = y. Asigna un valor a una variable.</p></li>
-          <li><p><strong>+= </strong>x = x + y</p></li>
-          <li><p><strong>-= </strong>x = x - y</p></li>
-          <li><p><strong>*= </strong>x = x * y</p></li>
-          <li><p><strong>/= </strong>x = x / y</p></li>
-          <li><p><strong>%= </strong>x = x % y</p></li>
-          <li><p><strong>**= </strong>z = x ** y</p></li>
-        </ul>
-        <p>Existen operadores de asginación par todos los otros tipos de operadores. Se consiguen añadiendo un símbolo = al final.</p>
-        <ul>
-          <li><p><strong>&lt;&lt;= : </strong>cálculo bitwise con cambio hacia la izquierda.</p></li>
-          <li><p><strong>&gt;&gt;= : </strong>cálculo bitwise con cambio hacia la derecha en número árabe.</p></li>
-          <li><p><strong>&gt;&gt;&gt;= : </strong>cálculo bitwise con cambio hacia la derecha en número decimal.</p></li>
-          <li><p><strong>&= : </strong>cálculo bitwise que compara dos valores como un and.</p></li>
-          <li><p><strong>^= : </strong>cálculo bitwise que compara dos valores como un xor.</p></li>
-          <li><p><strong>|= : </strong>cálculo bitwise que compara dos valores como un or. </p></li>
-          <li><p><strong>&&= : </strong>si el primer valor es true, se asigna el segundo valor.</p></li>
-          <li><p><strong>||= : </strong>si el primer valor es false, se asigna el segundo valor.</p></li>
+          <li><p><strong>var : </strong>variable</p></li>
+          <li><p><strong>let : </strong>bloque variable</p></li>
+          <li><p><strong>const : </strong>constante</p></li>
+          <li><p><strong>if : </strong>condición</p></li>
+          <li><p><strong>switch : </strong>diferentes opciones para elegir</p></li>
+          <li><p><strong>for : </strong>iteración</p></li>
+          <li><p><strong>function : </strong>declara una función</p></li>
+          <li><p><strong>return : </strong>devuelve un valor</p></li>
+          <li><p><strong>try : </strong>incluye un manipulador de errores</p></li>
           <li>
-            <p><strong>??= : </strong>si el primer valor es undefined o null se asigna el segundo valor.</p>
+            <p><strong>delete : </strong>elimina propiedades. Ej.: delete.person.age</p>
+            <p>Se elimina el valor y la propiedad.</p>
           </li>
         </ul>
       </details>
-
+  
       <details>
-        <summary>De comparación </summary>
-        <p>Comparan entre dos valores y su tipo.</p>
+        <summary>Tipos de datos JavaScript</summary>
         <ul>
-          <li><p><strong>==</strong>iguales en valor</p></li>
-          <li><p><strong>===</strong> igual en valor y tipo</p></li>
-          <li><p><strong>!=</strong> diferente en valor</p></li>
-          <li><p><strong>!==</strong> diferente en valor o tipo</p></li>
-          <li><p><strong>&gt;</strong> más que</p></li>
-          <li><p><strong>&lt;</strong> menos que</p></li>
-          <li><p><strong>&gt;=</strong> mayor o igual que</p></li>
-          <li><p><strong>&lt;=</strong> menor igual que</p></li>
-          <li><p><strong>?</strong> operador ternario</p></li>
+          <li><p><strong>string: </strong>Cadenas de palabras. Siempre van entre comillas.</p></li>
+          <li><p><strong>number: </strong>Números, enteros o decimales.</p></li>
+          <li><p><strong>bigInt: </strong>representan valores en 64bits para contener números muy grandes.</p></li>
+          <li><p><strong>boolean: </strong>Pueden ser true o false.</p></li>
+          <li><p><strong>undefined: </strong>Valor de variable sin asignar.</p></li>
+          <li><p><strong>null: </strong></p></li>
+          <li><p><strong>symbol: </strong></p></li>
+          <li>
+            <p><strong>object: </strong>Es un espacio de memoria que puede contener varias declaraciones de identificador y valor.</p>
+            <div class="black">
+              <span class="etiqueta">const</span>
+              cars = 
+              <span class="llave">{</span>
+              <span class="valor">car : "Seat"</span>,
+              <span class="valor">color : "red"</span>,
+              <span class="valor">year : "1998"</span>
+              <span class="llave">}</span>;
+            </div>
+          </li>
+          <li>
+            <p><strong>array: </strong>Es un espacio de memoria que puede contener varios valores.</p>
+            <div class="black">
+              <span class="etiqueta">const</span>
+              cars = 
+              <span class="llave">[</span>
+              <span class="valor">"Seat"</span>,
+              <span class="valor">"Volvo"</span>,
+              <span class="valor">"BMW"</span>
+              <span class="llave">]</span>;
+            </div>
+            <p>Los arrays empiezan en posición 0. cars[0] es "Seat".</p>
+          </li>
         </ul>
       </details>
-
+  
       <details>
-        <summary>Strings </summary>
-        <p>Cadenas de texto. Igual que los de comparación pero con strings. Las comparaciones son alfabéticas.</p>
-      </details>
-
-      <details>
-        <summary>bitwise </summary>
-        <p>Trabaja con los números en código binario. No es de uso común pero es útil para temas de seguridad y encriptación de datos.</p>
+        <summary>Constructores</summary>
+        <p>JavaScript dispone de métodos constructores para crear nuevos espacios de memoria de tipo object.</p>
         <ul>
-          <li><p><strong>& : </strong>and</p></li>
-          <li><p><strong>| : </strong>or</p></li>
-          <li><p><strong>~ : </strong>not</p></li>
-          <li><p><strong>^ : </strong>xor</p></li>
-          <li><p><strong>&lt;&lt; : </strong>cambio a la izquierda</p></li>
-          <li><p><strong>&gt;&gt; : </strong>cambio a la derecha en número árabe.</p></li>
-          <li><p><strong>&gt;&gt;&gt; : </strong>cambio a la derecha en número decimal.</p></li>
+          <li><p><strong>new Object()</strong></p></li>
+          <li><p><strong>new Array()</strong></p></li>
+          <li><p><strong>new Map()</strong></p></li>
+          <li><p><strong>new Set()</strong></p></li>
+          <li><p><strong>new Date()</strong></p></li>
+          <li><p><strong>new RegExp()</strong></p></li>
+          <li><p><strong>new Function()</strong></p></li>
         </ul>
       </details>
-
+  
       <details>
-        <summary>De tipo </summary>
-        <p>Existen dos operadores:</p>
-        <ul>
-          <li><p><strong>typeof : </strong>Devuelve el tipo de variable.</p></li>
-          <li><p><strong>instanceof : </strong>Devuelve verdadero si un objeto es una instancia de un objeto. ¿?</p></li>
-        </ul>
+        <summary>eventos</summary>
+        <p>Los eventos son cosas que pasan en el HTML que JavaScript puede escuchar y utilizar para inicializar alguno de sus programas.</p>
+        <p>La sintaxis de un atributo evento en un elemento HTML es:</p>
+        <div class="black">
+          <span class="gris">&lt;</span>
+          <span class="etiqueta">etiqueta</span>
+          <span class="atributo">event</span> =
+          <span class="valor-css">"...javascript..."</span>
+          <span class="gris">&gt;</span>
+          <br>
+          &lt;button onclick = "this.innerHTML = Date()"&gt;Hoy es &lt;/button&gt;
+        </div>
       </details>
-
-      <details>
-        <summary>Lógicos</summary>
-        <p>Añaden una condición.</p>
-        <ul>
-          <li><p><strong>&& : </strong>and. Se aplica a uno y otro.</p></li>
-          <li><p><strong>|| : </strong>or. Se añaden a uno u otro.</p></li>
-          <li><p><strong>! : </strong>not. Se prohibe aplicar a ese.</p></li>
-        </ul>
-      </details>
-
-    </details>
-
-    <details>
-      <summary>palabras clave</summary>
-      <p>Son con las que se suele empezar. Identifican una acción JavaScript que se quiere llevar a cabo. Estas son palabras reservadas, lo que significa que no se pueden utilizar como nombres de variables.</p>
-      <ul>
-        <li><p><strong>var : </strong>variable</p></li>
-        <li><p><strong>let : </strong>bloque variable</p></li>
-        <li><p><strong>const : </strong>constante</p></li>
-        <li><p><strong>if : </strong>condición</p></li>
-        <li><p><strong>switch : </strong>diferentes opciones para elegir</p></li>
-        <li><p><strong>for : </strong>iteración</p></li>
-        <li><p><strong>function : </strong>declara una función</p></li>
-        <li><p><strong>return : </strong>devuelve un valor</p></li>
-        <li><p><strong>try : </strong>incluye un manipulador de errores</p></li>
-        <li>
-          <p><strong>delete : </strong>elimina propiedades. Ej.: delete.person.age</p>
-          <p>Se elimina el valor y la propiedad.</p>
-        </li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>Tipos de datos JavaScript</summary>
-      <ul>
-        <li><p><strong>string: </strong>Cadenas de palabras. Siempre van entre comillas.</p></li>
-        <li><p><strong>number: </strong>Números, enteros o decimales.</p></li>
-        <li><p><strong>bigInt: </strong>representan valores en 64bits para contener números muy grandes.</p></li>
-        <li><p><strong>boolean: </strong>Pueden ser true o false.</p></li>
-        <li><p><strong>undefined: </strong>Valor de variable sin asignar.</p></li>
-        <li><p><strong>null: </strong></p></li>
-        <li><p><strong>symbol: </strong></p></li>
-        <li>
-          <p><strong>object: </strong>Es un espacio de memoria que puede contener varias declaraciones de identificador y valor.</p>
-          <div class="black">
-            <span class="etiqueta">const</span>
-            cars = 
-            <span class="llave">{</span>
-            <span class="valor">car : "Seat"</span>,
-            <span class="valor">color : "red"</span>,
-            <span class="valor">year : "1998"</span>
-            <span class="llave">}</span>;
-          </div>
-        </li>
-        <li>
-          <p><strong>array: </strong>Es un espacio de memoria que puede contener varios valores.</p>
-          <div class="black">
-            <span class="etiqueta">const</span>
-            cars = 
-            <span class="llave">[</span>
-            <span class="valor">"Seat"</span>,
-            <span class="valor">"Volvo"</span>,
-            <span class="valor">"BMW"</span>
-            <span class="llave">]</span>;
-          </div>
-          <p>Los arrays empiezan en posición 0. cars[0] es "Seat".</p>
-        </li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>Constructores</summary>
-      <p>JavaScript dispone de métodos constructores para crear nuevos espacios de memoria de tipo object.</p>
-      <ul>
-        <li><p><strong>new Object()</strong></p></li>
-        <li><p><strong>new Array()</strong></p></li>
-        <li><p><strong>new Map()</strong></p></li>
-        <li><p><strong>new Set()</strong></p></li>
-        <li><p><strong>new Date()</strong></p></li>
-        <li><p><strong>new RegExp()</strong></p></li>
-        <li><p><strong>new Function()</strong></p></li>
-      </ul>
-    </details>
-
-    <details>
-      <summary>eventos</summary>
-      <p>Los eventos son cosas que pasan en el HTML que JavaScript puede escuchar y utilizar para inicializar alguno de sus programas.</p>
-      <p>La sintaxis de un atributo evento en un elemento HTML es:</p>
-      <div class="black">
-        <span class="gris">&lt;</span>
-        <span class="etiqueta">etiqueta</span>
-        <span class="atributo">event</span> =
-        <span class="valor-css">"...javascript..."</span>
-        <span class="gris">&gt;</span>
-        <br>
-        &lt;button onclick = "this.innerHTML = Date()"&gt;Hoy es &lt;/button&gt;
-      </div>
     </details>
 
 
     <p class="h2">Métodos HTML</p>
-    <p class="h3">Para encontrar elementos</p>
-    
-    <details>
-      <summary>
-        <h2 class="details-summary">getElementById()</h2>
-      </summary>
-      <p>Permite seleccionar un elemento HTML por su id.</p>
-    </details>
-
-    <p class="h3">Para añadir contenidos</p>
-    <details>
-      <summary>
-        <h2 class="details-summary">innerHTML</h2>
-      </summary>
-      <p>Sustituye el contenido del Elemento HTML al que apunta. Se usa para cambiar el elemento HTML.</p>
-    </details>
-
-    <details>
-      <summary>innerText</summary>
-      <p>Sustituye el texto contenido en un Elemento HTML. Se usa para cambiar sólo el texto de un Elemento HTML.</p>
-    </details>
-
-    <details>
-      <summary>document.write()</summary>
-      <p>Se utiliza por razones de testeo. Este método sobre-escribe todo el HTML.</p>
-    </details>
-
-    <details>
-      <summary>window.alert()</summary>
-      <p>Crea una ventana emergente.</p>
-    </details>
-
-    <p>La palabra clave "window" se puede obviar porque es un objeto de alcance global. Esto significa que las variables, propiedades y métodos por defecto pertenecen al objeto window.</p>
-
-    <details>
-      <summary>console.log()</summary>
-      <p>Este método inserta texto en la consola del navegador. No se verá en pantalla pero sí en las herramientas de desarrollo. Es útil a la hora de hacer depuración del código (debugging).</p>
-    </details>
-
-    <p class="h3">Para cambiar propiedades CSS</p>
-    
-    <details>
-      <summary>
-        <h2 class="details-summary">.style.propiedad</h2>
-      </summary>
-      <p>document.getElementById("demo").style.fontSize = "35px";</p>
-    </details>
-
-    <p class="h3">Para realizar acciones</p>
-    
-    <details>
-      <summary>print()</summary>
-      <p>Permite abrir la ventana de impresión del navegador, generando una página imprimible con los contenidos de la web.</p>
-    </details>
-
-    <p class="h3">Para escuchar eventos</p>
-    <p>Se denominan Event Handlers y sirven para manejar y verificar inputs, acciones del usuario o del navegador.</p>
-
-    <details>
-      <summary>onchange</summary>
-      <p>Un elemento HTML ha sido cambiado.</p>
-    </details>
-    <details>
-      <summary>onclick</summary>
-      <p>El usuario a clickado un elemento HTML.</p>
-    </details>
-    <details>
-      <summary>onmouseover</summary>
-      <p>El usuario ha colocado el ratón por encima de un elemento HTML.</p>
-    </details>
-    <details>
-      <summary>onmouseout</summary>
-      <p>El usuario a sacado el ratón de encima de un elemento HTML.</p>
-    </details>
-    <details>
-      <summary>onkeydown</summary>
-      <p>El usuario a pulsado alguna tecla del teclado.</p>
-    </details>
-    <details>
-      <summary>onload</summary>
-      <p>El navegador a terminado de cargar la página.</p>
-    </details>
-
-    <p class="h3">Para contar</p>
-
-    <details>
-      <summary>length</summary>
-      <p>Permite contar caracteres de un string</p>
-      <div class="black">
-        <span class="etiqueta">let</span>
-        length = text.length;
-      </div>
-    </details>
+    <div class="index">
+      <nav aria-label="métodos">
+        <a href="js/methodString.html">Cadenas de texto</a>
+        <a href="js/cssProp.html">Cambiar propiedades CSS</a>
+        <a href="js/finders.html">Encontrar elementos</a>
+        <a href="js/eventListener.html">Escuchadores</a>
+        <a href="js/addContent.html">Imprimir por pantalla</a>
+      </nav>
+    </div>
   </main>
 
 </body>
