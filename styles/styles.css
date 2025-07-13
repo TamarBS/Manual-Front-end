@@ -167,7 +167,7 @@ ul .li--indented {
   background-color: black;
   color: white;
   font-family: monospace;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.2rem;
   margin-top: 15px;
   /* Clases para las palabras que representan código */
@@ -184,6 +184,9 @@ ul .li--indented {
 .black .llave {
   color: gold;
 }
+.black .identificador {
+  color: lightgoldenrodyellow;
+}
 .black .atributo, .black .propiedad {
   color: lightskyblue;
 }
@@ -195,6 +198,9 @@ ul .li--indented {
 }
 .black .comentario {
   color: seagreen;
+}
+.black .variable {
+  color: mediumorchid;
 }
 .black .hijo {
   margin-left: 15px;
