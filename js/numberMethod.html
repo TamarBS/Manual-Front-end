@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Métodos para números</title>
+  <meta name="description" content="Métodos para utilizar con números">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
+    <hgroup>
+      <h1 class="h1">Métodos para números</h1>
+      <p>Métodos para utilizar con números.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    
+    <h2 class="h2">Métodos básicos</h2>
+    <p>Pueden ser usados en cualquier número.</p>
+
+    <details>
+      <summary>toString()</summary>
+      <p>Cambia el tipo de número a string. Si se añade un parámetro puede hacer que cambie la base del número. Ej. Cambiar 7 a base binaria toString(2) = 111</p>
+    </details>
+    <details>
+      <summary>toExponential()</summary>
+      <p>Devuelve un string con un número usando anotación exponencial. Ej.: 9.236 toExponential(2) = 9.236e+0</p>
+    </details>
+    <details>
+      <summary>toFixed()</summary>
+      <p>Devuelve un string con el número y la cantidad de decimales especificada en el parámetro. toFixed(2) es perfecta para trabajar con dinero.</p>
+    </details>
+    <details>
+      <summary>toPrecision()</summary>
+      <p>Devuelve un string con la cifra y tantos números como se haya pasado en el parámetro.</p>
+    </details>
+    <details>
+      <summary>valueOf()</summary>
+      <p>Convierte los números de tipo objeto en tipo número.</p>
+      <p>Existen otros tres métodos que convierten variables en números: <strong>Number()</strong>, <strong>parseFloat()</strong> y <strong>parseInt()</strong>.</p>
+    </details>
+    
+
+    <h2 class="h2">Métodos estáticos</h2>
+    <p>Sólo pueden ser usados en "Number"</p>
+    <p>Number() convierte fechas a número. Ej.: Number(new Date("1970+01+01")); El método Date devuelve el número de milisegundos desde el 1 de Enero de 1970.</p>
+
+
+    <details>
+      <summary>Number.isFinite()</summary>
+      <p>Devuelve true si el argumento es un número finito.</p>
+    </details>
+    <details>
+      <summary>Number.isInteger()</summary>
+      <p>Devuelve true si el argumento es un número entero.</p>
+    </details>
+    <details>
+      <summary>Number.isNan()</summary>
+      <p>Devuelve true si el argumento no es NaN.</p>
+    </details>
+    <details>
+      <summary>Number.isSafeInteger()</summary>
+      <p>Un safe integer es un número entero que no excede las 15 cifras y está entre -9007199254740991 y 9007199254740991. Este método devuelve true o false dependiendo de si el número es un íntegro seguro o no.</p>
+    </details>
+    <details>
+      <summary>Number.parseInt()</summary>
+      <p>Analiza un string y devuelve un número entero. Si el número no se puede convertir el valor será NaN.</p>
+    </details>
+    <details>
+      <summary>Number.parseFloat()</summary>
+      <p>Analiza un string y devuelve un número. Admite espacios pero cojerá sólo el primer número. Si no encuentra número será NaN.</p>
+    </details>
+
+    <h2 class="h2">Propiedades de los números</h2>
+    <details>
+      <summary>EPSILON</summary>
+      <p>Representa la diferencia más pequeña entre 1 y el siguiente número de punto flotante mayor que 1. Los número de punto flotante tienen precisión limitada. Significa que no todos los números pueden ser representados con exactitud en memoria.</p>
+    </details>
+    <details>
+      <summary>MAX_VALUE</summary>
+      <p>Representa el máximo valor posible en JavaScript.</p>
+    </details>
+    <details>
+      <summary>MIN_VALUE</summary>
+      <p>Representa el mínimo valor posible en JavaScript.</p>
+    </details>
+    <details>
+      <summary>MAX_SAFE_INTEGER</summary>
+      <p>Representa el máximo valor entero posible en JavaScript.</p>
+    </details>
+    <details>
+      <summary>MIN_SAFE_INTEGER</summary>
+      <p>Representa el mínimo valor entero posible en JavaScript.</p>
+    </details>
+    <details>
+      <summary>POSITIVE_INFINITY</summary>
+      <p>Devuelve Infinito</p>
+    </details>
+    <details>
+      <summary>NEGATIVE_INFINITY</summary>
+      <p>Devuelve -infinito</p>
+    </details>
+
+  </main>
+
+</body>
+</html>

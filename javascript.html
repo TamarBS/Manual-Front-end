@@ -496,12 +496,49 @@
         <details>
           <summary>fijos / literales</summary>
           <ul>
-            <li><p><strong>números: </strong>no llevan comillas.</p></li>
+            <li>
+              <p><strong>números: </strong>no llevan comillas.</p>
+              <p>Se pueden escribir con anotación científica. Ej.: 123e5 = 12300000, 123e-5 = 0,00123</p>
+              <p>El máximo número de decimales es 17. No hace correctamente algunos cálculos con decimales, así que se aconseja multiplicar para convertir en números enteros. Ej.: 0,2 + 0,1 = 0,3000000000004, Resolver multiplicando por 10. (0,2*10 + 0,1*10 ) /10</p>
+              <p>JavaScript intentará hacer el cálculo de número incluso cuándo sean string con todos los operadores aritméticos excepto con +.</p>
+              <details>
+                <summary>NaN</summary>
+                <p>Significa not a number. No es un número. Es una palabra reservada.</p>
+                <p>Puede utilizar la función <strong>isNaN() para descubrir si un valor es NaN.</strong></p>
+              </details>
+              <details>
+                <summary>Infinity -Infinity</summary>
+                <p>Devolverá este valor los cálculos que se pasen del límite de números máximos.</p>
+              </details>
+              <details>
+                <summary>Hexadecimales</summary>
+                <p>Existe un código para números no numérico que comienza siempre con 0x seguido de letras. Ej.: 0XFF = 255</p>
+              </details>
+              <details>
+                <summary>Cambiar base</summary>
+                <p>Por defecto la base de los números es base 10, pero se puede cambiar la base con el método <strong>toString() </strong>con el parámetro de la base a aplicar. Ej.: cambiar el número 7 a una base binaria: toString(2) = 111;</p>
+              </details>
+            </li>
             <li>
               <p><strong>strings: </strong>Siempre llevan comillas. Son cadenas de texto. Los número que van entre comillas son strings y son tratados como palabras.</p>
               <p>Los strings siempre van entre comillas, se pueden usar 'comillas simples' o "comillas dobles" indistintametne. Si se quiere que se muestre en pantalla alguna comilla, no podrá coincidir con la comilla que se esté usando para agrupar el string. Ej.: "quiero poner 'comillas'", 'quiero poner "comillas"'</p>
-              <p>Para el caso en el que se necesite utilizar los dos tipos de comilla se puede utilizar la comilla `` llamada template. Es el acento francés. Ej. `Necesito usar 'comillas simples' y "comillas dobles" en este string`</p>
+              <p>Para el caso en el que se necesite utilizar los dos tipos de comilla se puede utilizar la comilla ` llamada template. Es el acento francés. Ej. `Necesito usar 'comillas simples' y "comillas dobles" en este string`</p>
               <p>También hay otras soluciones para esto mismo sustituyendo las comas por \', \", \\, Ejemplo.: Quiero poner \'comillas\'. Quiero poner \\una barras lateral.</p>
+              <p>Dentro de las comillas simples se pueden incluir interpolaciones de variables y expresiones dentro de los strings.</p>
+              <div class="black">
+                <span class="etiqueta">let</span> firstName =
+                <span class="valor">"John"</span>;
+                <br>
+                <span class="etiqueta">let </span> texto =
+                <span class="valor">`Bienvenido ${firstName}`</span>;
+                <span class="comentario">// Interpolacion de variable</span>
+                <br>
+                <span class="etiqueta">let </span> texto =
+                <span class="valor">`Bienvenido ${firstName + 1*5.toString()}`</span>;
+                <span class="comentario">// Interpolacion de expresión.</span>
+                <br>
+                <span class="comentario">// La sintaxis de una interpolación en un template es ${...}</span>
+              </div>
             </li>
             <li><p><strong>undefined :</strong> El valor no trae nada, está vacío.</p></li>
           </ul>
@@ -905,7 +942,11 @@
         <ul>
           <li><p><strong>string: </strong>Cadenas de palabras. Siempre van entre comillas.</p></li>
           <li><p><strong>number: </strong>Números, enteros o decimales.</p></li>
-          <li><p><strong>bigInt: </strong>representan valores en 64bits para contener números muy grandes.</p></li>
+          <li>
+            <p><strong>BigInt: </strong>representan valores en 64bits para contener números muy grandes. Cómo JavaScript tiene límite máximo de números, esta variable permite almacenar cifras más grandes de lo posible.</p>
+            <p>Las formas de crear un BigInt es añadiendo una n al final del número o metiendo el número como parámetro en el método BigInt(aquí).</p>
+            <p>No puede contener decimales.</p>
+          </li>
           <li><p><strong>boolean: </strong>Pueden ser true o false.</p></li>
           <li><p><strong>undefined: </strong>Valor de variable sin asignar.</p></li>
           <li><p><strong>null: </strong></p></li>
@@ -977,6 +1018,7 @@
         <a href="js/finders.html">Encontrar elementos</a>
         <a href="js/eventListener.html">Escuchadores</a>
         <a href="js/addContent.html">Imprimir por pantalla</a>
+        <a href="js/numberMethod.html">Números</a>
       </nav>
     </div>
   </main>
