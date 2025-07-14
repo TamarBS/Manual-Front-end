@@ -22,6 +22,110 @@
 
   <main>
     <details>
+      <summary>Buscar en el string</summary>
+      <details>
+        <summary>indexOf()</summary>
+        <p>Devuelve la posición de la primera vez que encuentra el texto buscado. Si no encuentra el texto devuelve -1.</p>
+        <p>Acepta otro parámetro para la posición desde dónde empezar a buscar. Busca de derecha a izquierda.</p>
+        <p>No puede hacer búsquedas con expresiones regulares.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text =
+          <span class="valor">"hola, hola, holita"</span>;
+          <br>
+          <span class="etiqueta">let</span> index = 
+          <span class="clase">text</span>.
+          <span class="valor-css">indexOf</span>( <span class="valor">"hola"</span> );
+          <br>
+          <span class="comentario">// Resultado: 0. Encuentra el primer hola en primera posición.</span>
+        </div>
+      </details>
+      <details>
+        <summary>lastIndexOf()</summary>
+        <p>Devuelve la posición de la última palabra que coincide con la que se está buscando. Si no encuentra el texto devuelve -1.</p>
+        <p>Acepta otro parámetro para la posición desde dónde empezar a buscar. Busca de izquierda a derecha.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text =
+          <span class="valor">"hola, hola, holita"</span>;
+          <br>
+          <span class="etiqueta">let</span> index = 
+          <span class="clase">text</span>.
+          <span class="valor-css">lastIndexOf</span>( <span class="valor">"hola"</span> );
+          <br>
+          <span class="comentario">// Resultado: 6. Encuentra el último hola.</span>
+        </div>
+      </details>
+      <details>
+        <summary>search()</summary>
+        <p>Busca la cadena de texto como texto o como expresión regular y devuelve su posición.</p>
+        <p>No acepta un segundo parámetro como indexOf().</p>
+        <div class="black">
+          <span class="etiqueta">let</span> text =
+          <span class="valor">"hola, hola, holita"</span>;
+          <br>
+          <span class="etiqueta">let</span> index = 
+          <span class="clase">text</span>.
+          <span class="valor-css">search</span>( <span class="valor">"hola"</span> );
+          <br>
+          <span class="comentario">// Resultado: 0. Encuentra el primer hola en primera posición.</span>
+        </div>
+      </details>
+      <details>
+        <summary>match()</summary>
+        <p>Devuelve un array con los resultados que coincidan de comparar una cadena de texto con otra o una cadena de texto con una expresión regular.</p>
+        <p>Comparando cadenas de texto se parará con la primera coincidencia, si se le añade una expresión regular con / /gi que aporta búsqueda global, es decir, todas las que haya, y la i que hace que no discrimine mayúsuclas, creará un array con todas las coincidencias.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> texto = 
+          <span class="valor">"Hola, holita, hola"</span>;
+          <br>
+          <span class="etiqueta">let</span> array =
+          <span class="clase">texto</span>.
+          <span class="valor-css">match</span>( <span class="valor">/hol/gi</span> );
+          <br>
+          document.getElementById("...").innerHTML = array;
+          <span class="comentario">// Resultado: Hol, hol, hol</span>
+        </div>
+      </details>
+      <details>
+        <summary>matchAll()</summary>
+        <p>Cómo match() pero devuelve el resultado de una iteración, que le permite devolver todas las coincidencias y no sólo quedarse con la primera.</p>
+        <div class="black">
+          <span class="clase">string</span>. 
+          <span class="valor-css">matchAll</span>( <span class="valor">"string a buscar"</span> );
+          <br>
+          <span class="etiqueta">Array</span>. 
+          <span class="propiedad">from</span>( <span class="valor">nombreArray</span> );
+          <br><br>
+          <span class="etiqueta">let</span> texto = 
+          <span class="valor">"Hola, holita, hola"</span>;
+          <br>
+          <span class="etiqueta">let</span> array =
+          <span class="clase">texto</span>.
+          <span class="valor-css">matchAll</span>( <span class="valor">"hol"</span> );
+          <br>
+          document.getElementById("...").innerHTML = Array.from(array);
+          <span class="comentario">// Resultado: hol, hol</span>
+        </div>
+      </details>
+      <details>
+        <summary>includes()</summary>
+        <p>Devuelve true si el valor está en la cadena de texto.</p>
+        <div class="black">
+          <span class="etiqueta">let</span> texto = 
+          <span class="valor">"Hola, holita"</span>;
+          <br>
+          texto.includes("hol");
+          <br>
+          <span class="comentario">// Resultado: true</span>
+        </div>
+        <p>Permite añadir un segundo parámetro para comenzar la búsqueda a partir de esa posición.</p>
+      </details>
+      <details>
+        <summary>startsWith() endsWith()</summary>
+        <p>Devuelve verdadero si encuentra la búsqueda al principio (startsWith()) o al final (endsWith()).</p>
+        <p>Aceptan un segundo parámetro para empezar la búsqueda desde una posición concreta.</p>
+      </details>
+    </details>
+    <details>
       <summary>Controlar símbolos</summary>
       <details>
         <summary>isWellFormed()</summary><p>sirve para saber si un código del string da error o no. Si da error el resultado es false.</p>
@@ -188,6 +292,7 @@
         <span class="comentario">// Resultado: Hola Holita</span>
       </div>
     </details>    
+
   </main>
 
 </body>
