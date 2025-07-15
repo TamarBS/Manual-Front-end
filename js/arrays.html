@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Arrays</title>
+  <meta name="description" content="Métodos para manipular arrays.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
+    <hgroup>
+      <h1 class="h1">Arrays</h1>
+      <p>Los arrays son colecciones de valores llamados elementos. Pueden contener objetos como valor. Son tipo objeto.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+
+    <h2 class="h2">Métodos</h2>
+
+    <div class="black">
+      Para todos los ejemplos usaré este array:
+      <br>
+      let frutas = ["manzana", "pera", "plátano"];
+      <br>
+      <span class="comentario">Para algunos ejemplos también existirá un array verduras.</span>
+      <br>
+      <span class="comentario">const verduras = ["lechuga", "calabacín"];</span>
+    </div>
+
+
+    <details>
+      <summary>Acceder a algún elemento del array</summary>
+      <ul>
+        <li><p><strong>Array at()</strong> permite acceder a una posición del array pasándole el número de la posición como argumento. </p></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Añadir nuevos elementos</summary>
+      <p>Se pueden usar los siguientes métodos para añadir nuevos elementos a un array.</p>
+      <details>
+        <summary>push()</summary>
+        <p>frutas.push("limón"); añadirá el elemento "limón" en una nueva última posición del array.</p>
+        <div class="black">
+          frutas.push("limón");
+          <span class="comentario">// Añade limón al final del array</span>
+          <br>
+          let nuevo = frutas.push("limón");
+          <br>
+          console.log(nuevo);
+          <span class="comentario">// Devuelve el nuevo length del array. Resultado: 4.</span>
+        </div>
+      </details>
+      <details>
+        <summary>length</summary>
+        <p>frutas[frutas.length] = "limón"; Como length siempre da un valor de uno por encima del index del array esta asignación funciona para colocar limón en la útlima posición del array.</p>
+        <p>También permite limitar la largura del array, recortarla. Si a frutas le digo frutas.length = 2; Pasa a tener sólo dos elementos. Cómo se se cortara.</p>
+      </details>
+      <ul>
+        <li><p><strong>Array unshift()</strong> añade nuevos elementos al principio del array. Desplazando una posición a los demás. Devuelve el length del nuevo array.</p></li>
+        <li>
+          <p><strong>Array slice()</strong> significa empalmar. El primer parámetro indica la posición de empalme. El segundo parámetro el número de elementos a eliminar. Elimina desde atrás hacia delante, es decir, elimina el último, penúltimo... Después vendrán los argumentos con los valores a añadir.</p>
+          <p>Si no se añaden parámetros para añadir, lo que se puede hacer es utilizar este método para eliminar elementos. splice(0,1) eliminará el último elemento.</p>
+          <div class="black">
+            const fruits = ["Banana", "Orange", "Apple", "Mango"];
+            <br>
+            fruits.splice(2, 0, "Lemon", "Kiwi");
+            <br>
+            <span class="comentario">// Resultado: Banana,Orange,Lemon,Kiwi,Apple,Mango</span>
+          </div>
+          <p>Existe un método que hace lo mismo que este pero aplica los cambios en un nuevo array para no perder los valores del array original. Este método es <strong>toSpliced()</strong></p>
+        </li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>bucles</summary>
+      <p>Para recorrer los elementos de un array se puede utilizar diferentes métodos</p>
+      <details>
+        <summary>for</summary>
+        <p>Con un for y la cantidad de elementos en un array definidas puedes hacer un bucle y acceder a todos sus elementos.</p>
+        <div class="black">
+          <span class="comentario">// Primero se declara y crea el array</span>
+          <br>
+          const array = [elemento1, elemento2, elemento3];
+          <br>
+          <span class="comentario">// Se define una variable que contenga la cantidad de elementos de este array.</span>
+          <br>
+          let elementos = array.length;
+          <br>
+          <span class="comentario">// Se hace el for</span>
+          <br>
+          for (let i = 0; i &lt; elementos; i++) {
+            <br>
+            console.log(array[i]);
+            <br>
+          };
+          <br>
+          <span class="comentario">// Resultado: elemento1 elemento2 elemento3</span>
+        </div>
+      </details>
+      <details>
+        <summary>forEach()</summary>
+        <p>Con este método se itera por cada elemento del array.</p>
+        <div class="black">
+          <span class="comentario">// Se crea el array</span>
+          <br>
+          const array = [elemento1, elemento2, elemento3];
+          <br>
+          <span class="comentario">// Se declara el método forEach() llamando a la función a ejecutar en cada bucle.</span>
+          <br>
+          array.forEach(miFuncion);
+          <br>
+          <span class="etiqueta">function</span> mifuncion(valor) {
+            <br>
+            console.log(valor);
+            <br>
+          };
+        </div>
+      </details>
+    </details>
+
+    <details>
+      <summary>Cambios en los elementos</summary>
+      <ul>
+        <li>
+          <p><strong>Array copyWithin()</strong> primero copia elementos y después los sobre-escribe en el mismo array sustituyendo otros elementos.</p>
+          <p>El hecho de copiar elementos no quiere decir que haga el array más grande, el tamaño del array es el mismo, por lo que este método sustituye elementos del array por copias de otros elementos dentro de él en detrimento de eliminar los valores de otros.</p>
+          <div class="black">
+            <span class="comentario">// Las posiciones son las siguientes: 0manzana1pera2plátano3. El 2,1 es sólo pera, del 2,0 es manzana y pera.</span>
+            <br>
+            frutas.copyWithin(1,0); 
+            <br>
+            <span class="comentario">// Copiará manzana y la colocará la primera, desplazando el array y haciendo que plátano desaparezca. Resultado: manzana,manzana,pera</span>
+            <br>
+            frutas.copyWithin(2,1,2);
+            <br>
+            <span class="comentario">// Copia pera que está entre el 2 y el 1 y la coloca sustituyendo la posición 2 que es el plátano. Resultado: manzana,pera,pera</span> 
+          </div>
+        </li>
+        <li>
+          <p><strong>flat()</strong> se utiliza cuándo hay arrays como valor dentro de un array para convertirlo en un único array con valores, no un array de arrays.</p>
+          <div class="black">
+            const myArr = [[1,2],[3,4],[5,6]];
+            <br>
+            const newArr = myArr.flat();
+            <br>
+            <span class="comentario">// newArr = [1, 2, 3, 4, 5, 6]; </span>
+            <br>
+            myArr[0]
+            <span class="comentario">// Resultado: 1,2</span>
+            <br>
+            newArr[0]
+            <span class="comentario">// Resultado: 1</span>
+          </div>
+        </li>
+        <li>
+          <p><strong>flatMap()</strong> permite hacer calculos sobre los valores de los elementos y crear con eso un nuevo array plano</p>
+          <div class="black">
+            const myArr = [1, 2, 3, 4, 5, 6];
+            <br>
+            const newArr = myArr.flatMap(x => [x, x * 10]);
+            <br>
+            <span class="comentario">// flatMap crea ese cálculo en el que se quiere crear por cada elemento un array con dos elementos dentro que son, el elemento y el elemento * 10. De modo que crearía: [[1, 10], [2, 20], ...] pero no se queda ahí y lo siguiente que hace es convertirlo en un array plano.</span>
+            <br>
+            <span class="comentario">// Resultado: newArr = [1,10,2,20,3,30,4,40,5,50,6,60];</span>
+          </div>
+        </li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Convertir en strings</summary>
+      <ul>
+        <li><p><strong>Array toString()</strong> convierte en un único string la lista de elementos del array sólo separados por coma.</p></li>
+        <li><p><strong>Array join()</strong> es como toString() pero permite cambiar la , que separa los elementos por otra cosa que es lo que se le pasa como argumento.</p></li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>Eliminar elementos</summary>
+      <ul>
+        <li>
+          <p><strong>Array pop()</strong> elimina el último elemento del array.</p>
+          <div class="black">
+            frutas.pop()
+            <span class="comentario">// Elimina el último elemento del array</span>
+            <br>
+            let eliminado = frutas.pop();
+            <br>
+            console.log(eliminado);
+            <span class="comentario">// Muestra sólo el elemento que se ha eliminado.</span>
+          </div>
+        </li>
+        <li><p><strong>Array shift()</strong>Elimina el primer elemento del array adelantando una posición a los demás. Devuelve el valor eliminado.</p></li>
+        <li>
+          <p><strong>slice()</strong> corta elementos de un array y se los lleva a un nuevo array.</p>
+          <p>Corta de izquierda a derecha. Es a partir de la posición dada como argumento hacia la derecha los elementos con los que se queda.</p>
+          <div class="black">
+            const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+            <br>
+            const citrus = fruits.slice(1);
+            <span class="comentario">// Resultado: citrus = ["Orange", "Lemon", "Apple", "Mango"]; Se queda con lo que está a la derecha de la posición 1. Lo demás lo ignora.</span>
+            <br>
+            const citrus = fruits.slice(3);
+            <span class="comentario">// Resultado: citrus = ["Apple", "Mango"]; Se queda con lo que está a la derecha de la posición 3. Lo demás lo ignora.</span>
+            <br>
+            const citrus = fruits.slice(1, 3);
+            <span class="comentario">// Resultado: citrus = ["Orange", "Lemon"]; Se queda con lo que está a la derecha de la posición 1 hasta la posición 3. Lo demás lo ignora.</span>
+          </div>
+        </li>
+      </ul>
+      <p>Existe un método llamado delete() que no se recomienda utilizar porque no elimina los elementos, los sustituye por un valor undefined.</p>
+    </details>
+
+    <details>
+      <summary>isArray()</summary>
+      <p>Es un método para saber cuándo un objeto es un array o no. Si es array devuelve true.</p>
+    </details>
+
+    <details>
+      <summary>Unir arrays</summary>
+      <p>Se denomina concatenar a la acción de unir arrays. Implica crear un nuevo array que contenga los elementos de los dos arrays.</p>
+      <ul>
+        <li>
+          <p><strong>Array concat()</strong> concatena dos arrays. Sintaxis: const saludable = frutas.concat(verduras, másArraysSiHubiera); Resultado del array: manzana,pera,plátano,lechuga,calabacín</p>
+          <p>También permite añadir nuevos elementos, pasándoselo como valor. Los colocará al final del array. Ej.: const frutas2 = frutas.concat("tomate");</p>
+        </li>
+      </ul>
+    </details>
+
+  </main>
+
+</body>
+</html>
