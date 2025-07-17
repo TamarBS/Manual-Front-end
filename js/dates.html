@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Fechas</title>
+  <meta name="description" content="Métodos para devolver fechas.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
+    <hgroup>
+      <h1 class="h1">Fechas</h1>
+      <p>Hay métodos que permiten obtener la fecha actual, pasadas futuras, horas segundos, etc.</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    
+    <p class="h2">Formatos de fecha</p>
+
+    <ul>
+      <li>
+        <p><strong>ISO: </strong>"yyyy-mm-dd" (Zona horaria)</p>
+      </li>
+      <li>
+        <p><strong>Fecha corta: </strong>mm/dd/yyyy</p>
+      </li>
+      <li>
+        <p><strong>Fecha larga: </strong>Mmm dd yyyyy ó dd Mmm yyyy</p>
+      </li>
+      <li><p><strong>UTC : </strong>Universal time coordinates. Se toma de referencia el meridiano de Greenwich.</p></li>
+    </ul>
+
+    <details>
+      <summary>
+        <h2 class="details-summary">new Date()</h2>
+      </summary>
+      <p>Devuelve un objeto fecha con datos de día, hora y segundos actuales. Son objetos estáticos, el reloj no corre. Utilizará la zona horaria del navegador.</p>
+      <div class="black">
+        <span class="comentario">ddd Mmm 00 yyyy hh:mm:ss GMTx (hora de "estación" de "Región")</span>
+        <p id="hoy"></p>
+      </div>
+      <p>Se pueden añadir los siguientes parámetros</p>
+      <div class="black">
+        <p>new Date(date string)</p>
+        <span class="comentario"></span>
+        <br>
+        <p>new Date(year, month)</p> <span class="comentario">Si al año le das sólo dos dígitos lo interpretará como el año mil novecientos xx.</span>
+        <p>new Date(year, month, day)</p>
+        <p>new Date(year, month, day, hours)</p>
+        <p>new Date(year, month, day, hours, minutes)</p>
+        <p>new Date(year, month, day, hours, minutes,seconds)</p>
+        <p>new Date(year, month, day, hours, minutes,seconds, ms)</p>
+        <span class="comentario">Crean un objeto con la fecha y demás datos dada. Los parámetros mínimos son dos, año y mes. No se puede dar sólo un valor porque lo interpretará como mili segundos.</span>
+        <br>
+        <p>new Date(milliseconds)</p>
+        <span class="comentario">Devuelve la fecha a la que habrán o han pasado xx milisegundos desde Enero de 1970 a la 1:00AM. También acepta valores en negativos para fechas anteriores. Los mili segundos de un día completo se calculan multiplicando las 24 horas del día por 60 minutos que dura cada una, 60 segundos que dura cada minuto y 1000 milisegundos por segundo = 24 *60 *60 *100 = 86400000</span>
+      </div>
+      <p>Los meses se cuentan del 0 al 11. Si por error se define el mes 12 no dará fallo pero seguirá la vuelta y sacará Enero de siguiente año. Lo mismo con los días.</p>
+    </details>
+
+    <p class="h2">Métodos</p>
+
+    <details>
+      <summary>Convertir en String</summary>
+      <p>Por defecto el objeto se convierte en string al mostrarlo en pantalla, pero hay métodos para controlar la manera en la que se muestra la fecha en ese string.</p>
+      <ul>
+        <li>
+          <p><strong>toString() : </strong>ddd Mmm 00 yyyy hh:mm:ss GMTx (hora de "estación" de "región")</p>
+        </li>
+        <li>
+          <p><strong>toDateString() : </strong>Ddd Mmm 00 yyyy</p>
+        </li>
+        <li>
+          <p><strong>toUTCString() : </strong>Ddd, 00 Mmm yyy hh:mm:ss GMT</p>
+        </li>
+        <li>
+          <p><strong>toISOString() : </strong>yyyy-00-00Thh:mm:ss.msmsms(Letra que indica zona horaria). ms son milisegundos que nunca llegan a 1000 o más de 1000</p>
+        </li>
+      </ul>
+    </details>
+    <details>
+      <summary>Convertir en milisegundos</summary>
+      <p>Puedes convertir una fecha a milisegundos usando el método Date.parse("fecha"). Devolverá el número de milisegundos desde Enero de 1970 hasta la fecha del argumento.</p>
+    </details>
+    <ul>
+      <li>
+        <p><strong>getFullYear() : </strong>Recibe el año actual en formato yyyy.</p>
+      </li>
+      <li>
+        <p><strong>getMonth() : </strong>Recibe el mes actual como número del 0 al 11.</p>
+      </li>
+      <li>
+        <p><strong>getDate() : </strong>Recibe el día actual como número de 1 a 31.</p>
+      </li>
+      <li>
+        <p><strong>getDay() : </strong>Recibe el día de la semana actual como un número del 0 al 7. El 0 es el domingo no el lunes.</p>
+      </li>
+      <li>
+        <p><strong>getHours() : </strong>Recibe la hora actual del 0 al 23.</p>
+      </li>
+      <li>
+        <p><strong>getMinutes() : </strong>Recibe minutos actuales del 0 al 59.</p>
+      </li>
+      <li>
+        <p><strong>getSeconds() : </strong>Recibe segundos actuales del 0 al 59.</p>
+      </li>
+      <li>
+        <p><strong>getMiliseconds() Date.now(): </strong>Recibe milisegundos actuales del 0 al 999.</p>
+      </li>
+      <li>
+        <p><strong>getTime() : </strong>Recibe los milisegundos desde Enero de 1970 a la 1:00 al momento actual.</p>
+      </li>
+      <li>
+        <p><strong>getTimezoneOffset() : </strong>devuelve la diferencia en minutos entre la hora actual de la zona del navegador y la zona UTC.</p>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    const hoy = new Date();
+    document.getElementById("hoy").innerHTML = hoy;
+  </script>
+
+</body>
+</html>

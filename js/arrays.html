@@ -21,6 +21,10 @@
   </header>
 
   <main>
+    <h2>Diferencia entre índice y posición en el array</h2>
+    <p>Los índices empiezan en 0, el primer elemento de un array tiene índice 0.</p>
+    <p>La posición en los arrays empieza en 1, el primer elemento de un array tiene posición 1.</p>
+    <p>La manera de situar los elementos de forma abstracta sigue este patron: 0 elemento1 1 elemento2 2 elemento3 3 </p>
 
     <h2 class="h2">Métodos</h2>
 
@@ -128,6 +132,55 @@
     </details>
 
     <details>
+      <summary>Buscar en el array</summary>
+      <details>
+        <summary>indexOf()</summary>
+        <p>Se le da un valor del array y devuelve su índice.</p>
+        <div class="black">
+          frutas.indeOf("manzana");
+          <br>
+          <span class="comentario">// Resultado: 0</span>
+        </div>
+        <p>Admite un segundo parámetro para especificar desde dónde empezar a buscar.</p>
+        <p>Si no encuentra el elemento devuelve -1.</p>
+        <p>Si el elemento está en el array más de una vez, devuelve sólo el índice del primer elemento encontrado.</p>
+        <p>No funciona para buscar valores NaN.</p>
+      </details>
+      <details>
+        <summary>lastIndexOf()</summary>
+        <p>Lo mismo que indexOf() pero devuelve el índice del último elemento que encuentra, no el primero.</p>
+      </details>
+      <details>
+        <summary>includes()</summary>
+        <p>Se le da un valor del array y devuelve true o false en función de si lo encuentra o no.</p>
+        <p>Permite buscar un valor NaN.</p>
+      </details>
+      <details>
+        <summary>find() findIndex()</summary>
+        <p>Devuelve el índice del primer valor de un array que cumpla con la condición de una función.</p>
+        <p>Los parámetros de la función tienen que tomar tres valores: el valor del elemento, el índice del elemento y el propio array.</p>
+        <div class="black">
+          const numbers = [4, 9, 16, 25, 29];
+          <br>
+          let first = numbers.find(myFunction);
+          <br>
+          function myFunction(value, index, array) {
+            <br>
+            return value > 18;
+            <br>
+          }
+          <br>
+          <span class="comentario">// Resultado: 3. Que es el índice el cuarto valor = 25.</span>
+        </div>
+      </details>
+      <details>
+        <summary>findLast() findLastIndex()</summary>
+        <p>Lo mismo que find() pero empieza a buscar de atrás hacia adelante.</p>
+      </details>
+
+    </details>
+
+    <details>
       <summary>Cambios en los elementos</summary>
       <ul>
         <li>
@@ -223,6 +276,226 @@
     <details>
       <summary>isArray()</summary>
       <p>Es un método para saber cuándo un objeto es un array o no. Si es array devuelve true.</p>
+    </details>
+
+    <details>
+      <summary>Iteraciones</summary>
+      <p>Métodos que realizan acciones con repeticiones.</p>
+      <details>
+        <summary>forEach()</summary>
+        <p>Llama a una callback function para cada elemento del array.</p>
+        <div class="black">
+          frutas.forEach(miFunción);
+          <br>
+          <span class="comentario">// Por cada elemento del array frutas repetirá la acción definida en la función.</span>
+          <span class="comentario">// Los parámetros de la callback function son (valor, índice, array)</span>
+        </div>
+      </details>
+      <details>
+        <summary>map() flatMap()</summary>
+        <p>Crea un nuevo array que cumple con lo que se haya definido en una callback function.</p>
+        <div class="black">const numbers2 = numbers1.map(myFunction);</div>
+        <p>El método no hará nada si el array no contiene valores.</p>
+        <p>Los parámetros de la callback function son (valor, índice, array)</p>
+      </details>
+      <details>
+        <summary>filter()</summary>
+        <p>Crea un nuevo array sólo con elementos que cumplan la condición de su callback function.</p>
+        <p>Los parámetros de la callback function son (valor, índice, array)</p>
+      </details>
+      <details>
+        <summary>reduce()</summary>
+        <p>Realiza el cálculo de los elementos del array para entregar un único valor. No afecta al array original y funciona de izquierda a derecha.</p>
+        <div class="black">
+          const numbers = [45, 4, 9, 16, 25];
+          <br>
+          let sum = numbers.reduce(myFunction);
+          <br>
+          function myFunction(total, value, index, array) {
+            <br>
+            return total + value;
+            <br>
+          }
+          <br>
+          <span class="comentario">// la función toma cuatro argumentos, uno más que el resto porque el total es el argumento que va recopilando los resultados de la función.</span>
+          <br>
+          <span class="comentario">// El resultado será la suma de todas las cifras : 99</span>
+        </div>
+      </details>
+      <details>
+        <summary>reduceRight()</summary>
+        <p>Hace lo mismo que el reduce pero hace sus cálculos de derecha a izquierda.</p>
+      </details>
+      <details>
+        <summary>every()</summary>
+        <p>Comprueba si todos los elementos de un array cumplen con una condición. Si la cumple devuelve true, si no false.</p>
+      </details>
+      <details>
+        <summary>some()</summary>
+        <p>Comprueba si alguno de los valores de un array cumple con una condición. Si algún valor la cumple devuelve true, si ningún elemento la cumple devolverá false.</p>
+      </details>
+      <details>
+        <summary>from()</summary>
+        <p>Convierte en un array cualquier objeto iterable y cualquier objeto con propiedad length. El valor que devuelve es un string.</p>
+        <div class="black">
+          let text = "ABCDEFG";
+          <br>
+          Array.from(text);
+          <br>
+          <span class="comentario">// Resultado: A,B,C,D,E,F,G</span>
+        </div>
+        <p>Permite añadir un parámetro tipo arrow function para afectar los valores de ese nuevo array.</p>
+        <div class="black">
+          const myNumbers = [1,2,3,4];
+          <br>
+          const myArr = Array.from(myNumbers, (x) => x * 2);
+          <br>
+          <span class="comentario">// Resultado: 2,4,6,8</span>
+        </div>
+      </details>
+      <details>
+        <summary>keys()</summary>
+        <p>Las claves/llaves se refieren a los índices de los elementos del array. Este método devuelve un array con las keys de un array.</p>
+        <div class="black">
+          const fruits = ["Banana", "Orange", "Apple", "Mango"];
+          <br>
+          const keys = fruits.keys();
+          <br>
+          for (let x of keys) {
+            <br>
+            text += x + " ";
+            <br>
+          }
+          <br>
+          <span class="comentario">// Resultado: 0 1 2 3</span>
+        </div>
+      </details>
+      <details>
+        <summary>entries()</summary>
+        <p>Recorre el array y devuelve la key y el valor</p>
+        <div class="black">
+          const fruits = ["Banana", "Orange", "Apple", "Mango"];
+          <br>
+          const f = fruits.entries();
+          <br>
+          for (let x of f) {
+            <br>
+            document.getElementById("demo").innerHTML += x + " ";
+            <br>
+          }
+          <br>
+          <span class="comentario">// Resultado: 1,Banana 2,Orange 3,...</span>
+        </div>
+      </details>
+      <details>
+        <summary>with()</summary>
+        <p>Crea un nuevo array al que le aplica algún cambio.</p>
+        <div class="black">
+          const months = ["Januar", "Februar", "Mar", "April"];
+          <br>
+          const myMonths = months.with(2, "March");
+          <br>
+          <span class="comentario">// Se cambia el índice 2 que es la tercera posición que es "Mar" por "March". Resultado:  ["Januar", "Februar", "March", "April"]</span>
+        </div>
+      </details>
+      <details>
+        <summary>Spread(...)</summary>
+        <p>Es un operador con símbolo de tres puntos ... y permite unir arrays. Lo que hace es "expandir" un array en elementos individuales. No sé exactamente que quiere decir aquí expandir, pero bueno, que se queda sólo con los valores del array.</p>
+        <div class="black">
+          const arr1 = [1, 2, 3];
+          <br>
+          const arr2 = [4, 5, 6];
+          <br>
+          const arr3 = [...arr1, ...arr2];  
+          <br>    
+          <span class="comentario">// Resultado: 1,2,3,4,5,6</span>    
+        </div>
+        <p>También se puede utilizar para copiar un array.</p>
+        <div class="black">
+          const arr3 = [...arr1]; 
+        </div>
+        <p>Se puede utilizar para pasarle argumentos a una función.</p>
+        <div class="black">
+          const numbers = [23,55,21,87,56];
+          <br>
+          let minValue = Math.min(...numbers);
+          <br>
+        </div>
+      </details>
+      <details>
+        <summary>Rest(...)</summary>
+        <p>Crea un nuevo array que elimina los primeros valores y guarda los demás.</p>
+        <div class="black">
+          let a, b, rest;
+          <br>
+          const arr1 = [1,2,3,4,5,6,7,8];
+          <br>
+          [a, b, ...rest] = arr1;
+          <br>
+          document.getElementById("demo").innerHTML = "The rest is: " + rest;
+          <br>
+          <span class="comentario">// Cómo se le pasan dos parámetros a, b, eliminará las dos primeras posiciones del array. Resultado: 3,4,5,6,7,8</span>
+        </div>
+      </details>
+
+    </details>
+
+    <details>
+      <summary>Ordenar los elementos</summary>
+      <p>Métodos para organizar y ordenar los arrays</p>
+      <p class="details-subtitle">Ordenar alfabéticamente</p>
+      <details>
+        <summary>sort()</summary>
+        <p>Organiza un array en orden alfabético.</p>
+        <details>
+          <summary>toSorted()</summary>
+          <p>Hace lo mismo que sort, pero creando un nuevo array sin afectar al original.</p>
+        </details>
+      </details>
+      <details>
+        <summary>reverse()</summary>
+        <p>Coloca los elementos del array al revés. Los de atrás adelante.</p>
+        <details>
+          <summary>toReversed()</summary>
+          <p>Lo mismo que reverse() pero creando un nuevo array sin afectar al original.</p>
+        </details>
+      </details>
+      <details>
+        <summary>Organizar Objetos</summary>
+        <p></p>
+      </details>
+
+      <p class="details-subtitle">Ordenar numéricamente</p>
+      <details>
+        <summary>sort()</summary>
+        <p>Este método está pensado para organizar strings, por lo que los strings con valor numérico no se van a organizar lógicamente por número más alto, sino por cifra más alta, ya que hace la comparación caracter por caracter.</p>
+        <p>Es decir: "25" será mayor que "100" porque 2 > 1.</p>
+        <p>Para evitar este problema y conseguir que organice los número de mayor a menor se puede añadir una función como parámetro del método.</p>
+        <div class="black">
+          const points = [40, 100, 1, 5, 25, 10];
+          <br>
+          points.sort(function(a, b){return a - b});
+          <br>
+          <span class="comentario">// La función lo que hace es comparar los valores de dos en dos haciendo una resta entre ambos. Si el resultado de la resta da negativo querrá decir que b > a. Eso lo puede entender y hace que el valor más pequeño quede una posición por delante del valor mayor.</span>
+          <br>
+          <span class="comentario">// Si se quiere que se organicen al revés, de mayor a menor se cambia el orden de los parámetros.</span>
+          <br>
+          points.sort(function(a, b){return b - a});
+        </div>
+      </details>
+      <details>
+        <summary>Math.min() Math.max()</summary>
+        <p>Permiten encontrar el valor más alto o más bajo de un array numérico.</p>
+        <div class="black">
+          function myArrayMin(arr) {
+            <br>
+            return Math.min.apply(null, arr);
+            <br>
+          }
+          <br>
+        </div>
+      </details>
+
     </details>
 
     <details>
