@@ -880,6 +880,7 @@
             <li>
               <p><strong>??= : </strong>si el primer valor es undefined o null se asigna el segundo valor.</p>
             </li>
+            <li><p><strong>?. :</strong>Operador de encadenamiento opcional. Devuelve undefined o null en lugar de crear un error cuándo el operador devuelve undefined.</p></li>
           </ul>
         </details>
   
@@ -891,12 +892,23 @@
             <li><p><strong>===</strong> igual en valor y tipo</p></li>
             <li><p><strong>!=</strong> diferente en valor</p></li>
             <li><p><strong>!==</strong> diferente en valor o tipo</p></li>
-            <li><p><strong>&gt;</strong> más que</p></li>
-            <li><p><strong>&lt;</strong> menos que</p></li>
+            <li><p><strong>&gt;</strong> mayor que</p></li>
+            <li><p><strong>&lt;</strong> menor que</p></li>
             <li><p><strong>&gt;=</strong> mayor o igual que</p></li>
             <li><p><strong>&lt;=</strong> menor igual que</p></li>
-            <li><p><strong>?</strong> operador ternario</p></li>
+            <li>
+              <p><strong>?</strong> operador ternario. Hace la comparación y asigna un valor en función de si el resultado es true o false.</p>
+              <div class="black">
+                <span class="etiqueta">(condición)</span> ? 
+                <span class="valor-css">"string del true"</span>:
+                <span class="valor">"string del false"</span>;
+                <br>
+                let voteable = (age &lt; 18) ? "Too young":"Old enough";
+              </div>
+              <p>Este operador ternario hace una comparación entre la edad a ver si es mayor o menor de edad. Si la comparación es true devolverá el primer string colocado después de ? si es false devuelve el segundo strong después de :</p>
+            </li>
           </ul>
+          <p>Al comparar número y strings el resultado será false porque el string no numérico tiene valor de Nan lo que lo hace siempre false. Aunque si el string es numérico intenta hacer el cálculo a modo de orden numérico cifra a cifra. Ej.: "25" será mayor que "100" porque 2 &gt; 1.</p>
         </details>
   
         <details>
