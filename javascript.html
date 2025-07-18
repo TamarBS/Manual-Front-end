@@ -1020,7 +1020,66 @@
           <li><p><strong>new Object()</strong></p></li>
           <li><p><strong>new Array()</strong></p></li>
           <li><p><strong>new Map()</strong></p></li>
-          <li><p><strong>new Set()</strong></p></li>
+          <li class="li--details-exception">
+            <details>
+              <summary>new Set()</summary>
+              <p>Un set es un espacio de memoria que puede contener valores que no se repiten. Que no se puedan repetir es la característica especial de este objeto. Es de tipo object. No pueden existir dos valores iguales.</p>
+              <p>Los set no tienen "indice" sólo valor.</p>
+              <p>Es posible crear un set con este método new Set([...]); conteniendo un array, o también creándolo y dándole luego los valores. variable.add("valor");</p>
+              
+              <p class="details-subtitle">Métodos</p>
+              <p>Se puede utilizar un for/of para acceder a los valores del set.</p>
+              <ul>
+                <li>
+                  <p><strong>has() : </strong>devuelve true si el valor del argumento está entre los valores del set. Sintaxis: setName.has("d");</p>
+                </li>
+                <li>
+                  <p><strong>forEach() : </strong>como un array recorre sus valores.</p>
+                </li>
+                <li>
+                  <p><strong>values() :</strong> devuelve un objeto que se puede iterar con los valores del set.</p>
+                </li>
+                <li>
+                  <p><strong>keys() : </strong>también devuelve un objeto que se puede iterar con los valores del set para que sea compatible con otros métodos, por ejemplo Maps().</p>
+                </li>
+                <li>
+                  <p><strong>entries() : </strong>al no tener set valores de índice, este método devuelve un objeto que se puede iterar con valores en pareja [valor,valor]. En los arrays devuelve [índice, valor]. Este método lo hace compatible con métodos como Maps().</p>
+                </li>
+              </ul>
+              <p>Métodos Lógicos</p>
+              <div class="black">
+                setMétodo.método(setArgumento);
+              </div>
+              <ul>
+                <li>
+                  <p><strong>union() : </strong>devuelve un nuevo set que contiene lo que tienen los otros dos set pero sin repeticiones.</p>
+                  <li>
+                    <p><strong>difference() : </strong>sería como restarle los valores del set dado como argumento al set del método. El nuevo set contiene sólo los valores del set que no coinciden con los valores del set del argumento.</p>
+                  </li>
+                  <li>
+                    <p><strong>intersection() : </strong>devuelve un nuevo set que contiene sólo los valores que comparten los dos set.</p>
+                  </li>
+                  <li>
+                    <p><strong>isDisjointFrom() : </strong>devuelve true si los dos set no comparten ningún valor.</p>
+                  </li>
+                  <li>
+                    <p><strong>isSubsetOf() : </strong>devuelve true si el set del método está contenido en el set del argumento.</p>
+                  </li>
+                  <li>
+                    <p><strong>isSupersetOf() : </strong>devuelve true si el set del argumento está contenido en el set del método.</p>
+                  </li>
+                  <li>
+                    <p><strong>symmetricDifference() : </strong>El nuevo set contiene los valores de ambos set menos aquellos que comparten ambos.</p>
+                  </li>
+                </li>
+              </ul>
+              
+              <p class="details-subtitle">Propiedades</p>
+              <p><strong>size : </strong>La propiedad size devuelve la cantidad de valores guardados en el set. Sintaxis: mySet.size; Devuelve la cantidad de valores que tenga el set.</p>
+
+
+            </details>
+          </li>
           <li><p><strong>new Date()</strong></p></li>
           <li><p><strong>new RegExp()</strong></p></li>
           <li><p><strong>new Function()</strong></p></li>
