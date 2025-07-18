@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Condicionales</title>
+  <meta name="description" content="Métodos para realizar acciones en base a condiciones.">
+</head>
+<body>
+  
+  <header>
+    <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
+    <hgroup>
+      <h1 class="h1">Condicionales</h1>
+      <p>Para los casos en los que se quiere que una acción se lleve a cabo sólo cuándo se cumplan ciertas condiciones existen los siguientes estados condicionales (conditional statements).</p>
+      <hr>
+    </hgroup>
+  </header>
+
+  <main>
+    
+    <p class="h2">Estados condicionales</p>
+    <details>
+      <summary>if </summary>
+      <p>Para ejecutar una acción si una condición se cumple.</p>
+      <div class="black">
+        if (condición) {
+          <br>
+          //  código para ser ejecutado cuándo la condición se cumple
+          <br>
+        }
+      </div>
+    </details>
+    <details>
+      <summary>else </summary>
+      <p>Para ejecutar una acción si una condición no se cumple.</p>
+      <div class="black">
+        if (condición) {
+          <br>
+          //  código para ser ejecutado cuándo la condición se cumple
+          <br>
+        } else {
+          <br>
+          //  código para ser ejecutado si la condición no se ha cumplido
+          <br>
+        }
+      </div>
+    </details>
+    <details>
+      <summary>else if </summary>
+      <p>Para ejecutar una acción si una segunda condición dentro de una primera se cumple después de que la primera no se haya cumplido.</p>
+      <div class="black">
+        if (condición) {
+          <br>
+          //  código para ser ejecutado cuándo la condición se cumple
+          <br>
+          } else if (conditción 2) {
+            <br>
+          //  código para ser ejecutado si la condición del if no se ha cumplido pero sí que se cumple la condición 2 del else if
+          <br>
+        } else {
+          <br>
+          //  código para ser ejecutado si ninguna condición se cumple
+          <br>
+        }
+      </div>
+    </details>
+    <details>
+      <summary>switch </summary>
+      <p>Permite ejecutar diferentes acciones basado en diferentes condiciones. Se ejecutará el código del caso que sea igual en valor y tipo al resultado de la expresión.</p>
+      <p>La expresión es el valor que se quiere comparar con los diferentes casos. Si el resultado de la expresión puede no coincidir con alguno de los casos se utiliza el default que será su código el que se ejecutará en caso de no haber tenido la expresión ninguna coincidencia con los casos.</p>
+      <div class="black">
+        switch(expresión) {
+          <br>
+          case x:
+          <br>
+            // código que se ejecutará si el valor de la expresión es el mismo que la x de este caso.
+            <br>
+            break;
+            <br>
+          case y:
+          <br>
+            // código que se ejecutará si el valor de la expresión es el mismo que la y de este caso.
+            <br>
+            break;
+            <br>
+          default:
+          <br>
+            // código que se ejecutará si el valor de la expresión no coincide ni con x ni con y.
+            <br>
+        }
+      </div>
+      <p>Si se quiere que más de un caso ejecute un código se pueden poner los dos casos seguidos que hará que compartan código.</p>
+      <div class="black">
+        switch(expresión) {
+          <br>
+          case x:
+          <br>
+          case y:
+          <br>
+            // código que se ejecutará si el valor de la expresión es el mismo que la x o la y de este caso.
+            <br>
+            break;
+            <br>
+          case z:
+          <br>
+            // código que se ejecutará si el valor de la expresión es el mismo que la z de este caso.
+            <br>
+            break;
+            <br>
+        }
+      </div>
+    </details>
+
+    <p class="h2">Bucles condicionales</p>
+
+    <p>Existen dos palabras reservadas para parar o saltar iteraciones en los bucles.</p>
+    <ul>
+      <li>
+        <p><strong>break : </strong>Para el bucle aunque no haya llegado a cumplir con todas las posibilidades de cumplir con la condición.</p>
+      </li>
+      <li>
+        <p><strong>continue : </strong>Se salta la repetición en la vez que le toca pero luego continúa con el bucle hasta el final.</p>
+      </li>
+    </ul>
+    <p>Estas palabras reservadas no sólo se pueden usar dentro de iteraciones, se pueden usar para parar bloques de código en algún punto, pero parar eso tienen que tener vinculado un "label". Un label es una palabra para designar un bloque de código.</p>
+    <div class="black">
+      const cars = ["BMW", "Volvo", "Saab", "Ford"];<br>
+        list: {<br>
+          <span class="comentario">// Este es el label. Sintaxis label: { ... }</span><br>
+          text += cars[0] + " ";<br>
+          text += cars[1] + " ";<br>
+          break list;<br>
+          <span class="comentario">// El break o continue tiene que estar vinculado al label: Sitaxis break|continue labelName;</span>
+          text += cars[2] + " ";<br>
+          text += cars[3] + " ";<br>
+        } <br>
+        <span class="comentario">// Este bloque de código sólo se ejecutará hasta cars[1]. Resultado: BMW, Volvo  </span>
+    </div>
+
+    <details>
+      <summary>for</summary>
+      <p>Ejecuta un bucle que revisa una condición en cada vuelta mientras se incrementa el valor de la expresión (valor a comparar). En algún momento la condición se deja de cumplir y en ese momento detiene el bucle.</p>
+      <div class="black">
+        for (let i = 0; i &lt; cars.length; i++) &#123;
+          <br>
+          <span class="comentario">// for (declarar variable (se ejecuta una vez); condición; incremento|descuento(se ejecuta cada vez que se cumple la condición.)) &#123;</span>
+          <br>
+          <span class="comentario">// Las tres expresiones del for son opcionales. La variable se puede declarar antes del for. La condición se puede obviar también, pero será necesario añadir un break dentro del bucle. De lo contrario hará un bucle infinito y romperá el sitio web. El incremento o descuento se puede omitir también mientras lo incluyas como código dentro del bucle después de la acción. De todas formas es necesario incluir los punto y coma ;. Quedaría algo así: for (; condición ;) {...}</span>
+          <br>
+          text += cars[i] + "<br>";
+          <br>
+        &#125;
+      </div>
+    </details>
+
+    <details>
+      <summary>for/in </summary>
+      <p>Ejecuta un bucle en las propiedades de un objeto.</p>
+      <div class="black">
+        for (key in object) {
+          <br>
+          // ejecuta el código mientras encuentra propiedades en el objeto.
+          <br>
+        }
+        <br>
+        const person = {fname:"John", lname:"Doe", age:25};
+        <br>
+        let text = "";
+        <br>
+        for (let x in person) {
+          <br>
+          text += person[x];
+          <br>
+        }
+      </div>
+    </details>
+    <details>
+      <summary>for/of </summary>
+      <p>Ejecuta un bucle en los valores de un objeto iterable.</p>
+      <div class="black">
+        for (variable of iterable) {
+          <br>
+          // code block to be executed
+          <br>
+        }
+      </div>
+      <p>Los objetos iterables puede ser arrays, strings, Maps y NodeLists entre otros</p>
+      <div class="black">
+        const cars = ["BMW", "Volvo", "Mini"];
+        <br>
+        let text = "";
+        <br>
+        for (let x of cars) {
+          <br>
+          text += x;
+          <br>
+        }
+      </div>
+    </details>
+    <details>
+      <summary>while </summary>
+      <p>Ejecuta un bucle mientras una condición se cumpla. Es como un for al que se le ha omitido la variable y el incremento sin necesidad de añadir el punto y coma en los parámetros.</p>
+      <div class="black">
+        while (condition) {
+          <br>
+          // code block to be executed
+          <br>
+        }
+      </div>
+      <div class="black">
+        while (i &lt; 10) {
+          <br>
+          text += "The number is " + i;
+          <br>
+          i++;
+          <br>
+        }
+        <br>
+        <span class="comentario">// Si no se añade el incremento o decremento se puede generar un loop infinito que romperá la web.</span>
+      </div>
+    </details>
+    <details>
+      <summary>do/while</summary>
+      <p>Primero hace una primera acción y después revisa si una condición se cumple para repetir el bucle o parar.</p>
+      <div class="black">
+        do {
+          <br>
+          // code block to be executed
+          <br>
+        }
+        <br>
+        while (condition);
+      </div>
+    </details>
+
+  </main>
+
+</body>
+</html>
