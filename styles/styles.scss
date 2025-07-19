@@ -174,21 +174,21 @@ ul {
  font-size: 0.8rem;
  line-height: 1.2rem;
  margin-top: 15px;
- /* Clases para las palabras que representan código */
- .gris { color: $grey; }
- .etiqueta { color: dodgerblue; }
- .clase { color: goldenrod; }
- .llave { color: gold; }
- .identificador { color: lightgoldenrodyellow; }
- .atributo, .propiedad { color: lightskyblue; }
- .valor, .htmlColor { color: lightsalmon; }
- .valor-css { color: lightgreen; }
- .comentario { color: seagreen; }
- .variable { color: mediumorchid; }
- .hijo { margin-left: 15px; }
- .nieto { margin-left: 30px; }
- .biznieto { margin-left: 45px; }
 }
+/* Clases para las palabras que representan código */
+.gris { color: $grey; }
+.etiqueta { color: dodgerblue; }
+.clase { color: goldenrod; }
+.llave { color: gold; }
+.identificador { color: lightgoldenrodyellow; }
+.atributo, .propiedad { color: lightskyblue; }
+.valor, .htmlColor { color: lightsalmon; }
+.valor-css { color: lightgreen; }
+.comentario { color: seagreen; }
+.variable { color: mediumorchid; }
+.hijo { margin-left: 15px; }
+.nieto { margin-left: 30px; }
+.biznieto { margin-left: 45px; }
 /* ----------------------------- */
 
 /* Estilos para los atajos de teclado */
