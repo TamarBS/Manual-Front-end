@@ -170,45 +170,58 @@ ul .li--indented {
   font-size: 0.8rem;
   line-height: 1.2rem;
   margin-top: 15px;
-  /* Clases para las palabras que representan código */
 }
-.black .gris {
+
+/* Clases para las palabras que representan código */
+.gris {
   color: grey;
 }
-.black .etiqueta {
+
+.etiqueta {
   color: dodgerblue;
 }
-.black .clase {
+
+.clase {
   color: goldenrod;
 }
-.black .llave {
+
+.llave {
   color: gold;
 }
-.black .identificador {
+
+.identificador {
   color: lightgoldenrodyellow;
 }
-.black .atributo, .black .propiedad {
+
+.atributo, .propiedad {
   color: lightskyblue;
 }
-.black .valor, .black .htmlColor {
+
+.valor, .htmlColor {
   color: lightsalmon;
 }
-.black .valor-css {
+
+.valor-css {
   color: lightgreen;
 }
-.black .comentario {
+
+.comentario {
   color: seagreen;
 }
-.black .variable {
+
+.variable {
   color: mediumorchid;
 }
-.black .hijo {
+
+.hijo {
   margin-left: 15px;
 }
-.black .nieto {
+
+.nieto {
   margin-left: 30px;
 }
-.black .biznieto {
+
+.biznieto {
   margin-left: 45px;
 }
 

@@ -798,6 +798,24 @@
               </li>
             </ul>
           </details>
+          <p class="details-subtitle">Destructuring</p>
+          <p>Lo normal es declarar la variable y depués del = indicar los valores, pero en el caso del destructuring se declaran primero los valores y después del = el nombre de la variable.</p>
+          <p>Esto sirve para llegar a los valores de un objeto de forma más rápida.</p>
+          <p>Primero se declara un objeto y después se utiliza el destructuring para acceder a alguna de las propiedades del objeto.</p>
+          <div class="black">
+            // Crea el objeto. En este caso un Array
+            <br>
+            const fruits = ["Bananas", "Oranges", "Apples", "Mangos"];
+            <br>
+
+            // Destructuring
+            <br>
+            let [fruit1,,,fruit2] = fruits;
+            <br>
+            <span class="comentario">// Añadiendo comas "," está saltando posiciones del array, 2 posiciones en este caso.</span>
+            <br>
+            <span class="comentario">// Resultado: Bananas Mangos</span>
+          </div>
   
         </details>
   
@@ -1102,6 +1120,92 @@
       </details>
     </details>
 
+    <details>
+      <summary>Expresiones regulares</summary>
+      <p>Son secuencias de caracteres que forman patrones de búsqueda. Se pueden utilizar para:</p>
+      <ul>
+        <li>
+          <p>Buscar textos</p>
+        </li>
+        <li>
+          <p>Reemplazar textos</p>
+        </li>
+        <li>
+          <p>Validar textos</p>
+        </li>
+      </ul>
+      <p>Normalmente se utilizan con métodos de string.</p>
+      <p class="details-subtitle">Sintaxis</p>
+      <p>/pattern/modifier flags;</p>
+      <p>/palabra/i</p>
+      <ul>
+        <li>
+          <p><strong>/ /g</strong> global. Hace la búsqueda en todo el string.</p>
+          <p><strong>/ /i</strong> case-insensitive. No hace diferencia entre mayúsculas o minúsculas.</p>
+          <p><strong>/ /m</strong> selección múltiple. Devuelve todas las coincidencias que encuentre en el string.</p>
+          <p><strong>/ /s</strong> permite que la palabra esté unida a un punto "." para ser encontrada.</p>
+          <p><strong>/ /v</strong> unicode suport. Incluye en la búsqueda todos los caracteres unicode.</p>
+          <p><strong>/ /y</strong> búsqueda sticky. </p>
+        </li>
+      </ul>
+      <p>Caractér de clase</p>
+      <p>Va entre [] y coincide con cualquiera de los caracteres que se contienen entre los corchetes.</p>
+    </details>
+    
+    <details>
+      <summary>this</summary>
+      <p>Es una palabra clave de tipo objeto. Se utiliza para que el método al que se quiere apuntar se refiera a sí mismo.</p>
+      <p>Dependiendo de dónde se encuentre el this, se referirá a diferentes cosas:</p>
+      <ul>
+        <li>
+          <p><strong>En el método de un objeto: </strong>Se refiere al objeto.</p>
+          <p><strong>Sólo: </strong>Se refiere al objeto global.</p>
+          <p><strong>En una función:</strong> Se refiere al objeto global (el objeto que llama a la función).</p>
+          <p><strong>En modo estricto: </strong>Su valor es undefined.</p>
+          <p><strong>En un evento: </strong>se refiere al elemento que recibe el evento.</p>
+          <p><strong>En un arrow function: </strong>No funciona igual que en una función normal. En arrow function siempre se referirá al objeto global (El objeto "dueño" de la función. Siempre será el mismo).</p>
+        </li>
+      </ul>
+    </details>
+
+    <details>
+      <summary>arrow function</summary>
+      <p>Función flecha. Es una miniaturización de la función.</p>
+      <div class="black">
+        let myFunction = (argumentos, ...) => expresiones;
+        let myFunction = (a, b) => a * b;
+      </div>
+    </details>
+
+    <details>
+      <summary>clases</summary>
+      <p>Las clases en javascript no son objetos. En este caso son plantillas para crear objetos.</p>
+      <div class="black">
+        class ClassName {
+          <br>
+  constructor() { ... }
+  <br>
+}
+<br><br>
+        class Car {
+          <br>
+  constructor(name, year) {
+    <br>
+    this.name = name;
+    <br>
+    this.year = year;
+    <br>
+  }
+  <br>
+}
+<br>
+const myCar1 = new Car("Ford", 2014);
+<br>
+const myCar2 = new Car("Audi", 2019);
+<br>
+<span class="comentario">// El constructor se ejecuta cada vez que un nuevo objeto es creado.</span>
+      </div>
+    </details>
 
     <p class="h2">Métodos HTML</p>
     <div class="index">
