@@ -1033,6 +1033,28 @@
   
       <details>
         <summary>Constructores</summary>
+        <p>Para crear objetos, los constructores son plantillas.</p>
+        <div class="black">
+          <span class="etiqueta">function</span>
+          NombreDeConstructor
+          <span class="llave">(</span><span class="valor">parámetro1, parámetro2, parámetro3</span><span class="llave">)</span>
+          <span class="clase">{</span><br>
+            <span class="hijo atributo">this</span>.nombrePropiedad1 = <span class="valor-css">argumento1</span>;<br>
+            <span class="hijo atributo">this</span>.nombrePropiedad2 = <span class="valor-css">argumento2</span>;<br>
+            <span class="hijo atributo">this</span>.nombrePropiedad3 = <span class="valor-css">argumento3</span>;<br>
+          <span class="clase">}</span>
+          <br>
+          <span class="etiqueta">const</span>
+          nombreObjeto =
+          <span class="atributo">new</span> NombreDeConstructor
+          <span class="llave">(</span><span class="valor-css">argumento1, argumento2, argumento3</span><span class="llave">)</span>;<br>
+        </div>
+        <p>No es posible crear una nueva propiedad para un constructor de la siguiente manera: Person.nacionalidad = "Inglés";</p>
+        <p>Para estos casos en los que se quiere crear un nuevo parámetro en un constructor se tiene que utilizar la propiedad .prototype</p>
+        <div class="black">
+          NombreDeConstructor<span class="etiqueta">.prototype</span>.nuevaPropiedad = <span class="valor">"valor"</span>;
+        </div>
+        <p class="details-subtitle">Métodos</p>
         <p>JavaScript dispone de métodos constructores para crear nuevos espacios de memoria de tipo object.</p>
         <ul>
           <li><p><strong>new Object()</strong></p></li>
