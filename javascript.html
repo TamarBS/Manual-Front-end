@@ -176,6 +176,22 @@
           <p>Es una palabra reservada que se convertirá en el útlimo paso de la función. No hará nada el programa después del return. Sirve para alojar y mandar los resultados de la función.</p>
         </details>
       </details>
+
+      <details>
+        <summary>callback</summary>
+        <p>Es una función que se puede mandar como argumento a otra función.</p>
+        <div class="black">
+          <span class="etiqueta">function</span> imprimirResultado(resultado) <span class="llave">&#123;</span><br>
+          <span class="hijo">document.getElementById("demo").innerHTML = resultado;</span><br>
+          <span class="llave">&#125;</span><br>
+          <span class="etiqueta">function</span> sumar(argumento1, <span class="valor-css">callback</span> ) <span class="llave">&#123;</span><br>
+          <span class="atributo hijo">let</span> suma = argumento1 + 1;<br>
+          <span class="hijo valor-css">callback(suma)</span> ;<br>
+          <span class="llave">&#125;</span><br>
+          sumar(2, imprimirResultado);
+        </div>
+        <p>Las funciones siempre se pasan como argumentos sin paréntesis ()</p>
+      </details>
   
       <details>
         <summary>objetos</summary>
