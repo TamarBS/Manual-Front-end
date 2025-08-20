@@ -440,7 +440,8 @@
       <details>
         <summary>parciales</summary>
         <p>Se aconseja dividir el código scss en varios archivos para que sean más fáciles de organizar. Hay que distinguir los parciales colocando siempre un _ delante del nombre.</p>
-        <p>Estos parciales se importan al css principal mediante @import 'nombreParcial'; </p>
+        <p>Estos parciales se importan al css principal mediante @use 'carpetaParcial/nombreParcial'; </p>
+        <p>*@import está obsoleto.</p>
         <p>No hace falta añadir la extensión. Ya identifica el programa que tiene que buscar archivos .sass o .scss.</p>
         <!-- <p>Se pueden utilizar sus variables en el scss principal añadiendo al nombre del parcial delante de la variable separada por un punto. Ej.: propiedad: nombreParcial.$nombre-variable.</p> -->
       </details>

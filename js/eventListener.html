@@ -27,8 +27,8 @@
       <p>Un elemento HTML ha sido cambiado.</p>
     </details>
     <details>
-      <summary>onclick</summary>
-      <p>El usuario a clickado un elemento HTML.</p>
+      <summary>onclick, onmousedown y onmouseup</summary>
+      <p>El usuario a clickado un elemento HTML y se han llevado a cabo tres eventos diferentes. Onmousedown es le momento de hacer click sobre el elemento. Onmouseup es el momento de levantar el click sobre el elemento. Onclick es la acción de los dos anteriores en el mismo elemento. Por eso a veces cuando se hace click en un botón, pero se arrastra sin soltar y se suelta fuera del área del botón, la acción del botón no se ejecuta. Esto es porque utiliza un evento onclick en lugar de un onmousedown.</p>
     </details>
     <details>
       <summary>onmouseover</summary>
@@ -43,10 +43,42 @@
       <p>El usuario a pulsado alguna tecla del teclado.</p>
     </details>
     <details>
-      <summary>onload</summary>
-      <p>El navegador a terminado de cargar la página.</p>
+      <summary>onload y onunload</summary>
+      <p>El usuario entra o sale de la página. Es útil para controlar las coockies por ejemplo.</p>
+    </details>
+    <details>
+      <summary>oninput</summary>
+      <p>Se ejecuta en el momento en el que ocurre algo en un input.</p>
+    </details>
+    <details>
+      <summary>onchange</summary>
+      <p>Se ejecuta en el momento en el que se termina de realizar un cambio en un input. Por ejemplo en un input de texto se añade una palabra. Al salir del input se ajecuta el onchange.</p>
     </details>
 
+    <p class="body-subtitle">Método addEventListener(event, function, useCapture)</p>
+    <p>Los anteriores son eventos que se pueden ejecutar en una página web realizando alguna acción. Los escuchadores son métodos que lo que hacen es poner la atención, "escuchar", si alguno de estos eventos ocurre en un elemento HTML concreto.</p>
+    <p>Permiten llevar a cabo varias acciones a la vez de un mismo evento o varias acciones de varios eventos diferentes.</p>
+    <p>Los parámetros que se pueden pasar a esta función son:</p>
+    <ul>
+      <li>
+        <p><strong>evento </strong>Es el evento que se espera escuchar. Pueden ser de muchos tipos, desde acciones del reatón y del teclado hasta cambios de forma en la ventana de la página web (resize).</p>
+      </li>
+      <li>
+        <p><strong>function </strong>Es la acción que se espera llevar a cabo contenida en una función. No se permiten añadir parámetros a estas funciones, pero sí pueden contener otras funciones que sí lleven sus propios parámetros.</p>
+      </li>
+      <li>
+        <p><strong>useCapture </strong>para elementos con escuchadores que están dentro de otros elementos con otros escuchadores existe una manera de controlar qué escuchadores se ejecutan primero.</p>
+        <ul>
+          <li>
+            <p><strong>bubbling </strong>primero se ejecuta el escuchador del elemento hijo y después el del padre. Va de dentro hacia afuera.</p>
+          </li>
+          <li>
+            <p><strong>capturing </strong>primero se ejecuta el escuchador del padre y luego el del hijo. Va de fuera hacia adentro.</p>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p>Para dejar de "escuchar" se utiliza el método removeEventListener()</p>
   </main>
 
 </body>

@@ -74,6 +74,179 @@
 
     <p class="h2">Particularidades</p>
     
+    <details> <!-- Validación de formularios-->
+      <sumnary>Validación de formularias</sumnary>
+      <p>Aunque el HTML trae por defecto una serie de ventanas emergentes para corregir algunos problemas de validación de los inputs, con Javascript se pueden controlar todas las posibilidades de validación de los formularos.</p>
+      <p>La validación es el proceso de asegurar que los inputs que rellena el usuario son correctos y útiles.</p>
+      <ul>
+        <li>
+          <p><strong>Server side validation </strong>lo lleva a cabo el servidor una vez que el formulario se ha enviado.</p>
+        </li>
+        <li>
+          <p><strong>Client side validation </strong>lo valida el navegador antes de que el formulario se haya validado.</p>
+        </li>
+      </ul>
+      <p>En los elementos HTML se pueden añadir una serie de atributos que ayudan a hacer lo que se denomina <strong>constarint validation</strong>, validación de restricciones. </p>
+      <ul>
+        <li>
+          <p><strong>disabled </strong>desabilita el input</p>
+        </li>
+        <li>
+          <p><strong>max </strong>define un valor máximo para el input</p>
+        </li>
+        <li>
+          <p><strong>min </strong>define un valor mínimo para el input</p>
+        </li>
+        <li>
+          <p><strong>required </strong>indica que es obligatorio rellenar el input</p>
+        </li>
+        <li>
+          <p><strong>type </strong> especifica el tipo de input y le aporta estilos predefinidos adaptados al tipo de contenido que da.</p>
+        </li>
+        <li>
+          <p><strong>pattern </strong>define el patrón que seguirá el input. Por ejemplo, un patrón de contraseña muestra los contenidos del input como asteriscos.</p>
+        </li>
+      </ul>
+      <p>En CSS se pueden controlar los estilos de los diferentes estados de los input utilizando los siguientes Pseudo selectores.</p>
+      <ul>
+        <li>
+          <p><strong>:disabled </strong>Aplica estilos a los elementos con atributo disabled</p>
+        </li>
+        <li>
+          <p><strong>:invalid </strong>Aplica estilos a los elementos con valores del input incorrectos, no validos.</p>
+        </li>
+        <li>
+          <p><strong>:optional </strong>Aplica estilos a los elementos de un formulario que no tienen atributo required.</p>
+        </li>
+        <li>
+          <p><strong>:required </strong>Aplica estilos a los elementos que tengan el atributo required.</p>
+        </li>
+        <li>
+          <p><strong>:valid </strong>Aplica estilos a los elementos con valor de sus inputs correcto y válidos.</p>
+        </li>
+      </ul>
+    </details>
+
+    <details> <!-- Buenas prácticas -->
+      <summary>Buenas prácticas</summary>
+      <details>
+        <summary>Aplicar id en el HTML con intención de usar en JavaScript</summary>
+        <p>Se recomienda aplicar los estilos CSS en la medida de lo posible utilizando clases y dejar el uso de los id para funcionalidades de JavaScript.</p>
+      </details>
+    </details>
+
+    <details> <!-- DOM -->
+      <summary><dfn><abbr title="Document Object Model">DOM</abbr></dfn> (Document Object Model)</summary>
+      <p>El Modelo de objeto de documento es el estándar para acceder a los documentos y sus contenidos.</p>
+      <p>Cuándo una página se carga en el navegador, este genera un documento interno a modo de árbol de <strong>nodos</strong> con todo lo que contiene. Esto hace posible acceder al contenido de los documentos y modificarlo con JavaScript (y otros lenguajes de programación).</p>
+      <p> Se divide en tres partes diferentes:</p>
+      <ul>
+        <li>
+          <p><strong>Core DOM</strong> modelo estándar para todo tipo de documentos.</p>
+        </li>
+        <li>
+          <p><strong>XML DOM</strong> modelo estándar para los documentos XML.</p>
+        </li>
+        <li>
+          <p><strong>HTML DOM</strong> modelo estándar para los documentos HTML.</p>
+        </li>
+      </ul>
+      <p>El objeto <code>document</code> representa tu página web. A continuación algunos ejemplos de cómo se utiliza el objeto documento para manipular elementos HTML.</p>
+      <div class="code black">
+        <span class="etiqueta">document</span>.<span class="llave">getElementByID</span>( <span class="valor">"id"</span> ) <br>
+        <span class="etiqueta">document</span>.<span class="llave">getElementByTagName</span>( <span class="valor">"nombre de etiqueta"</span> ) <br>
+        <span class="etiqueta">document</span>.<span class="llave">getElementByClassName</span>( <span class="valor">"nombre de clase"</span> )
+      </div>
+      <details> <!-- HTML DOM -->
+        <summary>HTML DOM</summary>
+        <p>Es el modelo estándar de objeto e <dfn>interfaz de programación</dfn> (son los métodos y propiedades de cada objeto) que permite aplicar cambios en los elementos HTML. Define:</p>
+        <ul>
+          <li>
+            <p>Los elementos HTML como <strong>objetos</strong>.</p>
+          </li>
+          <li>
+            <p>Las <strong>propiedades</strong> de todos los elementos HTML.</p>
+            <p>Son los valores de los elementos HTML que puedes cambiar. Ej.: .innerHTML es una propiedad que permite cambiar el contenido de un elemento HTML.</p>
+          </li>
+          <li>
+            <p>Los <strong>métodos </strong>para acceder a todos los elementos HTML.</p>
+            <p>Son las acciones que se pueden llevar a cabo en los elementos HTML. Ej.: getElementByID es un método que permite acceder a un elementoHTML a través de su ID.</p>
+          </li>
+          <li>
+            <p>Los <strong>eventos</strong> para todos los elementos HTML.</p>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Nodos</summary>
+        <p>Los <strong>nodos</strong> son los contenidos del documento y hay que resaltar como importante no confundirlos con elementos HTML. Nodo ≠ elemento HTML. <br> Por ejemplo un elemento HTML p con contenido es un nodo, pero su texto y sus atributos pertenecen a otro nodo tipo texto o nodo tipo atributo. De manera que si quiero acceder al texto del elemento no me valdrá con acceder al nodo del párrafo, sino que necesito acceder al nodo hijo del párrafo que es el nodo de texto dónde sí que encontraré el texto contenido.</p>
+        <p class="details-subtitle">Relación entre nodos</p>
+        <p>El primer nodo que contiene todos se denomina root. Nunca tiene un padre.Es el principio de todo el documento.</p>
+        <p>Padre es el nodo que contiene otros nodos. Excepto el root todos los nodos tienen un padre. El padre del primer nodo padre es root.</p>
+        <p>Un nodo hijo es aquel que está después del padre. El padre contiene al hijo.</p>
+        <p>Existen dos maneras de llamar a los dos hijos más destacados que son el primero de la lísta y el último de la lista. firtChild y lastChild.</p>
+        <p>Sibling (hermanos) son nodos que comparten el mismo padre.</p>
+        <p>Existen dos maneras de moverse a través de los hermanos con nextSibling que es el siguiente hermano y previousSibling que es el hermano anterior.</p>
+        <p class="details-subtitle">Navegar entre nodos</p>
+        <p>Para acceder a los nodos del DOM existen varias propiedades:</p>
+        <ul>
+          <li>
+            <p><strong>parentNode </strong>busca al nodo padre a través de un nodo hijo.</p>
+          </li>
+          <li>
+            <p><strong>childNodes[nodenumber] </strong>busca el hijo de un elemento que es el padre en este caso en función de su posición, como los valores de un array. El nodenumber = 0 es el primer hijo.</p>
+          </li>
+          <li>
+            <p><strong>firstChild </strong>encuentra el primer hijo de la lista desde un elemento que es el padre en este caso.</p>
+          </li>
+          <li>
+            <p><strong>lastChild </strong>encuentra el último hijo de la lista desde un elemento que es el padre en este caso.</p>
+          </li>
+          <li>
+            <p><strong>previousSibling </strong>se mueve al hermano que está por encima en la lista desde su hermano posterior.</p>
+          </li>
+          <li>
+            <p><strong>nextSibling </strong>se mueve al hermano que está por detrás en la lista desde su hermano anterior.</p>
+          </li>
+        </ul>
+        <p>IMPORTANTE RESALTAR: que el contenido de los nodos no son el nodo en sí. El texto contenido en un elemento no es el nodo del elemento sino su hijo tipo nodo de texto.</p>
+        <p>Para acceder al texto de un nodo de texto se pueden utilizar las propiedades .innerHTML o .nodeValue</p>
+        <p class="details-subtitle">Crear y eliminar nodos</p>
+        <p>Con los siguientes métodos es posible crear y eliminar nodos del DOM. Es la manera que tiene JavaScript para hacer cambios en el HTML y por tanto lo que se puede ver en pantalla. Haciendo las interfaces más interactivas y dinámicas.</p>
+        <p>CREAR ELEMENTOS</p>
+        <p>Para crear un nodo lo primero que hay que hacer es crear el nodo, luego crear nodos hijos para el contenido si los requiere y unir esos dos nodos para convertirlos en un elemento HTML con contenido. </p>
+        <div class="code black">
+          const para = document.createElement("p");<br>
+          const node = document.createTextNode("This is new.");<br>
+          para.appendChild(node);
+        </div>
+        <p>Para añadir ese nuevo nodo en el DOM se añade como hijo a un elemento elegido que pasará a ser su padre.</p>
+        <div class="code black">
+          &lt; div id="div1"> <br>
+            &lt; p id="p1">This is a paragraph.</p> <br>
+            &lt; p id="p2">This is another paragraph.</p> <br>
+          &lt; /div> <br><br>
+          const element = document.getElementById("div1");<br>
+          element.appendChild(para);
+        </div>
+        <p class="details-subtitle">Métodos para crear y eliminar nodos</p>
+        <ul>
+          <li>
+            <p><strong>appendChild </strong>Crea un nuevo hijo en la última posición de la lista de hermanos.</p>
+          </li>
+          <li>
+            <p><strong>insertBefore() </strong>Crea un nuevo hijo delante del hermano al que se esté apuntando en el método.</p>
+          </li>
+          <li>
+            <p><strong>remove() </strong>Elimina un nodo</p>
+          </li>
+          <li>
+            <p><strong>replaceChild(new, old) </strong>Sustituye un nodo por otro.</p>
+          </li>
+        </ul>
+      </details>
+    </details>
+    
     <details>
       <summary>comentarios</summary>
       <p>Son estados que no se ejecutan. Son ignorados a la hora de ejecutar estados.</p>
@@ -1245,13 +1418,15 @@ const myCar2 = new Car("Audi", 2019);
       </div>
     </details>
 
-    <p class="h2">Métodos HTML</p>
+    <p class="h2">Acciones</p>
     <div class="index">
       <nav aria-label="métodos">
         <a href="js/arrays.html">Arrays</a>
+        <a href="js/animation.html">Animaciones y transiciones</a>
+        <a href="js/addDelete.html">Añadir o eliminar</a>
         <a href="js/methodString.html">Cadenas de texto</a>
         <a href="js/math.html">Cálculos</a>
-        <a href="js/cssProp.html">Cambiar propiedades CSS</a>
+        <a href="js/cssProp.html">Cambiar atributos del Elemento HTML</a>
         <a href="js/condition.html">Condicionales</a>
         <a href="js/finders.html">Encontrar elementos</a>
         <a href="js/eventListener.html">Escuchadores</a>

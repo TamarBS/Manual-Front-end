@@ -26,6 +26,41 @@
         <h2 class="details-summary">getElementById()</h2>
       </summary>
       <p>Permite seleccionar un elemento HTML por su id.</p>
+      <div class="code black">
+        <span class="etiqueta">document</span>.<span class="llave">getElementByID</span>( <span class="valor">"id"</span> );
+      </div>
+    </details>
+    <details>
+      <summary>getElementsByTagName()</summary>
+      <p>Busca todos los elementos por el nombre de su etiqueta. Ej.; getElementByTagName("p") buscará todas las etiquetas &lt;p&gt;.</p>
+      <div class="code black">
+        <span class="etiqueta">document</span>.<span class="llave">getElementByTagName</span>( <span class="valor">"nombre de etiqueta"</span> );<br>
+        <span class="comentario">// Para buscar sólo elementos dentro de otra elemento se puede utilizar este truco.</span>
+        let padre = <span class="etiqueta">document</span>.<span class="llave">getElementByTagName</span>( <span class="valor">"nombre de etiqueta Padre"</span> );<br>
+        let hijos = <span class="etiqueta">padre</span>.<span class="llave">getElementByTagName</span>( <span class="valor">"nombre de etiqueta hijos"</span> );
+      </div>
+      <p class="details-subtitle">HTMLCollection Object</p>
+      <p>Este método devuelve una colección de objetos HTML, que es algo parecido a un array con todos los elementos que encuentra. Pero no es un array porque no puede utilizarse algunos métodos como valueOf(), push(), pop(),etc. Gracias a esto es posible acceder a uno de los elementos como en un array myCollection[3] y calcular el .length para saber cuántos elementos se han encontrado permitiendo a su vez hacer loops.</p>
+      <p>Se diferencia de NodeList porque se puede acceder a sus elementos utilizando el nombre de la etiqueta, el id o su posición en la lista, mientras nodeList sólo permite aceder por su posición en la lista.</p>
+      <p>Además permite acceder a elementos que se crean después, NodeList no</p>
+    </details>
+    <details>
+      <summary>getElementByClassName()</summary>
+      <p>Encuentra todos los elementos con el mismo atributo clase.</p>
+      <div class="code black">
+        <span class="etiqueta">document</span>.<span class="llave">getElementByClassName</span>( <span class="valor">"nombre de clase"</span> )
+      </div>
+    </details>
+    <details>
+      <summary>querySelectorAll()</summary>
+      <p>Encuentra los elementos utilizando selectores de elementos como en CSS.</p>
+      <div class="code black">
+        <span class="etiqueta">document</span>.<span class="llave">querySelectorAll</span>( <span class="valor">"p.intro"</span> )
+      </div>
+      <p class="details-subtitle">NodeList object</p>
+      <p>Este método devuelve una colección de nodos que contienen el atributo de clase con el valor pasado como parámetro. Es muy parecido a un HTMLCollection, pero tiene alguna diferencia. Puede hacerse lo mismo, acceder a sus nodos myCollection[2] y calcular el número de nodos encontrados con .length y hacer loops. </p>
+      <p>Se diferencia de HTMLCollection porque se puede acceder a sus elementos utilizando sólo su posición en la lista, mientras HTMLCollectiont permite acceder por nombre, id y también su posición en la lista.</p>
+      <p>Además no permite acceder a elementos que se crean después, HTMLCollection sí puede.</p>
     </details>
   </main>
 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <title>Animaciones</title>
+  <meta name="description" content="Animar elementos con javaScript">
+</head>
+<body>
+  <header>
+    <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
+    <hgroup>
+      <h1 class="h1">Animaciones y transiciones</h1>
+      <p>Cambiando los estilos CSS de los elementos HTML es posible crear la ilusión de cambiar y dar movimiento a los contenidos de la web. </p>
+      <hr>
+    </hgroup>
+  </header>
+  <main>
+    <p>Todas las animaciones deben estar contenidas en un contenedor padre. Ese contenedor padre tiene que tener position relativa y el hijo position absolute.</p>
+    <div class="code black">
+      <span class="etiqueta">let</span> id =
+      <span class="llave">setInterval</span>( <span class="comentario">frame</span>, <span class="valor">5</span>); <br>
+      <span class="etiqueta">function</span> <span class="comentario">frame</span>() <span class="llave">{</span><br>
+        <span class="hijo atributo">if</span>( condiciones para terminar la animación ) <span class="llave">{</span> <br>
+          <span class="valorCSS nieto">clearInterval</span>( id );<br>
+          <span class="llave hijo">}</span><span class="atributo"> else </span><span class="llave">{</span><br>
+            <span class="nieto">código para animar el elemento cambiando sus estilos.</span> <br>
+            <span class="llave hijo">}</span><br>
+            <span class="llave">}</span>
+    </div>
+  </main>
+</body>
+</html>

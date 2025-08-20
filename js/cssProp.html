@@ -14,28 +14,48 @@
   <header>
     <div class="button back"><a  href="../javascript.html">Volver a JavaScript</a></div>
     <hgroup>
-      <h1 class="h1">Cambiar propiedades CSS</h1>
-      <p>Es posible hacer cambios en CSS utilizando Javascript.</p>
+      <h1 class="h1">Cambiar atributos</h1>
+      <p>Es posible acceder a los valores de los atributos de un elemento HTML. Con esto es posible cambiar sus estilos y valores de sus atributos.</p>
       <hr>
     </hgroup>
   </header>
 
   <main>
 
-    <p class="body-title">Sintaxis</p>
-    <div class="black">
-      <span class="etiqueta">document</span>.
-      <span class="clase">getElementByID</span>( <span class="valor">"identificadorElementoHTML"</span> ).
-      <span class="valor-css">style</span>.
-      <span class="propiedad">propiedad</span> =
-      <span class="valor">"nuevo valor"</span>;
-      <br><br>
-      <span class="etiqueta">document</span>.
-      <span class="clase">getElementByID</span>( <span class="valor">"demo"</span> ).
-      <span class="valor-css">style</span>.
-      <span class="propiedad">font-size</span> =
-      <span class="valor">"35px"</span>;
-    </div>
+    <details>
+      <summary>Cambiar valores de los atributos</summary>
+      <p>Se pueden cambiar u obtener los valores de los atributos.</p>
+      <p class="body-title">Sintaxis</p>
+      <div class="black">
+        <span class="etiqueta">document</span>.
+        <span class="clase">getElementByID</span>( <span class="valor">"idElementoHTML"</span> ).
+        <span class="valor-css">atributo</span> =
+        <span class="valor">"nuevo valor"</span>;
+        <br>
+        <span class="etiqueta">document</span>.
+        <span class="clase">getElementByID</span>( <span class="valor">"idElementoHTML"</span> ).
+        <span class="valor-css">setAttribute</span>( 
+          <span class="comentario">atributo</span>, <span class="valor">valor</span>)
+      </div>
+    </details>
+    <details>
+      <summary>Cambiar estilos</summary>
+      <p>Se pueden cambiar los estilos de un elemento HMTL accediendo a su atributo style.</p>
+      <p class="body-title">Sintaxis</p>
+      <div class="black">
+        <span class="etiqueta">document</span>.
+        <span class="clase">getElementByID</span>( <span class="valor">"identificadorElementoHTML"</span> ).
+        <span class="valor-css">style</span>.
+        <span class="propiedad">propiedad</span> =
+        <span class="valor">"nuevo valor"</span>;
+        <br><br>
+        <span class="etiqueta">document</span>.
+        <span class="clase">getElementByID</span>( <span class="valor">"demo"</span> ).
+        <span class="valor-css">style</span>.
+        <span class="propiedad">font-size</span> =
+        <span class="valor">"35px"</span>;
+      </div>
+    </details>
 
   </main>
 
